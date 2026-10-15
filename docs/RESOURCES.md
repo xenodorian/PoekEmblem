@@ -19,7 +19,6 @@ Links gathered from web search. Not all were opened; check each thread for curre
 - pokefirered-expansion (Shiny-Miner): https://github.com/Shiny-Miner/pokefirered-expansion
 - cawtds/pokefirered (ports pokeemerald-expansion changes): https://www.pokecommunity.com/threads/is-there-an-expansion-project-for-the-pokefirered-decomp-project.533164/latest
 - Decomp repository for community hacks: https://www.pokecommunity.com/threads/decomp-repository-for-community-built-hacks.534395/latest
-- Notes: a legally obtained ROM is required to build or patch. PokeCommunity does not allow links to ROM sources.
 
 ## Map and Graphics Editors
 - AdvanceMap tutorial and overview (PokeCommunity Daily): https://daily.pokecommunity.com/2016/10/01/rom-hacking-tools-part-1-advancemap
