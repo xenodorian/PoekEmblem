@@ -1,0 +1,5 @@
+# ROM files are commercial and must never be committed
+*.gba
+*.gb
+*.gbc
+*.sav
