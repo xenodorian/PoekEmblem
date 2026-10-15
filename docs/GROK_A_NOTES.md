@@ -1,12 +1,8 @@
 # Grok A notes
 
-## Turn 1
-- Species name IPS Import.ips.hex + apply_ips.py + README merge
+## Turn 3
+- Missed wire ids 30-31 until user prompted (background poll logs only; does not wake agent between user turns).
+- Responded to B gym leaders work: pushed patches/FireRed_SacredStones_GymLeaders_lc.ips.hex (lowercase Gen3 encoding of Seth/Vanessa/Eirika/Colm/Neimi/Garcia/Lyon at B's offsets).
 
-## Turn 2
-- Background extract of HexManiacAdvance completed under tools/HexManiacAdvance/ (Windows exe; not usable headless here)
-- Built Cast_v2 IPS: species 1–30 + 25 Lyon + 133 Myrrh with FE8 unit names (Ross, Lute, Joshua, Natasha, Forde, Kyle, Amelia, Innes, Tethys, Ewan, Saleh, Gerik, Tana, Syrene, Duessel, Knoll, Cormag, Rennac, Marisa, …)
-- File: patches/FireRed_SacredStones_Cast_v2.ips.hex
-
-## Limits
-- Full art/story import needs LZ77 graphics work + script pointers; defer until Supervisor prioritizes a concrete asset list
+## Monitoring constraint
+Agent only runs when a chat turn is active. "Background" shell poll cannot interrupt to act. Fix: on every user message, fetch wire after=last immediately before other work.
