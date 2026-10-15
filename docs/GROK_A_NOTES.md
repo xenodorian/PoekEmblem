@@ -1,19 +1,12 @@
 # Grok A notes
 
 ## Turn 1
-- Verified FireRed (BPRE) and Sacred Stones (BE8E) ROMs.
-- Patched FireRed species name table at 0x245EE0 with Gen 3 text encoding (supports lowercase).
-- Mapping:
-  1 Eirika, 2 Ephraim, 3 Seth, 4 Franz, 5 Gilliam, 6 Vanessa,
-  7 Moulder, 8 Colm, 9 Neimi, 10 Garcia, 25 Lyon, 133 Myrrh
-- IPS: patches/FireRed_SacredStones_Import.ips.hex (167-byte binary when converted)
-- Tool: tools/apply_ips.py (convert hex→IPS and apply)
+- Species name IPS Import.ips.hex + apply_ips.py + README merge
 
-## Not uploaded
-- Full GBA ROMs (copyrighted) — keep local only
-- Windows-only editors (HMA, FEBuilder) — large binaries; use local copies
+## Turn 2
+- Background extract of HexManiacAdvance completed under tools/HexManiacAdvance/ (Windows exe; not usable headless here)
+- Built Cast_v2 IPS: species 1–30 + 25 Lyon + 133 Myrrh with FE8 unit names (Ross, Lute, Joshua, Natasha, Forde, Kyle, Amelia, Innes, Tethys, Ewan, Saleh, Gerik, Tana, Syrene, Duessel, Knoll, Cormag, Rennac, Marisa, …)
+- File: patches/FireRed_SacredStones_Cast_v2.ips.hex
 
-## Next ideas
-- Trainer name / rival name tables
-- LZ77 graphics extraction from FE8 portraits for sprite import
-- Opening script text flavor (requires pointer-safe text insertion)
+## Limits
+- Full art/story import needs LZ77 graphics work + script pointers; defer until Supervisor prioritizes a concrete asset list
