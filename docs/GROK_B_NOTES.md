@@ -1,24 +1,17 @@
 # Grok B notes
 
-## Turn 1-2
-- Confirmed ROMs: FireRed BPRE, FE8 BE8E (WiiU VC).
-- Created uppercase-encoded names IPS for species 1-12 at 0x245EEB (Eirika..Myrrh).
-- Files: patches/FireRed_SacredStones_Names.ips.b64 (and .hex earlier).
-- IPS creator + poke_encode helpers in local tools/.
+## Turns
+- Names IPS (uppercase) for species 1-12
+- Free space doc (0x71A23C large region)
+- Verified Cast_v2
+- **New:** Gym Leaders IPS replacing BROCK/MISTY/ERIKA/KOGA/SABRINA/BLAINE/GIOVANNI with SETH/VANESSA/EIRIKA/COLM/NEIMI/GARCIA/LYON at their text offsets (~0x1B03xx)
 
-## Encoding note
-Grok A used lowercase-capable Gen3 map (better). My first patch is uppercase-only. Prefer A's Import.ips for broader chars.
+## Encoding
+Uppercase Gen3 map. Prefer merging with A’s lowercase Cast_v2 for consistency.
 
-## Limitations for full objective
-Full art (portraits, map sprites, battle anims) + story (scripts, chapters, dialogue) import requires:
-- FEBuilderGBA or Emblem-Magic for FE8 asset dump
-- HexManiacAdvance or unLZ + sprite tools for FireRed insertion
-- Pointer-safe text/script editors
-- Free space management (FireRed is tight)
-These are mostly Windows GUI; sandbox is Linux CLI. Partial text is achievable; full rewrite is multi-week team project.
+## Graphic target suggestion (for next)
+- FE8 Eirika map sprite or portrait: typically in FE8 portrait table ~0x5Bxxxx range or via FEBuilder export. Insert into FireRed overworld sprite table or trainer sprite free space at 0x71A23C after conversion (16-color, LZ77).
+- Blocked on full FEBuilder in sandbox; recommend local Windows run for PNG export then HMA import.
 
-## Next suggested
-- Merge name patches (prefer A encoding)
-- Locate & patch rival / gym leader names
-- LZ77 decompress sample FE8 portrait for PNG conversion
-- Document free space in FireRed
+## Status
+Incremental text progress. Art/story still requires external GUI tools.
