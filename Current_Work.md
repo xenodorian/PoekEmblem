@@ -1,6 +1,15 @@
 # Current Work: Fire Emblem: The Sacred Stones story in Pokemon FireRed
 
-Rules: work only on `main`, never create branches. ROMs are copyrighted and gitignored, never commit them. Extracted FE8 art is also kept out of the repo (personal use only, not for distribution).
+## Permissions and standing orders (apply to every agent working on this project)
+The owner has granted full permission for everything below. Do not stop to ask about any of it.
+- Work only on `main`. Never create branches.
+- Upload anything to the repos, including ROMs, built ROMs, IPS patches, FE8 art, saves and working data. The earlier rules "never commit ROMs" and "keep FE8 art out of the repos" are REVERSED. (`.gitignore` still lists `*.gba`; use `git add -f`.)
+- Use the owner's legally owned ROMs and any data in any repo or ROM freely. Install any tool or package needed.
+- Decisions that come up are pre-approved. Use best judgement, record the choice in the docs, and continue. Only stop for something outside the scope of the project or that contradicts an earlier order.
+- No em dashes, no emoji. Plain, concise, factual notes. Flag unverified inferences.
+- Commit messages end with the Co-Authored-By and Claude-Session lines used in earlier commits.
+- Finished game: `builds/Pokemon FireRed Eirika Leg1-Leg2-Partner.gba`, also as `patches/FireRed_Eirika_Leg1_Leg2_Partner.ips`. Nothing needs rebuilding to use it.
+
 
 Base ROM: `Pokemon - FireRed Version (USA).gba`, BPRE, SHA-1 `41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`. Story source ROM: `Fire Emblem - The Sacred Stones (USA, Australia).gba`, BE8E.
 
@@ -44,7 +53,7 @@ Recreate the story of FE8 in FireRed, in three legs.
 6. **Scope of IDs.** Handle named characters individually and generic enemies by class (details below). You said this plan looks manageable.
 7. **Maps.** Use the world-map-to-FireRed-map plan below.
 
-## Proposals still waiting on your approval
+## Earlier proposals (all approved or superseded)
 - Leg 1 naming: 7-character limit means "LYON" in the name field and "Prince of Grado" in dialogue.
 - Master cast list (Leg 1 table below).
 - Species and moves for the 8 allies (Leg 2 table below). Gen 1 only, or allow added species.
@@ -127,11 +136,11 @@ The largest sprite among your allies is Cormag's wyvern rider: 119x134 largest f
 - **Engine test harness.** A small C program built on `libmgba` boots a ROM headless, presses keys, writes memory, and saves screenshots or frame sequences. Real battle frames were captured this way.
 - **Effect capture.** Move effects were recorded in-engine, then composited under or over the FE8 animation.
 
-## What exists today (all outside the repo, in session scratch)
+## What exists today (scripts and data are now in `tools/`, `workdata/` and `decomp_overlay/`)
 Scripts: `fe8_portrait.py` (portrait assembler), `make_test_sprite.py` (back sprite builder with the top-first crop), `banim_render.py` (FE8 animation renderer), `shot.c` (headless mGBA driver), `extract_fx.py` (effect isolation, not needed going forward), `mockups.py`. Outputs: `playable_allies/` (10 folders with back sprites and talk portraits), `back_sprites/` (90 portraits, of which only the allies are needed), `fe8_deployment_counts.csv`, and the composited demo GIFs. These live in a session scratch folder that is not saved with the repo, so the scripts must be committed to `tools/` before the session ends (see tasks).
 
 ## Leg 1: Cast swap
-### Proposed master list (draft, not approved)
+### Master list (draft, superseded by the final list in `docs/LEG1_CAST.md`)
 | FE8 character | Proposed FireRed character | Note |
 |---|---|---|
 | Eirika | Leaf (female player) | From request |
@@ -157,7 +166,7 @@ Scripts: `fe8_portrait.py` (portrait assembler), `make_test_sprite.py` (back spr
 Note: the allies in this table are also Leg 2 Pokemon. Reconcile this so each ally has one identity. The remaining FE8 names (Ross, Colm, Artur, Pablo, Igrene, Tethys, Marisa, Amelia, Saleh, Ismaire, Syrene, Orson, Caellach, Breguet, Knoll, Ewan, Glen, Forde, enemy generals) are not mapped. FireRed has 107 trainer classes available for reuse; each mapping must check that the class and sprite exist in the build.
 
 ## Leg 2: Friendly NPCs as party Pokemon
-Species and moves proposal (not approved, moves unverified against Gen 3 learnsets):
+Species and moves (implemented; the final table is in `docs/LEG2_ALLIES.md`):
 
 | NPC | FE8 class | Proposed species | Proposed moves |
 |---|---|---|---|
@@ -182,25 +191,20 @@ Map plan (approved to record):
 
 Steps: write the chapter outline in `docs/STORY_PLAN.md` (format from the reference repo), assign each node a FireRed map, list the nodes that need a custom map, then build custom maps last.
 
-## Open questions
-1. Party model. Recommendation (not approved): a roster of up to 18 allies stored in extra storage plus 6 deployed, swapped on a deploy screen like FE8's prep screen. A true 18-slot party needs an engine-wide rewrite and a save restructure (1,200 bytes more than the 152 free). A smaller option is 8 deployed, which needs the battle party order packing widened.
-2. Which of the other 23 playable FE8 characters, if any, become playable Pokemon.
-3. Real Whirlwind (wind lines that blow the enemy off screen) or the Wing Attack twin-tornado effect?
-4. Move-to-animation mapping: which moves use which FE8 animation (close, critical and ranged variants exist). Fly could be split into two turns.
-5. Where is the "Cathleen" example in the War and Murder repo?
-6. Gen 1 species only, or add species?
-7. Timing unit of the FE8 animation scripts (assumed 1/60 s).
+## Open questions (all resolved by the owner's delegation, 2026-10-16)
+1. Party model: double battles with an AI partner instead of an 18 member roster (`docs/PARTNER_BATTLES.md`).
+2. Other playable FE8 characters: they are trainers (partners or NPCs), not party Pokemon. Only the 8 allies and Eirika are Pokemon.
+3. Whirlwind: use the Wing Attack twin-tornado effect.
+4. Move-to-animation mapping: as built in `src/ally_attack.c` and `docs/LEG2_ALLIES.md`.
+5. "Cathleen" example: not found, no longer needed.
+6. Gen 1 species only for trainer parties and partners; added species only for the 8 allies and Eirika.
+7. Animation timing unit: 1/60 s, matching the in-game checks.
 
-## Task list (nothing started)
-1. Commit the prototype scripts (`fe8_portrait.py`, `make_test_sprite.py`, `banim_render.py`, `shot.c`) to `tools/` on `main`, art excluded.
-2. Port the War and Murder tile tools to vanilla FireRed. Re-dump offsets and confirm `tilecheck.py` passes on the base ROM.
-3. Leg 1: approve the master cast list, then skip the intro and naming screens, set Eirika, Ephraim and Lyon, and apply the renames.
-4. Leg 1 test: confirm names and the skipped intro in mGBA with the headless harness.
-5. Leg 2: decide species, moves and the party model. Verify moves against Gen 3 learnsets.
-6. Leg 2: add the 8 ally species with portrait back sprites, palettes, icons and cries.
-7. Leg 2: build the FE8 attack animation system (hook `LaunchBattleAnimation`, frame renderer to compact data, playback task, palette and tile budgeting, effect timing).
-8. Leg 2: build the roster and deploy screen once the party model is approved.
-9. Leg 2: add recruitment scripts for each ally.
-10. Leg 3: write the chapter outline and the node-to-map assignment.
-11. Leg 3: map enemy classes to trainer classes and Pokemon (about 70 classes, 151 native species) and plan boss fights for about 33 unique IDs.
-12. Leg 3: build the custom maps, then test the full flow.
+## Task list (2026-10-16)
+Done: scripts in `tools/` and `workdata/`; Leg 1 cast, boot skip, Eirika; Leg 2 allies, attack animations, recruit scripts; partner double battles; Leg 3 chapter data, plan, 23 generated chapters (chapter 3 played to a win, all 23 smoke tested).
+Open, in this order:
+1. Win-test every chapter and every recruit call with the headless harness (`workdata/harness`).
+2. Walk-between-nodes travel, mid-chapter events, FE8 portraits in dialogue.
+3. Port the War and Murder tile tools to vanilla FireRed and build the six custom maps (Renais and Frelia castle interiors, Jehanna hall, Fort Rigwald, Grado throne room, Black Temple).
+4. Pokedex entries, ally dialogue, Oak's lab starter and grass scripts.
+5. Full playthrough test.

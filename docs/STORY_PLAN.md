@@ -2,7 +2,7 @@
 
 **Status: all decisions below approved (2026-10-16). Recruit points (2) and later partners (3) were left to my judgement. Future decisions are treated as approved.**
 
-Format follows `xenodorian/Pokemon-War-and-Murder` `docs/STORY_PLAN.md`: a flow plus numbered DECISION entries. Everything marked DECISION is a proposal for you to approve or change. Facts marked "verified" come from the FE8 decomp (`docs/FE8_CHAPTERS.md`, `docs/LEG2_ALLIES.md`). Facts marked "inferred" are derived from those and not checked in an emulator.
+Format follows `xenodorian/Pokemon-War-and-Murder` `docs/STORY_PLAN.md`: a flow plus numbered DECISION entries. Every DECISION is approved (the owner delegated all decisions to the working agent). Facts marked "verified" come from the FE8 decomp (`docs/FE8_CHAPTERS.md`, `docs/LEG2_ALLIES.md`). Facts marked "inferred" are derived from those and not checked in an emulator.
 
 ## Scope
 - Route: the Eirika route only (chapters Prologue to 8, then 9a to 21a, with 5x and 21x). Ephraim's route is not played. Ephraim appears only in cutscenes (DECISION 1).
@@ -51,7 +51,7 @@ Notes. Tana, Duessel and Myrrh have no recruit event in the Eirika-route scripts
 ## Decisions
 
 1. **Ephraim.** He appears as a cutscene character on the Red cast slot. The two routes' battles are not both built. The Ephraim-route chapters (9b to 21b) are summarized in dialogue only.
-2. **Recruit points for the eight allies.** Innes in 10a, L'Arachel and Dozla in 11a, Cormag in 13a, Joshua in 5 (all verified). Tana joins in 9a with Amelia's scene, Duessel joins in 10a with Gerik's group, Myrrh joins in 12a (all three proposals, because the Eirika-route scripts do not show them).
+2. **Recruit points for the eight allies.** Innes in 10a, L'Arachel and Dozla in 11a, Cormag in 13a, Joshua in 5 (all verified). Tana joins in 9a with Amelia's scene, Duessel joins in 10a with Gerik's group, Myrrh joins in 12a (my choices, because the Eirika-route scripts do not show them).
 3. **Partner battles.** Seth partners in 3 and 4, Joshua (Blaine slot) from 5. From 9a onward the partner is whoever best fits the scene: Innes (10a), L'Arachel (11a), Cormag (13a). The partner is a trainer slot whose party stands in for that character.
 4. **Enemy forces.** An FE8 map's 20 to 80 enemies becomes 3 to 6 trainer battles on the map, each with at most 6 Pokemon. The named boss is the last battle.
 5. **Skirmishes** become wild encounter tables on the same maps.
@@ -59,7 +59,7 @@ Notes. Tana, Duessel and Myrrh have no recruit event in the Eirika-route scripts
 7. **Boss parties** are hand-written: level scales with the chapter (FE8 boss levels 4 to 20 become Pokemon levels 8 to 62).
 8. **Dungeons.** Tower of Valni becomes the Pokemon Tower floors (8 floors), Lagdou Ruins becomes the Tanoby Ruins chambers plus Cinnabar Mansion (10 floors). Melkaen Coast becomes a One Island beach map. All optional, after Chapter 8.
 
-## Node to FireRed map assignment (proposal)
+## Node to FireRed map assignment (approved)
 
 | FE8 node | FireRed map | Custom map needed |
 | --- | --- | --- |
