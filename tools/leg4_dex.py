@@ -1,15 +1,15 @@
 import re
 D='src/data/pokemon/'
 allies=[ # sp name, dexconst, cat, h(dm), w(hg), text
- ('INNES','OLD_UNOWN_B','ARCHER',18,660,"Prince of Frelia and a master archer.\nHe trusts his bow over any blade and\nrarely misses."),
- ('TANA','OLD_UNOWN_C','PEGASUS',16,480,"A pegasus knight of Frelia. She flies\nahead of the army to scout and to\nreach her brother Innes."),
- ('LARACHEL','OLD_UNOWN_D','TROUBADOUR',15,450,"A Rausten priestess who heals allies.\nShe is loud, proud and certain she\nis the chosen one."),
- ('DOZLA','OLD_UNOWN_E','BERSERKER',22,1100,"A huge Jehanna warrior who fights\nwith an axe. His strength is great\nand his heart is gentle."),
- ('JOSHUA','OLD_UNOWN_F','MYRMIDON',17,580,"A wandering swordsman from Jehanna.\nHe gambles on everything, but his\nblade never loses."),
- ('DUESSEL','OLD_UNOWN_G','GREAT KNIGHT',19,1200,"The Silver Axe of Grado. He serves\nonly honor and left the empire to\nstand with Eirika."),
- ('CORMAG','OLD_UNOWN_H','WYVERN',18,700,"A Grado wyvern rider who changed\nsides. His wyvern follows him into\nany battle."),
- ('MYRRH','OLD_UNOWN_I','MANAKETE',12,300,"A young manakete who can become a\ndragon. She is shy, curious and\nalways hungry."),
- ('EIRIKA','OLD_UNOWN_Z','PRINCESS',16,520,"Princess of Renais. She took up the\nrapier to protect her people and to\nsave her twin brother."),
+ ('INNES','OLD_UNOWN_B','ARCHER',18,660,"Crown prince of Frelia and a sniper\nwith no equal. He is calm and proud,\nand he guards his sister Tana."),
+ ('TANA','OLD_UNOWN_C','PEGASUS',16,480,"A pegasus knight of Frelia and\nInnes's younger sister. She is\nbright and quick, and loves to fly."),
+ ('LARACHEL','OLD_UNOWN_D','TROUBADOUR',15,450,"A Rausten princess who wields a\nstaff and a loud voice. She thinks\nshe is a hero and acts like one."),
+ ('DOZLA','OLD_UNOWN_E','BERSERKER',22,1100,"A strong axe fighter of Jehanna.\nHe looks fierce but is kind, and\nhe never leaves a friend behind."),
+ ('JOSHUA','OLD_UNOWN_F','MYRMIDON',17,580,"A swordsman from Jehanna. He lives\nby the dice and wins more than\nhe loses, with a blade or a bet."),
+ ('DUESSEL','OLD_UNOWN_G','GREAT KNIGHT',19,1200,"Once the Silver Axe of Grado. A\nloyal and serious knight who left\nthe empire to keep his honor."),
+ ('CORMAG','OLD_UNOWN_H','WYVERN',18,700,"A wyvern rider of Grado who chose\nto leave the empire. He is quiet,\nsteady and loyal to his friends."),
+ ('MYRRH','OLD_UNOWN_I','MANAKETE',12,300,"A young manakete who can turn into\na dragon. She is shy and gentle,\nand she is always hungry."),
+ ('EIRIKA','OLD_UNOWN_Z','PRINCESS',16,520,"Princess of Renais and twin sister\nof Ephraim. She wields a rapier and\nleads the march to save the land."),
 ]
 # enum reorder
 p='include/constants/pokedex.h'; t=open(p).read()

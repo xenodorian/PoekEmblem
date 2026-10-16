@@ -52,7 +52,7 @@
     }
    ],
    "after": [
-    "Ross and Garcia join the party."
+    "Ross and Garcia fall back. The border road is open."
    ],
    "mid": {
     "speaker": "SPECIES_EIRIKA",
@@ -128,7 +128,7 @@
     "text": "Grado's soldiers are everywhere. Keep moving."
    },
    "recruit_lines": {
-    "Joshua": "Joshua: Heh. A princess on the run? I'll lend my sword. Fair pay, fair play."
+    "Joshua": "Joshua: Heh. A princess on the run? I will lend my sword. Fair pay, fair play."
    }
   },
   {
@@ -154,7 +154,7 @@
    },
    "ally_talk": {
     "speaker": "SPECIES_JOSHUA",
-    "text": "Joshua: Villagers first, coin later. Even I can't take pay from this lot."
+    "text": "Joshua: Villagers first, coin later. Even I cannot take pay from this lot."
    }
   },
   {
@@ -230,7 +230,7 @@
     "text": "A lone fighter holds the road ahead."
    },
    "recruit_lines": {
-    "Tana": "Tana: Princess Eirika! I'm Tana of Frelia. Innes is waiting. Let me guide you."
+    "Tana": "Tana: Princess Eirika! I am Tana of Frelia. Innes is waiting. Let me guide you."
    }
   },
   {
@@ -290,7 +290,7 @@
    },
    "recruit_lines": {
     "LArachel": "L'Arachel: Fear not! The great L'Arachel has arrived to rescue you!",
-    "Dozla": "Dozla: Dozla is strong. Dozla will fight for you. Let's go!"
+    "Dozla": "Dozla: Dozla is strong. Dozla will fight for you. Let us go!"
    }
   },
   {
@@ -318,7 +318,7 @@
     "text": "No one answers. Something is wrong in this village."
    },
    "recruit_lines": {
-    "Myrrh": "Myrrh: Um... I'm Myrrh. I can fight. Can I stay with you? I'm hungry too."
+    "Myrrh": "Myrrh: Um... I am Myrrh. I can fight. May I stay with you? I am hungry, too."
    }
   },
   {
@@ -346,7 +346,7 @@
     "text": "The canyon narrows. Stay in formation."
    },
    "recruit_lines": {
-    "Cormag": "Cormag: Grado betrayed my honor. I'll ride with you, Princess, and prove it."
+    "Cormag": "Cormag: Grado betrayed my honor. I will ride with you, Princess, and prove it."
    }
   },
   {
@@ -583,7 +583,7 @@
     ],
     [
      "SPECIES_INNES",
-     "Innes: Grado is broken. I will take Frelia's banner home, and I owe you my life, Eirika."
+     "Innes: Grado is broken. I will take Frelia's banner home. I owe you a debt, Eirika."
     ],
     [
      "SPECIES_TANA",
@@ -591,7 +591,7 @@
     ],
     [
      "SPECIES_LARACHEL",
-     "L'Arachel: Naturally the Rhoden hero saved the world! I shall write a ballad of it."
+     "L'Arachel: Of course Rausten's hero saved the day! I shall write a ballad of it."
     ],
     [
      "SPECIES_DOZLA",
@@ -599,11 +599,11 @@
     ],
     [
      "SPECIES_JOSHUA",
-     "Joshua: Not bad for a gambler's luck. I will see what Jehanna's tables are like now."
+     "Joshua: Not bad for a gambler's luck. Now to see what the Jehanna tables hold."
     ],
     [
      "SPECIES_DUESSEL",
-     "Duessel: The Obsidian guards the king no more. I will guard the peace instead."
+     "Duessel: The Silver Axe guarded a king once. Now I will guard the peace."
     ],
     [
      "SPECIES_CORMAG",
