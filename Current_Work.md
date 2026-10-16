@@ -140,30 +140,8 @@ The largest sprite among your allies is Cormag's wyvern rider: 119x134 largest f
 Scripts: `fe8_portrait.py` (portrait assembler), `make_test_sprite.py` (back sprite builder with the top-first crop), `banim_render.py` (FE8 animation renderer), `shot.c` (headless mGBA driver), `extract_fx.py` (effect isolation, not needed going forward), `mockups.py`. Outputs: `playable_allies/` (10 folders with back sprites and talk portraits), `back_sprites/` (90 portraits, of which only the allies are needed), `fe8_deployment_counts.csv`, and the composited demo GIFs. These live in a session scratch folder that is not saved with the repo, so the scripts must be committed to `tools/` before the session ends (see tasks).
 
 ## Leg 1: Cast swap
-### Master list (draft, superseded by the final list in `docs/LEG1_CAST.md`)
-| FE8 character | Proposed FireRed character | Note |
-|---|---|---|
-| Eirika | Leaf (female player) | From request |
-| Ephraim | Red (male player) | From request |
-| Lyon | Rival (renamed) | From request |
-| Seth | Brock | Proposal |
-| Franz | Misty | Proposal |
-| Gilliam | Lt. Surge | Proposal |
-| Vanessa | Erika | Proposal |
-| Moulder | Professor Oak | Proposal |
-| Garcia | Koga | Proposal |
-| Neimi | Daisy | Proposal |
-| Cormag | Lance | Proposal |
-| Natasha | Nurse Joy | Proposal |
-| Lute | Sabrina | Proposal |
-| Joshua | Blaine | Proposal, check vibe |
-| Tana | Bill | Proposal, check vibe |
-| L'Arachel | Lorelei | Proposal |
-| Dozla | Bruno | Proposal |
-| Myrrh | Agatha | Proposal |
-| Innes | Giovanni | Proposal, check vibe |
-
-Note: the allies in this table are also Leg 2 Pokemon. Reconcile this so each ally has one identity. The remaining FE8 names (Ross, Colm, Artur, Pablo, Igrene, Tethys, Marisa, Amelia, Saleh, Ismaire, Syrene, Orson, Caellach, Breguet, Knoll, Ewan, Glen, Forde, enemy generals) are not mapped. FireRed has 107 trainer classes available for reuse; each mapping must check that the class and sprite exist in the build.
+### Master list
+The final cast (55 characters) is in `docs/LEG1_CAST.md`. The earlier draft table here was removed because the final identities differ (for example Garcia is Blaine, Colm is Koga, and Joshua is a Pokemon ally).
 
 ## Leg 2: Friendly NPCs as party Pokemon
 Species and moves (implemented; the final table is in `docs/LEG2_ALLIES.md`):
