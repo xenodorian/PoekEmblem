@@ -66,7 +66,7 @@ SOLID_FR = {8, 26, 27, 28, 32, 40, 33, 34, 41, 42, 43, 44, 45, 46, 47, 49, 50, 5
 WALL_CH = set('#=') | set(WALL_OBJ)
 FLOORISH = set('.cpTab')
 # layout legend (see docs/INDOOR_TILING.md)
-LEGEND = {' ': 'void', '#': 'FE8 brick wall (two rows: cap, face)', '=': 'FireRed cream wall panel', '.': 'slab floor',
+LEGEND = {' ': 'void', '#': 'FE8 brick wall (two rows: cap, face; a room uses # or =/objects, never both)', '=': 'FireRed cream wall panel', '.': 'slab floor',
           'c': 'rug', 'T': 'table (2x2, on rug)', 'a': 'chair facing east', 'b': 'chair facing west',
           'p': 'tall plant (pot cell, plant top is the cell above)', 'D': 'door in the bottom wall row',
           'w': 'window', 's': 'shelf', 'k': 'sink', 'f': 'fridge', 'x': 'cabinet'}
@@ -75,8 +75,8 @@ LEGEND = {' ': 'void', '#': 'FE8 brick wall (two rows: cap, face)', '=': 'FireRe
 # 2. TEST ROOM (15 x 16 metatiles). Row 0 is the wall cap row, row 1 the face row.
 # ======================================================================================
 ROOM = [
-    "######=========",
-    "######=wwssxxf=",
+    " ============= ",
+    " ==wwssxxf==== ",
     " ............. ",
     " .p........... ",
     " ............. ",
@@ -85,12 +85,11 @@ ROOM = [
     " ......caTTbc. ",
     " ......cccccc. ",
     " ............. ",
-    "     ...ccc... ",
-    "     ...ccc... ",
-    "     ...ccc... ",
-    "     .p.ccc.p. ",
-    "     ......... "
-    ,
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc...p. ",
+    " ............. ",
     "         D     ",
 ]
 # normalise: every row is 15 wide
@@ -281,7 +280,7 @@ def autotile(layout=ROOM, reg=None, fr=None, seed=0):
                         put(x + i, y - 1, cap[col], 1, 'fr') if ids[y - 1][x + i] is None else None
                         put(x + i, y, face[col], 1, 'fr')
                     x += run; continue
-                if floorish(x, y + 1) or (ch(x, y + 1) not in WALL_CH and ch(x, y - 1) in WALL_CH):   # face row (a wall also runs on over the side void)
+                if floorish(x, y + 1):   # face row: a wall cell always has floor below it (no wall over void)
                     if ch(x, y - 1) not in WALL_CH: raise RuleError('wall face at %s has no cap above it' % ((x, y),))
                     if c == '#': put(x, y, reg.wall('brick', *wall_end(x, y)), 1)
                     else: put(x, y, FR_FACE, 1, 'fr')
@@ -399,6 +398,29 @@ def validate(res):
     for (ents, attr) in reg.metas:
         for e in ents:
             if e and e < SEC0 and (e >> 12) > 6: bad.append(('palette-outside-primary', e, 0))
+    # 6. ONE wall style per room, and wall width == floor width (no wall over void, no floor edge without wall)
+    wall_cells = [(x, y) for y in range(H) for x in range(W) if ch(x, y) in WALL_CH]
+    if any(ch(x, y) == '#' for x, y in wall_cells) and any(ch(x, y) != '#' for x, y in wall_cells): bad.append(('mixed-wall-styles', 0, 0))
+    wrows = sorted({y for _, y in wall_cells})
+    for y in wrows:
+        for x in range(W):
+            if ch(x, y) in WALL_CH:
+                st = {'#': 'fe8'}.get(ch(x, y), 'fr')
+                if not (res['src'][y][x] == st or (st == 'fe8' and res['src'][y][x] == 'fe8')): bad.append(('wall-style-mismatch', x, y))
+    frows = [y for y in range(H) if any(ch(x, y) in FLOORISH for x in range(W))]
+    fcols = {x for y in frows for x in range(W) if ch(x, y) in FLOORISH}
+    if fcols and fcols != set(range(min(fcols), max(fcols) + 1)): bad.append(('floor-not-contiguous', 0, 0))
+    for y in frows:
+        r = {x for x in range(W) if ch(x, y) in FLOORISH}
+        if r != fcols: bad.append(('floor-not-rectangle', min(r ^ fcols), y))
+    if frows and frows != list(range(frows[0], frows[-1] + 1)): bad.append(('floor-rows-gap', 0, 0))
+    for y in wrows:
+        r = {x for x in range(W) if ch(x, y) in WALL_CH}
+        if r != fcols: bad.append(('wall-width-mismatch', min(r ^ fcols), y))
+    for x in range(W):
+        for y in range(H):
+            if ch(x, y) in FLOORISH and ch(x, y - 1) not in FLOORISH and ch(x, y - 1) not in WALL_CH: bad.append(('floor-edge-without-wall', x, y))
+            if ch(x, y) in WALL_CH and ch(x, y + 1) not in WALL_CH and ch(x, y + 1) not in FLOORISH: bad.append(('wall-over-void', x, y))
     if bad: raise RuleError('%d rule violations, first: %s' % (len(bad), bad[:8]))
     return 0
 
@@ -511,9 +533,21 @@ def selftest():
     L3 = list(ROOM); L3[14] = L3[14][:8] + 'p' + L3[14][9:]       # plant on the cell above the door mat... mat needs plain floor
     try: autotile(L3); raise SystemExit('door rule did not fire')
     except RuleError: pass
-    # wall end corner: the outer quadrants of a wall cell beside void use palette 10, an inner cell does not
-    reg = res['reg']; e0 = reg.metas[res['ids'][0][0] - SEC0][0]; e1 = reg.metas[res['ids'][0][2] - SEC0][0]
+    # brick wall end corner: the outer quadrants of a wall cell beside void use palette 10, an inner cell does not
+    BR = [" ########### ", " ########### "] + [" ........... "] * 3 + ["      D      "]
+    r2 = autotile(BR); reg = r2['reg']; e0 = reg.metas[r2['ids'][0][1] - SEC0][0]; e1 = reg.metas[r2['ids'][0][3] - SEC0][0]
     assert (e0[0] >> 12) == 10 and (e0[1] >> 12) == 9 and (e1[0] >> 12) == 9, 'wall corner block'
+    # wall rules: mixed styles, wall past the floor, floor L shape
+    def must_fail(lay, why):
+        try: autotile(lay); raise SystemExit(why + ' rule did not fire')
+        except RuleError: pass
+    good = [" ========= ", " ========= "] + [" ......... "] * 3 + ["    D      "[:11]]
+    good[-1] = "     D     "
+    autotile(good)
+    mixed = list(good); mixed[0] = " ###======= "; mixed[1] = " ###======= "; must_fail(mixed, 'mixed wall')
+    wide = list(good); wide[0] = "=========== "; wide[1] = "=========== "; must_fail(wide, 'wall past floor')
+    narrow = list(good); narrow[0] = "  ======== "; narrow[1] = "  ======== "; must_fail(narrow, 'wall narrower than floor')
+    ell = list(good); ell[3] = "     ..... "; ell[4] = "     ..... "; must_fail(ell, 'floor L shape')
     # irregular floor: accents never touch, and the old x + 2y = 0 mod 4 lattice is gone
     assert not any(accent_adjacent(x, y) for x in range(40) for y in range(40))
     assert any(is_accent(x, y) != ((x + 2 * y) % 4 == 0) for x in range(20) for y in range(20))

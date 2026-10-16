@@ -13,10 +13,10 @@ root = Path(sys.argv[1])
 DOOR = ["      D        "]
 
 ROOMS = {
- # throne hall: cream wall with windows, shelves, cabinets between FE8 wall ends, red carpet, potted plants
+ # throne hall (one style: cream wall, wall width == floor width): cream wall with windows, shelves, cabinets between FE8 wall ends, red carpet, potted plants
  'Story_RenaisCastle': (11, 'story_renais_castle', [
-    "##===========##",
-    "##=wwssfxxss=##",
+    " ============= ",
+    " ==wwssfxxss== ",
     " ............. ",
     " .p.........p. ",
     " ....ccccc.... "[:15],
@@ -34,8 +34,8 @@ ROOMS = {
   {'Sign0': (5, 1), 'Sign1': (11, 1)}),
  # airy hall: cream centre, council table on a rug island, plants
  'Story_FreliaCastle': (23, 'story_frelia_castle', [
-    "###=========###",
-    "###=wwssxxf=###",
+    " ============= ",
+    " ===wwssxxf=== ",
     " ............. ",
     " ............. ",
     " ...ccccccc... ",
@@ -51,10 +51,10 @@ ROOMS = {
     " ............. "] + DOOR,
   {'Knight': (3, 9), 'Knight2': (11, 9), 'Page': (4, 13), 'Noble': (10, 13), 'Chest': (3, 14)},
   {'Sign0': (1, 1), 'Sign1': (13, 1)}),
- # stone hall with a dais rug and one window
+ # stone hall with a dais rug, FE8 brick wall only (no wall objects)
  'Story_JehannaHall': (37, 'story_jehanna_hall', [
-    "######====#####",
-    "######=ww=#####"[:15],
+    " ############# ",
+    " ############# ",
     " ............. ",
     " ...ccccccc... ",
     " ...ccccccc... ",
@@ -70,10 +70,10 @@ ROOMS = {
     " ............. "] + DOOR,
   {'Sage': (7, 10), 'Warrior': (3, 12), 'Scholar': (11, 12), 'Chest': (12, 14)},
   {'Sign0': (6, 1)}),
- # dark stone temple with an altar table
+ # dark stone temple with an altar table, FE8 brick wall only
  'Story_BlackTemple': (51, 'story_black_temple', [
-    "#####=====#####",
-    "#####=xxf=#####",
+    " ############# ",
+    " ############# ",
     " ............. ",
     " ............. ",
     " ....ccccc.... ",

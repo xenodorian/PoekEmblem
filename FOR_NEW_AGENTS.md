@@ -50,3 +50,7 @@ See Current_Work.md. Chapters 4, 12 and 16-22 stalled in one test only because t
 * Rebuild order for story maps: leg4_story_tilesets.py (PROPS=0), leg5_story_map_objects.py, leg7_donor_maps.py, leg9_indoor_maps.py, then SCRIPTS_ONLY=1 leg3_story.py.
 * A previous worker briefly overwrote a local tarball. Check `git status` for modified tarballs before committing and never reuse a name.
 * Deploy and party model: `docs/DEPLOY_AND_PARTY.md`.
+
+## Update (Leg11)
+* Latest source tree: `decomp_full_v11.tar.gz`. Next free tarball number is v12.
+* Indoor room rules: one wall style per room (# brick or = cream with objects), wall width equals floor width, floor must be a rectangle. validate() rejects anything else, so edit the grids in tools/leg9_indoor_maps.py and rerun; do not widen walls over the side void. Render check: `python3 tools/render_story_maps.py <tree> out.png`.

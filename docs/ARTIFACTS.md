@@ -17,6 +17,7 @@ The base ROM is `Pokemon - FireRed Version (USA).gba` (BPRE, SHA-1 `41cb23d8dccc
 | decomp_full_v8.tar.gz | 20.6 | yes |
 | decomp_full_v9.tar.gz | 20.5 | yes |
 | decomp_full_v10.tar.gz | 20.5 | yes |
+| decomp_full_v11.tar.gz | 27.3 | yes |
 
 Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pokefirered, run `make -j8`. Tarballs carry no build output.
 
@@ -46,12 +47,14 @@ Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pok
 | Pokemon FireRed Eirika Leg9-IndoorMaps.gba | 16.8 | 4b5e8f56703c | FireRed_Eirika_Leg9_IndoorMaps.ips | yes |
 | Pokemon FireRed Eirika Leg9-TextPass.gba | 16.8 | 0f8a2cbcdc3a | FireRed_Eirika_Leg9_TextPass.ips | yes |
 | Pokemon FireRed Eirika Leg10-TheEndCard.gba | 16.8 | 9213b5eba5bc | FireRed_Eirika_Leg10_TheEndCard.ips | yes |
+| Pokemon FireRed Eirika Leg11-WallFix.gba | 16.8 | e03c671fac1f | FireRed_Eirika_Leg11_WallFix.ips | yes |
 
 ## IPS patches in patches/
 
 | File | Size MB |
 |---|---|
 | FireRed_Eirika_Leg10_TheEndCard.ips | 9.4 |
+| FireRed_Eirika_Leg11_WallFix.ips | 9.4 |
 | FireRed_Eirika_Leg1_Leg2_Partner.ips | 9.4 |
 | FireRed_Eirika_Leg4.ips | 9.5 |
 | FireRed_Eirika_Leg5.ips | 9.5 |
