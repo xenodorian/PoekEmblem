@@ -1,0 +1,45 @@
+diff --git a/src/oak_speech.c b/src/oak_speech.c
+index 77dd3db..a8c1b06 100644
+--- a/src/oak_speech.c
++++ b/src/oak_speech.c
+@@ -111,6 +111,8 @@ extern const u8 gText_ABUTTONNext[];
+ extern const u8 gText_ABUTTONNext_BBUTTONBack[];
+ extern const u8 gText_Boy[];
+ extern const u8 gText_Girl[];
++extern const u8 gText_FixedPlayerName[];
++extern const u8 gText_FixedRivalName[];
+ extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
+ extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
+ extern const struct OamData gOamData_AffineOff_ObjNormal_32x16;
+@@ -1276,10 +1278,14 @@ static void Task_OakSpeech_AskPlayerGender(u8 taskId)
+         }
+         else
+         {
+-            tTrainerPicPosX = -60;
+-            ClearTrainerPic();
+-            OakSpeechPrintMessage(gOakSpeech_Text_AskPlayerGender, sOakSpeechResources->textSpeed);
+-            gTasks[taskId].func = Task_OakSpeech_ShowGenderOptions;
++            // Gender, player name and rival name are fixed: skip the gender and naming screens
++            gSaveBlock2Ptr->playerGender = FEMALE;
++            StringCopy(gSaveBlock2Ptr->playerName, gText_FixedPlayerName);
++            StringCopy(gSaveBlock1Ptr->rivalName, gText_FixedRivalName);
++            tTrainerPicPosX = 0;
++            gSpriteCoordOffsetX = 0;
++            tTimer = 0;
++            gTasks[taskId].func = Task_OakSpeech_ReshowPlayersPic;
+         }
+     }
+ }
+diff --git a/src/strings.c b/src/strings.c
+index c099555..64fc56d 100644
+--- a/src/strings.c
++++ b/src/strings.c
+@@ -52,6 +52,8 @@ ALIGNED(4) const u8 gText_UPDOWNPick_ABUTTONBBUTTONCancel[] = _("{DPAD_UPDOWN}PI
+ ALIGNED(4) const u8 gText_ABUTTONExit[] = _("{A_BUTTON}EXIT");
+ const u8 gText_Boy[] = _("BOY");
+ const u8 gText_Girl[] = _("GIRL");
++const u8 gText_FixedPlayerName[] = _("EIRIKA");
++const u8 gText_FixedRivalName[] = _("LYON");
+ const u8 gText_PokedexTableOfContents[] = _("POKéDEX   TABLE OF CONTENTS");
+ const u8 gText_PickOK[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK");
+ const u8 gText_Seen[] = _("Seen:");

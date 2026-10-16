@@ -6,6 +6,13 @@ Base ROM: `Pokemon - FireRed Version (USA).gba`, BPRE, SHA-1 `41cb23d8dccc8ebd7c
 
 Status as of 2026-10-16: planning plus feasibility prototypes. No ROM has been patched and nothing in this list has been executed in the repo yet. All prototype work lives in session scratch space and is listed under "What exists today".
 
+## Leg 1 progress (2026-10-16)
+Built from a copy of the FireRed decomp (`/home/user/pret/pokefirered_leg1`, session only). Source changes are in `patches/leg1/leg1_naming_bypass_src.diff` (code only). The art swaps use FE8 art, so they and the IPS built from them are not in the repo. The IPS was made locally as `FireRed_Eirika_Leg1.ips` (applies to vanilla BPRE, verified byte-identical to the built ROM).
+- Done: the gender and naming screens are skipped in Oak's speech. The player is always female, named EIRIKA, and the rival is named LYON. Oak's speech text and the controls guide and Pikachu intro pages are unchanged.
+- Done: Eirika's portrait (64x64 crop) replaces Leaf's trainer front pic (trainer card, link, other trainer pic uses), Leaf's Oak speech pic and Leaf's battle back pic (same still image in all five frames).
+- Checked in emulator: Oak speech shows Eirika and prints "EIRIKA!"; the starting room loads and text uses EIRIKA; a test battle shows the Eirika back pic. Not yet checked: trainer card, rival name in rival dialogue, Hall of Fame.
+- Not done: Eirika as a Pokemon species with her back sprite (needs the party model decision), the rival's Oak speech pic and overworld sprite, Leaf's overworld sprite, skipping Oak's speech and the intro pages.
+
 ## Goal
 Recreate the story of FE8 in FireRed, in three legs.
 
