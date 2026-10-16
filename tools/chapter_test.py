@@ -15,7 +15,7 @@ class Drv:
         s.p = subprocess.Popen([DRV, rom, '-'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
         def rd():
             for l in s.p.stdout:
-                if l.startswith(('r16p', 'echo')): s.q.put(l.strip())
+                if l.startswith(('r16p', 'echo', 'r8', 'r32', 'r16 ')): s.q.put(l.strip())
         threading.Thread(target=rd, daemon=True).start()
     def cmd(s, c, reply=False):
         s.p.stdin.write(c + '\n')
@@ -54,17 +54,44 @@ def run(rom, out, ch, maxframes=40000):
     os.makedirs(out, exist_ok=True)
     d = Drv(rom); d.cmd('run 600')
     d.cmd('w16p %x %x %x' % (SB1, V_CH, ch)); buff(d)
+    if os.environ.get('DUO') == '1':   # test driver only: a second party mon so Destiny Bond (ch22 Gengar) cannot wipe the party
+        for i in range(25):
+            o = d.cmd('r32 %x' % (PARTY + 4*i), True)[0].split()[-1]
+            d.cmd('w32 %x %s' % (PARTY + 100 + 4*i, o))
+        d.cmd('w8 02024029 2'); buff(d, 2)
     d.cmd('w16p %x %x 1' % (SB1, V_PEND))
-    res = 'HANG'; f = 0; last = None; stall = 0; shots = 0
+    endn = [0]; res = 'HANG'; f = 0; last = None; stall = 0; shots = 0
     while f < maxframes:
         if os.environ.get('CYCLE') == '1' and (f // 16) % 9 == 8: d.cmd('keys 80 4'); d.cmd('run 8')   # cycle the move cursor so a Disabled move does not stall the run
+        if os.environ.get('DUO') == '1' and (f // 16) % 2 == 0:   # party menu after a faint: move the cursor off the dead lead to slot 2 (test driver only)
+            d.cmd('shot /tmp/pm_%d.png' % os.getpid()); d.cmd('r8 02024029', True)
+            try:
+                from PIL import Image
+                if Image.open('/tmp/pm_%d.png' % os.getpid()).convert('RGB').getpixel((200, 100)) == (74, 173, 165):
+                    d.cmd('keys 10 4'); d.cmd('run 10')
+            except Exception: pass
+        if os.environ.get('ENDCAP') == '1' and f > 9500:   # capture the fade/THE END screens: hold off on A while the screen is mostly black
+            d.cmd('shot /tmp/bk_%d.png' % os.getpid()); d.cmd('r8 02024029', True)
+            try:
+                from PIL import Image
+                im = Image.open('/tmp/bk_%d.png' % os.getpid()).convert('L'); px = list(im.tobytes())
+                if sum(1 for q in px if q < 20) / len(px) > 0.6 and endn[0] < 60:
+                    endn[0] += 1; d.cmd('run 20'); d.cmd('shot %s/ch%02d_end_%03d.png' % (out, ch, endn[0])); f += 20; continue
+            except Exception: pass
         d.cmd('keys 1 4'); d.cmd('run 12'); f += 16
-        buff(d)  # keep HP topped
-        if f % 800 == 0:
+        buff(d, 2 if os.environ.get('DUO') == '1' else 1)  # keep HP topped
+        if f % int(os.environ.get("SHOTEVERY","800")) == 0:
             d.cmd('shot %s/ch%02d_%03d.png' % (out, ch, shots)); shots += 1
         if f % 160 == 0:
             v = d.var(V_CH)
-            if v != ch: res = 'PASS' if v == ch + 1 else 'ODD(%d)' % v; break
+            if v != ch:
+                res = 'PASS' if v == ch + 1 else 'ODD(%d)' % v
+                for k in range(int(os.environ.get('CONT', '0')) // 16):   # keep going after the win to capture what follows (epilogue, THE END)
+                    if os.environ.get('POSTSLOW') == '1':   # tap A every 40 frames, shot every 20, so short screens are captured
+                        d.cmd('keys 1 4'); d.cmd('run 16'); d.cmd('shot %s/ch%02d_post_%03d.png' % (out, ch, 2*k)); d.cmd('run 20'); d.cmd('shot %s/ch%02d_post_%03d.png' % (out, ch, 2*k+1)); continue
+                    d.cmd('keys 1 4'); d.cmd('run 12')
+                    if k % 5 == 0: d.cmd('shot %s/ch%02d_post_%03d.png' % (out, ch, k))
+                break
     d.cmd('shot %s/ch%02d_end.png' % (out, ch))
     d.close(); return res, f
 
