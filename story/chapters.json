@@ -1,0 +1,430 @@
+{
+ "levels_note": "Pokemon levels follow the chapter: ch0 5 up to ch21 about 55.",
+ "chapters": [
+  {
+   "id": 0,
+   "title": "The Fall of Renais",
+   "map": "MAP_PALLET_TOWN",
+   "before": [
+    "Grado's army has broken the peace and marched on Renais. The castle is burning.",
+    "Eirika, you must run. Find your brother Ephraim in Frelia."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_TEAM_ROCKET_GRUNT_27"
+    }
+   ],
+   "after": [
+    "O'Neill falls back. The road to the border is open."
+   ]
+  },
+  {
+   "id": 1,
+   "title": "Escape!",
+   "map": "MAP_ROUTE1",
+   "before": [
+    "Grado soldiers hunt the royal party on the road to the border."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_COOLTRAINER_ROLANDO"
+    }
+   ],
+   "after": [
+    "Breguet is beaten. The border at Mulan is close."
+   ]
+  },
+  {
+   "id": 2,
+   "title": "The Protected",
+   "map": "MAP_ROUTE1",
+   "before": [
+    "Bandits hold the border town. Ross and Garcia stand in their way."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_TEAM_ROCKET_GRUNT_31",
+     "b": null
+    }
+   ],
+   "after": [
+    "Ross and Garcia join the party."
+   ]
+  },
+  {
+   "id": 3,
+   "title": "The Bandits of Borgo",
+   "map": "MAP_ROUTE3",
+   "before": [
+    "Borgo Ridge is full of bandits. Seth rides at your side."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_TEAM_ROCKET_GRUNT_32",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_31",
+     "partner": "TRAINER_LEADER_BROCK"
+    }
+   ],
+   "after": [
+    "Colm, a thief of Renais, offers his help."
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Ancient Horrors",
+   "map": "MAP_VIRIDIAN_FOREST",
+   "before": [
+    "The dead walk in Zaha Woods. Something old has woken."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_PSYCHIC_TYRON",
+     "b": "TRAINER_SCIENTIST_JERRY",
+     "partner": "TRAINER_LEADER_BROCK"
+    }
+   ],
+   "after": [
+    "The graveyard falls quiet."
+   ]
+  },
+  {
+   "id": 5,
+   "title": "The Empire's Reach",
+   "map": "MAP_PEWTER_CITY",
+   "before": [
+    "Grado troops hold the city. A swordsman named Joshua watches from the walls."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_GENTLEMAN_THOMAS",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_36",
+     "partner": "TRAINER_LEADER_BLAINE"
+    }
+   ],
+   "recruits": [
+    "Joshua"
+   ],
+   "after": [
+    "Joshua joins you for a fee and a laugh."
+   ]
+  },
+  {
+   "id": 6,
+   "title": "Victims of War",
+   "map": "MAP_ROUTE2",
+   "before": [
+    "A burned village. Novala's dark mages are close."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_SCIENTIST_IVAN",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_28",
+     "partner": "TRAINER_LEADER_BLAINE"
+    }
+   ],
+   "after": [
+    "The villagers are safe for now."
+   ]
+  },
+  {
+   "id": 7,
+   "title": "Waterside Renvall",
+   "map": "MAP_VERMILION_CITY",
+   "before": [
+    "Pirates and Grado knights fight over the Renvall docks."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_COOLTRAINER_COLBY",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_34",
+     "partner": "TRAINER_LEADER_BLAINE"
+    }
+   ],
+   "after": [
+    "Murray is down. The harbor is yours."
+   ]
+  },
+  {
+   "id": 8,
+   "title": "It's a Trap!",
+   "map": "MAP_ROUTE11",
+   "before": [
+    "A trap at Renvall. Tirado, Caellach and Selena spring it."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_GENTLEMAN_BROOKS",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_33",
+     "partner": "TRAINER_LEADER_BLAINE"
+    }
+   ],
+   "after": [
+    "The way splits. Eirika goes to find Frelia and Prince Innes."
+   ]
+  },
+  {
+   "id": 9,
+   "title": "Distant Blade",
+   "map": "MAP_CERULEAN_CITY",
+   "before": [
+    "Frelia's castle. Tana and Amelia wait on the wall."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_ELITE_FOUR_BRUNO",
+     "b": "TRAINER_LASS_JOANA",
+     "partner": "TRAINER_LEADER_LT_SURGE"
+    }
+   ],
+   "recruits": [
+    "Tana"
+   ],
+   "after": [
+    "Tana the pegasus rider joins you."
+   ]
+  },
+  {
+   "id": 10,
+   "title": "Revolt at Carcino",
+   "map": "MAP_VERMILION_CITY",
+   "before": [
+    "Port Kiris is in revolt. Innes of Frelia needs help."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_SCIENTIST_PARKER",
+     "b": "TRAINER_BEAUTY_LORI",
+     "partner": "TRAINER_LEADER_MISTY"
+    }
+   ],
+   "recruits": [
+    "Innes",
+    "Duessel"
+   ],
+   "after": [
+    "Innes and Duessel join you."
+   ]
+  },
+  {
+   "id": 11,
+   "title": "Creeping Darkness",
+   "map": "MAP_LAVENDER_TOWN",
+   "before": [
+    "The dead walk again. L'Arachel and Dozla are lost in the mist."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_COOLTRAINER_WARREN",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_29",
+     "partner": "TRAINER_LEADER_ERIKA"
+    }
+   ],
+   "recruits": [
+    "LArachel",
+    "Dozla"
+   ],
+   "after": [
+    "L'Arachel and Dozla join you."
+   ]
+  },
+  {
+   "id": 12,
+   "title": "Village of Silence",
+   "map": "MAP_ROUTE9",
+   "before": [
+    "A quiet village where nobody speaks. Myrrh waits in a house."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_PSYCHIC_TYRON",
+     "b": "TRAINER_SCIENTIST_ED",
+     "partner": "TRAINER_LEADER_ERIKA"
+    }
+   ],
+   "recruits": [
+    "Myrrh"
+   ],
+   "after": [
+    "Myrrh the dragon girl joins you."
+   ]
+  },
+  {
+   "id": 13,
+   "title": "Hamill Canyon",
+   "map": "MAP_ROCK_TUNNEL_1F",
+   "before": [
+    "A canyon pass guarded by wyvern riders. Cormag rides with Grado."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_COOLTRAINER_SAMUEL",
+     "b": "TRAINER_SCIENTIST_PARKER",
+     "partner": "TRAINER_LEADER_KOGA"
+    }
+   ],
+   "recruits": [
+    "Cormag"
+   ],
+   "after": [
+    "Cormag changes sides and joins you."
+   ]
+  },
+  {
+   "id": 14,
+   "title": "Queen of White Dunes",
+   "map": "MAP_CELADON_CITY",
+   "before": [
+    "Jehanna's desert hall. The queen holds the sand."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_TEAM_ROCKET_GRUNT_30",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_33",
+     "partner": "TRAINER_LEADER_SABRINA"
+    }
+   ],
+   "after": [
+    "Carlyle yields. The way across the desert is open."
+   ]
+  },
+  {
+   "id": 15,
+   "title": "Scorched Sand",
+   "map": "MAP_CELADON_CITY",
+   "before": [
+    "Valter's wyverns burn the dunes."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_ELITE_FOUR_LANCE",
+     "b": "TRAINER_TEAM_ROCKET_GRUNT_33",
+     "partner": "TRAINER_LEADER_SABRINA"
+    }
+   ],
+   "after": [
+    "Valter retreats toward Grado."
+   ]
+  },
+  {
+   "id": 16,
+   "title": "Ruled by Madness",
+   "map": "MAP_FUCHSIA_CITY",
+   "before": [
+    "A fortress ruled by a mad lord."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_GENTLEMAN_LAMAR",
+     "b": "TRAINER_PSYCHIC_PRESTON",
+     "partner": "TRAINER_LEADER_SABRINA"
+    }
+   ],
+   "after": [
+    "Orson's madness breaks."
+   ]
+  },
+  {
+   "id": 17,
+   "title": "River of Regrets",
+   "map": "MAP_PALLET_TOWN",
+   "before": [
+    "Renais again. Lyon stands in the ruins of the castle."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE"
+    }
+   ],
+   "after": [
+    "Lyon is shaken, not beaten. Syrene steps forward."
+   ]
+  },
+  {
+   "id": 18,
+   "title": "Two Faces of Evil",
+   "map": "MAP_ROUTE19",
+   "before": [
+    "Narube River. Something bad rises from the water."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_PSYCHIC_CAMERON",
+     "b": "TRAINER_SCIENTIST_GIDEON",
+     "partner": "TRAINER_ELITE_FOUR_AGATHA"
+    }
+   ],
+   "after": [
+    "The gorgon sinks."
+   ]
+  },
+  {
+   "id": 19,
+   "title": "Last Hope",
+   "map": "MAP_CERULEAN_CAVE_1F",
+   "before": [
+    "Neleras Peak. Riev's priests stand in the way."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_SCIENTIST_GIDEON",
+     "b": "TRAINER_SCIENTIST_JOSE",
+     "partner": "TRAINER_ELITE_FOUR_AGATHA"
+    }
+   ],
+   "after": [
+    "The summit is clear."
+   ]
+  },
+  {
+   "id": 20,
+   "title": "Darkling Woods",
+   "map": "MAP_VIRIDIAN_FOREST",
+   "before": [
+    "The woods are black. Riev and Morva wait."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_SCIENTIST_GIDEON",
+     "b": "TRAINER_SCIENTIST_JOSHUA",
+     "partner": "TRAINER_ELITE_FOUR_AGATHA"
+    }
+   ],
+   "after": [
+    "The way to the temple is open."
+   ]
+  },
+  {
+   "id": 21,
+   "title": "Sacred Stone",
+   "map": "MAP_INDIGO_PLATEAU_EXTERIOR",
+   "before": [
+    "Lyon, now possessed, waits at the end of the road."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_CHAMPION_FIRST_SQUIRTLE"
+    }
+   ],
+   "after": [
+    "Lyon's body falls. The Demon King wakes."
+   ]
+  },
+  {
+   "id": 22,
+   "title": "Sacred Stone (Final)",
+   "map": "MAP_INDIGO_PLATEAU_EXTERIOR",
+   "before": [
+    "Fomortiis rises."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_PSYCHIC_CAMERON"
+    }
+   ],
+   "after": [
+    "Fomortiis is destroyed. Magvel is at peace. The end."
+   ]
+  }
+ ],
+ "parties": {}
+}

@@ -1,5 +1,7 @@
 # Leg 3 story plan: FE8 on FireRed maps (2026-10-16)
 
+**Status: all decisions below approved (2026-10-16). Recruit points (2) and later partners (3) were left to my judgement. Future decisions are treated as approved.**
+
 Format follows `xenodorian/Pokemon-War-and-Murder` `docs/STORY_PLAN.md`: a flow plus numbered DECISION entries. Everything marked DECISION is a proposal for you to approve or change. Facts marked "verified" come from the FE8 decomp (`docs/FE8_CHAPTERS.md`, `docs/LEG2_ALLIES.md`). Facts marked "inferred" are derived from those and not checked in an emulator.
 
 ## Scope
@@ -111,3 +113,11 @@ Custom maps (built last, with the War and Murder tile tools): castle interiors f
 3. Build boss parties and the class table in `src/data/trainers.h`.
 4. Port the War and Murder tile tools and build the six custom maps.
 5. Full playthrough test with the headless harness.
+
+## Built so far (2026-10-16)
+- `story/chapters.json` is the single source for all 23 chapters (0 to 22): title, node map, scene text, battles, recruits.
+- `tools/leg3_story.py story/chapters.json <decomp>` writes `data/scripts/story_chapters.inc` and sets the trainer parties (themes by FE8 class, levels by chapter, bosses 2 levels higher).
+- In game: talk to the guide (a Seth sprite) in Pallet Town. He shows the chapter title, warps the player to the chapter's node map (a Kanto map from the table), the scene plays on arrival (`VAR_STORY_PENDING`, hooked in `DoCB1_Overworld`), the battle runs (double battle with the AI partner from chapter 3), recruits happen, `VAR_STORY_CHAPTER` advances and the player returns to Pallet Town.
+- Tested in mGBA: chapter 3 end to end (warp to Route 3, text, double battle with Seth, win, text, return).
+- Not yet tested: the other chapters (same generated code path), the recruit calls inside chapters, and losing a chapter battle (whiteout, then the chapter can be retried).
+- Not done: walking between nodes on foot, custom maps, per-chapter FE8 portraits in dialogue, mid-chapter events.
