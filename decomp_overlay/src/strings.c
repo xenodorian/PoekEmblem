@@ -473,7 +473,7 @@ const u8 gText_Marshbadge[] = _("MARSHBADGE");
 const u8 gText_Volcanobadge[] = _("VOLCANOBADGE");
 const u8 gText_Earthbadge[] = _("EARTHBADGE");
 const u8 gText_SomeoneSPc[] = _("SOMEONE'S PC");
-const u8 gText_BillSPc[] = _("BILL'S PC");
+const u8 gText_BillSPc[] = _("HAYDEN'S PC");
 const u8 gText_SPc[] = _("{PLAYER}'s PC");
 const u8 gText_HallOfFame_2[] = _("HALL OF FAME");
 const u8 gText_LogOff[] = _("LOG OFF");
@@ -987,7 +987,7 @@ const u8 gText_End[] = _("おしまい");
 
 #include "data/text/teachy_tv.h"
 
-const u8 gString_Bill[] = _("BILL");
+const u8 gString_Bill[] = _("HAYDEN");
 const u8 gString_Someone[] = _("SOMEONE");
 const u8 gString_Help[] = _("HELP");
 const u8 gString_HelpSystem_ClearTo8[] = _("{CLEAR_TO 8}");
@@ -1272,8 +1272,8 @@ const u8 gFameCheckerText_MainScreenUI[] = _("{START_BUTTON}PICK {DPAD_UPDOWN}SE
 const u8 gFameCheckerText_PickScreenUI[] = _("{START_BUTTON}PICK {DPAD_UPDOWN}SELECT {B_BUTTON}CANCEL");
 const u8 gFameCheckerText_FlavorTextUI[] = _("{DPAD_ANY}PICK {A_BUTTON}READ {B_BUTTON}CANCEL");
 const u8 gFameCheckerOakName[] = _("MOULDER");
-const u8 gFameCheckerDaisyName[] = _("DAISY");
-const u8 gFameCheckerBillName[] = _("BILL");
+const u8 gFameCheckerDaisyName[] = _("ISMAIRE");
+const u8 gFameCheckerBillName[] = _("HAYDEN");
 const u8 gFameCheckerMrFujiName[] = _("FUJI");
 const u8 gText_VarietyOfEventsImportedWireless[] = _("A variety of events will be imported\nover Wireless Communication.");
 const u8 gText_WonderCardsInPossession[] = _("Read the WONDER CARDS in your\npossession.");

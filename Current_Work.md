@@ -194,3 +194,4 @@ Open, in this order:
 - Done: FE8 portraits in chapter dialogue (generator `tools/leg3_story.py` emits showmonpic/hidemonpic; fields speaker_before/speaker_after optional in chapters.json). ROM `builds/Pokemon FireRed Eirika Leg3-Portraits.gba`. Compile-only check.
 - Next: walking between nodes, mid-chapter events, custom maps, Leg 1/2 gaps.
 - Done: walk-in (4 steps up via applymovement) and mid-chapter event with portrait between battles or before the After text. ROM builds/Pokemon FireRed Eirika Leg3-Walk-Mid.gba. Compile check only.
+- Done: BILL is now HAYDEN and DAISY is now ISMAIRE in all text (FE8 minor NPC names). ROM builds/Pokemon FireRed Eirika Leg1-NPC-Names.gba.

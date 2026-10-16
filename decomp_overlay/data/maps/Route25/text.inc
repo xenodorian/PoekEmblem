@@ -93,7 +93,7 @@ Route25_Text_NobPostBattle::
     .string "species of POKéMON.$"
 
 Route25_Text_WayneIntro::
-    .string "You're going to see BILL?\n"
+    .string "You're going to see HAYDEN?\n"
     .string "First, we battle!$"
 
 Route25_Text_WayneDefeat::
@@ -105,7 +105,7 @@ Route25_Text_WaynePostBattle::
 
 Route25_Text_SeaCottageSign::
     .string "SEA COTTAGE\n"
-    .string "BILL lives here!$"
+    .string "HAYDEN lives here!$"
 
 Route25_Text_MistyHighHopesAboutThisPlace::
     .string "This cape is a famous date spot.\p"

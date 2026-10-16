@@ -30,7 +30,7 @@ CinnabarIsland_Text_HeyIfItIsntPlayer::
     .string "Hey, if it isn't {PLAYER}!$"
 
 CinnabarIsland_Text_ComeWithMeToOneIsland::
-    .string "Look, it's me, BILL.\n"
+    .string "Look, it's me, HAYDEN.\n"
     .string "Long time no see!\p"
     .string "I hope you're still using my\n"
     .string "PC system.\p"

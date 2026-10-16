@@ -14,11 +14,11 @@ CeruleanCity_Text_RivalDefeat::
 
 CeruleanCity_Text_RivalPostBattle::
     .string "{RIVAL}: Hey, guess what?\p"
-    .string "I went to BILL's and got him to\n"
+    .string "I went to HAYDEN's and got him to\n"
     .string "show me his rare POKéMON.\p"
     .string "That added a lot of pages to my\n"
     .string "POKéDEX!\p"
-    .string "After all, BILL's world famous as a\n"
+    .string "After all, HAYDEN's world famous as a\n"
     .string "POKéMANIAC.\p"
     .string "He invented the POKéMON Storage\n"
     .string "System on PC, too.\p"

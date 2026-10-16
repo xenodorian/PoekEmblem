@@ -18,7 +18,7 @@ gFameCheckerFlavorText_ProfOak2:: @ 0x81AD1BB
 gFameCheckerFlavorText_ProfOak3:: @ 0x81AD258
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER reportedly lives with his\n"
-	.string "grandchildren, DAISY and {RIVAL}.$"
+	.string "grandchildren, ISMAIRE and {RIVAL}.$"
 
 gFameCheckerFlavorText_ProfOak4:: @ 0x81AD2B9
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
@@ -38,7 +38,7 @@ gFameCheckerFlavorText_ProfOak5:: @ 0x81AD377
 
 gFameCheckerFlavorText_Daisy0:: @ 0x81AD40C
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}If you show DAISY your POKéMON,\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}If you show ISMAIRE your POKéMON,\n"
 	.string "she can tell how much it likes you.\p"
 	.string "Occasionally, she will even groom\n"
 	.string "a POKéMON for you.$"
@@ -46,23 +46,23 @@ gFameCheckerFlavorText_Daisy0:: @ 0x81AD40C
 gFameCheckerFlavorText_Daisy1:: @ 0x81AD4AE
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}But the person who is most liked by\n"
-	.string "POKéMON is DAISY, I think.$"
+	.string "POKéMON is ISMAIRE, I think.$"
 
 gFameCheckerFlavorText_Daisy2:: @ 0x81AD516
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}She was gently grooming POKéMON…\n"
 	.string "She was a little angel.\p"
 	.string "That little girl's name…\n"
-	.string "I think it was DAISY.$"
+	.string "I think it was ISMAIRE.$"
 
 gFameCheckerFlavorText_Daisy3:: @ 0x81AD5A7
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER reportedly lives with his\n"
-	.string "grandchildren, DAISY and {RIVAL}.$"
+	.string "grandchildren, ISMAIRE and {RIVAL}.$"
 
 gFameCheckerFlavorText_Daisy4:: @ 0x81AD608
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A girl from PALLET TOWN, DAISY,\n"
+	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}A girl from PALLET TOWN, ISMAIRE,\n"
 	.string "she enjoys TEA every day.\p"
 	.string "She visits the CELADON DEPT. STORE\n"
 	.string "to buy some TEA.$"
@@ -70,7 +70,7 @@ gFameCheckerFlavorText_Daisy4:: @ 0x81AD608
 gFameCheckerFlavorText_Daisy5:: @ 0x81AD69F
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Spring POKéMON CONTEST's\n"
-	.string "Grand Champion is DAISY MOULDER of\l"
+	.string "Grand Champion is ISMAIRE MOULDER of\l"
 	.string "PALLET TOWN!$"
 
 gFameCheckerFlavorText_Brock0:: @ 0x81AD705
@@ -493,14 +493,14 @@ gFameCheckerFlavorText_Lance5:: @ 0x81AF7CB
 
 gFameCheckerFlavorText_Bill0:: @ 0x81AF83E
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}After all, BILL's world-famous as a\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}After all, HAYDEN's world-famous as a\n"
 	.string "POKéMANIAC.\p"
 	.string "He invented the POKéMON Storage\n"
 	.string "System on PC, too.$"
 
 gFameCheckerFlavorText_Bill1:: @ 0x81AF8CA
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL has lots of POKéMON!\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}HAYDEN has lots of POKéMON!\n"
 	.string "He collects rare ones, too!$"
 
 gFameCheckerFlavorText_Bill2:: @ 0x81AF929
@@ -511,21 +511,21 @@ gFameCheckerFlavorText_Bill2:: @ 0x81AF929
 
 gFameCheckerFlavorText_Bill3:: @ 0x81AF998
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL is a POKéMANIAC, so he loves\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}HAYDEN is a POKéMANIAC, so he loves\n"
 	.string "every kind.\p"
 	.string "Apparently, the first one he caught\n"
 	.string "was an ABRA.$"
 
 gFameCheckerFlavorText_Bill4:: @ 0x81AFA20
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BILL's hometown is GOLDENROD CITY,\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}HAYDEN's hometown is GOLDENROD CITY,\n"
 	.string "where his folks still live.\p"
 	.string "I've heard that it's quite the\n"
 	.string "festive, bustling city.$"
 
 gFameCheckerFlavorText_Bill5:: @ 0x81AFAB9
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Apparently, BILL simply can't\n"
+	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Apparently, HAYDEN simply can't\n"
 	.string "stomach milk at all.$"
 
 gFameCheckerFlavorText_MrFuji0:: @ 0x81AFB0C
@@ -625,10 +625,10 @@ gFameCheckerPersonQuote_ProfOak:: @ 0x81B0198
 	.string "Never forget that.$"
 
 gFameCheckerPersonName_Daisy:: @ 0x81B0251
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}DAISY$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}ISMAIRE$"
 
 gFameCheckerPersonQuote_Daisy:: @ 0x81B025D
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: DAISY\n"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: ISMAIRE\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}While I was comfortably enjoying\n"
 	.string "my tea breaks, you've grown very\l"
@@ -764,10 +764,10 @@ gFameCheckerPersonQuote_Lance:: @ 0x81B098B
 	.string "hometown one day.$"
 
 gFameCheckerPersonName_Bill:: @ 0x81B0A45
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BILL$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}HAYDEN$"
 
 gFameCheckerPersonQuote_Bill:: @ 0x81B0A50
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BILL\n"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: HAYDEN\n"
 	.string "To: {PLAYER}\p"
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, there! CELIO had nothing but\n"
 	.string "praise for you.\p"
@@ -1466,7 +1466,7 @@ PokemonJournal_Text_SpecialFeatureProfOak::
 	.string "Special Feature: MOULDER,\n"
 	.string "the POKéMON Researcher!\p"
 	.string "MOULDER reportedly lives with his\n"
-	.string "grandchildren DAISY and {RIVAL}.$"
+	.string "grandchildren ISMAIRE and {RIVAL}.$"
 
 PokemonJournal_Text_SpecialFeatureDaisyOak::
 	.string "This is a POKéMON JOURNAL from\n"
@@ -1474,7 +1474,7 @@ PokemonJournal_Text_SpecialFeatureDaisyOak::
 	.string "POKéMON JOURNAL\n"
 	.string "CONTEST Special!\p"
 	.string "The Spring POKéMON CONTEST's\n"
-	.string "Grand Champion is DAISY MOULDER of\l"
+	.string "Grand Champion is ISMAIRE MOULDER of\l"
 	.string "PALLET TOWN!$"
 
 PokemonJournal_Text_SpecialFeatureMrFuji::

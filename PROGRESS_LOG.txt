@@ -1,3 +1,4 @@
 2026-10-16 mGBA headers built from source 0.10.5, driver tools/mgba_drv.c, tests tools/chapter_test.py (win-test, buffed party). Run 1: 14 of 23 chapters passed, rest stalled (test limits: Eirika had only Normal moves vs Ghost enemies, status effects). Testing stopped by owner order.
 2026-10-16 Step 1 built: FE8 portraits in chapter dialogue (showmonpic of SPECIES_EIRIKA / recruit species before/after text). Build OK. ROM: builds/Pokemon FireRed Eirika Leg3-Portraits.gba
 2026-10-16 Step 2 built: walk-in movement and mid-chapter events (chapters.json mid field). ROM builds/Pokemon FireRed Eirika Leg3-Walk-Mid.gba (compile check only)
+2026-10-16 Step 3 built: BILL renamed HAYDEN, DAISY renamed ISMAIRE in all dialogue (24 files). ROM builds/Pokemon FireRed Eirika Leg1-NPC-Names.gba
