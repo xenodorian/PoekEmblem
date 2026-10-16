@@ -21,6 +21,9 @@ Built from a copy of the FireRed decomp (`/home/user/pret/pokefirered_leg1`, ses
 ## Leg 2 progress (2026-10-16)
 Details in `docs/LEG2_ALLIES.md`. Done: 8 ally species (slots 252 to 259) with base-species stats, FE8 portrait pictures, icons, cries and moves; a generic FE8 attack animation system for the player side that now also runs Eirika's (`src/ally_attack.c`); recruit scripts that add an ally to the party or PC (`data/scripts/ally_recruit.inc`); the boot path now sets save block pointers and the heap the way the title screen did, which fixes PC deposits. Checked in test battles (each species swings and its move effect lands) and in a test script (recruits go to the party, then the PC). Not done: the deploy screen and roster (party model still unapproved), recruitment story events (Leg 3), Pokedex entries, ally dialogue, and checking the moves against FE8 kits beyond the proposal table.
 
+## Partner (double) battles (2026-10-16)
+Approved direction: double battles instead of an 18 member roster, starting at Chapter 3 (the first chapter with more than 6 deployment slots). Seth is the AI partner for Chapters 3 and 4, Joshua takes the partner slot in Chapter 5. Details and test results are in `docs/PARTNER_BATTLES.md`. Done: pokeemerald tag battle ported to the FireRed decomp (partner AI, two opposing trainers, text, party menu, win, loss, forced switch, party restore), started by `special StartPartnerBattle`. Code is in `patches/decomp_changes.diff` and the IPS was rebuilt locally as `FireRed_Eirika_Leg1_Leg2_Partner.ips` (`tools/make_ips.py`, verified byte-identical to the built ROM, not in the repo).
+
 ## Goal
 Recreate the story of FE8 in FireRed, in three legs.
 
