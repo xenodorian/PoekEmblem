@@ -8,3 +8,4 @@
 2026-10-16 Step 8: Eirika overworld walk sprite from FE8 map sprite. ROM builds/Pokemon FireRed Eirika Leg4-Overworld.gba. Blocker: bike/surf/fish sprites still Leaf.
 LOG step 6+7 Pokedex entries (No.387-395) and ally dialogue: commit 527983d, ROM Pokemon FireRed Eirika Leg4-Dex-AllyDialogue.gba, dex checked in emulator, dialogue compile only. Blockers: none.
 LOG step 8 Eirika overworld sprite: commit a90c906, ROM Pokemon FireRed Eirika Leg4-Overworld.gba, checked in emulator. Blockers: bike/surf/fish sprites keep Leaf art.
+LOG step 9 Story map tile art (6 maps from FE8 backdrops): commit a91f9d8, ROM Pokemon FireRed Eirika Leg4-StoryMaps.gba, 3 of 6 maps checked in emulator, others verified by tile render. Blockers: backdrops are not top-down maps, no furniture or NPC placement.
