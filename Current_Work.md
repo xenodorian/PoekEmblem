@@ -195,3 +195,4 @@ Open, in this order:
 - Next: walking between nodes, mid-chapter events, custom maps, Leg 1/2 gaps.
 - Done: walk-in (4 steps up via applymovement) and mid-chapter event with portrait between battles or before the After text. ROM builds/Pokemon FireRed Eirika Leg3-Walk-Mid.gba. Compile check only.
 - Done: BILL is now HAYDEN and DAISY is now ISMAIRE in all text (FE8 minor NPC names). ROM builds/Pokemon FireRed Eirika Leg1-NPC-Names.gba.
+- Done: Oak lab starter balls are inert (message that Eirika already has her partner); the Route 1 grass trigger cannot fire because the player always has a Pokemon. ROM builds/Pokemon FireRed Eirika Leg1-OakLab.gba.
