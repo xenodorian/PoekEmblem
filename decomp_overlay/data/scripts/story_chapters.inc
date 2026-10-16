@@ -4,7 +4,7 @@ Story_Go_0::
 	msgbox Story_Ch0_Title, MSGBOX_DEFAULT
 	setvar VAR_STORY_PENDING, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_PALLET_TOWN, 255, 6, 7
+	warp MAP_STORY_RENAIS_CASTLE, 255, 7, 2
 	waitstate
 	end
 
@@ -87,7 +87,7 @@ Story_Go_2::
 	msgbox Story_Ch2_Title, MSGBOX_DEFAULT
 	setvar VAR_STORY_PENDING, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_ROUTE1, 255, 6, 29
+	warp MAP_STORY_FRELIA_CASTLE, 255, 11, 19
 	waitstate
 	end
 
@@ -366,7 +366,7 @@ Story_Go_8::
 	msgbox Story_Ch8_Title, MSGBOX_DEFAULT
 	setvar VAR_STORY_PENDING, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_ROUTE11, 255, 6, 7
+	warp MAP_STORY_FORT_RIGWALD, 255, 12, 2
 	waitstate
 	end
 
@@ -702,7 +702,7 @@ Story_Go_15::
 	msgbox Story_Ch15_Title, MSGBOX_DEFAULT
 	setvar VAR_STORY_PENDING, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_CELADON_CITY, 255, 34, 21
+	warp MAP_STORY_JEHANNA_HALL, 255, 6, 12
 	waitstate
 	end
 
@@ -980,7 +980,7 @@ Story_Go_21::
 	msgbox Story_Ch21_Title, MSGBOX_DEFAULT
 	setvar VAR_STORY_PENDING, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_INDIGO_PLATEAU_EXTERIOR, 255, 11, 6
+	warp MAP_STORY_GRADO_THRONE_ROOM, 255, 6, 19
 	waitstate
 	end
 
@@ -1023,7 +1023,7 @@ Story_Go_22::
 	msgbox Story_Ch22_Title, MSGBOX_DEFAULT
 	setvar VAR_STORY_PENDING, 1
 	fadescreen FADE_TO_BLACK
-	warp MAP_INDIGO_PLATEAU_EXTERIOR, 255, 11, 6
+	warp MAP_STORY_BLACK_TEMPLE, 255, 11, 16
 	waitstate
 	end
 
