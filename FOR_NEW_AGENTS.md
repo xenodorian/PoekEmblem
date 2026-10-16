@@ -16,10 +16,11 @@ Written by a Grok session that started from scratch. It lists what cost time so 
 - FE8 art is derived from the FE8 ROM in the repo root; art scripts are in tools/.
 
 ## Hard rules from the owner
+- Permissions: the owner granted full permission to upload anything (ROMs, art, saves, built files), work on `main`, install tools, and treat decisions as pre-approved. See the top of Current_Work.md. Do not stop to ask about these.
 - Never delete, overwrite, or move ROMs, IPS patches, saves, states, or art. Work on copies.
 - No em dashes, no emoji. Short factual reports.
 - Build features. Do not spend sessions only testing. After each large step update Current_Work.md, commit, and push.
-- Confirm before edits that are unclear or out of scope.
+- Stop to confirm only for something outside the project's scope or that contradicts an earlier owner order. Everything else: use best judgement, write the choice in the docs, continue.
 
 ## Access and tools
 - The GitHub MCP connector only writes text files. For binaries use git over https with the gh CLI: gh auth login -h github.com -p https -s repo,workflow -w, then gh auth setup-git. The owner enters the device code in a browser.
