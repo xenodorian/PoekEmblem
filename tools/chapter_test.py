@@ -5,7 +5,7 @@ and reports whether VAR_STORY_CHAPTER advanced (win) or whiteout/hang happened."
 import subprocess, sys, os, shutil
 DRV = os.environ.get('MGBA_DRV', '/workspace/mgba_drv')
 FAST = os.environ.get('FAST') == '1'
-PARTY = 0x02024284; SB1 = 0x03005018
+PARTY = 0x02024284; SB1 = int(os.environ.get('SB1PTR', '0x03005028'), 16)
 V_CH = 0x1000 + 0xF0*2; V_PEND = 0x1000 + 0xEF*2
 
 class Drv:
