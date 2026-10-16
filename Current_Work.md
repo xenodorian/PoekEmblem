@@ -24,6 +24,9 @@ Details in `docs/LEG2_ALLIES.md`. Done: 8 ally species (slots 252 to 259) with b
 ## Partner (double) battles (2026-10-16)
 Approved direction: double battles instead of an 18 member roster, starting at Chapter 3 (the first chapter with more than 6 deployment slots). Seth is the AI partner for Chapters 3 and 4, Joshua takes the partner slot in Chapter 5. Details and test results are in `docs/PARTNER_BATTLES.md`. Done: pokeemerald tag battle ported to the FireRed decomp (partner AI, two opposing trainers, text, party menu, win, loss, forced switch, party restore), started by `special StartPartnerBattle`. Code is in `patches/decomp_changes.diff` and the IPS was rebuilt locally as `FireRed_Eirika_Leg1_Leg2_Partner.ips` (`tools/make_ips.py`, verified byte-identical to the built ROM, not in the repo).
 
+## Leg 3 progress (2026-10-16)
+All Leg 3 decisions approved (items 2 and 3 left to my judgement; later decisions are treated as approved). Done: chapter data extracted from the FE8 decomp (`docs/FE8_CHAPTERS.md`), story plan (`docs/STORY_PLAN.md`), and a data-driven story engine. `story/chapters.json` defines 23 chapters; `tools/leg3_story.py` generates the scripts and trainer parties. In game, the guide in Pallet Town warps the player to the chapter's Kanto map, the scene and battle run (double battle with an AI partner from chapter 3), recruits are given, and the player returns to Pallet Town. Chapter 3 was played to a win in mGBA; all 23 chapters were started and run without a crash, with losses going through whiteout. Next: win-test every chapter and the recruit calls, walking between nodes, mid-chapter events, FE8 portraits in dialogue, then the six custom maps.
+
 ## Goal
 Recreate the story of FE8 in FireRed, in three legs.
 
