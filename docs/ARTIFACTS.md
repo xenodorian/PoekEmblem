@@ -19,6 +19,9 @@ The base ROM is `Pokemon - FireRed Version (USA).gba` (BPRE, SHA-1 `41cb23d8dccc
 | decomp_full_v10.tar.gz | 20.5 | yes |
 | decomp_full_v11.tar.gz | 27.3 | yes |
 | decomp_full_v12.tar.gz | 20.9 | yes |
+| decomp_full_v13.tar.gz | 20.9 | NO |
+| decomp_full_v14.tar.gz | 20.9 | yes |
+| decomp_full_v15.tar.gz | 20.9 | NO |
 
 Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pokefirered, run `make -j8`. Tarballs carry no build output.
 
@@ -50,6 +53,9 @@ Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pok
 | Pokemon FireRed Eirika Leg10-TheEndCard.gba | 16.8 | 9213b5eba5bc | FireRed_Eirika_Leg10_TheEndCard.ips | yes |
 | Pokemon FireRed Eirika Leg11-WallFix.gba | 16.8 | e03c671fac1f | FireRed_Eirika_Leg11_WallFix.ips | yes |
 | Pokemon FireRed Eirika Leg12-StoryDepth.gba | 16.8 | ac13354df096 | FireRed_Eirika_Leg12_StoryDepth.ips | yes |
+| Pokemon FireRed Eirika Leg13a-TowerOfValni.gba | 16.8 | 48feb665a0b1 | FireRed_Eirika_Leg13a_TowerOfValni.ips | NO |
+| Pokemon FireRed Eirika Leg14-EndCardFix.gba | 16.8 | 0cba9e489bcf | FireRed_Eirika_Leg14_EndCardFix.ips | yes |
+| Pokemon FireRed Eirika Leg15-BlackTempleWeather.gba | 16.8 | 7adcc1dd4a92 | FireRed_Eirika_Leg15_BlackTempleWeather.ips | NO |
 
 ## IPS patches in patches/
 
@@ -58,6 +64,9 @@ Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pok
 | FireRed_Eirika_Leg10_TheEndCard.ips | 9.4 |
 | FireRed_Eirika_Leg11_WallFix.ips | 9.4 |
 | FireRed_Eirika_Leg12_StoryDepth.ips | 9.5 |
+| FireRed_Eirika_Leg13a_TowerOfValni.ips | 9.5 |
+| FireRed_Eirika_Leg14_EndCardFix.ips | 9.5 |
+| FireRed_Eirika_Leg15_BlackTempleWeather.ips | 9.5 |
 | FireRed_Eirika_Leg1_Leg2_Partner.ips | 9.4 |
 | FireRed_Eirika_Leg4.ips | 9.5 |
 | FireRed_Eirika_Leg5.ips | 9.5 |
@@ -69,8 +78,15 @@ Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pok
 | FireRed_Eirika_Leg9_BlackTempleDonor.ips | 9.5 |
 | FireRed_Eirika_Leg9_IndoorMaps.ips | 9.4 |
 | FireRed_Eirika_Leg9_TextPass.ips | 9.4 |
+| PokemblemTheSacredStones.ips | 9.5 |
 
 ## Test hook ROMs (builds/test/)
 
 - chapter3_test_hook.gba
 - partner_battle_test_hook.gba
+
+## Final release (Leg15)
+
+- `release/PokemblemTheSacredStones.gba`: 16777216 bytes, SHA-1 `7adcc1dd4a928d17b18eed1ae6271ed6300e5eac`. Byte-identical to `builds/Pokemon FireRed Eirika Leg15-BlackTempleWeather.gba`.
+- `patches/PokemblemTheSacredStones.ips`: 9461933 bytes, one IPS with every change, applies to vanilla Pokemon FireRed (USA) BPRE, SHA-1 `41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`.
+- Source: `decomp_full_v15.tar.gz` (v14 plus the Black Temple weather fix). Intermediate: `patches/FireRed_Eirika_Leg15_BlackTempleWeather.ips`.

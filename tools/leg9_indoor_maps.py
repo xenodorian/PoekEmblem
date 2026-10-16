@@ -127,6 +127,7 @@ for mapdir, (seed, tsdir, layout, npcs, signs) in ROOMS.items():
         assert coll[y][x] and lay[y + 1][x] == '.' and y == 1, (mapdir, nm)
         o['x'], o['y'] = x, y
     assert len(mj['bg_events']) == len(signs)
+    mj['weather'] = 'WEATHER_NONE'     # Black Temple was washed out by the donor's WEATHER_FOG_HORIZONTAL, not by a palette
     mj['warp_events'] = [{'x': 7, 'y': 14, 'elevation': 0, 'dest_map': 'MAP_PALLET_TOWN', 'dest_warp_id': '0'}]
     (root / 'data/maps' / mapdir / 'map.json').write_text(json.dumps(mj, indent=2) + '\n')
     print(mapdir, 'tiles', nt, 'metatiles', nmeta, it.count_sources(res))

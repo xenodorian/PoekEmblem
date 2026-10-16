@@ -33,3 +33,4 @@ LOG step 10 Source tree v2 and IPS: commit cffc470, decomp_full_v2.tar.gz, patch
 [Leg12] Story depth: STORY_GAPS.md audit, skirmish battles, chapter 5x, partner/enemy clones, doubles for 17/21/21x, scene lines, Ephraim cameos, ally lines 8-13, Frelia guard sprite. ROM Leg12-StoryDepth, IPS, decomp_full_v12.tar.gz. Compile checked only.
 
 2026-10-16 Emulator verification of Leg12: all items run, report in docs/VERIFY_REPORT.md. THE END card fixed in Leg14-EndCardFix (v14 tarball, new IPS). Open: Black Temple palette looks washed out in game.
+2026-10-16 Step Leg15 Black Temple fog fix (WEATHER_NONE) and final release. ROM builds/Pokemon FireRed Eirika Leg15-BlackTempleWeather.gba, release/PokemblemTheSacredStones.gba (SHA-1 7adcc1dd4a928d17b18eed1ae6271ed6300e5eac), IPS patches/PokemblemTheSacredStones.ips, decomp_full_v15.tar.gz. Verified in headless emulator.
