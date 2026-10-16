@@ -17,18 +17,11 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 11,
-      "y": 16,
-      "elevation": 3,
-      "dest_map": "MAP_POKEMON_TOWER_7F",
+      "x": 7,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_PALLET_TOWN",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 18,
-      "y": 10,
-      "elevation": 3,
-      "dest_map": "MAP_POKEMON_TOWER_5F",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

@@ -4402,74 +4402,74 @@
     {
       "id": "LAYOUT_STORY_RENAIS_CASTLE",
       "name": "Story_RenaisCastle_Layout",
-      "width": 17,
-      "height": 20,
+      "width": 15,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/SilphCo_11F/border.bin",
-      "blockdata_filepath": "data/layouts/SilphCo_11F/map.bin"
+      "secondary_tileset": "gTileset_StoryRenaisCastle",
+      "border_filepath": "data/layouts/Story_RenaisCastle/border.bin",
+      "blockdata_filepath": "data/layouts/Story_RenaisCastle/map.bin"
     },
     {
       "id": "LAYOUT_STORY_FRELIA_CASTLE",
       "name": "Story_FreliaCastle_Layout",
       "width": 15,
-      "height": 20,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Condominiums",
-      "border_filepath": "data/layouts/CeladonCity_Condominiums_1F/border.bin",
-      "blockdata_filepath": "data/layouts/CeladonCity_Condominiums_1F/map.bin"
+      "secondary_tileset": "gTileset_StoryFreliaCastle",
+      "border_filepath": "data/layouts/Story_FreliaCastle/border.bin",
+      "blockdata_filepath": "data/layouts/Story_FreliaCastle/map.bin"
     },
     {
       "id": "LAYOUT_STORY_JEHANNA_HALL",
       "name": "Story_JehannaHall_Layout",
-      "width": 13,
-      "height": 13,
+      "width": 15,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_LoreleisRoom/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_LoreleisRoom/map.bin"
+      "secondary_tileset": "gTileset_StoryJehannaHall",
+      "border_filepath": "data/layouts/Story_JehannaHall/border.bin",
+      "blockdata_filepath": "data/layouts/Story_JehannaHall/map.bin"
     },
     {
       "id": "LAYOUT_STORY_FORT_RIGWALD",
       "name": "Story_FortRigwald_Layout",
-      "width": 28,
-      "height": 34,
+      "width": 15,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
-      "border_filepath": "data/layouts/RocketHideout_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/RocketHideout_B1F/map.bin"
+      "secondary_tileset": "gTileset_StoryFortRigwald",
+      "border_filepath": "data/layouts/Story_FortRigwald/border.bin",
+      "blockdata_filepath": "data/layouts/Story_FortRigwald/map.bin"
     },
     {
       "id": "LAYOUT_STORY_GRADO_THRONE_ROOM",
       "name": "Story_GradoThroneRoom_Layout",
-      "width": 13,
-      "height": 20,
+      "width": 15,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonLeague",
-      "border_filepath": "data/layouts/PokemonLeague_ChampionsRoom/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonLeague_ChampionsRoom/map.bin"
+      "secondary_tileset": "gTileset_StoryGradoThroneRoom",
+      "border_filepath": "data/layouts/Story_GradoThroneRoom/border.bin",
+      "blockdata_filepath": "data/layouts/Story_GradoThroneRoom/map.bin"
     },
     {
       "id": "LAYOUT_STORY_BLACK_TEMPLE",
       "name": "Story_BlackTemple_Layout",
-      "width": 24,
-      "height": 20,
+      "width": 15,
+      "height": 16,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonTower",
-      "border_filepath": "data/layouts/PokemonTower_6F/border.bin",
-      "blockdata_filepath": "data/layouts/PokemonTower_6F/map.bin"
+      "secondary_tileset": "gTileset_StoryBlackTemple",
+      "border_filepath": "data/layouts/Story_BlackTemple/border.bin",
+      "blockdata_filepath": "data/layouts/Story_BlackTemple/map.bin"
     }
   ]
 }
