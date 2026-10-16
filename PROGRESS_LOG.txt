@@ -12,3 +12,4 @@ LOG step 9 Story map tile art (6 maps from FE8 backdrops): commit a91f9d8, ROM P
 LOG step 10 Source tree v2 and IPS: commit cffc470, decomp_full_v2.tar.gz, patches/FireRed_Eirika_Leg4.ips. Blockers: none.
 2026-10-16 Step 11 (agent 3) Eirika bike/surf/fish/item/VS Seeker overworld sprites. ROM builds/Pokemon FireRed Eirika Leg5-Vehicles.gba, tools/leg5_eirika_vehicles.py. Compile check only. Blockers: none.
 2026-10-16 Step 12 (agent 3) Story map NPCs, treasure, signs, collision. ROM builds/Pokemon FireRed Eirika Leg5-StoryMapObjects.gba, tools/leg5_story_map_objects.py. Compile check only. Blockers: none (no new furniture tiles).
+2026-10-16 Step 13 (agent 3) Chapter rewards (heal + money) and fixed story map arrival coordinates. ROM builds/Pokemon FireRed Eirika Leg5-Rewards.gba. Compile check only. Blockers: none.
