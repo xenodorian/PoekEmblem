@@ -1,0 +1,434 @@
+diff --git a/include/constants/species.h b/include/constants/species.h
+index 7446cc1..fe75aa3 100644
+--- a/include/constants/species.h
++++ b/include/constants/species.h
+@@ -282,6 +282,7 @@
+ #define SPECIES_OLD_UNOWN_X 274
+ #define SPECIES_OLD_UNOWN_Y 275
+ #define SPECIES_OLD_UNOWN_Z 276
++#define SPECIES_EIRIKA SPECIES_OLD_UNOWN_Z
+ 
+ #define SPECIES_TREECKO 277
+ #define SPECIES_GROVYLE 278
+diff --git a/include/graphics.h b/include/graphics.h
+index 069924f..74f50de 100644
+--- a/include/graphics.h
++++ b/include/graphics.h
+@@ -1296,6 +1296,12 @@ extern const u32 gMonBackPic_Qwilfish[];
+ extern const u32 gMonShinyPalette_Qwilfish[];
+ extern const u8 gMonIcon_Qwilfish[];
+ extern const u8 gMonFootprint_Qwilfish[];
++extern const u32 gMonFrontPic_Eirika[];
++extern const u32 gMonPalette_Eirika[];
++extern const u32 gMonBackPic_Eirika[];
++extern const u32 gMonShinyPalette_Eirika[];
++extern const u8 gMonIcon_Eirika[];
++extern const u8 gMonFootprint_Eirika[];
+ extern const u32 gMonFrontPic_Scizor[];
+ extern const u32 gMonPalette_Scizor[];
+ extern const u32 gMonBackPic_Scizor[];
+diff --git a/src/data/graphics/pokemon.h b/src/data/graphics/pokemon.h
+index e744f80..44a1311 100644
+--- a/src/data/graphics/pokemon.h
++++ b/src/data/graphics/pokemon.h
+@@ -1475,6 +1475,12 @@ const u32 gMonShinyPalette_Qwilfish[] = INCBIN_U32("graphics/pokemon/qwilfish/sh
+ const u8 gMonIcon_Qwilfish[] = INCBIN_U8("graphics/pokemon/qwilfish/icon.4bpp");
+ const u8 gMonFootprint_Qwilfish[] = INCBIN_U8("graphics/pokemon/qwilfish/footprint.1bpp");
+ 
++const u32 gMonFrontPic_Eirika[] = INCBIN_U32("graphics/pokemon/eirika/front.4bpp.lz");
++const u32 gMonPalette_Eirika[] = INCBIN_U32("graphics/pokemon/eirika/normal.gbapal.lz");
++const u32 gMonBackPic_Eirika[] = INCBIN_U32("graphics/pokemon/eirika/back.4bpp.lz");
++const u32 gMonShinyPalette_Eirika[] = INCBIN_U32("graphics/pokemon/eirika/shiny.gbapal.lz");
++const u8 gMonIcon_Eirika[] = INCBIN_U8("graphics/pokemon/eirika/icon.4bpp");
++const u8 gMonFootprint_Eirika[] = INCBIN_U8("graphics/pokemon/eirika/footprint.1bpp");
+ const u32 gMonFrontPic_Scizor[] = INCBIN_U32("graphics/pokemon/scizor/front.4bpp.lz");
+ const u32 gMonPalette_Scizor[] = INCBIN_U32("graphics/pokemon/scizor/normal.gbapal.lz");
+ const u32 gMonBackPic_Scizor[] = INCBIN_U32("graphics/pokemon/scizor/back.4bpp.lz");
+diff --git a/src/data/pokemon/level_up_learnset_pointers.h b/src/data/pokemon/level_up_learnset_pointers.h
+index 661458c..0046ddd 100644
+--- a/src/data/pokemon/level_up_learnset_pointers.h
++++ b/src/data/pokemon/level_up_learnset_pointers.h
+@@ -276,7 +276,7 @@ const u16 *const gLevelUpLearnsets[NUM_SPECIES] =
+     [SPECIES_OLD_UNOWN_W] = sSpecies273LevelUpLearnset,
+     [SPECIES_OLD_UNOWN_X] = sSpecies274LevelUpLearnset,
+     [SPECIES_OLD_UNOWN_Y] = sSpecies275LevelUpLearnset,
+-    [SPECIES_OLD_UNOWN_Z] = sSpecies276LevelUpLearnset,
++    [SPECIES_OLD_UNOWN_Z] = sEirikaLevelUpLearnset,
+     [SPECIES_TREECKO] = sTreeckoLevelUpLearnset,
+     [SPECIES_GROVYLE] = sGrovyleLevelUpLearnset,
+     [SPECIES_SCEPTILE] = sSceptileLevelUpLearnset,
+diff --git a/src/data/pokemon/level_up_learnsets.h b/src/data/pokemon/level_up_learnsets.h
+index bdf1f9f..d4e010a 100644
+--- a/src/data/pokemon/level_up_learnsets.h
++++ b/src/data/pokemon/level_up_learnsets.h
+@@ -2962,6 +2962,29 @@ static const u16 sQwilfishLevelUpLearnset[] = {
+     LEVEL_UP_END
+ };
+ 
++static const u16 sEirikaLevelUpLearnset[] = {
++    LEVEL_UP_MOVE( 1, MOVE_QUICK_ATTACK),
++    LEVEL_UP_MOVE( 1, MOVE_LEER),
++    LEVEL_UP_MOVE( 6, MOVE_FOCUS_ENERGY),
++    LEVEL_UP_MOVE( 7, MOVE_SCRATCH),
++    LEVEL_UP_MOVE( 9, MOVE_FURY_CUTTER),
++    LEVEL_UP_MOVE(11, MOVE_PURSUIT),
++    LEVEL_UP_MOVE(12, MOVE_FURY_ATTACK),
++    LEVEL_UP_MOVE(14, MOVE_CUT),
++    LEVEL_UP_MOVE(16, MOVE_FALSE_SWIPE),
++    LEVEL_UP_MOVE(17, MOVE_METAL_CLAW),
++    LEVEL_UP_MOVE(19, MOVE_RAZOR_LEAF),
++    LEVEL_UP_MOVE(21, MOVE_AGILITY),
++    LEVEL_UP_MOVE(22, MOVE_VICE_GRIP),
++    LEVEL_UP_MOVE(25, MOVE_SLASH),
++    LEVEL_UP_MOVE(28, MOVE_STEEL_WING),
++    LEVEL_UP_MOVE(31, MOVE_RAZOR_WIND),
++    LEVEL_UP_MOVE(34, MOVE_CROSS_CHOP),
++    LEVEL_UP_MOVE(36, MOVE_SWORDS_DANCE),
++    LEVEL_UP_MOVE(41, MOVE_IRON_DEFENSE),
++    LEVEL_UP_END
++};
++
+ static const u16 sScizorLevelUpLearnset[] = {
+     LEVEL_UP_MOVE(1, MOVE_QUICK_ATTACK),
+     LEVEL_UP_MOVE(1, MOVE_LEER),
+diff --git a/src/data/pokemon/species_info.h b/src/data/pokemon/species_info.h
+index 3e36c08..33fec90 100644
+--- a/src/data/pokemon/species_info.h
++++ b/src/data/pokemon/species_info.h
+@@ -7338,7 +7338,35 @@ const struct SpeciesInfo gSpeciesInfo[] =
+     [SPECIES_OLD_UNOWN_W] = OLD_UNOWN_SPECIES_INFO,
+     [SPECIES_OLD_UNOWN_X] = OLD_UNOWN_SPECIES_INFO,
+     [SPECIES_OLD_UNOWN_Y] = OLD_UNOWN_SPECIES_INFO,
+-    [SPECIES_OLD_UNOWN_Z] = OLD_UNOWN_SPECIES_INFO,
++    [SPECIES_EIRIKA] =
++    {
++        .baseHP = 70,
++        .baseAttack = 130,
++        .baseDefense = 100,
++        .baseSpeed = 65,
++        .baseSpAttack = 55,
++        .baseSpDefense = 80,
++        .types = {TYPE_BUG, TYPE_STEEL},
++        .catchRate = 25,
++        .expYield = 200,
++        .evYield_HP = 0,
++        .evYield_Attack = 2,
++        .evYield_Defense = 0,
++        .evYield_Speed = 0,
++        .evYield_SpAttack = 0,
++        .evYield_SpDefense = 0,
++        .itemCommon = ITEM_NONE,
++        .itemRare = ITEM_NONE,
++        .genderRatio = MON_FEMALE,
++        .eggCycles = 25,
++        .friendship = 70,
++        .growthRate = GROWTH_MEDIUM_FAST,
++        .eggGroups = {EGG_GROUP_BUG, EGG_GROUP_BUG},
++        .abilities = {ABILITY_SWARM, ABILITY_NONE},
++        .safariZoneFleeRate = 0,
++        .bodyColor = BODY_COLOR_RED,
++        .noFlip = FALSE,
++    },
+     [SPECIES_TREECKO] =
+     {
+         .baseHP = 40,
+diff --git a/src/data/pokemon/tmhm_learnsets.h b/src/data/pokemon/tmhm_learnsets.h
+index 0aa21e8..ed03476 100644
+--- a/src/data/pokemon/tmhm_learnsets.h
++++ b/src/data/pokemon/tmhm_learnsets.h
+@@ -6103,7 +6103,26 @@ static const u32 sTMHMLearnsets[][2] =
+ 
+     [SPECIES_OLD_UNOWN_Y] = TMHM_LEARNSET(0),
+ 
+-    [SPECIES_OLD_UNOWN_Z] = TMHM_LEARNSET(0),
++    [SPECIES_EIRIKA]      = TMHM_LEARNSET(TMHM(TM06_TOXIC)
++                                        | TMHM(TM10_HIDDEN_POWER)
++                                        | TMHM(TM11_SUNNY_DAY)
++                                        | TMHM(TM15_HYPER_BEAM)
++                                        | TMHM(TM17_PROTECT)
++                                        | TMHM(TM18_RAIN_DANCE)
++                                        | TMHM(TM21_FRUSTRATION)
++                                        | TMHM(TM27_RETURN)
++                                        | TMHM(TM32_DOUBLE_TEAM)
++                                        | TMHM(TM37_SANDSTORM)
++                                        | TMHM(TM40_AERIAL_ACE)
++                                        | TMHM(TM42_FACADE)
++                                        | TMHM(TM43_SECRET_POWER)
++                                        | TMHM(TM44_REST)
++                                        | TMHM(TM45_ATTRACT)
++                                        | TMHM(TM46_THIEF)
++                                        | TMHM(TM47_STEEL_WING)
++                                        | TMHM(HM01_CUT)
++                                        | TMHM(HM04_STRENGTH)
++                                        | TMHM(HM06_ROCK_SMASH)),
+ 
+     [SPECIES_TREECKO]     = TMHM_LEARNSET(TMHM(TM01_FOCUS_PUNCH)
+                                         | TMHM(TM06_TOXIC)
+diff --git a/src/data/pokemon/tutor_learnsets.h b/src/data/pokemon/tutor_learnsets.h
+index 5396c1e..bb9bf22 100644
+--- a/src/data/pokemon/tutor_learnsets.h
++++ b/src/data/pokemon/tutor_learnsets.h
+@@ -2806,6 +2806,12 @@ static const u16 sTutorLearnsets[] =
+                      | TUTOR(MOVE_ROCK_SLIDE)
+                      | TUTOR(MOVE_SUBSTITUTE),
+ 
++    [SPECIES_EIRIKA] = TUTOR(MOVE_SWORDS_DANCE)
++                     | TUTOR(MOVE_DOUBLE_EDGE)
++                     | TUTOR(MOVE_COUNTER)
++                     | TUTOR(MOVE_MIMIC)
++                     | TUTOR(MOVE_SUBSTITUTE),
++
+     [SPECIES_CHIMECHO] = TUTOR(MOVE_DOUBLE_EDGE)
+                        | TUTOR(MOVE_MIMIC)
+                        | TUTOR(MOVE_DREAM_EATER)
+diff --git a/src/data/pokemon_graphics/back_pic_coordinates.h b/src/data/pokemon_graphics/back_pic_coordinates.h
+index 17f818f..256206e 100644
+--- a/src/data/pokemon_graphics/back_pic_coordinates.h
++++ b/src/data/pokemon_graphics/back_pic_coordinates.h
+@@ -1383,7 +1383,7 @@ const struct MonCoords gMonBackPicCoords[] =
+     [SPECIES_OLD_UNOWN_Z] =
+     {
+         .size = MON_COORDS_SIZE(64, 64),
+-        .y_offset = 1,
++        .y_offset = 0,
+     },
+     [SPECIES_TREECKO] =
+     {
+diff --git a/src/data/pokemon_graphics/back_pic_table.h b/src/data/pokemon_graphics/back_pic_table.h
+index 60ee8fe..7d9b7ba 100644
+--- a/src/data/pokemon_graphics/back_pic_table.h
++++ b/src/data/pokemon_graphics/back_pic_table.h
+@@ -276,7 +276,7 @@ const struct CompressedSpriteSheet gMonBackPicTable[] =
+     SPECIES_SPRITE(OLD_UNOWN_W, gMonBackPic_DoubleQuestionMark),
+     SPECIES_SPRITE(OLD_UNOWN_X, gMonBackPic_DoubleQuestionMark),
+     SPECIES_SPRITE(OLD_UNOWN_Y, gMonBackPic_DoubleQuestionMark),
+-    SPECIES_SPRITE(OLD_UNOWN_Z, gMonBackPic_DoubleQuestionMark),
++    SPECIES_SPRITE(OLD_UNOWN_Z, gMonBackPic_Eirika),
+     SPECIES_SPRITE(TREECKO, gMonBackPic_Treecko),
+     SPECIES_SPRITE(GROVYLE, gMonBackPic_Grovyle),
+     SPECIES_SPRITE(SCEPTILE, gMonBackPic_Sceptile),
+diff --git a/src/data/pokemon_graphics/footprint_table.h b/src/data/pokemon_graphics/footprint_table.h
+index 86ca067..607e398 100644
+--- a/src/data/pokemon_graphics/footprint_table.h
++++ b/src/data/pokemon_graphics/footprint_table.h
+@@ -276,7 +276,7 @@ const u8 *const gMonFootprintTable[] =
+     [SPECIES_OLD_UNOWN_W] = gMonFootprint_QuestionMark,
+     [SPECIES_OLD_UNOWN_X] = gMonFootprint_QuestionMark,
+     [SPECIES_OLD_UNOWN_Y] = gMonFootprint_QuestionMark,
+-    [SPECIES_OLD_UNOWN_Z] = gMonFootprint_QuestionMark,
++    [SPECIES_OLD_UNOWN_Z] = gMonFootprint_Eirika,
+     [SPECIES_TREECKO] = gMonFootprint_Treecko,
+     [SPECIES_GROVYLE] = gMonFootprint_Grovyle,
+     [SPECIES_SCEPTILE] = gMonFootprint_Sceptile,
+diff --git a/src/data/pokemon_graphics/front_pic_coordinates.h b/src/data/pokemon_graphics/front_pic_coordinates.h
+index d521b61..780c546 100644
+--- a/src/data/pokemon_graphics/front_pic_coordinates.h
++++ b/src/data/pokemon_graphics/front_pic_coordinates.h
+@@ -1383,7 +1383,7 @@ const struct MonCoords gMonFrontPicCoords[] =
+     [SPECIES_OLD_UNOWN_Z] =
+     {
+         .size = MON_COORDS_SIZE(64, 64),
+-        .y_offset = 6,
++        .y_offset = 0,
+     },
+     [SPECIES_TREECKO] =
+     {
+diff --git a/src/data/pokemon_graphics/front_pic_table.h b/src/data/pokemon_graphics/front_pic_table.h
+index 82af860..e1a489e 100644
+--- a/src/data/pokemon_graphics/front_pic_table.h
++++ b/src/data/pokemon_graphics/front_pic_table.h
+@@ -276,7 +276,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
+     SPECIES_SPRITE(OLD_UNOWN_W, gMonFrontPic_DoubleQuestionMark),
+     SPECIES_SPRITE(OLD_UNOWN_X, gMonFrontPic_DoubleQuestionMark),
+     SPECIES_SPRITE(OLD_UNOWN_Y, gMonFrontPic_DoubleQuestionMark),
+-    SPECIES_SPRITE(OLD_UNOWN_Z, gMonFrontPic_DoubleQuestionMark),
++    SPECIES_SPRITE(OLD_UNOWN_Z, gMonFrontPic_Eirika),
+     SPECIES_SPRITE(TREECKO, gMonFrontPic_Treecko),
+     SPECIES_SPRITE(GROVYLE, gMonFrontPic_Grovyle),
+     SPECIES_SPRITE(SCEPTILE, gMonFrontPic_Sceptile),
+diff --git a/src/data/pokemon_graphics/palette_table.h b/src/data/pokemon_graphics/palette_table.h
+index 35edcc7..3dcc300 100644
+--- a/src/data/pokemon_graphics/palette_table.h
++++ b/src/data/pokemon_graphics/palette_table.h
+@@ -276,7 +276,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
+     SPECIES_PAL(OLD_UNOWN_W, gMonPalette_DoubleQuestionMark),
+     SPECIES_PAL(OLD_UNOWN_X, gMonPalette_DoubleQuestionMark),
+     SPECIES_PAL(OLD_UNOWN_Y, gMonPalette_DoubleQuestionMark),
+-    SPECIES_PAL(OLD_UNOWN_Z, gMonPalette_DoubleQuestionMark),
++    SPECIES_PAL(OLD_UNOWN_Z, gMonPalette_Eirika),
+     SPECIES_PAL(TREECKO, gMonPalette_Treecko),
+     SPECIES_PAL(GROVYLE, gMonPalette_Grovyle),
+     SPECIES_PAL(SCEPTILE, gMonPalette_Sceptile),
+diff --git a/src/data/pokemon_graphics/shiny_palette_table.h b/src/data/pokemon_graphics/shiny_palette_table.h
+index 8b1cfca..ea9522c 100644
+--- a/src/data/pokemon_graphics/shiny_palette_table.h
++++ b/src/data/pokemon_graphics/shiny_palette_table.h
+@@ -276,7 +276,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
+     SPECIES_SHINY_PAL(OLD_UNOWN_W, gMonShinyPalette_DoubleQuestionMark),
+     SPECIES_SHINY_PAL(OLD_UNOWN_X, gMonShinyPalette_DoubleQuestionMark),
+     SPECIES_SHINY_PAL(OLD_UNOWN_Y, gMonShinyPalette_DoubleQuestionMark),
+-    SPECIES_SHINY_PAL(OLD_UNOWN_Z, gMonShinyPalette_DoubleQuestionMark),
++    SPECIES_SHINY_PAL(OLD_UNOWN_Z, gMonShinyPalette_Eirika),
+     SPECIES_SHINY_PAL(TREECKO, gMonShinyPalette_Treecko),
+     SPECIES_SHINY_PAL(GROVYLE, gMonShinyPalette_Grovyle),
+     SPECIES_SHINY_PAL(SCEPTILE, gMonShinyPalette_Sceptile),
+diff --git a/src/data/text/species_names.h b/src/data/text/species_names.h
+index 25f2c9a..9a39e2d 100644
+--- a/src/data/text/species_names.h
++++ b/src/data/text/species_names.h
+@@ -275,7 +275,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
+     [SPECIES_OLD_UNOWN_W] = _("?"),
+     [SPECIES_OLD_UNOWN_X] = _("?"),
+     [SPECIES_OLD_UNOWN_Y] = _("?"),
+-    [SPECIES_OLD_UNOWN_Z] = _("?"),
++    [SPECIES_OLD_UNOWN_Z] = _("EIRIKA"),
+     [SPECIES_TREECKO] = _("TREECKO"),
+     [SPECIES_GROVYLE] = _("GROVYLE"),
+     [SPECIES_SCEPTILE] = _("SCEPTILE"),
+diff --git a/src/new_game.c b/src/new_game.c
+index 3768b3c..3fa6e76 100644
+--- a/src/new_game.c
++++ b/src/new_game.c
+@@ -29,6 +29,8 @@
+ #include "berry_powder.h"
+ #include "pokemon_jump.h"
+ #include "event_scripts.h"
++#include "pokemon.h"
++#include "pokedex.h"
+ 
+ // this file's functions
+ static void ResetMiniGamesResults(void);
+@@ -104,6 +106,18 @@ void ResetMenuAndMonGlobals(void)
+     ResetSpecialVars();
+ }
+ 
++static void CreateStarterEirika(void)
++{
++    u16 nationalDexNum = SpeciesToNationalPokedexNum(SPECIES_EIRIKA);
++
++    // Level 5, every IV 31, always female
++    CreateMon(&gPlayerParty[0], SPECIES_EIRIKA, 5, 31, FALSE, 0, OT_ID_PLAYER_ID, 0);
++    gPlayerPartyCount = 1;
++    FlagSet(FLAG_SYS_POKEMON_GET);
++    GetSetPokedexFlag(nationalDexNum, FLAG_SET_SEEN);
++    GetSetPokedexFlag(nationalDexNum, FLAG_SET_CAUGHT);
++}
++
+ void NewGameInitData(void)
+ {
+     u8 rivalName[PLAYER_NAME_LENGTH + 1];
+@@ -134,6 +148,7 @@ void NewGameInitData(void)
+     gPlayerPartyCount = 0;
+     ZeroPlayerPartyMons();
+     ResetPokemonStorageSystem();
++    CreateStarterEirika();
+     ClearRoamerData();
+     gSaveBlock1Ptr->registeredItem = 0;
+     ClearBag();
+diff --git a/src/oak_speech.c b/src/oak_speech.c
+index 77dd3db..de119d2 100644
+--- a/src/oak_speech.c
++++ b/src/oak_speech.c
+@@ -111,6 +111,8 @@ extern const u8 gText_ABUTTONNext[];
+ extern const u8 gText_ABUTTONNext_BBUTTONBack[];
+ extern const u8 gText_Boy[];
+ extern const u8 gText_Girl[];
++extern const u8 gText_FixedPlayerName[];
++extern const u8 gText_FixedRivalName[];
+ extern const struct OamData gOamData_AffineOff_ObjBlend_32x32;
+ extern const struct OamData gOamData_AffineOff_ObjNormal_32x32;
+ extern const struct OamData gOamData_AffineOff_ObjNormal_32x16;
+@@ -685,10 +687,11 @@ static void CB2_NewGameScene(void)
+ 
+ void StartNewGameScene(void)
+ {
+-    gPlttBufferUnfaded[0] = RGB_BLACK;
+-    gPlttBufferFaded[0]   = RGB_BLACK;
+-    CreateTask(Task_NewGameScene, 0);
+-    SetMainCallback2(CB2_NewGameScene);
++    // Skip the controls guide, Pikachu intro and Oak's speech: fixed gender and names, straight to the player's room
++    gSaveBlock2Ptr->playerGender = FEMALE;
++    StringCopy(gSaveBlock2Ptr->playerName, gText_FixedPlayerName);
++    StringCopy(gSaveBlock1Ptr->rivalName, gText_FixedRivalName);
++    SetMainCallback2(CB2_NewGame);
+ }
+ 
+ #define tSpriteTimer                data[0]
+@@ -1276,10 +1279,14 @@ static void Task_OakSpeech_AskPlayerGender(u8 taskId)
+         }
+         else
+         {
+-            tTrainerPicPosX = -60;
+-            ClearTrainerPic();
+-            OakSpeechPrintMessage(gOakSpeech_Text_AskPlayerGender, sOakSpeechResources->textSpeed);
+-            gTasks[taskId].func = Task_OakSpeech_ShowGenderOptions;
++            // Gender, player name and rival name are fixed: skip the gender and naming screens
++            gSaveBlock2Ptr->playerGender = FEMALE;
++            StringCopy(gSaveBlock2Ptr->playerName, gText_FixedPlayerName);
++            StringCopy(gSaveBlock1Ptr->rivalName, gText_FixedRivalName);
++            tTrainerPicPosX = 0;
++            gSpriteCoordOffsetX = 0;
++            tTimer = 0;
++            gTasks[taskId].func = Task_OakSpeech_ReshowPlayersPic;
+         }
+     }
+ }
+diff --git a/src/pokemon.c b/src/pokemon.c
+index 66a5c3d..17d6fb4 100644
+--- a/src/pokemon.c
++++ b/src/pokemon.c
+@@ -5236,6 +5236,9 @@ u16 SpeciesToCryId(u16 species)
+     if (species < SPECIES_OLD_UNOWN_B - 1)
+         return species;
+ 
++    if (species == SPECIES_EIRIKA)
++        return SPECIES_SCIZOR - 1; // Eirika uses Scizor's cry
++
+     if (species <= SPECIES_OLD_UNOWN_Z - 1)
+         return SPECIES_UNOWN - 1;
+ 
+diff --git a/src/pokemon_icon.c b/src/pokemon_icon.c
+index 037b1bf..a4eaa64 100644
+--- a/src/pokemon_icon.c
++++ b/src/pokemon_icon.c
+@@ -22,7 +22,8 @@ static void DestroyMonIconInternal(struct Sprite *sprite);
+ const u16 gMonIconPalettes[][16] = {
+     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_0.gbapal"),
+     INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_1.gbapal"),
+-    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_2.gbapal")
++    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_2.gbapal"),
++    INCBIN_U16("graphics/pokemon/icon_palettes/icon_palette_3.gbapal")
+ };
+ 
+ const u8 *const gMonIconTable[] = {
+@@ -302,7 +303,7 @@ const u8 *const gMonIconTable[] = {
+     [SPECIES_OLD_UNOWN_W] = gMonIcon_QuestionMark,
+     [SPECIES_OLD_UNOWN_X] = gMonIcon_QuestionMark,
+     [SPECIES_OLD_UNOWN_Y] = gMonIcon_QuestionMark,
+-    [SPECIES_OLD_UNOWN_Z] = gMonIcon_QuestionMark,
++    [SPECIES_OLD_UNOWN_Z] = gMonIcon_Eirika,
+     [SPECIES_TREECKO]     = gMonIcon_Treecko,
+     [SPECIES_GROVYLE]     = gMonIcon_Grovyle,
+     [SPECIES_SCEPTILE]    = gMonIcon_Sceptile,
+@@ -745,7 +746,7 @@ const u8 gMonIconPaletteIndices[] = {
+     [SPECIES_OLD_UNOWN_W] = 0,
+     [SPECIES_OLD_UNOWN_X] = 0,
+     [SPECIES_OLD_UNOWN_Y] = 0,
+-    [SPECIES_OLD_UNOWN_Z] = 0,
++    [SPECIES_OLD_UNOWN_Z] = 3,
+     [SPECIES_TREECKO]     = 1,
+     [SPECIES_GROVYLE]     = 0,
+     [SPECIES_SCEPTILE]    = 1,
+diff --git a/src/strings.c b/src/strings.c
+index c099555..64fc56d 100644
+--- a/src/strings.c
++++ b/src/strings.c
+@@ -52,6 +52,8 @@ ALIGNED(4) const u8 gText_UPDOWNPick_ABUTTONBBUTTONCancel[] = _("{DPAD_UPDOWN}PI
+ ALIGNED(4) const u8 gText_ABUTTONExit[] = _("{A_BUTTON}EXIT");
+ const u8 gText_Boy[] = _("BOY");
+ const u8 gText_Girl[] = _("GIRL");
++const u8 gText_FixedPlayerName[] = _("EIRIKA");
++const u8 gText_FixedRivalName[] = _("LYON");
+ const u8 gText_PokedexTableOfContents[] = _("POKéDEX   TABLE OF CONTENTS");
+ const u8 gText_PickOK[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK");
+ const u8 gText_Seen[] = _("Seen:");

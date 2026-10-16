@@ -7,11 +7,13 @@ Base ROM: `Pokemon - FireRed Version (USA).gba`, BPRE, SHA-1 `41cb23d8dccc8ebd7c
 Status as of 2026-10-16: planning plus feasibility prototypes. No ROM has been patched and nothing in this list has been executed in the repo yet. All prototype work lives in session scratch space and is listed under "What exists today".
 
 ## Leg 1 progress (2026-10-16)
-Built from a copy of the FireRed decomp (`/home/user/pret/pokefirered_leg1`, session only). Source changes are in `patches/leg1/leg1_naming_bypass_src.diff` (code only). The art swaps use FE8 art, so they and the IPS built from them are not in the repo. The IPS was made locally as `FireRed_Eirika_Leg1.ips` (applies to vanilla BPRE, verified byte-identical to the built ROM).
-- Done: the gender and naming screens are skipped in Oak's speech. The player is always female, named EIRIKA, and the rival is named LYON. Oak's speech text and the controls guide and Pikachu intro pages are unchanged.
-- Done: Eirika's portrait (64x64 crop) replaces Leaf's trainer front pic (trainer card, link, other trainer pic uses), Leaf's Oak speech pic and Leaf's battle back pic (same still image in all five frames).
-- Checked in emulator: Oak speech shows Eirika and prints "EIRIKA!"; the starting room loads and text uses EIRIKA; a test battle shows the Eirika back pic. Not yet checked: trainer card, rival name in rival dialogue, Hall of Fame.
-- Not done: Eirika as a Pokemon species with her back sprite (needs the party model decision), the rival's Oak speech pic and overworld sprite, Leaf's overworld sprite, skipping Oak's speech and the intro pages.
+Built from a copy of the FireRed decomp (`/home/user/pret/pokefirered_leg1`, session only). Source changes are in `patches/leg1/leg1_src.diff` (code only). The art swaps use FE8 art, so they and the IPS built from them are not in the repo. The IPS was made locally as `FireRed_Eirika_Leg1.ips` (applies to vanilla BPRE, verified byte-identical to the built ROM).
+- Done: NEW GAME skips the controls guide, Pikachu intro, Oak's speech and all naming. The player is female and named EIRIKA, the rival is named LYON, and the game starts in the player's room (checked in the emulator).
+- Done: Eirika art replaces Leaf in the trainer front pic (trainer card, link and other uses), Oak speech pic (no longer shown), battle back pic and region map icon. The overworld sprites are unchanged.
+- Done: species EIRIKA uses the old "?" slot 276 (`SPECIES_EIRIKA`). Scizor's base stats, types (Bug/Steel), ability (Swarm), exp, EV yield, TM/HM and tutor compatibility and cry. Gender is fixed female. Front, back and icon are the Eirika portrait crop. The learnset is Scizor's with these changes: Metal Claw (was 26), Slash (was 31) and Fury Cutter (was 46) are moved, and the 11 requested moves are placed at levels 7 Scratch, 9 Fury Cutter, 12 Fury Attack, 14 Cut, 17 Metal Claw, 19 Razor Leaf, 22 Vice Grip, 25 Slash, 28 Steel Wing, 31 Razor Wind, 34 Cross Chop. Scizor's own Pursuit 11, False Swipe 16, Agility 21 and Swords Dance 36 are unchanged.
+- Done: every new game gives the player a level 5 Eirika in party slot 1 with all IVs 31 (verified in memory), marked seen and caught, and sets the has-Pokemon flag.
+- Checked in emulator: room loads, party screen and summary show Eirika with the portrait icon, and a test battle uses her back sprite.
+- Not done: Eirika attack animation in battle (next), Oak's lab starter and the "Oak stops you in the grass" scripts still expect a starter, the rival's art, overworld sprites, the "Met in CELADON DEPT." origin text, Pokedex entry and number for Eirika.
 
 ## Goal
 Recreate the story of FE8 in FireRed, in three legs.
