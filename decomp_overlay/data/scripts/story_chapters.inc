@@ -240,6 +240,9 @@ Story_Arrive_5::
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_JOSHUA, 1, 1
+	msgbox Story_Ch5_RecruitJoshua, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitJoshua
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch5_Mid, MSGBOX_DEFAULT
@@ -261,6 +264,9 @@ Story_Ch5_Before:
 
 Story_Ch5_Mid:
 	.string "Grado's soldiers are everywhere.\nKeep moving.$"
+
+Story_Ch5_RecruitJoshua:
+	.string "Joshua: Heh. A princess on the\nrun? I'll lend my sword. Fair pay,\pfair play.$"
 
 Story_Ch5_After:
 	.string "Joshua joins you for a fee and a\nlaugh.$"
@@ -288,6 +294,9 @@ Story_Arrive_6::
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_JOSHUA, 1, 1
+	msgbox Story_Ch6_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch6_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -308,6 +317,9 @@ Story_Ch6_Before:
 
 Story_Ch6_Mid:
 	.string "Whole villages stand empty. I will\nnot forget this.$"
+
+Story_Ch6_AllyTalk:
+	.string "Joshua: Villagers first, coin\nlater. Even I can't take pay from\pthis lot.$"
 
 Story_Ch6_After:
 	.string "The villagers are safe for now.$"
@@ -335,6 +347,9 @@ Story_Arrive_7::
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_JOSHUA, 1, 1
+	msgbox Story_Ch7_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch7_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -355,6 +370,9 @@ Story_Ch7_Before:
 
 Story_Ch7_Mid:
 	.string "The coast road is open. Let us\nhurry.$"
+
+Story_Ch7_AllyTalk:
+	.string "Joshua: Harbor towns are easy to\nlove. Shame about the guards.$"
 
 Story_Ch7_After:
 	.string "Murray is down. The harbor is\nyours.$"
@@ -429,6 +447,9 @@ Story_Arrive_9::
 	setvar VAR_0x8006, TRAINER_LEADER_LT_SURGE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_TANA, 1, 1
+	msgbox Story_Ch9_RecruitTana, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitTana
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch9_Mid, MSGBOX_DEFAULT
@@ -450,6 +471,9 @@ Story_Ch9_Before:
 
 Story_Ch9_Mid:
 	.string "A lone fighter holds the road\nahead.$"
+
+Story_Ch9_RecruitTana:
+	.string "Tana: Princess Eirika! I'm Tana of\nFrelia. Innes is waiting. Let me\pguide you.$"
 
 Story_Ch9_After:
 	.string "Tana the pegasus rider joins you.$"
@@ -477,7 +501,13 @@ Story_Arrive_10::
 	setvar VAR_0x8006, TRAINER_LEADER_MISTY
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_INNES, 1, 1
+	msgbox Story_Ch10_RecruitInnes, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitInnes
+	showmonpic SPECIES_DUESSEL, 1, 1
+	msgbox Story_Ch10_RecruitDuessel, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitDuessel
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch10_Mid, MSGBOX_DEFAULT
@@ -499,6 +529,12 @@ Story_Ch10_Before:
 
 Story_Ch10_Mid:
 	.string "Carcino is in revolt. Hold the\nline.$"
+
+Story_Ch10_RecruitInnes:
+	.string "Innes: Eirika. Your fight is mine\nnow. Frelia's bow will cover you.$"
+
+Story_Ch10_RecruitDuessel:
+	.string "Duessel: I serve no throne now,\nonly honor. My axe is yours,\pPrincess.$"
 
 Story_Ch10_After:
 	.string "Innes and Duessel join you.$"
@@ -526,7 +562,13 @@ Story_Arrive_11::
 	setvar VAR_0x8006, TRAINER_LEADER_ERIKA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_LARACHEL, 1, 1
+	msgbox Story_Ch11_RecruitLArachel, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitLArachel
+	showmonpic SPECIES_DOZLA, 1, 1
+	msgbox Story_Ch11_RecruitDozla, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitDozla
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch11_Mid, MSGBOX_DEFAULT
@@ -548,6 +590,12 @@ Story_Ch11_Before:
 
 Story_Ch11_Mid:
 	.string "The temple is quiet. Too quiet.$"
+
+Story_Ch11_RecruitLArachel:
+	.string "L'Arachel: Fear not! The great\nL'Arachel has arrived to rescue\pyou!$"
+
+Story_Ch11_RecruitDozla:
+	.string "Dozla: Dozla is strong. Dozla will\nfight for you. Let's go!$"
 
 Story_Ch11_After:
 	.string "L'Arachel and Dozla join you.$"
@@ -575,6 +623,9 @@ Story_Arrive_12::
 	setvar VAR_0x8006, TRAINER_LEADER_ERIKA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_MYRRH, 1, 1
+	msgbox Story_Ch12_RecruitMyrrh, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitMyrrh
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch12_Mid, MSGBOX_DEFAULT
@@ -596,6 +647,9 @@ Story_Ch12_Before:
 
 Story_Ch12_Mid:
 	.string "No one answers. Something is wrong\nin this village.$"
+
+Story_Ch12_RecruitMyrrh:
+	.string "Myrrh: Um... I'm Myrrh. I can\nfight. Can I stay with you? I'm\phungry too.$"
 
 Story_Ch12_After:
 	.string "Myrrh the dragon girl joins you.$"
@@ -623,6 +677,9 @@ Story_Arrive_13::
 	setvar VAR_0x8006, TRAINER_LEADER_KOGA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_CORMAG, 1, 1
+	msgbox Story_Ch13_RecruitCormag, MSGBOX_DEFAULT
+	hidemonpic
 	call EventScript_RecruitCormag
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch13_Mid, MSGBOX_DEFAULT
@@ -644,6 +701,9 @@ Story_Ch13_Before:
 
 Story_Ch13_Mid:
 	.string "The canyon narrows. Stay in\nformation.$"
+
+Story_Ch13_RecruitCormag:
+	.string "Cormag: Grado betrayed my honor.\nI'll ride with you, Princess, and\pprove it.$"
 
 Story_Ch13_After:
 	.string "Cormag changes sides and joins\nyou.$"
@@ -671,6 +731,9 @@ Story_Arrive_14::
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_CORMAG, 1, 1
+	msgbox Story_Ch14_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch14_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -691,6 +754,9 @@ Story_Ch14_Before:
 
 Story_Ch14_Mid:
 	.string "The desert wind is cruel. Keep\nyour strength.$"
+
+Story_Ch14_AllyTalk:
+	.string "Cormag: Carlyle fought well. I\nknew him once. Let us finish this\pquickly.$"
 
 Story_Ch14_After:
 	.string "Carlyle yields. The way across the\ndesert is open.$"
@@ -718,6 +784,9 @@ Story_Arrive_15::
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_DOZLA, 1, 1
+	msgbox Story_Ch15_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch15_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -738,6 +807,9 @@ Story_Ch15_Before:
 
 Story_Ch15_Mid:
 	.string "Sand and silence. The Queen waits.$"
+
+Story_Ch15_AllyTalk:
+	.string "Dozla: Hot sand. Heavy armor.\nDozla is fine, but Dozla wants\pwater.$"
 
 Story_Ch15_After:
 	.string "Valter retreats toward Grado.$"
@@ -765,6 +837,9 @@ Story_Arrive_16::
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_LARACHEL, 1, 1
+	msgbox Story_Ch16_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch16_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -785,6 +860,9 @@ Story_Ch16_Before:
 
 Story_Ch16_Mid:
 	.string "His madness is not his own.$"
+
+Story_Ch16_AllyTalk:
+	.string "L'Arachel: Orson has lost his\nmind! Do not worry, my staff will\pmend you.$"
 
 Story_Ch16_After:
 	.string "Orson's madness breaks.$"
@@ -808,6 +886,9 @@ Story_Arrive_17::
 	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE, Story_Ch17_Defeat
+	showmonpic SPECIES_MYRRH, 1, 1
+	msgbox Story_Ch17_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch17_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -828,6 +909,9 @@ Story_Ch17_Before:
 
 Story_Ch17_Mid:
 	.string "Lyon, why? We were friends.$"
+
+Story_Ch17_AllyTalk:
+	.string "Myrrh: The river is sad. I can\nfeel it. Lyon, please stop.$"
 
 Story_Ch17_After:
 	.string "Lyon is shaken, not beaten. Syrene\nsteps forward.$"
@@ -855,6 +939,9 @@ Story_Arrive_18::
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_INNES, 1, 1
+	msgbox Story_Ch18_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch18_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -875,6 +962,9 @@ Story_Ch18_Before:
 
 Story_Ch18_Mid:
 	.string "Two faces, and neither is the boy\nI knew.$"
+
+Story_Ch18_AllyTalk:
+	.string "Innes: That monster is no Grado\nsoldier. Keep your bow ready,\pTana.$"
 
 Story_Ch18_After:
 	.string "The gorgon sinks.$"
@@ -902,6 +992,9 @@ Story_Arrive_19::
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_TANA, 1, 1
+	msgbox Story_Ch19_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch19_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -922,6 +1015,9 @@ Story_Ch19_Before:
 
 Story_Ch19_Mid:
 	.string "We have no way back now.$"
+
+Story_Ch19_AllyTalk:
+	.string "Tana: The summit is cold, but I\nflew higher than this once. We are\pnearly there.$"
 
 Story_Ch19_After:
 	.string "The summit is clear.$"
@@ -949,6 +1045,9 @@ Story_Arrive_20::
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_DUESSEL, 1, 1
+	msgbox Story_Ch20_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch20_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -969,6 +1068,9 @@ Story_Ch20_Before:
 
 Story_Ch20_Mid:
 	.string "The Darkling Woods swallow the\nlight.$"
+
+Story_Ch20_AllyTalk:
+	.string "Duessel: Dark woods, darker\npurpose. Stay close, Princess. I\pwill take the front.$"
 
 Story_Ch20_After:
 	.string "The way to the temple is open.$"
@@ -992,6 +1094,9 @@ Story_Arrive_21::
 	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_SQUIRTLE, Story_Ch21_Defeat
+	showmonpic SPECIES_MYRRH, 1, 1
+	msgbox Story_Ch21_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch21_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -1012,6 +1117,9 @@ Story_Ch21_Before:
 
 Story_Ch21_Mid:
 	.string "The Sacred Stone is close.$"
+
+Story_Ch21_AllyTalk:
+	.string "Myrrh: Lyon is not himself.\nEirika, please save him if you\pcan.$"
 
 Story_Ch21_After:
 	.string "Lyon's body falls. The Demon King\nwakes.$"
@@ -1035,6 +1143,9 @@ Story_Arrive_22::
 	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
 	waitmovement 0
 	trainerbattle_no_intro TRAINER_PSYCHIC_CAMERON, Story_Ch22_Defeat
+	showmonpic SPECIES_INNES, 1, 1
+	msgbox Story_Ch22_AllyTalk, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch22_Mid, MSGBOX_DEFAULT
 	hidemonpic
@@ -1055,6 +1166,9 @@ Story_Ch22_Before:
 
 Story_Ch22_Mid:
 	.string "This ends here.$"
+
+Story_Ch22_AllyTalk:
+	.string "Innes: We have come far. Finish\nthis, Eirika. Renais will rise\pagain.$"
 
 Story_Ch22_After:
 	.string "Fomortiis is destroyed. Magvel is\nat peace. The end.$"

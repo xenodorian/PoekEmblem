@@ -1,0 +1,7 @@
+chapter 4: HANG (40000 frames)
+chapter 6: HANG (40000 frames)
+chapter 10: HANG (40000 frames)
+chapter 12: HANG (40000 frames)
+chapter 16: HANG (40000 frames)
+chapter 17: HANG (40000 frames)
+chapter 22: HANG (40000 frames)

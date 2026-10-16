@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the story chapter scripts and trainer parties in the decomp.
 Usage: leg3_story.py CHAPTERS_JSON DECOMP_DIR"""
-import json, re, sys, textwrap
+import json, os, re, sys, textwrap
 from pathlib import Path
 
 d = json.load(open(sys.argv[1])); root = Path(sys.argv[2])
@@ -69,7 +69,8 @@ for t, (lvl, cnt, key) in plan.items():
     pm = re.search(r'static const struct \w+ %s\[\] = \{.*?\n\};' % sym, parties, re.S)
     parties = parties.replace(pm.group(0), 'static const struct TrainerMonNoItemDefaultMoves %s[] = {\n%s};' % (sym, body))
     trainers = trainers.replace(m.group(0), m.group(0).replace(macro + '(', 'NO_ITEM_DEFAULT_MOVES('))
-pp.write_text(parties); tr.write_text(trainers)
+if not os.environ.get('SCRIPTS_ONLY'):
+    pp.write_text(parties); tr.write_text(trainers)
 
 # ---- scripts
 def mapinfo(mid):
@@ -123,7 +124,12 @@ for c in d['chapters']:
         else:
             inc += ['\ttrainerbattle_no_intro %s, Story_Ch%d_Defeat' % (b['a'], n)]
     for r in c.get('recruits', []):
+        rl = c.get('recruit_lines', {}).get(r)
+        if rl:
+            inc += ['\tshowmonpic SPECIES_%s, 1, 1' % r.upper(), '\tmsgbox Story_Ch%d_Recruit%s, MSGBOX_DEFAULT' % (n, r), '\thidemonpic']
         inc += ['\tcall EventScript_Recruit%s' % r]
+    if c.get('ally_talk'):
+        inc += ['\tshowmonpic %s, 1, 1' % c['ally_talk']['speaker'], '\tmsgbox Story_Ch%d_AllyTalk, MSGBOX_DEFAULT' % n, '\thidemonpic']
     if len(c['battles']) < 2 and c.get('mid'):
         inc += ['\tshowmonpic %s, 1, 1' % c['mid']['speaker'], '\tmsgbox Story_Ch%d_Mid, MSGBOX_DEFAULT' % n, '\thidemonpic']
     sa = c.get('speaker_after') or ('SPECIES_' + c['recruits'][0].upper() if c.get('recruits') else 'SPECIES_EIRIKA')
@@ -135,6 +141,8 @@ for c in d['chapters']:
     inc += ['Story_Ch%d_Title:' % n, '\t.string "CHAPTER %d\\n%s$"' % (n, c['title'].upper().replace('"', '')), '',
             'Story_Ch%d_Before:' % n, '\t.string "%s"' % fmt(c['before']), '',
             'Story_Ch%d_Mid:' % n, '\t.string "%s"' % fmt([c['mid']['text'] if c.get('mid') else '...']), '',
+            ] + sum([['Story_Ch%d_Recruit%s:' % (n, r), '\t.string "%s"' % fmt([t]), ''] for r, t in c.get('recruit_lines', {}).items()], []) + (
+            ['Story_Ch%d_AllyTalk:' % n, '\t.string "%s"' % fmt([c['ally_talk']['text']]), ''] if c.get('ally_talk') else []) + [
             'Story_Ch%d_After:' % n, '\t.string "%s"' % fmt(c['after']), '',
             'Story_Ch%d_Defeat:' % n, '\t.string "..."', '']
 guide += ['\tmsgbox Story_NoMoreChapters, MSGBOX_DEFAULT', '\trelease', '\tend', '',

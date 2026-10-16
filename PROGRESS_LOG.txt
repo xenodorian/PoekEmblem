@@ -4,3 +4,4 @@
 2026-10-16 Step 3 built: BILL renamed HAYDEN, DAISY renamed ISMAIRE in all dialogue (24 files). ROM builds/Pokemon FireRed Eirika Leg1-NPC-Names.gba
 2026-10-16 Step 4 built: Oak lab starter balls made inert (text only). ROM builds/Pokemon FireRed Eirika Leg1-OakLab.gba
 2026-10-16 Step 5 built: six story maps (tools/leg3_custom_maps.py, clones of existing interiors without NPCs) wired to chapters 0,2,8,15,21,22; dialogue overflow scan (tools/check_overflow.py) found no regressions vs vanilla. ROM builds/Pokemon FireRed Eirika Leg3-CustomMaps.gba. Pokedex entries for ally species not done: entries for national numbers past Deoxys do not exist in gPokedexEntries and the dex UI is capped at the Deoxys count.
+2026-10-16 Step 6: Pokedex entries for Eirika and 8 allies (No.387-395), National Dex enabled at new game. Step 7: ally recruit lines and ally talk lines (chapters.json, leg3_story.py). ROM builds/Pokemon FireRed Eirika Leg4-Dex-AllyDialogue.gba

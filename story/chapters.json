@@ -126,6 +126,9 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Grado's soldiers are everywhere. Keep moving."
+   },
+   "recruit_lines": {
+    "Joshua": "Joshua: Heh. A princess on the run? I'll lend my sword. Fair pay, fair play."
    }
   },
   {
@@ -148,6 +151,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Whole villages stand empty. I will not forget this."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_JOSHUA",
+    "text": "Joshua: Villagers first, coin later. Even I can't take pay from this lot."
    }
   },
   {
@@ -170,6 +177,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The coast road is open. Let us hurry."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_JOSHUA",
+    "text": "Joshua: Harbor towns are easy to love. Shame about the guards."
    }
   },
   {
@@ -217,6 +228,9 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "A lone fighter holds the road ahead."
+   },
+   "recruit_lines": {
+    "Tana": "Tana: Princess Eirika! I'm Tana of Frelia. Innes is waiting. Let me guide you."
    }
   },
   {
@@ -243,6 +257,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Carcino is in revolt. Hold the line."
+   },
+   "recruit_lines": {
+    "Innes": "Innes: Eirika. Your fight is mine now. Frelia's bow will cover you.",
+    "Duessel": "Duessel: I serve no throne now, only honor. My axe is yours, Princess."
    }
   },
   {
@@ -269,6 +287,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The temple is quiet. Too quiet."
+   },
+   "recruit_lines": {
+    "LArachel": "L'Arachel: Fear not! The great L'Arachel has arrived to rescue you!",
+    "Dozla": "Dozla: Dozla is strong. Dozla will fight for you. Let's go!"
    }
   },
   {
@@ -294,6 +316,9 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "No one answers. Something is wrong in this village."
+   },
+   "recruit_lines": {
+    "Myrrh": "Myrrh: Um... I'm Myrrh. I can fight. Can I stay with you? I'm hungry too."
    }
   },
   {
@@ -319,6 +344,9 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The canyon narrows. Stay in formation."
+   },
+   "recruit_lines": {
+    "Cormag": "Cormag: Grado betrayed my honor. I'll ride with you, Princess, and prove it."
    }
   },
   {
@@ -341,6 +369,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The desert wind is cruel. Keep your strength."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_CORMAG",
+    "text": "Cormag: Carlyle fought well. I knew him once. Let us finish this quickly."
    }
   },
   {
@@ -363,6 +395,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Sand and silence. The Queen waits."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_DOZLA",
+    "text": "Dozla: Hot sand. Heavy armor. Dozla is fine, but Dozla wants water."
    }
   },
   {
@@ -385,6 +421,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "His madness is not his own."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_LARACHEL",
+    "text": "L'Arachel: Orson has lost his mind! Do not worry, my staff will mend you."
    }
   },
   {
@@ -405,6 +445,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Lyon, why? We were friends."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_MYRRH",
+    "text": "Myrrh: The river is sad. I can feel it. Lyon, please stop."
    }
   },
   {
@@ -427,6 +471,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Two faces, and neither is the boy I knew."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_INNES",
+    "text": "Innes: That monster is no Grado soldier. Keep your bow ready, Tana."
    }
   },
   {
@@ -449,6 +497,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "We have no way back now."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_TANA",
+    "text": "Tana: The summit is cold, but I flew higher than this once. We are nearly there."
    }
   },
   {
@@ -471,6 +523,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The Darkling Woods swallow the light."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_DUESSEL",
+    "text": "Duessel: Dark woods, darker purpose. Stay close, Princess. I will take the front."
    }
   },
   {
@@ -491,6 +547,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The Sacred Stone is close."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_MYRRH",
+    "text": "Myrrh: Lyon is not himself. Eirika, please save him if you can."
    }
   },
   {
@@ -511,6 +571,10 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "This ends here."
+   },
+   "ally_talk": {
+    "speaker": "SPECIES_INNES",
+    "text": "Innes: We have come far. Finish this, Eirika. Renais will rise again."
    }
   }
  ],
