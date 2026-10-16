@@ -128,6 +128,7 @@ def fe8_patch(bg, x, y, w=16, h=16):
 # no visible seam on both axes (floor) or on the horizontal axis (walls). No furniture is cropped.
 FE8_PIECES = {'floorA': ('Castle_Interior', 79, 44), 'floorB': ('Castle_Interior', 58, 45),
               'brick': ('Grado_Chamber', 184, 140), 'course': ('Castle_Interior', 112, 120)}
+WSHADE = 0.65                                 # dark wall palette (palette 10) for wall end corner blocks
 SHADE = 0.8                                   # dark palette = floor palette * SHADE
 
 class Registry:
@@ -141,10 +142,16 @@ class Registry:
         pw = [fe8_patch(*FE8_PIECES[k]) for k in ('brick', 'course')]
         s.pal_floor = s._quant(pf); s.pal_wall = s._quant(pw)
         s.pal_dark = [tuple(int(v * SHADE) for v in c) for c in s.pal_floor]
+        s.pal_wdark = [tuple(int(v * WSHADE) for v in c) for c in s.pal_wall]
         s.quads = {}                            # name -> 4 tile ids (TL, TR, BL, BR)
         for k, g, pal in (('floorA', pf[0], s.pal_floor), ('floorB', pf[1], s.pal_floor),
                           ('brick', pw[0], s.pal_wall), ('course', pw[1], s.pal_wall)):
             s.quads[k] = [s._tile(g.crop((qx * 8, qy * 8, qx * 8 + 8, qy * 8 + 8)), pal) for qy in (0, 1) for qx in (0, 1)]
+        # mirrored floor variants reuse the same 8x8 tiles through the flip bits (no new tile data)
+        a = s.quads['floorA']; H_, V_ = 0x400, 0x800
+        s.quads['floorAh'] = [a[1] ^ H_, a[0] ^ H_, a[3] ^ H_, a[2] ^ H_]
+        s.quads['floorAv'] = [a[2] ^ V_, a[3] ^ V_, a[0] ^ V_, a[1] ^ V_]
+        s.quads['floorAhv'] = [a[3] ^ (H_ | V_), a[2] ^ (H_ | V_), a[1] ^ (H_ | V_), a[0] ^ (H_ | V_)]
     def _quant(s, imgs):
         w = sum(i.width for i in imgs); big = Image.new('RGB', (w, imgs[0].height)); x = 0
         for i in imgs: big.paste(i, (x, 0)); x += i.width
@@ -160,9 +167,9 @@ class Registry:
         if k not in s.tidx: s.tidx[k] = len(s.tiles); s.tiles.append(list(k))
         return s.tidx[k]
     @staticmethod
-    def entry(tile, pal): return (SEC0 + tile) | (pal << 12)
+    def entry(tile, pal): return (SEC0 + (tile & 0x3ff)) | (tile & 0xc00) | (pal << 12)     # tile may carry flip bits (0x400 h, 0x800 v)
     def palette(s, absn):
-        return {7: s.pal_floor, 8: s.pal_dark, 9: s.pal_wall}.get(absn, [(0, 0, 0)] * 16)
+        return {7: s.pal_floor, 8: s.pal_dark, 9: s.pal_wall, 10: s.pal_wdark}.get(absn, [(0, 0, 0)] * 16)
     def add(s, ents, attr, src):
         k = (tuple(ents), attr)
         if k not in s.midx:
@@ -174,8 +181,10 @@ class Registry:
         return s.add(ents + [0] * 4, 0, 'fe8')
     def floor_entries(s, variant, mask):
         return [s.entry(s.quads[variant][q], 8 if mask[q] else 7) for q in range(4)]
-    def wall(s, kind):
-        ents = [s.entry(t, 9) for t in s.quads[kind]]
+    def wall(s, kind, west_end=False, east_end=False):
+        """wall block; at a wall end (void beside it) the outer column of quadrants uses the dark wall palette: the corner block"""
+        dk = (west_end, east_end, west_end, east_end)
+        ents = [s.entry(t, 10 if dk[q] else 9) for q, t in enumerate(s.quads[kind])]
         return s.add(ents + [0] * 4, 0, 'fe8')
     def lift(s, fr, frid, variant, mask):
         """FireRed block `frid` with its parquet bottom quadrants replaced by our floor quadrants (clean: the
@@ -212,11 +221,30 @@ def rug_block(isrug, x, y):
         return RUG_CENTER
     raise RuleError('rug too thin at %s (neighbours %s): rugs need to be at least 2x2' % ((x, y), k))
 
+SEED = 0                      # per room seed for the floor pattern (set by autotile(seed=...))
+_BCACHE = {}
+def _h(x, y, salt=0):
+    v = (x * 73856093 ^ y * 19349663 ^ (SEED + 1) * 83492791 ^ salt * 2654435761) & 0xffffffff
+    v ^= v >> 13; v = (v * 0x5bd1e995) & 0xffffffff; v ^= v >> 15
+    return v
+def is_accent(x, y):
+    """irregular accent placement: a hash picks about one cell in five, and a cell never becomes an accent if its west
+    or north neighbour is one (so no two accents touch on either axis)"""
+    k = (SEED, x, y)
+    if k not in _BCACHE:
+        _BCACHE[k] = _h(x, y) % 5 == 0 and not (x > 0 and is_accent(x - 1, y)) and not (y > 0 and is_accent(x, y - 1))
+    return _BCACHE[k]
+def accent_adjacent(x, y):
+    return is_accent(x, y) and (is_accent(x + 1, y) or is_accent(x, y + 1))
 def floor_variant(x, y):
-    """floorB is an isolated accent: never next to another floorB on either axis (x + 2y = 0 mod 4)"""
-    return 'floorB' if (x + 2 * y) % 4 == 0 else 'floorA'
+    """floorB is an isolated accent (irregular, never touching another accent). All other cells use floorA or its mirrored
+    forms, picked by a hash, so the pattern has no regular repeat"""
+    if is_accent(x, y): return 'floorB'
+    return ('floorA', 'floorAh', 'floorAv', 'floorAhv')[(_h(x, y, 7) >> 3) & 3]
 
-def autotile(layout=ROOM, reg=None, fr=None):
+def autotile(layout=ROOM, reg=None, fr=None, seed=0):
+    global SEED
+    SEED = seed
     reg = reg or Registry(); fr = fr or FRPrimary()
     H = len(layout); W = len(layout[0])
     ch = lambda x, y: layout[y][x] if 0 <= x < W and 0 <= y < H else ' '
@@ -231,6 +259,7 @@ def autotile(layout=ROOM, reg=None, fr=None):
     def put(x, y, bid, c, s=None):
         if ids[y][x] is not None: raise RuleError('cell %s tiled twice' % ((x, y),))
         ids[y][x] = bid; coll[y][x] = c; src[y][x] = s or reg.src.get(bid, 'fr')
+    wall_end = lambda x, y: (ch(x - 1, y) == ' ', ch(x + 1, y) == ' ')     # void beside an FE8 wall cell = wall end
     # ---- pass 1: walls and void (neighbours below decide cap / face / void)
     wall_objects = []
     for y in range(H):
@@ -254,12 +283,12 @@ def autotile(layout=ROOM, reg=None, fr=None):
                     x += run; continue
                 if floorish(x, y + 1) or (ch(x, y + 1) not in WALL_CH and ch(x, y - 1) in WALL_CH):   # face row (a wall also runs on over the side void)
                     if ch(x, y - 1) not in WALL_CH: raise RuleError('wall face at %s has no cap above it' % ((x, y),))
-                    if c == '#': put(x, y, reg.wall('brick'), 1)
+                    if c == '#': put(x, y, reg.wall('brick', *wall_end(x, y)), 1)
                     else: put(x, y, FR_FACE, 1, 'fr')
                 elif ch(x, y + 1) in WALL_CH:               # cap row (its face is below). Objects under it set their own cap
                     below_obj = ch(x, y + 1) in WALL_OBJ
                     if not below_obj:
-                        if c == '#': put(x, y, reg.wall('course'), 1)
+                        if c == '#': put(x, y, reg.wall('course', *wall_end(x, y)), 1)
                         else: put(x, y, FR_CAP, 1, 'fr')
                 else: raise RuleError('dangling wall cell at %s' % ((x, y),))
             x += 1
@@ -332,9 +361,7 @@ def validate(res):
     # 1. floorB accent never touches floorB (the comb check: no block repeats along an axis it should not)
     for y in range(H):
         for x in range(W):
-            if floor_variant(x, y) == 'floorB' and ch(x, y) == '.':
-                for dx, dy in ((1, 0), (0, 1)):
-                    if floor_variant(x + dx, y + dy) == 'floorB': bad.append(('accent-adjacent', x, y))
+            if accent_adjacent(x, y): bad.append(('accent-adjacent', x, y))
     # 2. a wall face must have a cap above and a floor below; caps must sit over faces
     for y in range(H):
         for x in range(W):
@@ -484,6 +511,13 @@ def selftest():
     L3 = list(ROOM); L3[14] = L3[14][:8] + 'p' + L3[14][9:]       # plant on the cell above the door mat... mat needs plain floor
     try: autotile(L3); raise SystemExit('door rule did not fire')
     except RuleError: pass
+    # wall end corner: the outer quadrants of a wall cell beside void use palette 10, an inner cell does not
+    reg = res['reg']; e0 = reg.metas[res['ids'][0][0] - SEC0][0]; e1 = reg.metas[res['ids'][0][2] - SEC0][0]
+    assert (e0[0] >> 12) == 10 and (e0[1] >> 12) == 9 and (e1[0] >> 12) == 9, 'wall corner block'
+    # irregular floor: accents never touch, and the old x + 2y = 0 mod 4 lattice is gone
+    assert not any(accent_adjacent(x, y) for x in range(40) for y in range(40))
+    assert any(is_accent(x, y) != ((x + 2 * y) % 4 == 0) for x in range(20) for y in range(20))
+    assert len({floor_variant(x, y) for x in range(20) for y in range(20)}) == 5
     print('indoor_tiling selftest ok', count_sources(res))
 
 if __name__ == '__main__':
