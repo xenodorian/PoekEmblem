@@ -52,7 +52,7 @@ Notes. Tana, Duessel and Myrrh have no recruit event in the Eirika-route scripts
 
 1. **Ephraim.** He appears as a cutscene character on the Red cast slot. The two routes' battles are not both built. The Ephraim-route chapters (9b to 21b) are summarized in dialogue only.
 2. **Recruit points for the eight allies.** Innes in 10a, L'Arachel and Dozla in 11a, Cormag in 13a, Joshua in 5 (all verified). Tana joins in 9a with Amelia's scene, Duessel joins in 10a with Gerik's group, Myrrh joins in 12a (my choices, because the Eirika-route scripts do not show them).
-3. **Partner battles.** Seth partners in 3 and 4, Joshua (Blaine slot) from 5. From 9a onward the partner is whoever best fits the scene: Innes (10a), L'Arachel (11a), Cormag (13a). The partner is a trainer slot whose party stands in for that character.
+3. **Partner battles.** Seth partners in 3 and 4, Garcia (the Blaine slot) from 5. From 9a onward the partner is whoever best fits the scene: Innes (10a), L'Arachel (11a), Cormag (13a). The partner is a trainer slot whose party stands in for that character.
 4. **Enemy forces.** An FE8 map's 20 to 80 enemies becomes 3 to 6 trainer battles on the map, each with at most 6 Pokemon. The named boss is the last battle.
 5. **Skirmishes** become wild encounter tables on the same maps.
 6. **Enemy classes** map to FireRed trainer classes plus Pokemon families (table in `docs/STORY_PLAN.md` section below). About 70 FE8 classes collapse to roughly 25 trainer classes.

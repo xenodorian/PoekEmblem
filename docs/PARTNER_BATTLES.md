@@ -1,6 +1,6 @@
 # In-game partner (double) battles
 
-Ported from pokeemerald's tag battle. Used from FE8 Chapter 3 onward, when the player first has more than 6 deployment slots. Seth is the AI partner for the Chapter 3 and 4 double battles, Joshua takes the partner slot in Chapter 5.
+Ported from pokeemerald's tag battle. Used from FE8 Chapter 3 onward, when the player first has more than 6 deployment slots. Seth is the AI partner for the Chapter 3 and 4 double battles, Garcia (the Blaine slot) takes the partner slot from Chapter 5.
 
 ## How a battle works
 
@@ -20,7 +20,7 @@ special StartPartnerBattle
 waitstate
 ```
 
-Seth is the `TRAINER_LEADER_BROCK` slot and Joshua is the `TRAINER_LEADER_BLAINE` slot in the cast list. Edit their parties in `src/data/trainers.h` to set what the partner brings.
+Seth is the `TRAINER_LEADER_BROCK` slot and Garcia is the `TRAINER_LEADER_BLAINE` slot in the cast list. Edit their parties in `src/data/trainers.h` to set what the partner brings.
 
 ## Source map
 
