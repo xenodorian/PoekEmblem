@@ -10,6 +10,23 @@ index 7446cc1..fe75aa3 100644
  
  #define SPECIES_TREECKO 277
  #define SPECIES_GROVYLE 278
+diff --git a/include/eirika_attack.h b/include/eirika_attack.h
+new file mode 100644
+index 0000000..d552d82
+--- /dev/null
++++ b/include/eirika_attack.h
+@@ -0,0 +1,11 @@
++#ifndef GUARD_EIRIKA_ATTACK_H
++#define GUARD_EIRIKA_ATTACK_H
++
++// Plays Eirika's own attack animation in battle (the trainer-style sword attack drawn over her portrait).
++bool8 ShouldPlayEirikaAttack(u8 battler);
++void StartEirikaAttack(u8 battler);
++bool8 HasEirikaAttackReachedHit(void);
++bool8 IsEirikaAttackDone(void);
++void EndEirikaAttack(void);
++
++#endif // GUARD_EIRIKA_ATTACK_H
 diff --git a/include/graphics.h b/include/graphics.h
 index 069924f..74f50de 100644
 --- a/include/graphics.h
@@ -27,6 +44,145 @@ index 069924f..74f50de 100644
  extern const u32 gMonFrontPic_Scizor[];
  extern const u32 gMonPalette_Scizor[];
  extern const u32 gMonBackPic_Scizor[];
+diff --git a/ld_script.ld b/ld_script.ld
+index 9a4b450..268f785 100644
+--- a/ld_script.ld
++++ b/ld_script.ld
+@@ -77,6 +77,7 @@ SECTIONS {
+         src/battle_script_commands.o(.text);
+         src/battle_util2.o(.text);
+         src/battle_controller_player.o(.text);
++        src/eirika_attack.o(.text);
+         src/battle_gfx_sfx_util.o(.text);
+         src/battle_controller_opponent.o(.text);
+         src/battle_ai_switch_items.o(.text);
+@@ -416,6 +417,7 @@ SECTIONS {
+         src/battle_util.o(.rodata);
+         src/battle_script_commands.o(.rodata);
+         src/battle_controller_player.o(.rodata);
++        src/eirika_attack.o(.rodata);
+         src/battle_anim_smokescreen.o(.rodata);
+         src/battle_controller_opponent.o(.rodata);
+         src/battle_controller_link_opponent.o(.rodata);
+diff --git a/src/battle_controller_player.c b/src/battle_controller_player.c
+index d8e1fe7..88ec31c 100644
+--- a/src/battle_controller_player.c
++++ b/src/battle_controller_player.c
+@@ -1,4 +1,5 @@
+ #include "global.h"
++#include "eirika_attack.h"
+ #include "gflib.h"
+ #include "data.h"
+ #include "item.h"
+@@ -2345,6 +2346,21 @@ static void PlayerDoMoveAnimation(void)
+         break;
+     case 1:
+         if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].specialAnimActive)
++        {
++            if (ShouldPlayEirikaAttack(gActiveBattler))
++            {
++                // Eirika swings first; the move effect starts when the sword connects
++                StartEirikaAttack(gActiveBattler);
++                gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].animationState = 4;
++                break;
++            }
++            SetBattlerSpriteAffineMode(ST_OAM_AFFINE_OFF);
++            DoMoveAnim(move);
++            gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].animationState = 2;
++        }
++        break;
++    case 4:
++        if (HasEirikaAttackReachedHit())
+         {
+             SetBattlerSpriteAffineMode(ST_OAM_AFFINE_OFF);
+             DoMoveAnim(move);
+@@ -2355,6 +2371,10 @@ static void PlayerDoMoveAnimation(void)
+         gAnimScriptCallback();
+         if (!gAnimScriptActive)
+         {
++            if (ShouldPlayEirikaAttack(gActiveBattler) && !IsEirikaAttackDone())
++                break;
++            if (ShouldPlayEirikaAttack(gActiveBattler))
++                EndEirikaAttack();
+             SetBattlerSpriteAffineMode(ST_OAM_AFFINE_NORMAL);
+             if (gBattleSpritesDataPtr->battlerData[gActiveBattler].behindSubstitute && multihit < 2)
+             {
+diff --git a/src/data/eirika_attack_frames.h b/src/data/eirika_attack_frames.h
+new file mode 100644
+index 0000000..a444330
+--- /dev/null
++++ b/src/data/eirika_attack_frames.h
+@@ -0,0 +1,70 @@
++// Generated: Eirika attack animation frame images and timing (1 unit = 1 game frame)
++#define EIRIKA_ATTACK_FRAME_COUNT 20
++static const struct SpriteFrameImage sEirikaAttackImagesA[] = {
++    { sEirikaAttackGfxA + 0x800 * 0, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 1, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 2, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 3, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 4, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 5, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 6, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 7, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 8, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 9, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 10, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 11, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 12, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 13, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 14, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 15, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 16, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 17, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 18, 0x800 },
++    { sEirikaAttackGfxA + 0x800 * 19, 0x800 },
++};
++static const struct SpriteFrameImage sEirikaAttackImagesB[] = {
++    { sEirikaAttackGfxB + 0x400 * 0, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 1, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 2, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 3, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 4, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 5, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 6, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 7, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 8, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 9, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 10, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 11, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 12, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 13, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 14, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 15, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 16, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 17, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 18, 0x400 },
++    { sEirikaAttackGfxB + 0x400 * 19, 0x400 },
++};
++static const union AnimCmd sEirikaAttackAnim[] = {
++    ANIMCMD_FRAME(0, 1),
++    ANIMCMD_FRAME(1, 4),
++    ANIMCMD_FRAME(2, 2),
++    ANIMCMD_FRAME(3, 2),
++    ANIMCMD_FRAME(4, 10),
++    ANIMCMD_FRAME(5, 4),
++    ANIMCMD_FRAME(6, 4),
++    ANIMCMD_FRAME(7, 5),
++    ANIMCMD_FRAME(8, 2),
++    ANIMCMD_FRAME(9, 2),
++    ANIMCMD_FRAME(10, 3),
++    ANIMCMD_FRAME(11, 3),
++    ANIMCMD_FRAME(12, 3),
++    ANIMCMD_FRAME(13, 2),
++    ANIMCMD_FRAME(14, 2),
++    ANIMCMD_FRAME(15, 2),
++    ANIMCMD_FRAME(16, 2),
++    ANIMCMD_FRAME(17, 2),
++    ANIMCMD_FRAME(18, 2),
++    ANIMCMD_FRAME(19, 1),
++    ANIMCMD_FRAME(19, EIRIKA_ATTACK_HOLD),
++    ANIMCMD_END
++};
 diff --git a/src/data/graphics/pokemon.h b/src/data/graphics/pokemon.h
 index e744f80..44a1311 100644
 --- a/src/data/graphics/pokemon.h
@@ -58,17 +214,17 @@ index 661458c..0046ddd 100644
      [SPECIES_GROVYLE] = sGrovyleLevelUpLearnset,
      [SPECIES_SCEPTILE] = sSceptileLevelUpLearnset,
 diff --git a/src/data/pokemon/level_up_learnsets.h b/src/data/pokemon/level_up_learnsets.h
-index bdf1f9f..d4e010a 100644
+index bdf1f9f..22ffc0d 100644
 --- a/src/data/pokemon/level_up_learnsets.h
 +++ b/src/data/pokemon/level_up_learnsets.h
-@@ -2962,6 +2962,29 @@ static const u16 sQwilfishLevelUpLearnset[] = {
+@@ -2962,6 +2962,28 @@ static const u16 sQwilfishLevelUpLearnset[] = {
      LEVEL_UP_END
  };
  
 +static const u16 sEirikaLevelUpLearnset[] = {
 +    LEVEL_UP_MOVE( 1, MOVE_QUICK_ATTACK),
 +    LEVEL_UP_MOVE( 1, MOVE_LEER),
-+    LEVEL_UP_MOVE( 6, MOVE_FOCUS_ENERGY),
++    LEVEL_UP_MOVE( 6, MOVE_SWORDS_DANCE),
 +    LEVEL_UP_MOVE( 7, MOVE_SCRATCH),
 +    LEVEL_UP_MOVE( 9, MOVE_FURY_CUTTER),
 +    LEVEL_UP_MOVE(11, MOVE_PURSUIT),
@@ -83,8 +239,7 @@ index bdf1f9f..d4e010a 100644
 +    LEVEL_UP_MOVE(28, MOVE_STEEL_WING),
 +    LEVEL_UP_MOVE(31, MOVE_RAZOR_WIND),
 +    LEVEL_UP_MOVE(34, MOVE_CROSS_CHOP),
-+    LEVEL_UP_MOVE(36, MOVE_SWORDS_DANCE),
-+    LEVEL_UP_MOVE(41, MOVE_IRON_DEFENSE),
++    LEVEL_UP_MOVE(36, MOVE_IRON_DEFENSE),
 +    LEVEL_UP_END
 +};
 +
@@ -285,6 +440,127 @@ index 25f2c9a..9a39e2d 100644
      [SPECIES_TREECKO] = _("TREECKO"),
      [SPECIES_GROVYLE] = _("GROVYLE"),
      [SPECIES_SCEPTILE] = _("SCEPTILE"),
+diff --git a/src/eirika_attack.c b/src/eirika_attack.c
+new file mode 100644
+index 0000000..c0ea6c3
+--- /dev/null
++++ b/src/eirika_attack.c
+@@ -0,0 +1,115 @@
++#include "global.h"
++#include "gflib.h"
++#include "battle.h"
++#include "battle_anim.h"
++#include "constants/species.h"
++#include "eirika_attack.h"
++
++#define EIRIKA_ATTACK_HOLD   8     // frames the idle pose is held after the swing
++#define EIRIKA_ATTACK_HIT    34    // frames from the start until the sword connects (the move effect starts here)
++#define EIRIKA_ATTACK_PAL_TAG 0xEA01
++
++// Canvas: 96x64, screen position (42, 46). Sprite A is the left 64x64, sprite B the right 32x64.
++#define EIRIKA_ATTACK_X_A    74
++#define EIRIKA_ATTACK_X_B    122
++#define EIRIKA_ATTACK_Y      78
++
++#define tTimer   data[0]
++#define tBattler data[1]
++
++static const u16 sEirikaAttackPal[] = INCBIN_U16("graphics/battle_anims/eirika_attack/attack.gbapal");
++static const u8 sEirikaAttackGfxA[] = INCBIN_U8("graphics/battle_anims/eirika_attack/a.4bpp");
++static const u8 sEirikaAttackGfxB[] = INCBIN_U8("graphics/battle_anims/eirika_attack/b.4bpp");
++
++#include "data/eirika_attack_frames.h"
++
++static const union AnimCmd *const sEirikaAttackAnims[] = { sEirikaAttackAnim };
++
++static const struct SpritePalette sEirikaAttackPalette = { sEirikaAttackPal, EIRIKA_ATTACK_PAL_TAG };
++
++static const struct OamData sOamData_64x64 =
++{
++    .affineMode = ST_OAM_AFFINE_OFF,
++    .objMode = ST_OAM_OBJ_NORMAL,
++    .shape = SPRITE_SHAPE(64x64),
++    .size = SPRITE_SIZE(64x64),
++    .priority = 1,
++};
++
++static const struct OamData sOamData_32x64 =
++{
++    .affineMode = ST_OAM_AFFINE_OFF,
++    .objMode = ST_OAM_OBJ_NORMAL,
++    .shape = SPRITE_SHAPE(32x64),
++    .size = SPRITE_SIZE(32x64),
++    .priority = 1,
++};
++
++static void SpriteCB_EirikaAttack(struct Sprite *sprite);
++
++static const struct SpriteTemplate sSpriteTemplate_EirikaAttackA =
++{
++    .tileTag = TAG_NONE,
++    .paletteTag = EIRIKA_ATTACK_PAL_TAG,
++    .oam = &sOamData_64x64,
++    .anims = sEirikaAttackAnims,
++    .images = sEirikaAttackImagesA,
++    .affineAnims = gDummySpriteAffineAnimTable,
++    .callback = SpriteCB_EirikaAttack,
++};
++
++static const struct SpriteTemplate sSpriteTemplate_EirikaAttackB =
++{
++    .tileTag = TAG_NONE,
++    .paletteTag = EIRIKA_ATTACK_PAL_TAG,
++    .oam = &sOamData_32x64,
++    .anims = sEirikaAttackAnims,
++    .images = sEirikaAttackImagesB,
++    .affineAnims = gDummySpriteAffineAnimTable,
++    .callback = SpriteCB_EirikaAttack,
++};
++
++static u8 sEirikaSpriteIdA;
++static u8 sEirikaSpriteIdB;
++static u8 sEirikaBattler;
++
++static void SpriteCB_EirikaAttack(struct Sprite *sprite)
++{
++    // Keep her portrait hidden while the attack plays, even if a move animation toggles it
++    gSprites[gBattlerSpriteIds[sprite->tBattler]].invisible = TRUE;
++    sprite->tTimer++;
++}
++
++bool8 ShouldPlayEirikaAttack(u8 battler)
++{
++    return GetBattlerSide(battler) == B_SIDE_PLAYER && gBattleMons[battler].species == SPECIES_EIRIKA;
++}
++
++void StartEirikaAttack(u8 battler)
++{
++    LoadSpritePalette(&sEirikaAttackPalette);
++    sEirikaBattler = battler;
++    sEirikaSpriteIdA = CreateSprite(&sSpriteTemplate_EirikaAttackA, EIRIKA_ATTACK_X_A, EIRIKA_ATTACK_Y, 0);
++    sEirikaSpriteIdB = CreateSprite(&sSpriteTemplate_EirikaAttackB, EIRIKA_ATTACK_X_B, EIRIKA_ATTACK_Y, 0);
++    gSprites[sEirikaSpriteIdA].tBattler = battler;
++    gSprites[sEirikaSpriteIdB].tBattler = battler;
++    gSprites[gBattlerSpriteIds[battler]].invisible = TRUE;
++}
++
++bool8 HasEirikaAttackReachedHit(void)
++{
++    return gSprites[sEirikaSpriteIdA].tTimer >= EIRIKA_ATTACK_HIT;
++}
++
++bool8 IsEirikaAttackDone(void)
++{
++    return gSprites[sEirikaSpriteIdA].animEnded && gSprites[sEirikaSpriteIdB].animEnded;
++}
++
++void EndEirikaAttack(void)
++{
++    DestroySprite(&gSprites[sEirikaSpriteIdA]);
++    DestroySprite(&gSprites[sEirikaSpriteIdB]);
++    FreeSpritePaletteByTag(EIRIKA_ATTACK_PAL_TAG);
++    gSprites[gBattlerSpriteIds[sEirikaBattler]].invisible = FALSE;
++}
 diff --git a/src/intro.c b/src/intro.c
 index bec0f31..29956b6 100644
 --- a/src/intro.c
