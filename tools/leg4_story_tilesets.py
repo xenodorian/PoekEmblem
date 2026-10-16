@@ -9,6 +9,9 @@ import numpy as np
 from PIL import Image
 fe8, root = Path(sys.argv[1]), Path(sys.argv[2])
 EXTRA = 6; FLOOR_ROW = 8
+sys.path.insert(0, str(Path(__file__).parent))
+from leg6_props import PROPS
+from PIL import ImageOps
 import os; FLOOR_MODE = os.environ.get('FLOOR_MODE', 'repeat')
 ROOMS = [  # map dir, tileset dir, C name, FE8 backdrop
  ('Story_RenaisCastle', 'story_renais_castle', 'StoryRenaisCastle', 'bg_Renais_Chamber', 'LAYOUT_STORY_RENAIS_CASTLE'),
@@ -39,6 +42,10 @@ def build(name, mapdir, tsdir, cname, bg, layout):
         for k in range(7): ext.paste(band, (0, 144 + 16*k))
     else:
         ext.paste(img.crop((0, 112, 240, 160)).resize((240, 48 + 16*EXTRA), Image.Resampling.NEAREST), (0, 112))
+    if os.environ.get('PROPS', '1') == '1':   # furniture crops from the same backdrop, pasted into the floor
+        for (r, (dx, dy), mir) in PROPS.get(bg, []):
+            c = img.crop(r)
+            ext.paste(ImageOps.mirror(c) if mir else c, (dx, dy))
     a = np.asarray(ext).astype(int)
     H, W = a.shape[0] // 8, 30
     tiles = a.reshape(H, 8, W, 8, 3).transpose(0, 2, 1, 3, 4).reshape(H*W, 64, 3)

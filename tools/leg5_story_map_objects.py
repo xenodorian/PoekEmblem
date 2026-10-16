@@ -54,7 +54,21 @@ MAPS = {
    items=[('ITEM_ELIXIR', 11, 9, 'FLAG_HIDDEN_ITEM_UNUSED_0x2D', 'Chest')],
    signs=[(7, 7, 'An ancient altar. Dark\\nenergy pulses within.')]),
 }
+sys.path.insert(0, str(Path(__file__).parent))
+from leg6_props import block_cells
+BG = {'Story_RenaisCastle': 'bg_Renais_Chamber', 'Story_FreliaCastle': 'bg_Castle_Interior', 'Story_JehannaHall': 'bg_White_Chamber',
+      'Story_FortRigwald': 'bg_Fort', 'Story_GradoThroneRoom': 'bg_Throne_Normal', 'Story_BlackTemple': 'bg_Black_Temple_Inside'}
 for mapdir, d in MAPS.items():
+    d['block'] = list(d['block']) + [c for c in block_cells(BG[mapdir]) if 0 <= c[0] < 15 and c[1] < 16 and c[0] != 7]
+    fixed = []
+    taken = set(d['block']) | {(i[1], i[2]) for i in d['items']}
+    for n in d['npcs']:      # move an NPC off a blocked cell to the nearest free walkable cell
+        x, y = n[1], n[2]
+        if (x, y) in taken:
+            cand = sorted(((abs(cx-x)+abs(cy-y), cx, cy) for cx in range(1, 14) for cy in range(9, 16) if (cx, cy) not in taken and cx != 7))
+            x, y = cand[0][1], cand[0][2]
+        taken.add((x, y)); fixed.append((n[0], x, y) + tuple(n[3:]))
+    d['npcs'] = fixed
     # collision
     p = root / 'data/layouts' / mapdir / 'map.bin'
     w = 15
