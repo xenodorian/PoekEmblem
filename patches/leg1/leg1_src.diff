@@ -1,3 +1,2672 @@
+diff --git a/data/maps/CeladonCity/text.inc b/data/maps/CeladonCity/text.inc
+index dcdb015..a610fff 100644
+--- a/data/maps/CeladonCity/text.inc
++++ b/data/maps/CeladonCity/text.inc
+@@ -49,7 +49,7 @@ CeladonCity_Text_CitySign::
+ 
+ CeladonCity_Text_GymSign::
+     .string "CELADON CITY POKéMON GYM\n"
+-    .string "LEADER: ERIKA\l"
++    .string "LEADER: VANESSA\l"
+     .string "The Nature-Loving Princess!$"
+ 
+ CeladonCity_Text_MansionSign::
+diff --git a/data/maps/CeladonCity_Condominiums_3F/text.inc b/data/maps/CeladonCity_Condominiums_3F/text.inc
+index 752bdf3..b1cb6ed 100644
+--- a/data/maps/CeladonCity_Condominiums_3F/text.inc
++++ b/data/maps/CeladonCity_Condominiums_3F/text.inc
+@@ -8,9 +8,9 @@ CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist::
+ 
+ CeladonCity_Condominiums_3F_Text_IWroteTheStory::
+     .string "I wrote the story!\n"
+-    .string "Isn't ERIKA cute?\p"
+-    .string "I like MISTY a lot, too!\n"
+-    .string "Oh, and SABRINA, I like her!$"
++    .string "Isn't VANESSA cute?\p"
++    .string "I like MARISA a lot, too!\n"
++    .string "Oh, and LUTE, I like her!$"
+ 
+ CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
+     .string "Is that right?\p"
+diff --git a/data/maps/CeladonCity_DepartmentStore_2F/text.inc b/data/maps/CeladonCity_DepartmentStore_2F/text.inc
+index 7cfb9f9..f654c55 100644
+--- a/data/maps/CeladonCity_DepartmentStore_2F/text.inc
++++ b/data/maps/CeladonCity_DepartmentStore_2F/text.inc
+@@ -12,7 +12,7 @@ CeladonCity_DepartmentStore_2F_Text_FloorSign::
+     .string "2F: TRAINER'S MARKET$"
+ 
+ CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
+-    .string "We have a customer, LANCE, who\n"
++    .string "We have a customer, VALTER, who\n"
+     .string "occasionally comes.\p"
+     .string "He always buys capes.\p"
+     .string "I wonder… Does he have many\n"
+diff --git a/data/maps/CeladonCity_GameCorner/text.inc b/data/maps/CeladonCity_GameCorner/text.inc
+index acccb15..e210548 100644
+--- a/data/maps/CeladonCity_GameCorner/text.inc
++++ b/data/maps/CeladonCity_GameCorner/text.inc
+@@ -58,7 +58,7 @@ CeladonCity_GameCorner_Text_GymGuyAdvice::
+     .string "Hey!\p"
+     .string "You have better things to do,\n"
+     .string "champ in the making!\p"
+-    .string "CELADON GYM's LEADER is ERIKA.\p"
++    .string "CELADON GYM's LEADER is VANESSA.\p"
+     .string "She is a user of GRASS-type\n"
+     .string "POKéMON, and at one with nature.\p"
+     .string "She might appear docile because of\n"
+diff --git a/data/maps/CeladonCity_Gym/text.inc b/data/maps/CeladonCity_Gym/text.inc
+index 7a46fc3..80f0ba3 100644
+--- a/data/maps/CeladonCity_Gym/text.inc
++++ b/data/maps/CeladonCity_Gym/text.inc
+@@ -4,7 +4,7 @@ CeladonCity_Gym_Text_ErikaIntro::
+     .string "It's so pleasant…\p"
+     .string "…Oh, dear…\n"
+     .string "I must have dozed off. Welcome.\p"
+-    .string "My name is ERIKA.\n"
++    .string "My name is VANESSA.\n"
+     .string "I am the LEADER of CELADON GYM.\p"
+     .string "I am a student of the art of\n"
+     .string "flower arranging.\p"
+@@ -36,7 +36,7 @@ CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
+ 
+ CeladonCity_Gym_Text_ReceivedTM19FromErika::
+     .string "{PLAYER} received TM19\n"
+-    .string "from ERIKA.$"
++    .string "from VANESSA.$"
+ 
+ CeladonCity_Gym_Text_ExplainTM19::
+     .string "TM19 contains GIGA DRAIN.\p"
+@@ -58,7 +58,7 @@ CeladonCity_Gym_Text_KayDefeat::
+ 
+ CeladonCity_Gym_Text_KayPostBattle::
+     .string "Bleaah!\n"
+-    .string "I hope ERIKA wipes you out!$"
++    .string "I hope VANESSA wipes you out!$"
+ 
+ CeladonCity_Gym_Text_BridgetIntro::
+     .string "Oh, welcome.\n"
+@@ -81,7 +81,7 @@ CeladonCity_Gym_Text_TinaDefeat::
+     .string "You're an eye-opener!$"
+ 
+ CeladonCity_Gym_Text_TinaPostBattle::
+-    .string "Oh, you were looking at ERIKA…\n"
++    .string "Oh, you were looking at VANESSA…\n"
+     .string "You weren't looking at me…$"
+ 
+ CeladonCity_Gym_Text_TamiaIntro::
+@@ -109,7 +109,7 @@ CeladonCity_Gym_Text_LisaDefeat::
+     .string "You!$"
+ 
+ CeladonCity_Gym_Text_LisaPostBattle::
+-    .string "Our LEADER ERIKA might be quiet,\n"
++    .string "Our LEADER VANESSA might be quiet,\n"
+     .string "but she's famous around here.$"
+ 
+ CeladonCity_Gym_Text_LoriIntro::
+@@ -140,13 +140,13 @@ CeladonCity_Gym_Text_MaryPostBattle::
+ 
+ CeladonCity_Gym_Text_GymStatue::
+     .string "CELADON POKéMON GYM\n"
+-    .string "LEADER: ERIKA\p"
++    .string "LEADER: VANESSA\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ CeladonCity_Gym_Text_GymStatuePlayerWon::
+     .string "CELADON POKéMON GYM\n"
+-    .string "LEADER: ERIKA\p"
++    .string "LEADER: VANESSA\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/CeruleanCity/text.inc b/data/maps/CeruleanCity/text.inc
+index e7540e7..170889a 100644
+--- a/data/maps/CeruleanCity/text.inc
++++ b/data/maps/CeruleanCity/text.inc
+@@ -177,6 +177,6 @@ CeruleanCity_Text_BikeShopSign::
+ 
+ CeruleanCity_Text_GymSign::
+     .string "CERULEAN CITY POKéMON GYM\n"
+-    .string "LEADER: MISTY\l"
++    .string "LEADER: MARISA\l"
+     .string "The Tomboyish Mermaid!$"
+ 
+diff --git a/data/maps/CeruleanCity_Gym/text.inc b/data/maps/CeruleanCity_Gym/text.inc
+index f10bcae..8243b25 100644
+--- a/data/maps/CeruleanCity_Gym/text.inc
++++ b/data/maps/CeruleanCity_Gym/text.inc
+@@ -24,7 +24,7 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
+ 
+ CeruleanCity_Gym_Text_ReceivedTM03FromMisty::
+     .string "{PLAYER} received TM03\n"
+-    .string "from MISTY.$"
++    .string "from MARISA.$"
+ 
+ CeruleanCity_Gym_Text_BetterMakeRoomForThis::
+     .string "You better make room for this!$"
+@@ -39,7 +39,7 @@ CeruleanCity_Gym_Text_MistyDefeat::
+ CeruleanCity_Gym_Text_DianaIntro::
+     .string "What? You?\n"
+     .string "I'm more than good enough for you!\p"
+-    .string "MISTY won't have to be bothered.$"
++    .string "MARISA won't have to be bothered.$"
+ 
+ CeruleanCity_Gym_Text_DianaDefeat::
+     .string "You overwhelmed me!$"
+@@ -57,7 +57,7 @@ CeruleanCity_Gym_Text_LuisDefeat::
+     .string "That can't be!$"
+ 
+ CeruleanCity_Gym_Text_LuisPostBattle::
+-    .string "MISTY is a TRAINER who's going to\n"
++    .string "MARISA is a TRAINER who's going to\n"
+     .string "keep improving.\p"
+     .string "She won't lose to someone like you!$"
+ 
+@@ -65,7 +65,7 @@ CeruleanCity_Gym_Text_GymGuyAdvice::
+     .string "Yo!\n"
+     .string "Champ in the making!\p"
+     .string "Let me give you some advice!\p"
+-    .string "The LEADER, MISTY, is a pro who\n"
++    .string "The LEADER, MARISA, is a pro who\n"
+     .string "uses WATER-type POKéMON.\p"
+     .string "You can drain all their water with\n"
+     .string "GRASS-type POKéMON.\p"
+@@ -73,20 +73,20 @@ CeruleanCity_Gym_Text_GymGuyAdvice::
+     .string "POKéMON and zap them!$"
+ 
+ CeruleanCity_Gym_Text_WeMakePrettyGoodTeam::
+-    .string "You beat MISTY!\n"
++    .string "You beat MARISA!\n"
+     .string "See, what'd I tell ya?\p"
+     .string "You and me, kid, we make a pretty\n"
+     .string "darn-good team!$"
+ 
+ CeruleanCity_Gym_Text_GymStatue::
+     .string "CERULEAN POKéMON GYM\n"
+-    .string "LEADER: MISTY\p"
++    .string "LEADER: MARISA\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ CeruleanCity_Gym_Text_GymStatuePlayerWon::
+     .string "CERULEAN POKéMON GYM\n"
+-    .string "LEADER: MISTY\p"
++    .string "LEADER: MARISA\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/CinnabarIsland/text.inc b/data/maps/CinnabarIsland/text.inc
+index 379c7d0..ff727db 100644
+--- a/data/maps/CinnabarIsland/text.inc
++++ b/data/maps/CinnabarIsland/text.inc
+@@ -2,7 +2,7 @@ CinnabarIsland_Text_DoorIsLocked::
+     .string "The door is locked…$"
+ 
+ CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
+-    .string "CINNABAR GYM's BLAINE is quite the\n"
++    .string "CINNABAR GYM's GARCIA is quite the\n"
+     .string "odd fellow.\p"
+     .string "He's lived on the island since way\n"
+     .string "before the LAB was built.$"
+@@ -22,7 +22,7 @@ CinnabarIsland_Text_PokemonLab::
+ 
+ CinnabarIsland_Text_GymSign::
+     .string "CINNABAR ISLAND POKéMON GYM\n"
+-    .string "LEADER: BLAINE\l"
++    .string "LEADER: GARCIA\l"
+     .string "The Hotheaded Quiz Master!$"
+ 
+ CinnabarIsland_Text_HeyIfItIsntPlayer::
+diff --git a/data/maps/CinnabarIsland_Gym/text.inc b/data/maps/CinnabarIsland_Gym/text.inc
+index 27f1405..1c357ab 100644
+--- a/data/maps/CinnabarIsland_Gym/text.inc
++++ b/data/maps/CinnabarIsland_Gym/text.inc
+@@ -1,6 +1,6 @@
+ CinnabarIsland_Gym_Text_BlaineIntro::
+     .string "Hah!\p"
+-    .string "I am BLAINE, the red-hot LEADER\n"
++    .string "I am GARCIA, the red-hot LEADER\n"
+     .string "of CINNABAR GYM!\p"
+     .string "My fiery POKéMON are all rough\n"
+     .string "and ready with intense heat!\p"
+@@ -26,7 +26,7 @@ CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
+ 
+ CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
+     .string "{PLAYER} received TM38\n"
+-    .string "from BLAINE.$"
++    .string "from GARCIA.$"
+ 
+ CinnabarIsland_Gym_Text_BlainePostBattle::
+     .string "TM38 contains FIRE BLAST.\n"
+@@ -86,18 +86,18 @@ CinnabarIsland_Gym_Text_RamonPostBattle::
+     .string "I'd use that!$"
+ 
+ CinnabarIsland_Gym_Text_DerekIntro::
+-    .string "I know why BLAINE became a\n"
++    .string "I know why GARCIA became a\n"
+     .string "TRAINER.$"
+ 
+ CinnabarIsland_Gym_Text_DerekDefeat::
+     .string "Ow!$"
+ 
+ CinnabarIsland_Gym_Text_DerekPostBattle::
+-    .string "Our LEADER, BLAINE, became lost\n"
++    .string "Our LEADER, GARCIA, became lost\n"
+     .string "in the mountains but good.\p"
+     .string "Night fell when a fiery bird\n"
+     .string "POKéMON appeared.\p"
+-    .string "Its light allowed BLAINE to find\n"
++    .string "Its light allowed GARCIA to find\n"
+     .string "his way down safely.$"
+ 
+ CinnabarIsland_Gym_Text_DustyIntro::
+@@ -127,7 +127,7 @@ CinnabarIsland_Gym_Text_ZacPostBattle::
+ CinnabarIsland_Gym_Text_GymGuyAdvice::
+     .string "Yo!\n"
+     .string "Champ in the making!\p"
+-    .string "The hotheaded BLAINE is a FIRE\n"
++    .string "The hotheaded GARCIA is a FIRE\n"
+     .string "POKéMON pro.\p"
+     .string "Douse his spirits with water!\p"
+     .string "You'd better take some\n"
+@@ -139,13 +139,13 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory::
+ 
+ CinnabarIsland_Gym_Text_GymStatue::
+     .string "CINNABAR POKéMON GYM\n"
+-    .string "LEADER: BLAINE\p"
++    .string "LEADER: GARCIA\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ CinnabarIsland_Gym_Text_GymStatuePlayerWon::
+     .string "CINNABAR POKéMON GYM\n"
+-    .string "LEADER: BLAINE\p"
++    .string "LEADER: GARCIA\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/CinnabarIsland_PokemonLab_Entrance/text.inc b/data/maps/CinnabarIsland_PokemonLab_Entrance/text.inc
+index f146180..9a4317e 100644
+--- a/data/maps/CinnabarIsland_PokemonLab_Entrance/text.inc
++++ b/data/maps/CinnabarIsland_PokemonLab_Entrance/text.inc
+@@ -1,5 +1,5 @@
+ CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
+-    .string "It's a photo of BLAINE and\n"
++    .string "It's a photo of GARCIA and\n"
+     .string "MR. FUJI.\p"
+     .string "They're standing shoulder to\n"
+     .string "shoulder with big grins.$"
+diff --git a/data/maps/FiveIsland_RocketWarehouse/text.inc b/data/maps/FiveIsland_RocketWarehouse/text.inc
+index 3c7a65a..cfa0927 100644
+--- a/data/maps/FiveIsland_RocketWarehouse/text.inc
++++ b/data/maps/FiveIsland_RocketWarehouse/text.inc
+@@ -35,7 +35,7 @@ FiveIsland_RocketWarehouse_Text_Grunt3Intro::
+     .string "I got word about you from the\n"
+     .string "others.\p"
+     .string "But there's no way a kid like you'd\n"
+-    .string "know our BOSS GIOVANNI!$"
++    .string "know our BOSS VIGARDE!$"
+ 
+ FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
+     .string "Don't…you…dare…laugh…$"
+@@ -47,7 +47,7 @@ FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
+ FiveIsland_RocketWarehouse_Text_Admin1Intro::
+     .string "I don't know or care if what I'm\n"
+     .string "doing is right or wrong…\p"
+-    .string "I just put my faith in GIOVANNI\n"
++    .string "I just put my faith in VIGARDE\n"
+     .string "and do as I am told.$"
+ 
+ FiveIsland_RocketWarehouse_Text_Admin1Defeat::
+@@ -85,7 +85,7 @@ FiveIsland_RocketWarehouse_Text_Admin2Defeat::
+     .string "Urgh…\n"
+     .string "You were too strong…\p"
+     .string "…\n"
+-    .string "Th-that's GIOVANNI's BADGE!\p"
++    .string "Th-that's VIGARDE's BADGE!\p"
+     .string "So it's true?\n"
+     .string "TEAM ROCKET really has disbanded?$"
+ 
+@@ -93,7 +93,7 @@ FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
+     .string "We will abandon this WAREHOUSE…\p"
+     .string "But don't think this is over.\n"
+     .string "I won't let this be the end.\p"
+-    .string "I will find GIOVANNI.\n"
++    .string "I will find VIGARDE.\n"
+     .string "And I will resurrect TEAM ROCKET!\l"
+     .string "I will…\p"
+     .string "Until then, farewell!$"
+@@ -128,10 +128,10 @@ FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
+ 
+ FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
+     .string "What, you again?\p"
+-    .string "You… You're not GIOVANNI's kid,\n"
++    .string "You… You're not VIGARDE's kid,\n"
+     .string "are you?\p"
+     .string "No, that can't be right!\n"
+-    .string "GIOVANNI's kid has red hair.\p"
++    .string "VIGARDE's kid has red hair.\p"
+     .string "You don't have any reasons for\n"
+     .string "bugging me. Leave me alone!$"
+ 
+diff --git a/data/maps/FourIsland/text.inc b/data/maps/FourIsland/text.inc
+index a07d96a..cc60fac 100644
+--- a/data/maps/FourIsland/text.inc
++++ b/data/maps/FourIsland/text.inc
+@@ -3,12 +3,12 @@ FourIsland_Text_IslandSign::
+     .string "The Warm, Blue, Floe Island$"
+ 
+ FourIsland_Text_LoreleiHasReturned::
+-    .string "LORELEI has returned.\p"
++    .string "SELENA has returned.\p"
+     .string "Did she find the city life too\n"
+     .string "stressful, I wonder?$"
+ 
+ FourIsland_Text_LoreleiMetLaprasAsChild::
+-    .string "LORELEI has gone back.\p"
++    .string "SELENA has gone back.\p"
+     .string "The LAPRAS she has, I imagine it\n"
+     .string "to be the one she met as a child.\p"
+     .string "I believe it was in ICEFALL CAVE\n"
+@@ -39,8 +39,8 @@ FourIsland_Text_RivalAlreadyGotEggBeSmellingYa::
+ 
+ FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
+     .string "Oh, you found me!\n"
+-    .string "Please don't tell LORELEI.\p"
+-    .string "Did you know that LORELEI has lots\n"
++    .string "Please don't tell SELENA.\p"
++    .string "Did you know that SELENA has lots\n"
+     .string "and lots of stuffed dolls?\p"
+     .string "Every time she comes back to\n"
+     .string "FOUR ISLAND, her collection grows!$"
+@@ -52,5 +52,5 @@ FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
+     .string "It's chilly and tasty!$"
+ 
+ FourIsland_Text_LoreleisHouse::
+-    .string "LORELEI'S HOUSE$"
++    .string "SELENA'S HOUSE$"
+ 
+diff --git a/data/maps/FourIsland_IcefallCave_Back/text.inc b/data/maps/FourIsland_IcefallCave_Back/text.inc
+index adc958c..7060b20 100644
+--- a/data/maps/FourIsland_IcefallCave_Back/text.inc
++++ b/data/maps/FourIsland_IcefallCave_Back/text.inc
+@@ -1,5 +1,5 @@
+ FourIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons::
+-    .string "LORELEI: Keep your filthy hands\n"
++    .string "SELENA: Keep your filthy hands\n"
+     .string "off the POKéMON in the cave!\p"
+     .string "Do as I say, or you'll have me to\n"
+     .string "answer to!$"
+@@ -11,7 +11,7 @@ FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe::
+     .string "steamed up!$"
+ 
+ FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut::
+-    .string "LORELEI: {PLAYER}?!\n"
++    .string "SELENA: {PLAYER}?!\n"
+     .string "What are you doing here?\p"
+     .string "No, we can catch up later.\n"
+     .string "Right now, I need your help.\p"
+@@ -31,7 +31,7 @@ FourIsland_IcefallCave_Back_Text_GruntDefeat::
+     .string "We didn't plan on this!$"
+ 
+ FourIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons::
+-    .string "LORELEI: Humph.\n"
++    .string "SELENA: Humph.\n"
+     .string "So despicably weak.\p"
+     .string "You!\n"
+     .string "Tell me!\p"
+@@ -45,7 +45,7 @@ FourIsland_IcefallCave_Back_Text_NotTellingYouThat::
+     .string "I'm not telling you that!$"
+ 
+ FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou::
+-    .string "LORELEI: If you won't confess,\n"
++    .string "SELENA: If you won't confess,\n"
+     .string "we'll deep-freeze you.\p"
+     .string "My LAPRAS is furious for what\n"
+     .string "you've done to its friends.\p"
+diff --git a/data/maps/FourIsland_LoreleisHouse/text.inc b/data/maps/FourIsland_LoreleisHouse/text.inc
+index 7bb81f4..96ea497 100644
+--- a/data/maps/FourIsland_LoreleisHouse/text.inc
++++ b/data/maps/FourIsland_LoreleisHouse/text.inc
+@@ -1,5 +1,5 @@
+ FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
+-    .string "LORELEI: There's something weighing\n"
++    .string "SELENA: There's something weighing\n"
+     .string "heavily on my mind.\p"
+     .string "If anything were to happen on\n"
+     .string "the island where I was born…\p"
+@@ -9,7 +9,7 @@ FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
+     .string "irresponsible to my home…$"
+ 
+ FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
+-    .string "LORELEI: So, you managed to solve\n"
++    .string "SELENA: So, you managed to solve\n"
+     .string "all the problems here?\p"
+     .string "That's wonderful.\p"
+     .string "That means there isn't any reason\n"
+diff --git a/data/maps/FourIsland_Mart/text.inc b/data/maps/FourIsland_Mart/text.inc
+index 242567d..f16cc45 100644
+--- a/data/maps/FourIsland_Mart/text.inc
++++ b/data/maps/FourIsland_Mart/text.inc
+@@ -2,8 +2,8 @@ FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
+     .string "We've had a great and powerful\n"
+     .string "TRAINER grow up on this island.\p"
+     .string "I bet even you'd know her.\n"
+-    .string "It's LORELEI of the ELITE FOUR!\p"
+-    .string "When LORELEI was just a tyke,\n"
++    .string "It's SELENA of the ELITE FOUR!\p"
++    .string "When SELENA was just a tyke,\n"
+     .string "I taught her about POKéMON.$"
+ 
+ FourIsland_Mart_Text_IcefallCaveIsFrigid::
+diff --git a/data/maps/FuchsiaCity/text.inc b/data/maps/FuchsiaCity/text.inc
+index f3a2c00..47cddcb 100644
+--- a/data/maps/FuchsiaCity/text.inc
++++ b/data/maps/FuchsiaCity/text.inc
+@@ -42,7 +42,7 @@ FuchsiaCity_Text_SafariZoneOfficeSign::
+ 
+ FuchsiaCity_Text_GymSign::
+     .string "FUCHSIA CITY POKéMON GYM\n"
+-    .string "LEADER: KOGA\l"
++    .string "LEADER: COLM\l"
+     .string "The Poisonous Ninja Master$"
+ 
+ FuchsiaCity_Text_ChanseySign::
+diff --git a/data/maps/FuchsiaCity_Gym/text.inc b/data/maps/FuchsiaCity_Gym/text.inc
+index 4d71e9f..1c76494 100644
+--- a/data/maps/FuchsiaCity_Gym/text.inc
++++ b/data/maps/FuchsiaCity_Gym/text.inc
+@@ -1,5 +1,5 @@
+ FuchsiaCity_Gym_Text_KogaIntro::
+-    .string "KOGA: Fwahahaha!\p"
++    .string "COLM: Fwahahaha!\p"
+     .string "A mere child like you dares to\n"
+     .string "challenge me?\p"
+     .string "The very idea makes me shiver\n"
+@@ -34,7 +34,7 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
+ 
+ FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
+     .string "{PLAYER} received TM06\n"
+-    .string "from KOGA.$"
++    .string "from COLM.$"
+ 
+ FuchsiaCity_Gym_Text_KogaExplainTM06::
+     .string "Sealed within that TM06 lies\n"
+@@ -73,7 +73,7 @@ FuchsiaCity_Gym_Text_KirkDefeat::
+ FuchsiaCity_Gym_Text_KirkPostBattle::
+     .string "Even though I've lost, I will keep\n"
+     .string "training according to the teachings\l"
+-    .string "of KOGA, my ninja master.$"
++    .string "of COLM, my ninja master.$"
+ 
+ FuchsiaCity_Gym_Text_NateIntro::
+     .string "Let's see you beat my special\n"
+@@ -103,7 +103,7 @@ FuchsiaCity_Gym_Text_PhilPostBattle::
+ 
+ FuchsiaCity_Gym_Text_EdgarIntro::
+     .string "I also study the way of the ninja\n"
+-    .string "with Master KOGA!\p"
++    .string "with Master COLM!\p"
+     .string "Ninja have a long history of using\n"
+     .string "animals!$"
+ 
+@@ -114,7 +114,7 @@ FuchsiaCity_Gym_Text_EdgarPostBattle::
+     .string "I still have much to learn.$"
+ 
+ FuchsiaCity_Gym_Text_ShawnIntro::
+-    .string "Master KOGA comes from a long line\n"
++    .string "Master COLM comes from a long line\n"
+     .string "of ninjas.\p"
+     .string "What did you descend from?$"
+ 
+@@ -133,7 +133,7 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
+     .string "Champ in the making!\p"
+     .string "FUCHSIA GYM is a tricked-up place.\n"
+     .string "It's riddled with invisible walls!\p"
+-    .string "KOGA might appear close, but he's\n"
++    .string "COLM might appear close, but he's\n"
+     .string "blocked off.\p"
+     .string "You have to find gaps in the walls\n"
+     .string "to reach him.$"
+@@ -144,13 +144,13 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory::
+ 
+ FuchsiaCity_Gym_Text_GymStatue::
+     .string "FUCHSIA POKéMON GYM\n"
+-    .string "LEADER: KOGA\p"
++    .string "LEADER: COLM\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ FuchsiaCity_Gym_Text_GymStatuePlayerWon::
+     .string "FUCHSIA POKéMON GYM\n"
+-    .string "LEADER: KOGA\p"
++    .string "LEADER: COLM\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/IndigoPlateau_PokemonCenter_1F/text.inc b/data/maps/IndigoPlateau_PokemonCenter_1F/text.inc
+index 857fc13..92f80bc 100644
+--- a/data/maps/IndigoPlateau_PokemonCenter_1F/text.inc
++++ b/data/maps/IndigoPlateau_PokemonCenter_1F/text.inc
+@@ -17,17 +17,17 @@ IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck::
+ IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing::
+     .string "I am so sorry, but you've wasted\n"
+     .string "your time coming here.\p"
+-    .string "LORELEI of the ELITE FOUR is\n"
++    .string "SELENA of the ELITE FOUR is\n"
+     .string "absent, you see.\p"
+     .string "As a result, the POKéMON LEAGUE is\n"
+     .string "closed for the time being.$"
+ 
+ IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
+-    .string "AGATHA's GHOST-type POKéMON are\n"
++    .string "SYRENE's GHOST-type POKéMON are\n"
+     .string "horrifically terrifying in toughness.\p"
+     .string "I took my FIGHTING-type POKéMON\n"
+     .string "and raised them to the max.\p"
+-    .string "I went at AGATHA feeling pretty\n"
++    .string "I went at SYRENE feeling pretty\n"
+     .string "confident, but she whupped us.\p"
+     .string "That old lady's also got a really\n"
+     .string "short fuse, too.\p"
+@@ -37,7 +37,7 @@ IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
+ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
+     .string "Maybe becoming an ELITE FOUR\n"
+     .string "member is in the blood.\p"
+-    .string "From what I've heard, LANCE has\n"
++    .string "From what I've heard, VALTER has\n"
+     .string "a cousin who's a GYM LEADER\l"
+     .string "somewhere far away.$"
+ 
+diff --git a/data/maps/MtMoon_1F/text.inc b/data/maps/MtMoon_1F/text.inc
+index 328e4f7..fcd98a8 100644
+--- a/data/maps/MtMoon_1F/text.inc
++++ b/data/maps/MtMoon_1F/text.inc
+@@ -88,5 +88,5 @@ MtMoon_1F_Text_ZubatIsABloodsucker::
+ MtMoon_1F_Text_BrockHelpsExcavateFossils::
+     .string "Hi, I'm excavating for fossils here\n"
+     .string "under MT. MOON.\p"
+-    .string "Sometimes, BROCK of PEWTER GYM\n"
++    .string "Sometimes, SETH of PEWTER GYM\n"
+     .string "lends me a hand.$"
+diff --git a/data/maps/OneIsland_KindleRoad_EmberSpa/text.inc b/data/maps/OneIsland_KindleRoad_EmberSpa/text.inc
+index 8db6bd4..b733fa7 100644
+--- a/data/maps/OneIsland_KindleRoad_EmberSpa/text.inc
++++ b/data/maps/OneIsland_KindleRoad_EmberSpa/text.inc
+@@ -33,7 +33,7 @@ OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion::
+     .string "After an honest day of training,\n"
+     .string "nothing beats a relaxing soak in\l"
+     .string "the hot spring pool.\p"
+-    .string "BRUNO, who's a senior ahead of me,\n"
++    .string "BINKS, who's a senior ahead of me,\n"
+     .string "visits the SPA on occasion.\p"
+     .string "He comes to rehab injuries, both\n"
+     .string "his own and his POKéMON's.$"
+diff --git a/data/maps/PalletTown/text.inc b/data/maps/PalletTown/text.inc
+index 726aea8..4ad415e 100644
+--- a/data/maps/PalletTown/text.inc
++++ b/data/maps/PalletTown/text.inc
+@@ -1,9 +1,9 @@
+ PalletTown_Text_OakDontGoOut::
+-    .string "OAK: Hey! Wait!\n"
++    .string "MOULDER: Hey! Wait!\n"
+     .string "Don't go out!$"
+ 
+ PalletTown_Text_OakGrassUnsafeNeedMon::
+-    .string "OAK: It's unsafe!\n"
++    .string "MOULDER: It's unsafe!\n"
+     .string "Wild POKéMON live in tall grass!\p"
+     .string "You need your own POKéMON for\n"
+     .string "your protection.\p"
+@@ -21,7 +21,7 @@ PalletTown_Text_CanStoreItemsAndMonsInPC::
+     .string "and POKéMON as data via PC.$"
+ 
+ PalletTown_Text_OakPokemonResearchLab::
+-    .string "OAK POKéMON RESEARCH LAB$"
++    .string "MOULDER POKéMON RESEARCH LAB$"
+ 
+ PalletTown_Text_PlayersHouse::
+     .string "{PLAYER}'s house$"
+@@ -34,7 +34,7 @@ PalletTown_Text_TownSign::
+     .string "Shades of your journey await!$"
+ 
+ PalletTown_Text_OakLetMeSeePokedex::
+-    .string "OAK: Ah, {PLAYER}!\n"
++    .string "MOULDER: Ah, {PLAYER}!\n"
+     .string "You're back, are you?\p"
+     .string "How much have you filled in your\n"
+     .string "POKéDEX?\p"
+@@ -57,7 +57,7 @@ PalletTown_Text_CaughtXImpressiveFollowMe::
+     .string "Follow me.$"
+ 
+ PalletTown_Text_OakYouEnjoyingTraveling::
+-    .string "OAK: Ah, {PLAYER}!\n"
++    .string "MOULDER: Ah, {PLAYER}!\n"
+     .string "You seem to be enjoying traveling.\p"
+     .string "Knowing you, {PLAYER}, I can easily\n"
+     .string "imagine you going out to even more\l"
+diff --git a/data/maps/PalletTown_PlayersHouse_1F/text.inc b/data/maps/PalletTown_PlayersHouse_1F/text.inc
+index 6b339b4..2911e4f 100644
+--- a/data/maps/PalletTown_PlayersHouse_1F/text.inc
++++ b/data/maps/PalletTown_PlayersHouse_1F/text.inc
+@@ -2,14 +2,14 @@ PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
+     .string "MOM: …Right.\n"
+     .string "All boys leave home someday.\l"
+     .string "It said so on TV.\p"
+-    .string "Oh, yes. PROF. OAK, next door, was\n"
++    .string "Oh, yes. MOULDER, next door, was\n"
+     .string "looking for you.$"
+ 
+ PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
+     .string "MOM: …Right.\n"
+     .string "All girls dream of traveling.\l"
+     .string "It said so on TV.\p"
+-    .string "Oh, yes. PROF. OAK, next door, was\n"
++    .string "Oh, yes. MOULDER, next door, was\n"
+     .string "looking for you.$"
+ 
+ PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
+diff --git a/data/maps/PalletTown_ProfessorOaksLab/text.inc b/data/maps/PalletTown_ProfessorOaksLab/text.inc
+index 849a643..8e84d62 100644
+--- a/data/maps/PalletTown_ProfessorOaksLab/text.inc
++++ b/data/maps/PalletTown_ProfessorOaksLab/text.inc
+@@ -20,7 +20,7 @@ PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
+ 
+ PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak::
+     .string "{RIVAL} received the {STR_VAR_1}\n"
+-    .string "from PROF. OAK!$"
++    .string "from MOULDER!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
+     .string "{RIVAL}: My POKéMON looks a lot\n"
+@@ -69,7 +69,7 @@ PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
+     .string "my place after this!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
+-    .string "OAK: {RIVAL}?\n"
++    .string "MOULDER: {RIVAL}?\n"
+     .string "Let me think…\p"
+     .string "Oh, that's right, I told you to\n"
+     .string "come! Just wait!\p"
+@@ -86,18 +86,18 @@ PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
+     .string "Go on, choose!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
+-    .string "OAK: Be patient, {RIVAL}.\n"
++    .string "MOULDER: Be patient, {RIVAL}.\n"
+     .string "You can have one, too!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose::
+-    .string "OAK: Now, {PLAYER}.\p"
++    .string "MOULDER: Now, {PLAYER}.\p"
+     .string "Inside those three POKé BALLS are\n"
+     .string "POKéMON.\p"
+     .string "Which one will you choose for\n"
+     .string "yourself?$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
+-    .string "OAK: Hey!\n"
++    .string "MOULDER: Hey!\n"
+     .string "Don't go away yet!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
+@@ -124,21 +124,21 @@ PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
+ 
+ PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
+     .string "{PLAYER} received the {STR_VAR_1}\n"
+-    .string "from PROF. OAK!$"
++    .string "from MOULDER!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
+-    .string "OAK: If a wild POKéMON appears,\n"
++    .string "MOULDER: If a wild POKéMON appears,\n"
+     .string "your POKéMON can battle it.\p"
+     .string "With it at your side, you should be\n"
+     .string "able to reach the next town.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
+-    .string "OAK: {PLAYER}, raise your young\n"
++    .string "MOULDER: {PLAYER}, raise your young\n"
+     .string "POKéMON by making it battle.\p"
+     .string "It has to battle for it to grow.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
+-    .string "OAK: Oh, {PLAYER}!\n"
++    .string "MOULDER: Oh, {PLAYER}!\n"
+     .string "How is my old POKéMON?\p"
+     .string "Well, it seems to be growing more\n"
+     .string "attached to you.\p"
+@@ -148,7 +148,7 @@ PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
+     .string "You have something for me?$"
+ 
+ PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
+-    .string "{PLAYER} delivered OAK'S PARCEL.$"
++    .string "{PLAYER} delivered MOULDER'S PARCEL.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
+     .string "Ah! \n"
+@@ -157,7 +157,7 @@ PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
+     .string "Thank you!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
+-    .string "OAK: Oh, right!\n"
++    .string "MOULDER: Oh, right!\n"
+     .string "I have a request for you two.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
+@@ -168,15 +168,15 @@ PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
+     .string "It's a high-tech encyclopedia!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
+-    .string "OAK: {PLAYER} and {RIVAL}.\n"
++    .string "MOULDER: {PLAYER} and {RIVAL}.\n"
+     .string "Take these with you.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
+     .string "{PLAYER} received the POKéDEX\n"
+-    .string "from PROF. OAK.$"
++    .string "from MOULDER.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
+-    .string "OAK: You can't get detailed data\n"
++    .string "MOULDER: You can't get detailed data\n"
+     .string "on POKéMON by just seeing them.\p"
+     .string "You must catch them to obtain\n"
+     .string "complete data.\p"
+@@ -224,7 +224,7 @@ PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex::
+     .string "little harder.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakComeSeeMeSometime::
+-    .string "OAK: Come see me sometime.\p"
++    .string "MOULDER: Come see me sometime.\p"
+     .string "After all, I want to know how your\n"
+     .string "POKéDEX is coming along.$"
+ 
+@@ -237,7 +237,7 @@ PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls::
+     .string "They contain POKéMON!$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OaksLastMon::
+-    .string "That's PROF. OAK's last POKéMON.$"
++    .string "That's MOULDER's last POKéMON.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu::
+     .string "Press START to open the MENU!$"
+@@ -261,11 +261,11 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
+     .string "how you rate as a TRAINER!\p"
+     .string "POKéMON LEAGUE HQ\n"
+     .string "INDIGO PLATEAU\p"
+-    .string "PROF. OAK, please visit us!\n"
++    .string "MOULDER, please visit us!\n"
+     .string "…$"
+ 
+ PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide::
+-    .string "I study POKéMON as PROF. OAK's\n"
++    .string "I study POKéMON as MOULDER's\n"
+     .string "AIDE.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
+@@ -281,13 +281,13 @@ PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
+     .string "tell anyone.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
+-    .string "PROF. OAK is going to have his own\n"
++    .string "MOULDER is going to have his own\n"
+     .string "radio show soon.\p"
+     .string "The program will be called PROF.\n"
+-    .string "OAK's POKéMON SEMINAR.$"
++    .string "MOULDER's POKéMON SEMINAR.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
+-    .string "PROF. OAK may not look like much,\n"
++    .string "MOULDER may not look like much,\n"
+     .string "but he's the authority on POKéMON.\p"
+     .string "Many POKéMON TRAINERS hold him in\n"
+     .string "high regard.$"
+@@ -318,13 +318,13 @@ PalletTown_ProfessorOaksLab_Text_RivalJustLetMeHandleEverything::
+     .string "everything.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes::
+-    .string "OAK: I know, I know.\n"
++    .string "MOULDER: I know, I know.\n"
+     .string "Of course I need your help, too.\p"
+     .string "Now, I need to see both your\n"
+     .string "POKéDEXES.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits::
+-    .string "PROF. OAK took both POKéDEX\n"
++    .string "MOULDER took both POKéDEX\n"
+     .string "units.$"
+ 
+ PalletTown_ProfessorOaksLab_Text_OakNowTheseUnitsCanRecordMoreData::
+diff --git a/data/maps/PewterCity/text.inc b/data/maps/PewterCity/text.inc
+index 2adeb55..6c1f682 100644
+--- a/data/maps/PewterCity/text.inc
++++ b/data/maps/PewterCity/text.inc
+@@ -31,7 +31,7 @@ PewterCity_Text_BrockOnlySeriousTrainerHere::
+     .string "TRAINERS here.\p"
+     .string "They're all like BUG CATCHERS,\n"
+     .string "you know, just hobbyists.\p"
+-    .string "But PEWTER GYM's BROCK isn't like\n"
++    .string "But PEWTER GYM's SETH isn't like\n"
+     .string "that, not one bit.$"
+ 
+ PewterCity_Text_DidYouCheckOutMuseum::
+@@ -64,12 +64,12 @@ PewterCity_Text_SprayingRepelToKeepWildMonsOut::
+ 
+ PewterCity_Text_BrocksLookingForChallengersFollowMe::
+     .string "You're a TRAINER, right?\p"
+-    .string "BROCK's looking for new\n"
++    .string "SETH's looking for new\n"
+     .string "challengers. Follow me!$"
+ 
+ PewterCity_Text_GoTakeOnBrock::
+     .string "If you have the right stuff,\n"
+-    .string "go take on BROCK!$"
++    .string "go take on SETH!$"
+ 
+ PewterCity_Text_TrainerTipsEarningEXP::
+     .string "TRAINER TIPS\p"
+@@ -88,7 +88,7 @@ PewterCity_Text_MuseumOfScience::
+ 
+ PewterCity_Text_GymSign::
+     .string "PEWTER CITY POKéMON GYM\n"
+-    .string "LEADER: BROCK\l"
++    .string "LEADER: SETH\l"
+     .string "The Rock-Solid POKéMON TRAINER!$"
+ 
+ PewterCity_Text_CitySign::
+@@ -122,7 +122,7 @@ PewterCity_Text_OhPlayer::
+ 
+ PewterCity_Text_AskedToDeliverThis::
+     .string "I'm glad I caught up to you.\n"
+-    .string "I'm PROF. OAK's AIDE.\p"
++    .string "I'm MOULDER's AIDE.\p"
+     .string "I've been asked to deliver this,\n"
+     .string "so here you go.$"
+ 
+diff --git a/data/maps/PewterCity_Gym/text.inc b/data/maps/PewterCity_Gym/text.inc
+index 7068429..540f5e5 100644
+--- a/data/maps/PewterCity_Gym/text.inc
++++ b/data/maps/PewterCity_Gym/text.inc
+@@ -1,5 +1,5 @@
+ PewterCity_Gym_Text_BrockIntro::
+-    .string "So, you're here. I'm BROCK.\n"
++    .string "So, you're here. I'm SETH.\n"
+     .string "I'm PEWTER's GYM LEADER.\p"
+     .string "My rock-hard willpower is evident\n"
+     .string "even in my POKéMON.\p"
+@@ -24,7 +24,7 @@ PewterCity_Gym_Text_BrockDefeat::
+     .string "on you this…the official POKéMON\l"
+     .string "LEAGUE BOULDERBADGE.\p"
+     .string "{FONT_NORMAL}{PLAYER} received the BOULDERBADGE\n"
+-    .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
++    .string "from SETH!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+     .string "{FONT_MALE}Just having the BOULDERBADGE makes\n"
+     .string "your POKéMON more powerful.\p"
+     .string "It also enables the use of the\n"
+@@ -38,7 +38,7 @@ PewterCity_Gym_Text_TakeThisWithYou::
+ 
+ PewterCity_Gym_Text_ReceivedTM39FromBrock::
+     .string "{PLAYER} received TM39\n"
+-    .string "from BROCK.$"
++    .string "from SETH.$"
+ 
+ PewterCity_Gym_Text_ExplainTM39::
+     .string "A TM, Technical Machine, contains a\n"
+@@ -68,7 +68,7 @@ PewterCity_Gym_Text_DontHaveRoomForThis::
+ PewterCity_Gym_Text_LiamIntro::
+     .string "Stop right there, kid!\p"
+     .string "You're ten thousand light-years \n"
+-    .string "from facing BROCK!$"
++    .string "from facing SETH!$"
+ 
+ PewterCity_Gym_Text_LiamDefeat::
+     .string "Darn!\p"
+@@ -77,7 +77,7 @@ PewterCity_Gym_Text_LiamDefeat::
+ 
+ PewterCity_Gym_Text_LiamPostBattle::
+     .string "You're pretty hot.\n"
+-    .string "…But not as hot as BROCK!$"
++    .string "…But not as hot as SETH!$"
+ 
+ PewterCity_Gym_Text_LetMeTakeYouToTheTop::
+     .string "Hiya!\n"
+@@ -110,13 +110,13 @@ PewterCity_Gym_Text_YoureChampMaterial::
+ 
+ PewterCity_Gym_Text_GymStatue::
+     .string "PEWTER POKéMON GYM\n"
+-    .string "LEADER: BROCK\p"
++    .string "LEADER: SETH\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ PewterCity_Gym_Text_GymStatuePlayerWon::
+     .string "PEWTER POKéMON GYM\n"
+-    .string "LEADER: BROCK\p"
++    .string "LEADER: SETH\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/PokemonLeague_AgathasRoom/text.inc b/data/maps/PokemonLeague_AgathasRoom/text.inc
+index bc87275..782126d 100644
+--- a/data/maps/PokemonLeague_AgathasRoom/text.inc
++++ b/data/maps/PokemonLeague_AgathasRoom/text.inc
+@@ -1,6 +1,6 @@
+ PokemonLeague_AgathasRoom_Text_Intro::
+-    .string "I am AGATHA of the ELITE FOUR.\p"
+-    .string "I hear OAK's taken a lot of\n"
++    .string "I am SYRENE of the ELITE FOUR.\p"
++    .string "I hear MOULDER's taken a lot of\n"
+     .string "interest in you, child.\p"
+     .string "That old duff was once tough and\n"
+     .string "handsome.\p"
+@@ -14,8 +14,8 @@ PokemonLeague_AgathasRoom_Text_Intro::
+     .string "TRAINER battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+ 
+ PokemonLeague_AgathasRoom_Text_RematchIntro::
+-    .string "I am AGATHA of the ELITE FOUR.\p"
+-    .string "You're the child that OAK's taken\n"
++    .string "I am SYRENE of the ELITE FOUR.\p"
++    .string "You're the child that MOULDER's taken\n"
+     .string "under his wing, aren't you?\p"
+     .string "That old duff was once tough and\n"
+     .string "handsome.\p"
+diff --git a/data/maps/PokemonLeague_BrunosRoom/text.inc b/data/maps/PokemonLeague_BrunosRoom/text.inc
+index 2668289..46be80e 100644
+--- a/data/maps/PokemonLeague_BrunosRoom/text.inc
++++ b/data/maps/PokemonLeague_BrunosRoom/text.inc
+@@ -1,5 +1,5 @@
+ PokemonLeague_BrunosRoom_Text_Intro::
+-    .string "I am BRUNO of the ELITE FOUR!\p"
++    .string "I am BINKS of the ELITE FOUR!\p"
+     .string "Through rigorous training, people\n"
+     .string "and POKéMON can become stronger\l"
+     .string "without limit.\p"
+@@ -12,7 +12,7 @@ PokemonLeague_BrunosRoom_Text_Intro::
+     .string "Hoo hah!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+ 
+ PokemonLeague_BrunosRoom_Text_RematchIntro::
+-    .string "I am BRUNO of the ELITE FOUR!\p"
++    .string "I am BINKS of the ELITE FOUR!\p"
+     .string "Through rigorous training, people\n"
+     .string "and POKéMON can become stronger\l"
+     .string "without limit.\p"
+diff --git a/data/maps/PokemonLeague_ChampionsRoom/text.inc b/data/maps/PokemonLeague_ChampionsRoom/text.inc
+index b00d117..cd25479 100644
+--- a/data/maps/PokemonLeague_ChampionsRoom/text.inc
++++ b/data/maps/PokemonLeague_ChampionsRoom/text.inc
+@@ -64,10 +64,10 @@ PokemonLeague_ChampionsRoom_Text_PostBattle::
+     .string "Although I don't like to admit it…$"
+ 
+ PokemonLeague_ChampionsRoom_Text_OakPlayer::
+-    .string "OAK: {PLAYER}!$"
++    .string "MOULDER: {PLAYER}!$"
+ 
+ PokemonLeague_ChampionsRoom_Text_OakCongratulations::
+-    .string "OAK: So, you've won!\n"
++    .string "MOULDER: So, you've won!\n"
+     .string "Sincerely, congratulations!\p"
+     .string "You're the new POKéMON LEAGUE\n"
+     .string "CHAMPION!\p"
+@@ -77,7 +77,7 @@ PokemonLeague_ChampionsRoom_Text_OakCongratulations::
+     .string "{PLAYER}, you have come of age!$"
+ 
+ PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival::
+-    .string "OAK: {RIVAL}…\n"
++    .string "MOULDER: {RIVAL}…\n"
+     .string "I'm disappointed in you.\p"
+     .string "I came when I heard you'd beaten\n"
+     .string "the ELITE FOUR.\p"
+@@ -91,7 +91,7 @@ PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival::
+     .string "become a CHAMP again!$"
+ 
+ PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe::
+-    .string "OAK: {PLAYER}.\p"
++    .string "MOULDER: {PLAYER}.\p"
+     .string "You understand that your victory\n"
+     .string "was not just your own doing.\p"
+     .string "The bond you share with your\n"
+diff --git a/data/maps/PokemonLeague_HallOfFame/text.inc b/data/maps/PokemonLeague_HallOfFame/text.inc
+index fbcf553..676f2d4 100644
+--- a/data/maps/PokemonLeague_HallOfFame/text.inc
++++ b/data/maps/PokemonLeague_HallOfFame/text.inc
+@@ -1,5 +1,5 @@
+ PokemonLeague_HallOfFame_Text_OakCongratulations::
+-    .string "OAK: Er-hem!\n"
++    .string "MOULDER: Er-hem!\n"
+     .string "Congratulations, {PLAYER}!\p"
+     .string "This floor is the POKéMON HALL OF\n"
+     .string "FAME.\p"
+diff --git a/data/maps/PokemonLeague_LancesRoom/text.inc b/data/maps/PokemonLeague_LancesRoom/text.inc
+index dd5bb38..5bcfdca 100644
+--- a/data/maps/PokemonLeague_LancesRoom/text.inc
++++ b/data/maps/PokemonLeague_LancesRoom/text.inc
+@@ -2,7 +2,7 @@ PokemonLeague_LancesRoom_Text_Intro::
+     .string "Ah! I've heard about you,\n"
+     .string "{PLAYER}!\p"
+     .string "I lead the ELITE FOUR.\p"
+-    .string "You can call me LANCE the dragon\n"
++    .string "You can call me VALTER the dragon\n"
+     .string "TRAINER.\p"
+     .string "You know that dragons are\n"
+     .string "mythical POKéMON.\p"
+@@ -18,7 +18,7 @@ PokemonLeague_LancesRoom_Text_RematchIntro::
+     .string "Ah!\n"
+     .string "So, you've returned, {PLAYER}!\p"
+     .string "I lead the ELITE FOUR.\p"
+-    .string "You can call me LANCE the dragon\n"
++    .string "You can call me VALTER the dragon\n"
+     .string "TRAINER.\p"
+     .string "You know that dragons are\n"
+     .string "mythical POKéMON.\p"
+diff --git a/data/maps/PokemonLeague_LoreleisRoom/text.inc b/data/maps/PokemonLeague_LoreleisRoom/text.inc
+index 1945c56..4de4b86 100644
+--- a/data/maps/PokemonLeague_LoreleisRoom/text.inc
++++ b/data/maps/PokemonLeague_LoreleisRoom/text.inc
+@@ -1,6 +1,6 @@
+ PokemonLeague_LoreleisRoom_Text_Intro::
+     .string "Welcome to the POKéMON LEAGUE.\p"
+-    .string "I am LORELEI of the ELITE FOUR.\p"
++    .string "I am SELENA of the ELITE FOUR.\p"
+     .string "No one can best me when it comes\n"
+     .string "to icy POKéMON.\p"
+     .string "Freezing moves are powerful.\p"
+@@ -11,7 +11,7 @@ PokemonLeague_LoreleisRoom_Text_Intro::
+ 
+ PokemonLeague_LoreleisRoom_Text_RematchIntro::
+     .string "Welcome to the POKéMON LEAGUE.\p"
+-    .string "I, LORELEI of the ELITE FOUR,\n"
++    .string "I, SELENA of the ELITE FOUR,\n"
+     .string "have returned!\p"
+     .string "You know how it goes.\n"
+     .string "No one can best me when it comes\l"
+diff --git a/data/maps/RocketHideout_B4F/text.inc b/data/maps/RocketHideout_B4F/text.inc
+index 0e7c734..61c0fe3 100644
+--- a/data/maps/RocketHideout_B4F/text.inc
++++ b/data/maps/RocketHideout_B4F/text.inc
+@@ -5,7 +5,7 @@ RocketHideout_B4F_Text_GiovanniIntro::
+     .string "around the world.\p"
+     .string "They're important tools for keeping\n"
+     .string "our criminal enterprise going.\p"
+-    .string "I am the leader, GIOVANNI!\p"
++    .string "I am the leader, VIGARDE!\p"
+     .string "For your insolence, you will feel a\n"
+     .string "world of pain!$"
+ 
+diff --git a/data/maps/Route10_PokemonCenter_1F/text.inc b/data/maps/Route10_PokemonCenter_1F/text.inc
+index c47c5ad..c7b2efe 100644
+--- a/data/maps/Route10_PokemonCenter_1F/text.inc
++++ b/data/maps/Route10_PokemonCenter_1F/text.inc
+@@ -16,10 +16,10 @@ Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons::
+     .string "Oh… {PLAYER}!\n"
+     .string "I've been looking for you!\p"
+     .string "It's me, one of the ever-present\n"
+-    .string "AIDES to PROF. OAK.\p"
++    .string "AIDES to MOULDER.\p"
+     .string "If your POKéDEX has complete data\n"
+     .string "on twenty species, I'm supposed to\l"
+-    .string "give you a reward from PROF. OAK.\p"
++    .string "give you a reward from MOULDER.\p"
+     .string "He entrusted me with this\n"
+     .string "EVERSTONE.\p"
+     .string "So, {PLAYER}, let me ask you.\p"
+diff --git a/data/maps/Route11_EastEntrance_2F/text.inc b/data/maps/Route11_EastEntrance_2F/text.inc
+index bdfa03e..f0ee337 100644
+--- a/data/maps/Route11_EastEntrance_2F/text.inc
++++ b/data/maps/Route11_EastEntrance_2F/text.inc
+@@ -1,10 +1,10 @@
+ Route11_EastEntrance_2F_Text_GiveItemfinderIfCaught30::
+     .string "Hi! Remember me?\n"
+-    .string "I'm one of PROF. OAK's AIDES.\p"
++    .string "I'm one of MOULDER's AIDES.\p"
+     .string "If your POKéDEX has complete data\n"
+     .string "on {STR_VAR_1} species, I'm supposed to\l"
+     .string "give you a reward.\p"
+-    .string "PROF. OAK entrusted me with the\n"
++    .string "MOULDER entrusted me with the\n"
+     .string "{STR_VAR_2} for you.\p"
+     .string "So, {PLAYER}, let me ask you.\p"
+     .string "Have you gathered data on at least\n"
+diff --git a/data/maps/Route15_WestEntrance_1F/text.inc b/data/maps/Route15_WestEntrance_1F/text.inc
+index 89194b5..f1e27b7 100644
+--- a/data/maps/Route15_WestEntrance_1F/text.inc
++++ b/data/maps/Route15_WestEntrance_1F/text.inc
+@@ -1,5 +1,5 @@
+ Route15_WestEntrance_1F_Text_OaksAideCameByHere::
+     .string "Are you the kid who's working on\n"
+     .string "a POKéDEX?\p"
+-    .string "PROF. OAK's AIDE came by here.$"
++    .string "MOULDER's AIDE came by here.$"
+ 
+diff --git a/data/maps/Route15_WestEntrance_2F/text.inc b/data/maps/Route15_WestEntrance_2F/text.inc
+index 28561c4..93f841e 100644
+--- a/data/maps/Route15_WestEntrance_2F/text.inc
++++ b/data/maps/Route15_WestEntrance_2F/text.inc
+@@ -1,10 +1,10 @@
+ Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
+     .string "Hi! Remember me?\n"
+-    .string "I'm one of PROF. OAK's AIDES.\p"
++    .string "I'm one of MOULDER's AIDES.\p"
+     .string "If your POKéDEX has complete data\n"
+     .string "on {STR_VAR_1} species, I'm supposed to\l"
+     .string "give you a reward.\p"
+-    .string "PROF. OAK entrusted me with the\n"
++    .string "MOULDER entrusted me with the\n"
+     .string "{STR_VAR_2} for you.\p"
+     .string "So, {PLAYER}, let me ask you.\p"
+     .string "Have you gathered data on at least\n"
+diff --git a/data/maps/Route16_NorthEntrance_2F/text.inc b/data/maps/Route16_NorthEntrance_2F/text.inc
+index a7a344a..9b2e409 100644
+--- a/data/maps/Route16_NorthEntrance_2F/text.inc
++++ b/data/maps/Route16_NorthEntrance_2F/text.inc
+@@ -19,11 +19,11 @@ Route16_NorthEntrance_2F_Text_LongPathOverWater::
+ 
+ Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
+     .string "Hi! Remember me?\n"
+-    .string "I'm one of PROF. OAK's AIDES.\p"
++    .string "I'm one of MOULDER's AIDES.\p"
+     .string "If your POKéDEX has complete data\n"
+     .string "on 40 species, I'm supposed to\l"
+     .string "give you a reward.\p"
+-    .string "PROF. OAK entrusted me with an\n"
++    .string "MOULDER entrusted me with an\n"
+     .string "AMULET COIN for you.\p"
+     .string "So, {PLAYER}, let me ask you.\p"
+     .string "Have you gathered data on at least\n"
+diff --git a/data/maps/Route20/text.inc b/data/maps/Route20/text.inc
+index 8d76723..e5ab4cc 100644
+--- a/data/maps/Route20/text.inc
++++ b/data/maps/Route20/text.inc
+@@ -116,5 +116,5 @@ Route20_Text_SeafoamIslands::
+ Route20_Text_MistyTrainsHere::
+     .string "Strong TRAINERS and WATER POKéMON\n"
+     .string "are common sights in these parts.\p"
+-    .string "They say that MISTY of the\n"
++    .string "They say that MARISA of the\n"
+     .string "CERULEAN GYM trains here.$"
+diff --git a/data/maps/Route25/text.inc b/data/maps/Route25/text.inc
+index 49e33c0..a9a5266 100644
+--- a/data/maps/Route25/text.inc
++++ b/data/maps/Route25/text.inc
+@@ -109,7 +109,7 @@ Route25_Text_SeaCottageSign::
+ 
+ Route25_Text_MistyHighHopesAboutThisPlace::
+     .string "This cape is a famous date spot.\p"
+-    .string "MISTY, the GYM LEADER, has high\n"
++    .string "MARISA, the GYM LEADER, has high\n"
+     .string "hopes about this place.$"
+ 
+ Route25_Text_AreYouHereAlone::
+diff --git a/data/maps/Route2_EastBuilding/text.inc b/data/maps/Route2_EastBuilding/text.inc
+index 509dae3..d1a3c6d 100644
+--- a/data/maps/Route2_EastBuilding/text.inc
++++ b/data/maps/Route2_EastBuilding/text.inc
+@@ -1,10 +1,10 @@
+ Route2_EastBuilding_Text_GiveHM05IfSeen10Mons::
+     .string "Hi! Remember me?\n"
+-    .string "I'm one of PROF. OAK's AIDES.\p"
++    .string "I'm one of MOULDER's AIDES.\p"
+     .string "If your POKéDEX has complete data\n"
+     .string "on ten species, I'm supposed to\l"
+     .string "give you a reward.\p"
+-    .string "PROF. OAK entrusted me with\n"
++    .string "MOULDER entrusted me with\n"
+     .string "HM05 for you.\p"
+     .string "So, {PLAYER}, let me ask you.\p"
+     .string "Have you gathered data on at least\n"
+diff --git a/data/maps/Route4/text.inc b/data/maps/Route4/text.inc
+index 37d5960..5e808b6 100644
+--- a/data/maps/Route4/text.inc
++++ b/data/maps/Route4/text.inc
+@@ -72,8 +72,8 @@ Text_MegaKickTaught::
+ 
+ Route4_Text_PeopleLikeAndRespectBrock::
+     .string "Oh, wow, that's the BOULDERBADGE!\n"
+-    .string "You got it from BROCK, didn't you?\p"
+-    .string "BROCK is cool. He's not just tough.\n"
++    .string "You got it from SETH, didn't you?\p"
++    .string "SETH is cool. He's not just tough.\n"
+     .string "People like and respect him.\p"
+     .string "I want to become a GYM LEADER\n"
+     .string "like him.$"
+diff --git a/data/maps/SafariZone_West_RestHouse/text.inc b/data/maps/SafariZone_West_RestHouse/text.inc
+index 774bede..60c8c1c 100644
+--- a/data/maps/SafariZone_West_RestHouse/text.inc
++++ b/data/maps/SafariZone_West_RestHouse/text.inc
+@@ -1,7 +1,7 @@
+ SafariZone_West_Text_KogaPatrolsSafariEverySoOften::
+     .string "The SAFARI ZONE's huge, wouldn't\n"
+     .string "you say?\p"
+-    .string "FUCHSIA's GYM LEADER, KOGA, \n"
++    .string "FUCHSIA's GYM LEADER, COLM, \n"
+     .string "patrols the grounds every so often.\p"
+     .string "Thanks to him, we can play here\n"
+     .string "knowing that we're safe.$"
+diff --git a/data/maps/SaffronCity/text.inc b/data/maps/SaffronCity/text.inc
+index bacc228..7d12f07 100644
+--- a/data/maps/SaffronCity/text.inc
++++ b/data/maps/SaffronCity/text.inc
+@@ -71,7 +71,7 @@ SaffronCity_Text_FightingDojo::
+ 
+ SaffronCity_Text_GymSign::
+     .string "SAFFRON CITY POKéMON GYM\n"
+-    .string "LEADER: SABRINA\l"
++    .string "LEADER: LUTE\l"
+     .string "The Master of PSYCHIC POKéMON!$"
+ 
+ SaffronCity_Text_FullHealCuresStatus::
+@@ -108,8 +108,8 @@ SaffronCity_Text_HowCanClubNotRecognizeLance::
+     .string "This FAN CLUB…\n"
+     .string "No one here has a clue!\p"
+     .string "How could they not recognize\n"
+-    .string "the brilliance that is LANCE?\p"
++    .string "the brilliance that is VALTER?\p"
+     .string "He stands for justice!\n"
+     .string "He's cool, and yet passionate!\l"
+-    .string "He's the greatest, LANCE!$"
++    .string "He's the greatest, VALTER!$"
+ 
+diff --git a/data/maps/SaffronCity_Gym/text.inc b/data/maps/SaffronCity_Gym/text.inc
+index 6cd8b93..3018073 100644
+--- a/data/maps/SaffronCity_Gym/text.inc
++++ b/data/maps/SaffronCity_Gym/text.inc
+@@ -32,7 +32,7 @@ SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
+ 
+ SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
+     .string "{PLAYER} received TM04 from\n"
+-    .string "SABRINA.$"
++    .string "LUTE.$"
+ 
+ SaffronCity_Gym_Text_ExplainTM04::
+     .string "TM04 is CALM MIND.\p"
+@@ -43,7 +43,7 @@ SaffronCity_Gym_Text_BagFullOfOtherItems::
+     .string "Your BAG is full of other items.$"
+ 
+ SaffronCity_Gym_Text_AmandaIntro::
+-    .string "SABRINA is far younger than I,\n"
++    .string "LUTE is far younger than I,\n"
+     .string "but she has earned my respect.$"
+ 
+ SaffronCity_Gym_Text_AmandaDefeat::
+@@ -52,7 +52,7 @@ SaffronCity_Gym_Text_AmandaDefeat::
+ SaffronCity_Gym_Text_AmandaPostBattle::
+     .string "In a battle of equals, the one\n"
+     .string "with the stronger will wins.\p"
+-    .string "If you wish to beat SABRINA, focus\n"
++    .string "If you wish to beat LUTE, focus\n"
+     .string "and will yourself to victory.$"
+ 
+ SaffronCity_Gym_Text_JohanIntro::
+@@ -87,7 +87,7 @@ SaffronCity_Gym_Text_TyronDefeat::
+     .string "I don't believe this!$"
+ 
+ SaffronCity_Gym_Text_TyronPostBattle::
+-    .string "SABRINA just wiped out the KARATE\n"
++    .string "LUTE just wiped out the KARATE\n"
+     .string "MASTER next door.$"
+ 
+ SaffronCity_Gym_Text_TashaIntro::
+@@ -102,7 +102,7 @@ SaffronCity_Gym_Text_TashaPostBattle::
+     .string "place.$"
+ 
+ SaffronCity_Gym_Text_CameronIntro::
+-    .string "SABRINA is young, but she's also\n"
++    .string "LUTE is young, but she's also\n"
+     .string "our highly skilled LEADER.\p"
+     .string "You won't reach her easily!$"
+ 
+@@ -121,7 +121,7 @@ SaffronCity_Gym_Text_CameronPostBattle::
+ SaffronCity_Gym_Text_PrestonIntro::
+     .string "SAFFRON POKéMON GYM is famous for\n"
+     .string "training psychics.\p"
+-    .string "You want to see SABRINA, don't\n"
++    .string "You want to see LUTE, don't\n"
+     .string "you? I can tell!$"
+ 
+ SaffronCity_Gym_Text_PrestonDefeat::
+@@ -134,7 +134,7 @@ SaffronCity_Gym_Text_PrestonPostBattle::
+ SaffronCity_Gym_Text_GymGuyAdvice::
+     .string "Yo!\n"
+     .string "Champ in the making!\p"
+-    .string "SABRINA's POKéMON use psychic\n"
++    .string "LUTE's POKéMON use psychic\n"
+     .string "power instead of force.\p"
+     .string "FIGHTING POKéMON are especially\n"
+     .string "weak against PSYCHIC POKéMON.\p"
+@@ -148,13 +148,13 @@ SaffronCity_Gym_Text_GymGuyPostVictory::
+ 
+ SaffronCity_Gym_Text_GymStatue::
+     .string "SAFFRON POKéMON GYM\n"
+-    .string "LEADER: SABRINA\p"
++    .string "LEADER: LUTE\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ SaffronCity_Gym_Text_GymStatuePlayerWon::
+     .string "SAFFRON POKéMON GYM\n"
+-    .string "LEADER: SABRINA\p"
++    .string "LEADER: LUTE\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/SaffronCity_PokemonTrainerFanClub/text.inc b/data/maps/SaffronCity_PokemonTrainerFanClub/text.inc
+index 1b7780b..b5c0cc2 100644
+--- a/data/maps/SaffronCity_PokemonTrainerFanClub/text.inc
++++ b/data/maps/SaffronCity_PokemonTrainerFanClub/text.inc
+@@ -72,24 +72,24 @@ SaffronCity_PokemonTrainerFanClub_Text_CountingOnYou::
+     .string "I believe in shorts!$"
+ 
+ SaffronCity_PokemonTrainerFanClub_Text_BrocksMyHero::
+-    .string "BROCK's my hero!\n"
++    .string "SETH's my hero!\n"
+     .string "He's a man among men!\p"
+     .string "Heheh, I got my mom to do\n"
+     .string "something for me.\p"
+-    .string "I got her to embroider “BROCK”\n"
++    .string "I got her to embroider “SETH”\n"
+     .string "on my shorts!$"
+ 
+ SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd::
+     .string "…  …\p"
+     .string "…  …\n"
+-    .string "I'm BROCK's fan!\p"
++    .string "I'm SETH's fan!\p"
+     .string "Even if I were his only fan,\n"
+     .string "I swear it on my rock-hard will,\l"
+     .string "and on my shorts!\p"
+     .string "I'll be his fan to the bitter end!$"
+ 
+ SaffronCity_PokemonTrainerFanClub_Text_BrocksLastWordOnCool::
+-    .string "BROCK's the last word on cool,\n"
++    .string "SETH's the last word on cool,\n"
+     .string "end of story!\p"
+     .string "Now there's a guy who I want to\n"
+     .string "be like!$"
+@@ -151,14 +151,14 @@ SaffronCity_PokemonTrainerFanClub_Text_EveryoneButMeStoppedBeingYourFan::
+ 
+ SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeSabrina::
+     .string "Do you know what?\n"
+-    .string "I want to be like SABRINA!\p"
++    .string "I want to be like LUTE!\p"
+     .string "I want to be a psychic girl just\n"
+     .string "like her!$"
+ 
+ SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan::
+     .string "Even if I'm the only one, I won't\n"
+-    .string "stop being SABRINA's fan.\p"
+-    .string "My dream is to be like SABRINA,\n"
++    .string "stop being LUTE's fan.\p"
++    .string "My dream is to be like LUTE,\n"
+     .string "cute, but cool.\p"
+     .string "I want to be a psychic girl just\n"
+     .string "like her!$"
+diff --git a/data/maps/SevenIsland_SevaultCanyon/text.inc b/data/maps/SevenIsland_SevaultCanyon/text.inc
+index 5810ebb..2d60e7c 100644
+--- a/data/maps/SevenIsland_SevaultCanyon/text.inc
++++ b/data/maps/SevenIsland_SevaultCanyon/text.inc
+@@ -125,6 +125,6 @@ SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly::
+     .string "not a bad thing.\p"
+     .string "But it's also not bad to aim for\n"
+     .string "the top with a partner.\p"
+-    .string "Even BRUNO…\n"
++    .string "Even BINKS…\n"
+     .string "He trained with a fellow by the\l"
+     .string "name of BRAWLY before.$"
+diff --git a/data/maps/SixIsland_Mart/text.inc b/data/maps/SixIsland_Mart/text.inc
+index 19425ed..dfcdc9d 100644
+--- a/data/maps/SixIsland_Mart/text.inc
++++ b/data/maps/SixIsland_Mart/text.inc
+@@ -1,7 +1,7 @@
+ SixIsland_Mart_Text_AgathaOldestEverEliteFourMember::
+     .string "Play with POKéMON lots and live\n"
+     .string "a long life!\p"
+-    .string "Take AGATHA, for example.\p"
++    .string "Take SYRENE, for example.\p"
+     .string "She set a record for being the\n"
+     .string "oldest-ever ELITE FOUR member.\p"
+     .string "She spurs me to do bigger things.$"
+diff --git a/data/maps/TwoIsland/text.inc b/data/maps/TwoIsland/text.inc
+index d7add84..490df4f 100644
+--- a/data/maps/TwoIsland/text.inc
++++ b/data/maps/TwoIsland/text.inc
+@@ -59,7 +59,7 @@ TwoIsland_Text_BrunoCameToIslandWhileBack::
+     .string "A famous TRAINER came to the\n"
+     .string "ISLAND a little while back.\p"
+     .string "He's one of the ELITE FOUR.\n"
+-    .string "His name is BRUNO.\p"
++    .string "His name is BINKS.\p"
+     .string "He went away disappointed when he\n"
+     .string "found out that they were all sold\l"
+     .string "out of Rage Candybars.$"
+diff --git a/data/maps/VermilionCity/text.inc b/data/maps/VermilionCity/text.inc
+index befc4a3..2fac862 100644
+--- a/data/maps/VermilionCity/text.inc
++++ b/data/maps/VermilionCity/text.inc
+@@ -47,7 +47,7 @@ VermilionCity_Text_PokemonFanClubSign::
+ 
+ VermilionCity_Text_GymSign::
+     .string "VERMILION CITY POKéMON GYM\n"
+-    .string "LEADER: LT. SURGE\l"
++    .string "LEADER: GILLIAM\l"
+     .string "The Lightning American!$"
+ 
+ VermilionCity_Text_VermilionHarbor::
+@@ -120,9 +120,9 @@ VermilionCity_Text_Seagallop12Departing::
+ VermilionCity_Text_Route2AideHasPackageForYou::
+     .string "Oh, hello, {PLAYER}!\n"
+     .string "How are you doing?\p"
+-    .string "It's me, one of PROF. OAK's AIDES.\p"
++    .string "It's me, one of MOULDER's AIDES.\p"
+     .string "Did you meet the other AIDE?\p"
+-    .string "He had a package from PROF. OAK\n"
++    .string "He had a package from MOULDER\n"
+     .string "for you, {PLAYER}.\p"
+     .string "He said he'd look for you around\n"
+     .string "ROUTE 2, {PLAYER}.\p"
+diff --git a/data/maps/VermilionCity_Gym/text.inc b/data/maps/VermilionCity_Gym/text.inc
+index e6f6fda..e4a5fd1 100644
+--- a/data/maps/VermilionCity_Gym/text.inc
++++ b/data/maps/VermilionCity_Gym/text.inc
+@@ -25,7 +25,7 @@ VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
+ 
+ VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
+     .string "{PLAYER} received TM34\n"
+-    .string "from LT. SURGE.$"
++    .string "from GILLIAM.$"
+ 
+ VermilionCity_Gym_Text_ExplainTM34::
+     .string "TM34 contains SHOCK WAVE!\p"
+@@ -40,7 +40,7 @@ VermilionCity_Gym_Text_LtSurgeDefeat::
+     .string "Fine, then, take the THUNDERBADGE!$"
+ 
+ VermilionCity_Gym_Text_TuckerIntro::
+-    .string "When I was in the Army, LT. SURGE\n"
++    .string "When I was in the Army, GILLIAM\n"
+     .string "was my strict CO.\p"
+     .string "He was a hard taskmaster.$"
+ 
+@@ -50,7 +50,7 @@ VermilionCity_Gym_Text_TuckerDefeat::
+ 
+ VermilionCity_Gym_Text_TuckerPostBattle::
+     .string "It's not easy opening that door.\p"
+-    .string "LT. SURGE was always famous for\n"
++    .string "GILLIAM was always famous for\n"
+     .string "his cautious nature in the Army.$"
+ 
+ VermilionCity_Gym_Text_BailyIntro::
+@@ -63,7 +63,7 @@ VermilionCity_Gym_Text_BailyDefeat::
+ 
+ VermilionCity_Gym_Text_BailyPostBattle::
+     .string "Okay, I'll talk!\p"
+-    .string "LT. SURGE said he hid door\n"
++    .string "GILLIAM said he hid door\n"
+     .string "switches inside something.$"
+ 
+ VermilionCity_Gym_Text_DwayneIntro::
+@@ -75,7 +75,7 @@ VermilionCity_Gym_Text_DwayneDefeat::
+     .string "Surprised me!$"
+ 
+ VermilionCity_Gym_Text_DwaynePostBattle::
+-    .string "LT. SURGE installed the traps in\n"
++    .string "GILLIAM installed the traps in\n"
+     .string "the GYM himself.\p"
+     .string "He set up double locks everywhere.\n"
+     .string "Let me give you a hint.\p"
+@@ -85,7 +85,7 @@ VermilionCity_Gym_Text_DwaynePostBattle::
+ VermilionCity_Gym_Text_GymGuyAdvice::
+     .string "Yo!\n"
+     .string "Champ in the making!\p"
+-    .string "LT. SURGE has a nickname.\p"
++    .string "GILLIAM has a nickname.\p"
+     .string "People refer to him as the\n"
+     .string "Lightning American!\p"
+     .string "He's an expert on electric\n"
+@@ -93,7 +93,7 @@ VermilionCity_Gym_Text_GymGuyAdvice::
+     .string "BIRD/WATER-type POKéMON match\n"
+     .string "poorly against the ELECTRIC type.\p"
+     .string "Beware of paralysis, too.\p"
+-    .string "LT. SURGE is very cautious.\p"
++    .string "GILLIAM is very cautious.\p"
+     .string "He's locked himself in, so it won't\n"
+     .string "be easy getting to him.$"
+ 
+@@ -103,13 +103,13 @@ VermilionCity_Gym_Text_GymGuyPostVictory::
+ 
+ VermilionCity_Gym_Text_GymStatue::
+     .string "VERMILION POKéMON GYM\n"
+-    .string "LEADER: LT. SURGE\p"
++    .string "LEADER: GILLIAM\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}$"
+ 
+ VermilionCity_Gym_Text_GymStatuePlayerWon::
+     .string "VERMILION POKéMON GYM\n"
+-    .string "LEADER: LT. SURGE\p"
++    .string "LEADER: GILLIAM\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/VictoryRoad_3F/text.inc b/data/maps/VictoryRoad_3F/text.inc
+index b73ac92..ea63b27 100644
+--- a/data/maps/VictoryRoad_3F/text.inc
++++ b/data/maps/VictoryRoad_3F/text.inc
+@@ -28,7 +28,7 @@ VictoryRoad_3F_Text_GeorgeDefeat::
+     .string "The rumors were true!$"
+ 
+ VictoryRoad_3F_Text_GeorgePostBattle::
+-    .string "So, it was you who beat GIOVANNI\n"
++    .string "So, it was you who beat VIGARDE\n"
+     .string "of TEAM ROCKET?$"
+ 
+ VictoryRoad_3F_Text_AlexaIntro::
+diff --git a/data/maps/ViridianCity_Gym/text.inc b/data/maps/ViridianCity_Gym/text.inc
+index 40b6ccc..72cb6c3 100644
+--- a/data/maps/ViridianCity_Gym/text.inc
++++ b/data/maps/ViridianCity_Gym/text.inc
+@@ -7,7 +7,7 @@ ViridianCity_Gym_Text_GiovanniIntro::
+     .string "So be it.\l"
+     .string "This time, I'm not holding back!\p"
+     .string "Once more, you shall face\n"
+-    .string "GIOVANNI, the greatest TRAINER!{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
++    .string "VIGARDE, the greatest TRAINER!{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
+ 
+ ViridianCity_Gym_Text_GiovanniDefeat::
+     .string "Ha!\n"
+@@ -40,7 +40,7 @@ ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
+ 
+ ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
+     .string "{PLAYER} received TM26\n"
+-    .string "from GIOVANNI.$"
++    .string "from VIGARDE.$"
+ 
+ ViridianCity_Gym_Text_ExplainTM26::
+     .string "TM26 contains EARTHQUAKE.\p"
+@@ -154,7 +154,7 @@ ViridianCity_Gym_Text_GymGuyAdvice::
+     .string "here like GROUND-type POKéMON.$"
+ 
+ ViridianCity_Gym_Text_GymGuyPostVictory::
+-    .string "Blow me away! GIOVANNI was the\n"
++    .string "Blow me away! VIGARDE was the\n"
+     .string "GYM LEADER of VIRIDIAN?$"
+ 
+ ViridianCity_Gym_Text_GymStatue::
+@@ -165,7 +165,7 @@ ViridianCity_Gym_Text_GymStatue::
+ 
+ ViridianCity_Gym_Text_GymStatuePlayerWon::
+     .string "VIRIDIAN POKéMON GYM\n"
+-    .string "LEADER: GIOVANNI\p"
++    .string "LEADER: VIGARDE\p"
+     .string "WINNING TRAINERS:\n"
+     .string "{RIVAL}, {PLAYER}$"
+ 
+diff --git a/data/maps/ViridianCity_Mart/text.inc b/data/maps/ViridianCity_Mart/text.inc
+index e07a637..eb2ba8e 100644
+--- a/data/maps/ViridianCity_Mart/text.inc
++++ b/data/maps/ViridianCity_Mart/text.inc
+@@ -3,17 +3,17 @@ ViridianCity_Mart_Text_YouCameFromPallet::
+     .string "You came from PALLET TOWN?$"
+ 
+ ViridianCity_Mart_Text_TakeThisToProfOak::
+-    .string "You know PROF. OAK, right?\p"
++    .string "You know MOULDER, right?\p"
+     .string "His order came in.\n"
+     .string "Can I get you to take it to him?$"
+ 
+ ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
+-    .string "{PLAYER} received OAK'S PARCEL\n"
++    .string "{PLAYER} received MOULDER'S PARCEL\n"
+     .string "from the POKéMON MART clerk.$"
+ 
+ ViridianCity_Mart_Text_SayHiToOakForMe::
+     .string "Okay, thanks! Please say hi to\n"
+-    .string "PROF. OAK for me, too.$"
++    .string "MOULDER for me, too.$"
+ 
+ ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes::
+     .string "This shop does good business in\n"
+diff --git a/data/maps/ViridianForest/text.inc b/data/maps/ViridianForest/text.inc
+index fb11547..c874c05 100644
+--- a/data/maps/ViridianForest/text.inc
++++ b/data/maps/ViridianForest/text.inc
+@@ -83,7 +83,7 @@ ViridianForest_Text_UseAntidoteForPoison::
+ 
+ ViridianForest_Text_ContactOakViaPCToRatePokedex::
+     .string "TRAINER TIPS\p"
+-    .string "Contact PROF. OAK via a PC to\n"
++    .string "Contact MOULDER via a PC to\n"
+     .string "get your POKéDEX evaluated!$"
+ 
+ ViridianForest_Text_CantCatchOwnedMons::
+diff --git a/data/text/fame_checker.inc b/data/text/fame_checker.inc
+index b4d52b2..a65b740 100644
+--- a/data/text/fame_checker.inc
++++ b/data/text/fame_checker.inc
+@@ -1,6 +1,6 @@
+ gFameCheckerFlavorText_ProfOak0:: @ 0x81AD106
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}OAK POKéMON RESEARCH LAB$"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER POKéMON RESEARCH LAB$"
+ 
+ gFameCheckerFlavorText_ProfOak1:: @ 0x81AD145
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+@@ -10,19 +10,19 @@ gFameCheckerFlavorText_ProfOak1:: @ 0x81AD145
+ 
+ gFameCheckerFlavorText_ProfOak2:: @ 0x81AD1BB
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK may not look like much,\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER may not look like much,\n"
+ 	.string "but he's the authority on POKéMON.\p"
+ 	.string "Many POKéMON TRAINERS hold him in\n"
+ 	.string "high regard.$"
+ 
+ gFameCheckerFlavorText_ProfOak3:: @ 0x81AD258
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK reportedly lives with his\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER reportedly lives with his\n"
+ 	.string "grandchildren, DAISY and {RIVAL}.$"
+ 
+ gFameCheckerFlavorText_ProfOak4:: @ 0x81AD2B9
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear OAK's taken a lot of\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear MOULDER's taken a lot of\n"
+ 	.string "interest in you, child.\p"
+ 	.string "That old duff was once tough and\n"
+ 	.string "handsome.\p"
+@@ -31,10 +31,10 @@ gFameCheckerFlavorText_ProfOak4:: @ 0x81AD2B9
+ 
+ gFameCheckerFlavorText_ProfOak5:: @ 0x81AD377
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK is going to have his own\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER is going to have his own\n"
+ 	.string "radio show soon.\p"
+ 	.string "The program will be called PROF.\n"
+-	.string "OAK'S POKéMON SEMINAR.$"
++	.string "MOULDER'S POKéMON SEMINAR.$"
+ 
+ gFameCheckerFlavorText_Daisy0:: @ 0x81AD40C
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+@@ -57,7 +57,7 @@ gFameCheckerFlavorText_Daisy2:: @ 0x81AD516
+ 
+ gFameCheckerFlavorText_Daisy3:: @ 0x81AD5A7
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PROF. OAK reportedly lives with his\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MOULDER reportedly lives with his\n"
+ 	.string "grandchildren, DAISY and {RIVAL}.$"
+ 
+ gFameCheckerFlavorText_Daisy4:: @ 0x81AD608
+@@ -70,13 +70,13 @@ gFameCheckerFlavorText_Daisy4:: @ 0x81AD608
+ gFameCheckerFlavorText_Daisy5:: @ 0x81AD69F
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The Spring POKéMON CONTEST's\n"
+-	.string "Grand Champion is DAISY OAK of\l"
++	.string "Grand Champion is DAISY MOULDER of\l"
+ 	.string "PALLET TOWN!$"
+ 
+ gFameCheckerFlavorText_Brock0:: @ 0x81AD705
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}PEWTER CITY POKéMON GYM\n"
+-	.string "LEADER: BROCK\l"
++	.string "LEADER: SETH\l"
+ 	.string "The Rock-Solid POKéMON TRAINER!$"
+ 
+ gFameCheckerFlavorText_Brock1:: @ 0x81AD771
+@@ -94,12 +94,12 @@ gFameCheckerFlavorText_Brock2:: @ 0x81AD840
+ 	.string "TRAINERS here.\p"
+ 	.string "They're all like BUG CATCHERS,\n"
+ 	.string "you know, just hobbyists.\p"
+-	.string "But PEWTER GYM's BROCK isn't like\n"
++	.string "But PEWTER GYM's SETH isn't like\n"
+ 	.string "that, not one bit.$"
+ 
+ gFameCheckerFlavorText_Brock3:: @ 0x81AD908
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BROCK is cool. He's not just tough.\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SETH is cool. He's not just tough.\n"
+ 	.string "People like and respect him.\p"
+ 	.string "I want to become a GYM LEADER\n"
+ 	.string "like him.$"
+@@ -108,18 +108,18 @@ gFameCheckerFlavorText_Brock4:: @ 0x81AD99A
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hi, I'm excavating for fossils here\n"
+ 	.string "under MT. MOON.\p"
+-	.string "Sometimes, BROCK of PEWTER GYM\n"
++	.string "Sometimes, SETH of PEWTER GYM\n"
+ 	.string "lends me a hand.$"
+ 
+ gFameCheckerFlavorText_Brock5:: @ 0x81ADA27
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BROCK rarely laughs, but is said to\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SETH rarely laughs, but is said to\n"
+ 	.string "be unable to stop if he starts.$"
+ 
+ gFameCheckerFlavorText_Misty0:: @ 0x81ADA91
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CERULEAN CITY POKéMON GYM\n"
+-	.string "LEADER: MISTY\l"
++	.string "LEADER: MARISA\l"
+ 	.string "The Tomboyish Mermaid!$"
+ 
+ gFameCheckerFlavorText_Misty1:: @ 0x81ADAF6
+@@ -129,7 +129,7 @@ gFameCheckerFlavorText_Misty1:: @ 0x81ADAF6
+ 
+ gFameCheckerFlavorText_Misty2:: @ 0x81ADB5A
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MISTY is a TRAINER who's going to\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MARISA is a TRAINER who's going to\n"
+ 	.string "keep improving.\p"
+ 	.string "She won't lose to someone like you!$"
+ 
+@@ -137,24 +137,24 @@ gFameCheckerFlavorText_Misty3:: @ 0x81ADBD9
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Strong TRAINERS and WATER POKéMON\n"
+ 	.string "are common sights in these parts.\p"
+-	.string "They say that MISTY of the\n"
++	.string "They say that MARISA of the\n"
+ 	.string "CERULEAN GYM trains here.$"
+ 
+ gFameCheckerFlavorText_Misty4:: @ 0x81ADC72
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}This cape is a famous date spot.\p"
+-	.string "MISTY, the GYM LEADER, has high\n"
++	.string "MARISA, the GYM LEADER, has high\n"
+ 	.string "hopes about this place.$"
+ 
+ gFameCheckerFlavorText_Misty5:: @ 0x81ADCEB
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MISTY is said to worship LORELEI\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}MARISA is said to worship SELENA\n"
+ 	.string "of the ELITE FOUR.$"
+ 
+ gFameCheckerFlavorText_LtSurge0:: @ 0x81ADD3C
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}VERMILION CITY POKéMON GYM\n"
+-	.string "LEADER: LT. SURGE\l"
++	.string "LEADER: GILLIAM\l"
+ 	.string "The Lightning American!$"
+ 
+ gFameCheckerFlavorText_LtSurge1:: @ 0x81ADDA7
+@@ -164,24 +164,24 @@ gFameCheckerFlavorText_LtSurge1:: @ 0x81ADDA7
+ 
+ gFameCheckerFlavorText_LtSurge2:: @ 0x81ADE0B
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When I was in the Army, LT. SURGE\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When I was in the Army, GILLIAM\n"
+ 	.string "was my strict CO.\p"
+ 	.string "He was a hard taskmaster.$"
+ 
+ gFameCheckerFlavorText_LtSurge3:: @ 0x81ADE82
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE was always famous for\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}GILLIAM was always famous for\n"
+ 	.string "his cautious nature in the Army.$"
+ 
+ gFameCheckerFlavorText_LtSurge4:: @ 0x81ADEEC
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE installed the traps in\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}GILLIAM installed the traps in\n"
+ 	.string "the GYM himself.\p"
+ 	.string "He set up double locks everywhere.$"
+ 
+ gFameCheckerFlavorText_LtSurge5:: @ 0x81ADF6A
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LT. SURGE is rumored to have been\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}GILLIAM is rumored to have been\n"
+ 	.string "a pilot while home in America.\p"
+ 	.string "He used the electricity generated\n"
+ 	.string "by POKéMON to power his plane.$"
+@@ -189,7 +189,7 @@ gFameCheckerFlavorText_LtSurge5:: @ 0x81ADF6A
+ gFameCheckerFlavorText_Erika0:: @ 0x81AE009
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CELADON CITY POKéMON GYM\n"
+-	.string "LEADER: ERIKA\l"
++	.string "LEADER: VANESSA\l"
+ 	.string "The Nature-Loving Princess!$"
+ 
+ gFameCheckerFlavorText_Erika1:: @ 0x81AE072
+@@ -201,7 +201,7 @@ gFameCheckerFlavorText_Erika1:: @ 0x81AE072
+ 
+ gFameCheckerFlavorText_Erika2:: @ 0x81AE0F3
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER ERIKA might be quiet,\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER VANESSA might be quiet,\n"
+ 	.string "but she's famous around here.$"
+ 
+ gFameCheckerFlavorText_Erika3:: @ 0x81AE15B
+@@ -220,12 +220,12 @@ gFameCheckerFlavorText_Erika5:: @ 0x81AE247
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Rumor has it that if you peek into\n"
+ 	.string "CELADON GYM, you can often\l"
+-	.string "see ERIKA snoozing.$"
++	.string "see VANESSA snoozing.$"
+ 
+ gFameCheckerFlavorText_Koga0:: @ 0x81AE2B6
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}FUCHSIA CITY POKéMON GYM\n"
+-	.string "LEADER: KOGA\l"
++	.string "LEADER: COLM\l"
+ 	.string "The Poisonous Ninja Master$"
+ 
+ gFameCheckerFlavorText_Koga1:: @ 0x81AE31D
+@@ -237,7 +237,7 @@ gFameCheckerFlavorText_Koga2:: @ 0x81AE37D
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even though I've lost, I will keep\n"
+ 	.string "training according to the teachings\l"
+-	.string "of KOGA, my ninja master.$"
++	.string "of COLM, my ninja master.$"
+ 
+ gFameCheckerFlavorText_Koga3:: @ 0x81AE407
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+@@ -248,7 +248,7 @@ gFameCheckerFlavorText_Koga3:: @ 0x81AE407
+ 
+ gFameCheckerFlavorText_Koga4:: @ 0x81AE48D
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}KOGA is said to have a thorough\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}COLM is said to have a thorough\n"
+ 	.string "knowledge of medicine.\p"
+ 	.string "He even concocts medicine to nurse\n"
+ 	.string "his POKéMON to health.$"
+@@ -257,7 +257,7 @@ gFameCheckerFlavorText_Koga5:: @ 0x81AE51B
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The SAFARI ZONE's huge, wouldn't\n"
+ 	.string "you say?\p"
+-	.string "FUCHSIA's GYM LEADER, KOGA, \n"
++	.string "FUCHSIA's GYM LEADER, COLM, \n"
+ 	.string "patrols the grounds every so often.\p"
+ 	.string "Thanks to him, we can play here\n"
+ 	.string "knowing that we're safe.$"
+@@ -265,7 +265,7 @@ gFameCheckerFlavorText_Koga5:: @ 0x81AE51B
+ gFameCheckerFlavorText_Sabrina0:: @ 0x81AE5E8
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SAFFRON CITY POKéMON GYM\n"
+-	.string "LEADER: SABRINA\l"
++	.string "LEADER: LUTE\l"
+ 	.string "The Master of PSYCHIC POKéMON!$"
+ 
+ gFameCheckerFlavorText_Sabrina1:: @ 0x81AE656
+@@ -289,19 +289,19 @@ gFameCheckerFlavorText_Sabrina3:: @ 0x81AE762
+ 
+ gFameCheckerFlavorText_Sabrina4:: @ 0x81AE7CB
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}People say that SABRINA can\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}People say that LUTE can\n"
+ 	.string "communicate with her POKéMON\l"
+ 	.string "during battle without speaking.$"
+ 
+ gFameCheckerFlavorText_Sabrina5:: @ 0x81AE841
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SABRINA just wiped out the KARATE\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LUTE just wiped out the KARATE\n"
+ 	.string "MASTER next door.$"
+ 
+ gFameCheckerFlavorText_Blaine0:: @ 0x81AE89E
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR ISLAND POKéMON GYM\n"
+-	.string "LEADER: BLAINE\l"
++	.string "LEADER: GARCIA\l"
+ 	.string "The Hotheaded Quiz Master!$"
+ 
+ gFameCheckerFlavorText_Blaine1:: @ 0x81AE90A
+@@ -312,36 +312,36 @@ gFameCheckerFlavorText_Blaine1:: @ 0x81AE90A
+ 
+ gFameCheckerFlavorText_Blaine2:: @ 0x81AE990
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER, BLAINE, became lost\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Our LEADER, GARCIA, became lost\n"
+ 	.string "in the mountains but good.\p"
+ 	.string "Night fell when a fiery bird\n"
+ 	.string "POKéMON appeared.\p"
+-	.string "Its light allowed BLAINE to find\n"
++	.string "Its light allowed GARCIA to find\n"
+ 	.string "his way down safely.$"
+ 
+ gFameCheckerFlavorText_Blaine3:: @ 0x81AEA59
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR GYM's BLAINE is quite the\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}CINNABAR GYM's GARCIA is quite the\n"
+ 	.string "odd fellow.\p"
+ 	.string "He's lived on the island since way\n"
+ 	.string "before the LAB was built.$"
+ 
+ gFameCheckerFlavorText_Blaine4:: @ 0x81AEAEE
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of BLAINE and\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of GARCIA and\n"
+ 	.string "MR. FUJI.\p"
+ 	.string "They're standing shoulder to\n"
+ 	.string "shoulder with big grins.$"
+ 
+ gFameCheckerFlavorText_Blaine5:: @ 0x81AEB69
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BLAINE is said to remove his dark\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}GARCIA is said to remove his dark\n"
+ 	.string "shades only when he is thinking up\l"
+ 	.string "new quiz questions.$"
+ 
+ gFameCheckerFlavorText_Lorelei0:: @ 0x81AEBDF
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am LORELEI of the ELITE FOUR.$"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am SELENA of the ELITE FOUR.$"
+ 
+ gFameCheckerFlavorText_Lorelei1:: @ 0x81AEC28
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+@@ -353,17 +353,17 @@ gFameCheckerFlavorText_Lorelei2:: @ 0x81AEC82
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We've had a great and powerful\n"
+ 	.string "TRAINER grow up on this island.\p"
+ 	.string "I bet even you'd know her.\n"
+-	.string "It's LORELEI of the ELITE FOUR!$"
++	.string "It's SELENA of the ELITE FOUR!$"
+ 
+ gFameCheckerFlavorText_Lorelei3:: @ 0x81AED27
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+ 	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Known for her logical, calculated,\n"
+-	.string "and cool battling style, LORELEI\l"
++	.string "and cool battling style, SELENA\l"
+ 	.string "has a surprising secret!$"
+ 
+ gFameCheckerFlavorText_Lorelei4:: @ 0x81AEDAA
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Did you know that LORELEI has lots\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Did you know that SELENA has lots\n"
+ 	.string "and lots of stuffed dolls?\p"
+ 	.string "Every time she comes back to\n"
+ 	.string "FOUR ISLAND, her collection grows!$"
+@@ -379,7 +379,7 @@ gFameCheckerFlavorText_Lorelei5:: @ 0x81AEE51
+ 
+ gFameCheckerFlavorText_Bruno0:: @ 0x81AEF25
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am BRUNO of the ELITE FOUR!$"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am BINKS of the ELITE FOUR!$"
+ 
+ gFameCheckerFlavorText_Bruno1:: @ 0x81AEF6C
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+@@ -388,13 +388,13 @@ gFameCheckerFlavorText_Bruno1:: @ 0x81AEF6C
+ 
+ gFameCheckerFlavorText_Bruno2:: @ 0x81AEFC6
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BRUNO apparently joined the ELITE\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BINKS apparently joined the ELITE\n"
+ 	.string "FOUR out of his burning ambition to\l"
+ 	.string "battle the best TRAINERS.$"
+ 
+ gFameCheckerFlavorText_Bruno3:: @ 0x81AF04C
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BRUNO, who's a senior ahead of me,\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}BINKS, who's a senior ahead of me,\n"
+ 	.string "visits the SPA on occasion.\p"
+ 	.string "He comes to rehab injuries, both\n"
+ 	.string "his own and his POKéMON's.$"
+@@ -402,24 +402,24 @@ gFameCheckerFlavorText_Bruno3:: @ 0x81AF04C
+ gFameCheckerFlavorText_Bruno4:: @ 0x81AF0F0
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He's one of the ELITE FOUR.\n"
+-	.string "His name is BRUNO.\p"
++	.string "His name is BINKS.\p"
+ 	.string "He went away disappointed when he\n"
+ 	.string "found out that they were all sold\l"
+ 	.string "out of Rage Candybars.$"
+ 
+ gFameCheckerFlavorText_Bruno5:: @ 0x81AF19A
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even BRUNO…\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Even BINKS…\n"
+ 	.string "He trained with a fellow by the\l"
+ 	.string "name of BRAWLY before.$"
+ 
+ gFameCheckerFlavorText_Agatha0:: @ 0x81AF200
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am AGATHA of the ELITE FOUR.$"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am SYRENE of the ELITE FOUR.$"
+ 
+ gFameCheckerFlavorText_Agatha1:: @ 0x81AF248
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}AGATHA's GHOST-type POKéMON are\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}SYRENE's GHOST-type POKéMON are\n"
+ 	.string "horrifically terrifying in toughness.$"
+ 
+ gFameCheckerFlavorText_Agatha2:: @ 0x81AF2B7
+@@ -431,13 +431,13 @@ gFameCheckerFlavorText_Agatha2:: @ 0x81AF2B7
+ 
+ gFameCheckerFlavorText_Agatha3:: @ 0x81AF34E
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In her youth, AGATHA and PROF.\n"
+-	.string "OAK were rivals who vied for\l"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In her youth, SYRENE and PROF.\n"
++	.string "MOULDER were rivals who vied for\l"
+ 	.string "supremacy as TRAINERS.$"
+ 
+ gFameCheckerFlavorText_Agatha4:: @ 0x81AF3BE
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear OAK's taken a lot of\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I hear MOULDER's taken a lot of\n"
+ 	.string "interest in you, child.\p"
+ 	.string "That old duff was once tough and\n"
+ 	.string "handsome.\p"
+@@ -446,14 +446,14 @@ gFameCheckerFlavorText_Agatha4:: @ 0x81AF3BE
+ 
+ gFameCheckerFlavorText_Agatha5:: @ 0x81AF47C
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take AGATHA, for example.\p"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take SYRENE, for example.\p"
+ 	.string "She set a record for being the\n"
+ 	.string "oldest-ever ELITE FOUR member.$"
+ 
+ gFameCheckerFlavorText_Lance0:: @ 0x81AF4FD
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I lead the ELITE FOUR.\p"
+-	.string "You can call me LANCE the dragon\n"
++	.string "You can call me VALTER the dragon\n"
+ 	.string "TRAINER.$"
+ 
+ gFameCheckerFlavorText_Lance1:: @ 0x81AF567
+@@ -469,11 +469,11 @@ gFameCheckerFlavorText_Lance2:: @ 0x81AF641
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What is this person like?\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}He stands for justice!\n"
+ 	.string "He's cool, and yet passionate!\l"
+-	.string "He's the greatest, LANCE!$"
++	.string "He's the greatest, VALTER!$"
+ 
+ gFameCheckerFlavorText_Lance3:: @ 0x81AF6BA
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}There's a rumor…\p"
+-	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We have a customer, LANCE, who\n"
++	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}We have a customer, VALTER, who\n"
+ 	.string "occasionally comes.\p"
+ 	.string "He always buys capes.\p"
+ 	.string "I wonder… Does he have many\n"
+@@ -481,13 +481,13 @@ gFameCheckerFlavorText_Lance3:: @ 0x81AF6BA
+ 
+ gFameCheckerFlavorText_Lance4:: @ 0x81AF758
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}LANCE's grandfather is thought to\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}VALTER's grandfather is thought to\n"
+ 	.string "be the elder of a famous clan of\l"
+ 	.string "dragon masters.$"
+ 
+ gFameCheckerFlavorText_Lance5:: @ 0x81AF7CB
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}From what I've heard, LANCE has\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}From what I've heard, VALTER has\n"
+ 	.string "a cousin who's a GYM LEADER\l"
+ 	.string "somewhere far away.$"
+ 
+@@ -558,7 +558,7 @@ gFameCheckerFlavorText_MrFuji3:: @ 0x81AFCE9
+ 
+ gFameCheckerFlavorText_MrFuji4:: @ 0x81AFD49
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of BLAINE and\n"
++	.string "{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}It's a photo of GARCIA and\n"
+ 	.string "MR. FUJI.\p"
+ 	.string "They're standing shoulder to\n"
+ 	.string "shoulder with big grins.$"
+@@ -576,7 +576,7 @@ gFameCheckerFlavorText_Giovanni0:: @ 0x81AFE68
+ 	.string "around the world.\p"
+ 	.string "They're important tools for keeping\n"
+ 	.string "our criminal enterprise going.\p"
+-	.string "I am the leader, GIOVANNI!$"
++	.string "I am the leader, VIGARDE!$"
+ 
+ gFameCheckerFlavorText_Giovanni1:: @ 0x81AFF23
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Favorite kind of POKéMON?\p"
+@@ -600,22 +600,22 @@ gFameCheckerFlavorText_Giovanni3:: @ 0x81B0022
+ 
+ gFameCheckerFlavorText_Giovanni4:: @ 0x81B00A6
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}What does this person do?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blow me away! GIOVANNI was the\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Blow me away! VIGARDE was the\n"
+ 	.string "GYM LEADER of VIRIDIAN?$"
+ 
+ gFameCheckerFlavorText_Giovanni5:: @ 0x81B0106
+ 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Family and friends?\p"
+-	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You… You're not GIOVANNI's kid,\n"
++	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You… You're not VIGARDE's kid,\n"
+ 	.string "are you?\p"
+ 	.string "No, that can't be right.\n"
+-	.string "GIOVANNI's kid has red hair.$"
++	.string "VIGARDE's kid has red hair.$"
+ 
+ 
+ gFameCheckerPersonName_ProfOak:: @ 0x81B0188
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}PROF. OAK$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}MOULDER$"
+ 
+ gFameCheckerPersonQuote_ProfOak:: @ 0x81B0198
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: PROF. OAK\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MOULDER\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Why do POKéMON compete and battle\n"
+ 	.string "so hard for you?\p"
+@@ -637,10 +637,10 @@ gFameCheckerPersonQuote_Daisy:: @ 0x81B025D
+ 	.string "to my little brother.$"
+ 
+ gFameCheckerPersonName_Brock:: @ 0x81B030F
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BROCK$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}SETH$"
+ 
+ gFameCheckerPersonQuote_Brock:: @ 0x81B031B
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BROCK\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: SETH\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}In this big world of ours, there\n"
+ 	.string "must be many tough TRAINERS.\p"
+@@ -648,10 +648,10 @@ gFameCheckerPersonQuote_Brock:: @ 0x81B031B
+ 	.string "making ourselves stronger!$"
+ 
+ gFameCheckerPersonName_Misty:: @ 0x81B03B3
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}MISTY$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}MARISA$"
+ 
+ gFameCheckerPersonQuote_Misty:: @ 0x81B03BF
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MISTY\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: MARISA\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm going to keep training here at\n"
+ 	.string "this GYM.\p"
+@@ -659,10 +659,10 @@ gFameCheckerPersonQuote_Misty:: @ 0x81B03BF
+ 	.string "the road and travel.$"
+ 
+ gFameCheckerPersonName_LtSurge:: @ 0x81B0446
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LT. SURGE$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}GILLIAM$"
+ 
+ gFameCheckerPersonQuote_LtSurge:: @ 0x81B0456
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LT. SURGE\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: GILLIAM\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Hey, kid!\n"
+ 	.string "You electrified me in our battle!\p"
+@@ -672,10 +672,10 @@ gFameCheckerPersonQuote_LtSurge:: @ 0x81B0456
+ 	.string "you!$"
+ 
+ gFameCheckerPersonName_Erika:: @ 0x81B0504
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}ERIKA$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}VANESSA$"
+ 
+ gFameCheckerPersonQuote_Erika:: @ 0x81B0510
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: ERIKA\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: VANESSA\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I am so glad that there are strong\n"
+ 	.string "TRAINERS like you.\p"
+@@ -685,10 +685,10 @@ gFameCheckerPersonQuote_Erika:: @ 0x81B0510
+ 	.string "Zzz…$"
+ 
+ gFameCheckerPersonName_Koga:: @ 0x81B05C2
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}KOGA$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}COLM$"
+ 
+ gFameCheckerPersonQuote_Koga:: @ 0x81B05CD
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: KOGA\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: COLM\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You and I, we must both set our\n"
+ 	.string "sights higher and work towards\l"
+@@ -696,10 +696,10 @@ gFameCheckerPersonQuote_Koga:: @ 0x81B05CD
+ 	.string "Now, I must go train my daughter.$"
+ 
+ gFameCheckerPersonName_Sabrina:: @ 0x81B0667
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}SABRINA$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LUTE$"
+ 
+ gFameCheckerPersonQuote_Sabrina:: @ 0x81B0675
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: SABRINA\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LUTE\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The love you have towards your\n"
+ 	.string "POKéMON…\p"
+@@ -707,10 +707,10 @@ gFameCheckerPersonQuote_Sabrina:: @ 0x81B0675
+ 	.string "bested by my psychic power.$"
+ 
+ gFameCheckerPersonName_Blaine:: @ 0x81B06FB
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BLAINE$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}GARCIA$"
+ 
+ gFameCheckerPersonQuote_Blaine:: @ 0x81B0708
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BLAINE\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: GARCIA\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}My fire POKéMON!\n"
+ 	.string "They'll become even more powerful!\p"
+@@ -718,10 +718,10 @@ gFameCheckerPersonQuote_Blaine:: @ 0x81B0708
+ 	.string "FIRE-type POKéMON are there?$"
+ 
+ gFameCheckerPersonName_Lorelei:: @ 0x81B079F
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LORELEI$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}SELENA$"
+ 
+ gFameCheckerPersonQuote_Lorelei:: @ 0x81B07AD
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LORELEI\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: SELENA\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I needed to thank you for your\n"
+ 	.string "help.\p"
+@@ -730,10 +730,10 @@ gFameCheckerPersonQuote_Lorelei:: @ 0x81B07AD
+ 	.string "You'd better watch out next time!$"
+ 
+ gFameCheckerPersonName_Bruno:: @ 0x81B0845
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BRUNO$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}BINKS$"
+ 
+ gFameCheckerPersonQuote_Bruno:: @ 0x81B0851
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BRUNO\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: BINKS\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}The super power of your POKéMON\n"
+ 	.string "and you I've experienced myself.\p"
+@@ -741,20 +741,20 @@ gFameCheckerPersonQuote_Bruno:: @ 0x81B0851
+ 	.string "how to train yourself.$"
+ 
+ gFameCheckerPersonName_Agatha:: @ 0x81B08EE
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}AGATHA$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}SYRENE$"
+ 
+ gFameCheckerPersonQuote_Agatha:: @ 0x81B08FB
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: AGATHA\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: SYRENE\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_FEMALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}When you grow older, don't you\n"
+-	.string "dare go soft like that coot OAK!\p"
++	.string "dare go soft like that coot MOULDER!\p"
+ 	.string "Be like me and keep battling on!$"
+ 
+ gFameCheckerPersonName_Lance:: @ 0x81B097F
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}LANCE$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}VALTER$"
+ 
+ gFameCheckerPersonQuote_Lance:: @ 0x81B098B
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: LANCE\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: VALTER\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I'm considering going back to my\n"
+ 	.string "hometown.\p"
+@@ -787,10 +787,10 @@ gFameCheckerPersonQuote_MrFuji:: @ 0x81B0B0E
+ 	.string "happiness of all POKéMON?$"
+ 
+ gFameCheckerPersonName_Giovanni:: @ 0x81B0BA6
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}GIOVANNI$"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}VIGARDE$"
+ 
+ gFameCheckerPersonQuote_Giovanni:: @ 0x81B0BB5
+-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: GIOVANNI\n"
++	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}From: VIGARDE\n"
+ 	.string "To: {PLAYER}\p"
+ 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}There is nothing that I wish to say\n"
+ 	.string "to you.\p"
+@@ -1089,7 +1089,7 @@ gFameCheckerFlavorTextOriginObjectName_ProfOak0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_ProfOak1::
+-	.string "PROF. OAK$"
++	.string "MOULDER$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_ProfOak2::
+ 	.string "AIDE$"
+@@ -1098,7 +1098,7 @@ gFameCheckerFlavorTextOriginObjectName_ProfOak3::
+ 	.string "POKéMON JOURNAL$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_ProfOak4::
+-	.string "AGATHA$"
++	.string "SYRENE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_ProfOak5::
+ 	.string "AIDE$"
+@@ -1125,7 +1125,7 @@ gFameCheckerFlavorTextOriginObjectName_Brock0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Brock1::
+-	.string "BROCK$"
++	.string "SETH$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Brock2::
+ 	.string "YOUNG MAN$"
+@@ -1143,7 +1143,7 @@ gFameCheckerFlavorTextOriginObjectName_Misty0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Misty1::
+-	.string "MISTY$"
++	.string "MARISA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Misty2::
+ 	.string "LUIS$"
+@@ -1161,7 +1161,7 @@ gFameCheckerFlavorTextOriginObjectName_LtSurge0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_LtSurge1::
+-	.string "LT. SURGE$"
++	.string "GILLIAM$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_LtSurge2::
+ 	.string "TUCKER$"
+@@ -1179,7 +1179,7 @@ gFameCheckerFlavorTextOriginObjectName_Erika0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Erika1::
+-	.string "ERIKA$"
++	.string "VANESSA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Erika2::
+ 	.string "LOLA$"
+@@ -1188,7 +1188,7 @@ gFameCheckerFlavorTextOriginObjectName_Erika3::
+ 	.string "TAMIA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Erika4::
+-	.string "ERIKA$"
++	.string "VANESSA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Erika5::
+ 	.string "POKéMON JOURNAL$"
+@@ -1197,7 +1197,7 @@ gFameCheckerFlavorTextOriginObjectName_Koga0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Koga1::
+-	.string "KOGA$"
++	.string "COLM$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Koga2::
+ 	.string "KIRK$"
+@@ -1218,10 +1218,10 @@ gFameCheckerFlavorTextOriginObjectName_Sabrina1::
+ 	.string "YOUNG MAN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Sabrina2::
+-	.string "SABRINA$"
++	.string "LUTE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Sabrina3::
+-	.string "SABRINA$"
++	.string "LUTE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Sabrina4::
+ 	.string "POKéMON JOURNAL$"
+@@ -1233,7 +1233,7 @@ gFameCheckerFlavorTextOriginObjectName_Blaine0::
+ 	.string "SIGN$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Blaine1::
+-	.string "BLAINE$"
++	.string "GARCIA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Blaine2::
+ 	.string "DEREK$"
+@@ -1248,10 +1248,10 @@ gFameCheckerFlavorTextOriginObjectName_Blaine5::
+ 	.string "POKéMON JOURNAL$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Lorelei0::
+-	.string "LORELEI$"
++	.string "SELENA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Lorelei1::
+-	.string "LORELEI$"
++	.string "SELENA$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Lorelei2::
+ 	.string "OLD MAN$"
+@@ -1266,10 +1266,10 @@ gFameCheckerFlavorTextOriginObjectName_Lorelei5::
+ 	.string "OLD LADY$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Bruno0::
+-	.string "BRUNO$"
++	.string "BINKS$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Bruno1::
+-	.string "BRUNO$"
++	.string "BINKS$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Bruno2::
+ 	.string "POKéMON JOURNAL$"
+@@ -1284,7 +1284,7 @@ gFameCheckerFlavorTextOriginObjectName_Bruno5::
+ 	.string "CRUSHER$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Agatha0::
+-	.string "AGATHA$"
++	.string "SYRENE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Agatha1::
+ 	.string "CRUSHER$"
+@@ -1296,16 +1296,16 @@ gFameCheckerFlavorTextOriginObjectName_Agatha3::
+ 	.string "POKéMON JOURNAL$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Agatha4::
+-	.string "AGATHA$"
++	.string "SYRENE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Agatha5::
+ 	.string "OLD LADY$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Lance0::
+-	.string "LANCE$"
++	.string "VALTER$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Lance1::
+-	.string "LANCE$"
++	.string "VALTER$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Lance2::
+ 	.string "WOMAN$"
+@@ -1356,7 +1356,7 @@ gFameCheckerFlavorTextOriginObjectName_MrFuji5::
+ 	.string "POKéMON JOURNAL$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Giovanni0::
+-	.string "GIOVANNI$"
++	.string "VIGARDE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Giovanni1::
+ 	.string "SCIENTIST$"
+@@ -1365,7 +1365,7 @@ gFameCheckerFlavorTextOriginObjectName_Giovanni2::
+ 	.string "SCIENTIST$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Giovanni3::
+-	.string "GIOVANNI$"
++	.string "VIGARDE$"
+ 
+ gFameCheckerFlavorTextOriginObjectName_Giovanni4::
+ 	.string "MAN$"
+@@ -1376,22 +1376,22 @@ gFameCheckerFlavorTextOriginObjectName_Giovanni5::
+ PokemonJournal_Text_SpecialFeatureBrock::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: PEWTER GYM\n"
+-	.string "LEADER BROCK!\p"
+-	.string "BROCK rarely laughs, but is said to\n"
++	.string "LEADER SETH!\p"
++	.string "SETH rarely laughs, but is said to\n"
+ 	.string "be unable to stop if he starts.$"
+ 
+ PokemonJournal_Text_SpecialFeatureMisty::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: CERULEAN GYM\n"
+-	.string "LEADER MISTY!\p"
+-	.string "MISTY is said to worship LORELEI\n"
++	.string "LEADER MARISA!\p"
++	.string "MARISA is said to worship SELENA\n"
+ 	.string "of the ELITE FOUR.$"
+ 
+ PokemonJournal_Text_SpecialFeatureLtSurge::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: VERMILION GYM\n"
+-	.string "LEADER LT. SURGE!\p"
+-	.string "LT. SURGE is rumored to have been\n"
++	.string "LEADER GILLIAM!\p"
++	.string "GILLIAM is rumored to have been\n"
+ 	.string "a pilot while home in America.\p"
+ 	.string "He used the electricity generated\n"
+ 	.string "by POKéMON to power his plane.$"
+@@ -1399,16 +1399,16 @@ PokemonJournal_Text_SpecialFeatureLtSurge::
+ PokemonJournal_Text_SpecialFeatureErika::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: CELADON GYM\n"
+-	.string "LEADER ERIKA!\p"
++	.string "LEADER VANESSA!\p"
+ 	.string "Rumor has it that if you peek into\n"
+ 	.string "CELADON GYM, you can often\l"
+-	.string "see ERIKA snoozing.$"
++	.string "see VANESSA snoozing.$"
+ 
+ PokemonJournal_Text_SpecialFeatureKoga::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: FUCHSIA GYM\n"
+-	.string "LEADER KOGA!\p"
+-	.string "KOGA is said to have a thorough\n"
++	.string "LEADER COLM!\p"
++	.string "COLM is said to have a thorough\n"
+ 	.string "knowledge of medicine.\p"
+ 	.string "He even concocts medicine to nurse\n"
+ 	.string "his POKéMON to health.$"
+@@ -1416,56 +1416,56 @@ PokemonJournal_Text_SpecialFeatureKoga::
+ PokemonJournal_Text_SpecialFeatureSabrina::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: SAFFRON GYM\n"
+-	.string "LEADER SABRINA!\p"
+-	.string "People say that SABRINA can\n"
++	.string "LEADER LUTE!\p"
++	.string "People say that LUTE can\n"
+ 	.string "communicate with her POKéMON\l"
+ 	.string "during battle without speaking.$"
+ 
+ PokemonJournal_Text_SpecialFeatureBlaine::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature: CINNABAR GYM\n"
+-	.string "LEADER BLAINE!\p"
+-	.string "BLAINE is said to remove his dark\n"
++	.string "LEADER GARCIA!\p"
++	.string "GARCIA is said to remove his dark\n"
+ 	.string "shades only when he is thinking up\l"
+ 	.string "new quiz questions.$"
+ 
+ PokemonJournal_Text_SpecialFeatureLorelei::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature:\n"
+-	.string "ELITE FOUR's LORELEI!\p"
++	.string "ELITE FOUR's SELENA!\p"
+ 	.string "Known for her logical, calculated,\n"
+-	.string "and cool battling style, LORELEI\l"
++	.string "and cool battling style, SELENA\l"
+ 	.string "has a surprising secret!$"
+ 
+ PokemonJournal_Text_SpecialFeatureBruno::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature:\n"
+-	.string "ELITE FOUR's BRUNO!\p"
+-	.string "BRUNO apparently joined the ELITE\n"
++	.string "ELITE FOUR's BINKS!\p"
++	.string "BINKS apparently joined the ELITE\n"
+ 	.string "FOUR out of his burning ambition to\l"
+ 	.string "battle the best TRAINERS.$"
+ 
+ PokemonJournal_Text_SpecialFeatureAgatha::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature:\n"
+-	.string "ELITE FOUR's AGATHA!\p"
+-	.string "In her youth, AGATHA and PROF.\n"
+-	.string "OAK were rivals who vied for\l"
++	.string "ELITE FOUR's SYRENE!\p"
++	.string "In her youth, SYRENE and PROF.\n"
++	.string "MOULDER were rivals who vied for\l"
+ 	.string "supremacy as TRAINERS.$"
+ 
+ PokemonJournal_Text_SpecialFeatureLance::
+ 	.string "POKéMON JOURNAL\p"
+ 	.string "Special Feature:\n"
+-	.string "ELITE FOUR's LANCE!\p"
+-	.string "LANCE's grandfather is thought to\n"
++	.string "ELITE FOUR's VALTER!\p"
++	.string "VALTER's grandfather is thought to\n"
+ 	.string "be the elder of a famous clan of\l"
+ 	.string "dragon masters.$"
+ 
+ PokemonJournal_Text_SpecialFeatureProfOak::
+ 	.string "POKéMON JOURNAL\p"
+-	.string "Special Feature: PROF. OAK,\n"
++	.string "Special Feature: MOULDER,\n"
+ 	.string "the POKéMON Researcher!\p"
+-	.string "PROF. OAK reportedly lives with his\n"
++	.string "MOULDER reportedly lives with his\n"
+ 	.string "grandchildren DAISY and {RIVAL}.$"
+ 
+ PokemonJournal_Text_SpecialFeatureDaisyOak::
+@@ -1474,7 +1474,7 @@ PokemonJournal_Text_SpecialFeatureDaisyOak::
+ 	.string "POKéMON JOURNAL\n"
+ 	.string "CONTEST Special!\p"
+ 	.string "The Spring POKéMON CONTEST's\n"
+-	.string "Grand Champion is DAISY OAK of\l"
++	.string "Grand Champion is DAISY MOULDER of\l"
+ 	.string "PALLET TOWN!$"
+ 
+ PokemonJournal_Text_SpecialFeatureMrFuji::
+diff --git a/data/text/help_system.inc b/data/text/help_system.inc
+index 3a083e8..c5bcb83 100644
+--- a/data/text/help_system.inc
++++ b/data/text/help_system.inc
+@@ -616,7 +616,7 @@ Help_Text_UsingMailbox::
+ 	.string "  Using “MAILBOX”$"
+ 
+ Help_Text_UsingProfOaksPC::
+-	.string " Using “PROF. OAK'S PC”$"
++	.string " Using “MOULDER'S PC”$"
+ 
+ Help_Text_OpeningMenu::
+ 	.string "Opening the MENU$"
+@@ -917,8 +917,8 @@ Help_Text_HowToUseMailbox::
+ 	.string "   make a POKéMON hold MAIL.$"
+ 
+ Help_Text_HowToUseProfOaksPC::
+-	.string "{CIRCLE_1} Select “PROF. OAK'S PC” on the PC.\n"
+-	.string "{CIRCLE_2} PROF. OAK will evaluate your\n"
++	.string "{CIRCLE_1} Select “MOULDER'S PC” on the PC.\n"
++	.string "{CIRCLE_2} MOULDER will evaluate your\n"
+ 	.string "   POKéDEX.\n"
+ 	.string "His evaluations should give you hints\n"
+ 	.string "for catching more POKéMON!$"
+diff --git a/data/text/new_game_intro.inc b/data/text/new_game_intro.inc
+index e667b68..4d2e5ee 100644
+--- a/data/text/new_game_intro.inc
++++ b/data/text/new_game_intro.inc
+@@ -190,7 +190,7 @@ gOakSpeech_Text_WelcomeToTheWorld::
+     .string "Hello, there!\n"
+     .string "Glad to meet you!\p"
+     .string "Welcome to the world of POKéMON!\p"
+-    .string "My name is OAK.\p"
++    .string "My name is MOULDER.\p"
+     .string "People affectionately refer to me\n"
+     .string "as the POKéMON PROFESSOR.\p$"
+ 
+diff --git a/data/text/pokedex_rating.inc b/data/text/pokedex_rating.inc
+index 3aa1080..226b2bd 100644
+--- a/data/text/pokedex_rating.inc
++++ b/data/text/pokedex_rating.inc
+@@ -1,5 +1,5 @@
+ PokedexRating_Text_HowIsPokedexComingAlong::
+-	.string "OAK: Good to see you!\n"
++	.string "MOULDER: Good to see you!\n"
+ 	.string "How is your POKéDEX coming along?\p"
+ 	.string "Here, let me take a look.$"
+ 
+@@ -8,7 +8,7 @@ PokedexRating_Text_SeenXOwnedY::
+ 	.string "on your POKéDEX is:\p"
+ 	.string "{STR_VAR_1} POKéMON seen and\n"
+ 	.string "{STR_VAR_2} POKéMON owned.\p"
+-	.string "{FONT_NORMAL}PROF. OAK's rating:$"
++	.string "{FONT_NORMAL}MOULDER's rating:$"
+ 
+ PokedexRating_Text_LessThan10::
+ 	.string "You still have lots to do.\p"
+@@ -114,7 +114,7 @@ PokedexRating_Text_ThankYouMadeDreamReality::
+ 	.string "You've made my dream a reality!$"
+ 
+ PokedexRating_Text_LoveSeeingYourPokedex::
+-	.string "OAK: Ah, welcome!\p"
++	.string "MOULDER: Ah, welcome!\p"
+ 	.string "Tell me, how is your POKéDEX\n"
+ 	.string "coming along?\p"
+ 	.string "Wahaha!\p"
+diff --git a/data/text/white_out.inc b/data/text/white_out.inc
+index 1d00c1e..824f1a7 100644
+--- a/data/text/white_out.inc
++++ b/data/text/white_out.inc
+@@ -28,7 +28,7 @@ Text_HadQuiteAnExperienceTakeRest::
+ Text_MomExplainHPGetPotions::
+ 	.string "MOM: Oh, good! You and your\n"
+ 	.string "POKéMON are looking great.\p"
+-	.string "I just heard from PROF. OAK.\p"
++	.string "I just heard from MOULDER.\p"
+ 	.string "He said that POKéMON's energy is\n"
+ 	.string "measured in HP.\p"
+ 	.string "If your POKéMON lose their HP,\n"
 diff --git a/include/constants/species.h b/include/constants/species.h
 index 7446cc1..fe75aa3 100644
 --- a/include/constants/species.h
@@ -10,6 +2679,57 @@ index 7446cc1..fe75aa3 100644
  
  #define SPECIES_TREECKO 277
  #define SPECIES_GROVYLE 278
+diff --git a/include/constants/trainers.h b/include/constants/trainers.h
+index 70e8b4b..a821fce 100644
+--- a/include/constants/trainers.h
++++ b/include/constants/trainers.h
+@@ -166,6 +166,46 @@
+ #define TRAINER_PIC_RUIN_MANIAC           145
+ #define TRAINER_PIC_LADY                  146
+ #define TRAINER_PIC_PAINTER               147
++#define TRAINER_PIC_FE8_KNOLL            185
++#define TRAINER_PIC_FE8_NATASHA          186
++#define TRAINER_PIC_FE8_NEIMI            187
++#define TRAINER_PIC_FE8_AIAS             148
++#define TRAINER_PIC_FE8_AMELIA           149
++#define TRAINER_PIC_FE8_ARTUR            150
++#define TRAINER_PIC_FE8_BAZBA            151
++#define TRAINER_PIC_FE8_BERAN            152
++#define TRAINER_PIC_FE8_BREGUET          153
++#define TRAINER_PIC_FE8_CAELLACH         154
++#define TRAINER_PIC_FE8_CARLYLE          155
++#define TRAINER_PIC_FE8_DARA             156
++#define TRAINER_PIC_FE8_EWAN             157
++#define TRAINER_PIC_FE8_FADO             158
++#define TRAINER_PIC_FE8_FOMORTIIS        159
++#define TRAINER_PIC_FE8_FORDE            160
++#define TRAINER_PIC_FE8_FRANZ            161
++#define TRAINER_PIC_FE8_FRELIAN          162
++#define TRAINER_PIC_FE8_GERIK            163
++#define TRAINER_PIC_FE8_GHEB             164
++#define TRAINER_PIC_FE8_GLEN             165
++#define TRAINER_PIC_FE8_HAYDEN           166
++#define TRAINER_PIC_FE8_ISMAIRE          167
++#define TRAINER_PIC_FE8_KLIMT            168
++#define TRAINER_PIC_FE8_KYLE             169
++#define TRAINER_PIC_FE8_MANSEL           170
++#define TRAINER_PIC_FE8_MORVA            171
++#define TRAINER_PIC_FE8_MURRAY           172
++#define TRAINER_PIC_FE8_NOVALA           173
++#define TRAINER_PIC_FE8_ONEILL           174
++#define TRAINER_PIC_FE8_ORSON            175
++#define TRAINER_PIC_FE8_PABLO            176
++#define TRAINER_PIC_FE8_RENNAC           177
++#define TRAINER_PIC_FE8_RIEV             178
++#define TRAINER_PIC_FE8_ROSS             179
++#define TRAINER_PIC_FE8_SAAR             180
++#define TRAINER_PIC_FE8_SALEH            181
++#define TRAINER_PIC_FE8_TETHYS           182
++#define TRAINER_PIC_FE8_TIRADO           183
++#define TRAINER_PIC_FE8_ZONTA            184
+ 
+ // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
+ #define TRAINER_BACK_PIC_RED                    0
 diff --git a/include/eirika_attack.h b/include/eirika_attack.h
 new file mode 100644
 index 0000000..5cca6dd
@@ -30,7 +2750,7 @@ index 0000000..5cca6dd
 +
 +#endif // GUARD_EIRIKA_ATTACK_H
 diff --git a/include/graphics.h b/include/graphics.h
-index 069924f..74f50de 100644
+index 069924f..fe404e8 100644
 --- a/include/graphics.h
 +++ b/include/graphics.h
 @@ -1296,6 +1296,12 @@ extern const u32 gMonBackPic_Qwilfish[];
@@ -46,6 +2766,93 @@ index 069924f..74f50de 100644
  extern const u32 gMonFrontPic_Scizor[];
  extern const u32 gMonPalette_Scizor[];
  extern const u32 gMonBackPic_Scizor[];
+@@ -2579,6 +2585,86 @@ extern const u32 gTrainerFrontPic_ProfessorOak[];
+ extern const u32 gTrainerFrontPic_RSBrendan2[];
+ extern const u32 gTrainerFrontPic_RSMay2[];
+ extern const u32 gTrainerFrontPic_Red[];
++extern const u32 gTrainerFrontPic_FE8Aias[];
++extern const u32 gTrainerPalette_FE8Aias[];
++extern const u32 gTrainerFrontPic_FE8Amelia[];
++extern const u32 gTrainerPalette_FE8Amelia[];
++extern const u32 gTrainerFrontPic_FE8Artur[];
++extern const u32 gTrainerPalette_FE8Artur[];
++extern const u32 gTrainerFrontPic_FE8Bazba[];
++extern const u32 gTrainerPalette_FE8Bazba[];
++extern const u32 gTrainerFrontPic_FE8Beran[];
++extern const u32 gTrainerPalette_FE8Beran[];
++extern const u32 gTrainerFrontPic_FE8Breguet[];
++extern const u32 gTrainerPalette_FE8Breguet[];
++extern const u32 gTrainerFrontPic_FE8Caellach[];
++extern const u32 gTrainerPalette_FE8Caellach[];
++extern const u32 gTrainerFrontPic_FE8Carlyle[];
++extern const u32 gTrainerPalette_FE8Carlyle[];
++extern const u32 gTrainerFrontPic_FE8Dara[];
++extern const u32 gTrainerPalette_FE8Dara[];
++extern const u32 gTrainerFrontPic_FE8Ewan[];
++extern const u32 gTrainerPalette_FE8Ewan[];
++extern const u32 gTrainerFrontPic_FE8Fado[];
++extern const u32 gTrainerPalette_FE8Fado[];
++extern const u32 gTrainerFrontPic_FE8Fomortiis[];
++extern const u32 gTrainerPalette_FE8Fomortiis[];
++extern const u32 gTrainerFrontPic_FE8Forde[];
++extern const u32 gTrainerPalette_FE8Forde[];
++extern const u32 gTrainerFrontPic_FE8Franz[];
++extern const u32 gTrainerPalette_FE8Franz[];
++extern const u32 gTrainerFrontPic_FE8Frelian[];
++extern const u32 gTrainerPalette_FE8Frelian[];
++extern const u32 gTrainerFrontPic_FE8Gerik[];
++extern const u32 gTrainerPalette_FE8Gerik[];
++extern const u32 gTrainerFrontPic_FE8Gheb[];
++extern const u32 gTrainerPalette_FE8Gheb[];
++extern const u32 gTrainerFrontPic_FE8Glen[];
++extern const u32 gTrainerPalette_FE8Glen[];
++extern const u32 gTrainerFrontPic_FE8Hayden[];
++extern const u32 gTrainerPalette_FE8Hayden[];
++extern const u32 gTrainerFrontPic_FE8Ismaire[];
++extern const u32 gTrainerPalette_FE8Ismaire[];
++extern const u32 gTrainerFrontPic_FE8Klimt[];
++extern const u32 gTrainerPalette_FE8Klimt[];
++extern const u32 gTrainerFrontPic_FE8Kyle[];
++extern const u32 gTrainerPalette_FE8Kyle[];
++extern const u32 gTrainerFrontPic_FE8Mansel[];
++extern const u32 gTrainerPalette_FE8Mansel[];
++extern const u32 gTrainerFrontPic_FE8Morva[];
++extern const u32 gTrainerPalette_FE8Morva[];
++extern const u32 gTrainerFrontPic_FE8Murray[];
++extern const u32 gTrainerPalette_FE8Murray[];
++extern const u32 gTrainerFrontPic_FE8Novala[];
++extern const u32 gTrainerPalette_FE8Novala[];
++extern const u32 gTrainerFrontPic_FE8ONeill[];
++extern const u32 gTrainerPalette_FE8ONeill[];
++extern const u32 gTrainerFrontPic_FE8Orson[];
++extern const u32 gTrainerPalette_FE8Orson[];
++extern const u32 gTrainerFrontPic_FE8Pablo[];
++extern const u32 gTrainerPalette_FE8Pablo[];
++extern const u32 gTrainerFrontPic_FE8Rennac[];
++extern const u32 gTrainerPalette_FE8Rennac[];
++extern const u32 gTrainerFrontPic_FE8Riev[];
++extern const u32 gTrainerPalette_FE8Riev[];
++extern const u32 gTrainerFrontPic_FE8Ross[];
++extern const u32 gTrainerPalette_FE8Ross[];
++extern const u32 gTrainerFrontPic_FE8Saar[];
++extern const u32 gTrainerPalette_FE8Saar[];
++extern const u32 gTrainerFrontPic_FE8Saleh[];
++extern const u32 gTrainerPalette_FE8Saleh[];
++extern const u32 gTrainerFrontPic_FE8Tethys[];
++extern const u32 gTrainerPalette_FE8Tethys[];
++extern const u32 gTrainerFrontPic_FE8Tirado[];
++extern const u32 gTrainerPalette_FE8Tirado[];
++extern const u32 gTrainerFrontPic_FE8Zonta[];
++extern const u32 gTrainerPalette_FE8Zonta[];
++extern const u32 gTrainerFrontPic_FE8Knoll[];
++extern const u32 gTrainerPalette_FE8Knoll[];
++extern const u32 gTrainerFrontPic_FE8Natasha[];
++extern const u32 gTrainerPalette_FE8Natasha[];
++extern const u32 gTrainerFrontPic_FE8Neimi[];
++extern const u32 gTrainerPalette_FE8Neimi[];
+ extern const u32 gTrainerFrontPic_Leaf[];
+ extern const u32 gTrainerFrontPic_RocketGruntF[];
+ extern const u32 gTrainerFrontPic_PsychicF[];
 diff --git a/ld_script.ld b/ld_script.ld
 index 9a4b450..268f785 100644
 --- a/ld_script.ld
@@ -148,6 +2955,33 @@ index 64c9e59..c107fa0 100644
      BuildOamBuffer();
      RunTextPrinters();
      UpdatePaletteFade();
+diff --git a/src/battle_message.c b/src/battle_message.c
+index a6392be..60a39f9 100644
+--- a/src/battle_message.c
++++ b/src/battle_message.c
+@@ -504,15 +504,15 @@ static const u8 sText_PlayedFluteCatchyTune[] = _("{B_PLAYER_NAME} played the {B
+ static const u8 sText_PlayedThe[] = _("{B_PLAYER_NAME} played the\n{B_LAST_ITEM}.");
+ static const u8 sText_PkmnHearingFluteAwoke[] = _("The POKéMON hearing the FLUTE\nawoke!");
+ static const u8 sText_YouThrowABallNowRight[] = _("You throw a BALL now, right?\nI… I'll do my best!");
+-const u8 gText_ForPetesSake[] = _("OAK: Oh, for Pete's sake…\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
++const u8 gText_ForPetesSake[] = _("MOULDER: Oh, for Pete's sake…\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
+ const u8 gText_TheTrainerThat[] = _("The TRAINER that makes the other\nTRAINER's POKéMON faint by lowering\ltheir HP to “0,” wins.\p");
+ const u8 gText_TryBattling[] = _("But rather than talking about it,\nyou'll learn more from experience.\pTry battling and see for yourself.\p");
+-const u8 gText_InflictingDamageIsKey[] = _("OAK: Inflicting damage on the foe\nis the key to any battle.\p");
+-const u8 gText_LoweringStats[] = _("OAK: Lowering the foe's stats\nwill put you at an advantage.\p");
+-const u8 gText_KeepAnEyeOnHP[] = _("OAK: Keep your eyes on your\nPOKéMON's HP.\pIt will faint if the HP drops to\n“0.”\p");
+-const u8 gText_OakNoRunningFromATrainer[] = _("OAK: No! There's no running away\nfrom a TRAINER POKéMON battle!\p");
+-const u8 gText_WinEarnsPrizeMoney[] = _("OAK: Hm! Excellent!\pIf you win, you earn prize money,\nand your POKéMON will grow!\pBattle other TRAINERS and make\nyour POKéMON strong!\p");
+-const u8 gText_HowDissapointing[] = _("OAK: Hm…\nHow disappointing…\pIf you win, you earn prize money,\nand your POKéMON grow.\pBut if you lose, {B_PLAYER_NAME}, you end\nup paying prize money…\pHowever, since you had no warning\nthis time, I'll pay for you.\pBut things won't be this way once\nyou step outside these doors.\pThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\p");
++const u8 gText_InflictingDamageIsKey[] = _("MOULDER: Inflicting damage on the foe\nis the key to any battle.\p");
++const u8 gText_LoweringStats[] = _("MOULDER: Lowering the foe's stats\nwill put you at an advantage.\p");
++const u8 gText_KeepAnEyeOnHP[] = _("MOULDER: Keep your eyes on your\nPOKéMON's HP.\pIt will faint if the HP drops to\n“0.”\p");
++const u8 gText_OakNoRunningFromATrainer[] = _("MOULDER: No! There's no running away\nfrom a TRAINER POKéMON battle!\p");
++const u8 gText_WinEarnsPrizeMoney[] = _("MOULDER: Hm! Excellent!\pIf you win, you earn prize money,\nand your POKéMON will grow!\pBattle other TRAINERS and make\nyour POKéMON strong!\p");
++const u8 gText_HowDissapointing[] = _("MOULDER: Hm…\nHow disappointing…\pIf you win, you earn prize money,\nand your POKéMON grow.\pBut if you lose, {B_PLAYER_NAME}, you end\nup paying prize money…\pHowever, since you had no warning\nthis time, I'll pay for you.\pBut things won't be this way once\nyou step outside these doors.\pThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\p");
+ 
+ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_START] = {
+     [STRINGID_TRAINER1LOSETEXT - BATTLESTRINGS_TABLE_START]              = sText_Trainer1LoseText,
 diff --git a/src/data/eirika_attack_frames.h b/src/data/eirika_attack_frames.h
 new file mode 100644
 index 0000000..a444330
@@ -241,6 +3075,94 @@ index e744f80..44a1311 100644
  const u32 gMonFrontPic_Scizor[] = INCBIN_U32("graphics/pokemon/scizor/front.4bpp.lz");
  const u32 gMonPalette_Scizor[] = INCBIN_U32("graphics/pokemon/scizor/normal.gbapal.lz");
  const u32 gMonBackPic_Scizor[] = INCBIN_U32("graphics/pokemon/scizor/back.4bpp.lz");
+diff --git a/src/data/graphics/trainers.h b/src/data/graphics/trainers.h
+index 0b4a21e..dc35ecc 100644
+--- a/src/data/graphics/trainers.h
++++ b/src/data/graphics/trainers.h
+@@ -454,3 +454,83 @@ const u32 gTrainerPalette_RedBackPic[] = INCBIN_U32("graphics/trainers/palettes/
+ const u32 gTrainerPalette_LeafBackPic[] = INCBIN_U32("graphics/trainers/palettes/leaf_back_pic.gbapal.lz");
+ const u32 gTrainerPalette_PokedudeBackPic[] = INCBIN_U32("graphics/trainers/palettes/pokedude_back_pic.gbapal.lz");
+ const u32 gTrainerPalette_OldManBackPic[] = INCBIN_U32("graphics/trainers/palettes/old_man_back_pic.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Aias[] = INCBIN_U32("graphics/trainers/front_pics/fe8_aias_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Aias[] = INCBIN_U32("graphics/trainers/palettes/fe8_aias.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Amelia[] = INCBIN_U32("graphics/trainers/front_pics/fe8_amelia_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Amelia[] = INCBIN_U32("graphics/trainers/palettes/fe8_amelia.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Artur[] = INCBIN_U32("graphics/trainers/front_pics/fe8_artur_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Artur[] = INCBIN_U32("graphics/trainers/palettes/fe8_artur.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Bazba[] = INCBIN_U32("graphics/trainers/front_pics/fe8_bazba_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Bazba[] = INCBIN_U32("graphics/trainers/palettes/fe8_bazba.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Beran[] = INCBIN_U32("graphics/trainers/front_pics/fe8_beran_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Beran[] = INCBIN_U32("graphics/trainers/palettes/fe8_beran.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Breguet[] = INCBIN_U32("graphics/trainers/front_pics/fe8_breguet_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Breguet[] = INCBIN_U32("graphics/trainers/palettes/fe8_breguet.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Caellach[] = INCBIN_U32("graphics/trainers/front_pics/fe8_caellach_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Caellach[] = INCBIN_U32("graphics/trainers/palettes/fe8_caellach.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Carlyle[] = INCBIN_U32("graphics/trainers/front_pics/fe8_carlyle_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Carlyle[] = INCBIN_U32("graphics/trainers/palettes/fe8_carlyle.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Dara[] = INCBIN_U32("graphics/trainers/front_pics/fe8_dara_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Dara[] = INCBIN_U32("graphics/trainers/palettes/fe8_dara.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Ewan[] = INCBIN_U32("graphics/trainers/front_pics/fe8_ewan_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Ewan[] = INCBIN_U32("graphics/trainers/palettes/fe8_ewan.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Fado[] = INCBIN_U32("graphics/trainers/front_pics/fe8_fado_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Fado[] = INCBIN_U32("graphics/trainers/palettes/fe8_fado.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Fomortiis[] = INCBIN_U32("graphics/trainers/front_pics/fe8_fomortiis_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Fomortiis[] = INCBIN_U32("graphics/trainers/palettes/fe8_fomortiis.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Forde[] = INCBIN_U32("graphics/trainers/front_pics/fe8_forde_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Forde[] = INCBIN_U32("graphics/trainers/palettes/fe8_forde.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Franz[] = INCBIN_U32("graphics/trainers/front_pics/fe8_franz_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Franz[] = INCBIN_U32("graphics/trainers/palettes/fe8_franz.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Frelian[] = INCBIN_U32("graphics/trainers/front_pics/fe8_frelian_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Frelian[] = INCBIN_U32("graphics/trainers/palettes/fe8_frelian.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Gerik[] = INCBIN_U32("graphics/trainers/front_pics/fe8_gerik_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Gerik[] = INCBIN_U32("graphics/trainers/palettes/fe8_gerik.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Gheb[] = INCBIN_U32("graphics/trainers/front_pics/fe8_gheb_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Gheb[] = INCBIN_U32("graphics/trainers/palettes/fe8_gheb.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Glen[] = INCBIN_U32("graphics/trainers/front_pics/fe8_glen_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Glen[] = INCBIN_U32("graphics/trainers/palettes/fe8_glen.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Hayden[] = INCBIN_U32("graphics/trainers/front_pics/fe8_hayden_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Hayden[] = INCBIN_U32("graphics/trainers/palettes/fe8_hayden.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Ismaire[] = INCBIN_U32("graphics/trainers/front_pics/fe8_ismaire_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Ismaire[] = INCBIN_U32("graphics/trainers/palettes/fe8_ismaire.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Klimt[] = INCBIN_U32("graphics/trainers/front_pics/fe8_klimt_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Klimt[] = INCBIN_U32("graphics/trainers/palettes/fe8_klimt.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Kyle[] = INCBIN_U32("graphics/trainers/front_pics/fe8_kyle_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Kyle[] = INCBIN_U32("graphics/trainers/palettes/fe8_kyle.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Mansel[] = INCBIN_U32("graphics/trainers/front_pics/fe8_mansel_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Mansel[] = INCBIN_U32("graphics/trainers/palettes/fe8_mansel.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Morva[] = INCBIN_U32("graphics/trainers/front_pics/fe8_morva_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Morva[] = INCBIN_U32("graphics/trainers/palettes/fe8_morva.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Murray[] = INCBIN_U32("graphics/trainers/front_pics/fe8_murray_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Murray[] = INCBIN_U32("graphics/trainers/palettes/fe8_murray.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Novala[] = INCBIN_U32("graphics/trainers/front_pics/fe8_novala_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Novala[] = INCBIN_U32("graphics/trainers/palettes/fe8_novala.gbapal.lz");
++const u32 gTrainerFrontPic_FE8ONeill[] = INCBIN_U32("graphics/trainers/front_pics/fe8_oneill_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8ONeill[] = INCBIN_U32("graphics/trainers/palettes/fe8_oneill.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Orson[] = INCBIN_U32("graphics/trainers/front_pics/fe8_orson_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Orson[] = INCBIN_U32("graphics/trainers/palettes/fe8_orson.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Pablo[] = INCBIN_U32("graphics/trainers/front_pics/fe8_pablo_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Pablo[] = INCBIN_U32("graphics/trainers/palettes/fe8_pablo.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Rennac[] = INCBIN_U32("graphics/trainers/front_pics/fe8_rennac_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Rennac[] = INCBIN_U32("graphics/trainers/palettes/fe8_rennac.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Riev[] = INCBIN_U32("graphics/trainers/front_pics/fe8_riev_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Riev[] = INCBIN_U32("graphics/trainers/palettes/fe8_riev.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Ross[] = INCBIN_U32("graphics/trainers/front_pics/fe8_ross_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Ross[] = INCBIN_U32("graphics/trainers/palettes/fe8_ross.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Saar[] = INCBIN_U32("graphics/trainers/front_pics/fe8_saar_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Saar[] = INCBIN_U32("graphics/trainers/palettes/fe8_saar.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Saleh[] = INCBIN_U32("graphics/trainers/front_pics/fe8_saleh_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Saleh[] = INCBIN_U32("graphics/trainers/palettes/fe8_saleh.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Tethys[] = INCBIN_U32("graphics/trainers/front_pics/fe8_tethys_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Tethys[] = INCBIN_U32("graphics/trainers/palettes/fe8_tethys.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Tirado[] = INCBIN_U32("graphics/trainers/front_pics/fe8_tirado_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Tirado[] = INCBIN_U32("graphics/trainers/palettes/fe8_tirado.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Zonta[] = INCBIN_U32("graphics/trainers/front_pics/fe8_zonta_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Zonta[] = INCBIN_U32("graphics/trainers/palettes/fe8_zonta.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Knoll[] = INCBIN_U32("graphics/trainers/front_pics/fe8_knoll_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Knoll[] = INCBIN_U32("graphics/trainers/palettes/fe8_knoll.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Natasha[] = INCBIN_U32("graphics/trainers/front_pics/fe8_natasha_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Natasha[] = INCBIN_U32("graphics/trainers/palettes/fe8_natasha.gbapal.lz");
++const u32 gTrainerFrontPic_FE8Neimi[] = INCBIN_U32("graphics/trainers/front_pics/fe8_neimi_front_pic.4bpp.lz");
++const u32 gTrainerPalette_FE8Neimi[] = INCBIN_U32("graphics/trainers/palettes/fe8_neimi.gbapal.lz");
 diff --git a/src/data/pokemon/level_up_learnset_pointers.h b/src/data/pokemon/level_up_learnset_pointers.h
 index 661458c..0046ddd 100644
 --- a/src/data/pokemon/level_up_learnset_pointers.h
@@ -468,6 +3390,28 @@ index 8b1cfca..ea9522c 100644
      SPECIES_SHINY_PAL(TREECKO, gMonShinyPalette_Treecko),
      SPECIES_SHINY_PAL(GROVYLE, gMonShinyPalette_Grovyle),
      SPECIES_SHINY_PAL(SCEPTILE, gMonShinyPalette_Sceptile),
+diff --git a/src/data/text/quest_log.h b/src/data/text/quest_log.h
+index db65f6e..2003ad2 100644
+--- a/src/data/text/quest_log.h
++++ b/src/data/text/quest_log.h
+@@ -72,7 +72,7 @@ const u8 gText_QuestLog_UsedTeleportToLocation[] = _("{STR_VAR_1} used TELEPORT,
+ const u8 gText_QuestLog_LeftTownsLocationForNextDestination[] = _("{PLAYER} left {STR_VAR_1}'s\n{STR_VAR_2} for the next\ndestination.");
+ const u8 gText_QuestLog_PlayedGamesAtGameCorner[] = _("Played a lot of games at the ROCKET\nGAME CORNER in {STR_VAR_1}.");
+ const u8 gText_QuestLog_RestedAtHome[] = _("{PLAYER} rested comfortably at home.");
+-const u8 gText_QuestLog_LeftOaksLab[] = _("{PLAYER} left PROF. OAK's POKéMON\nRESEARCH LAB.");
++const u8 gText_QuestLog_LeftOaksLab[] = _("{PLAYER} left MOULDER's POKéMON\nRESEARCH LAB.");
+ const u8 gText_QuestLog_GymWasFullOfToughTrainers[] = _("The GYM in {STR_VAR_1} was full of\ntough TRAINERS…\nPreparations had to be made.");
+ const u8 gText_QuestLog_DepartedGym[] = _("Departed the GYM in {STR_VAR_1}.");
+ const u8 gText_QuestLog_HadGreatTimeInSafariZone[] = _("{PLAYER} had a great time with POKéMON\nin the SAFARI ZONE.");
+@@ -90,7 +90,7 @@ const u8 gText_QuestLog_ObtainedItemInLocation[] = _("Here in {STR_VAR_1}, {PLAY
+ const u8 gText_QuestLog_ArrivedInLocation[] = _("Arrived in {STR_VAR_1}.");
+ const u8 gText_QuestLog_SavedGameAtLocation[] = _("And {PLAYER} saved the game at this\nlocation: {STR_VAR_1}.");
+ const u8 gText_QuestLog_Home[] = _("HOME");
+-const u8 gText_QuestLog_OakResearchLab[] = _("OAK RESEARCH LAB");
++const u8 gText_QuestLog_OakResearchLab[] = _("MOULDER RESEARCH LAB");
+ const u8 gText_QuestLog_Gym[] = _("GYM");
+ const u8 gText_QuestLog_PokemonLeagueGate[] = _("POKéMON LEAGUE GATE");
+ const u8 gText_QuestLog_ViridianForest[] = _("VIRIDIAN FOREST");
 diff --git a/src/data/text/species_names.h b/src/data/text/species_names.h
 index 25f2c9a..9a39e2d 100644
 --- a/src/data/text/species_names.h
@@ -481,6 +3425,813 @@ index 25f2c9a..9a39e2d 100644
      [SPECIES_TREECKO] = _("TREECKO"),
      [SPECIES_GROVYLE] = _("GROVYLE"),
      [SPECIES_SCEPTILE] = _("SCEPTILE"),
+diff --git a/src/data/trainer_graphics/front_pic_anims.h b/src/data/trainer_graphics/front_pic_anims.h
+index 2013ebb..0daf4ae 100644
+--- a/src/data/trainer_graphics/front_pic_anims.h
++++ b/src/data/trainer_graphics/front_pic_anims.h
+@@ -888,4 +888,44 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
+     [TRAINER_PIC_RUIN_MANIAC]           = sAnims_RuinManiac,
+     [TRAINER_PIC_LADY]                  = sAnims_Lady,
+     [TRAINER_PIC_PAINTER]               = sAnims_Painter,
++    [TRAINER_PIC_FE8_AIAS] = sAnims_Painter,
++    [TRAINER_PIC_FE8_AMELIA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_ARTUR] = sAnims_Painter,
++    [TRAINER_PIC_FE8_BAZBA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_BERAN] = sAnims_Painter,
++    [TRAINER_PIC_FE8_BREGUET] = sAnims_Painter,
++    [TRAINER_PIC_FE8_CAELLACH] = sAnims_Painter,
++    [TRAINER_PIC_FE8_CARLYLE] = sAnims_Painter,
++    [TRAINER_PIC_FE8_DARA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_EWAN] = sAnims_Painter,
++    [TRAINER_PIC_FE8_FADO] = sAnims_Painter,
++    [TRAINER_PIC_FE8_FOMORTIIS] = sAnims_Painter,
++    [TRAINER_PIC_FE8_FORDE] = sAnims_Painter,
++    [TRAINER_PIC_FE8_FRANZ] = sAnims_Painter,
++    [TRAINER_PIC_FE8_FRELIAN] = sAnims_Painter,
++    [TRAINER_PIC_FE8_GERIK] = sAnims_Painter,
++    [TRAINER_PIC_FE8_GHEB] = sAnims_Painter,
++    [TRAINER_PIC_FE8_GLEN] = sAnims_Painter,
++    [TRAINER_PIC_FE8_HAYDEN] = sAnims_Painter,
++    [TRAINER_PIC_FE8_ISMAIRE] = sAnims_Painter,
++    [TRAINER_PIC_FE8_KLIMT] = sAnims_Painter,
++    [TRAINER_PIC_FE8_KYLE] = sAnims_Painter,
++    [TRAINER_PIC_FE8_MANSEL] = sAnims_Painter,
++    [TRAINER_PIC_FE8_MORVA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_MURRAY] = sAnims_Painter,
++    [TRAINER_PIC_FE8_NOVALA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_ONEILL] = sAnims_Painter,
++    [TRAINER_PIC_FE8_ORSON] = sAnims_Painter,
++    [TRAINER_PIC_FE8_PABLO] = sAnims_Painter,
++    [TRAINER_PIC_FE8_RENNAC] = sAnims_Painter,
++    [TRAINER_PIC_FE8_RIEV] = sAnims_Painter,
++    [TRAINER_PIC_FE8_ROSS] = sAnims_Painter,
++    [TRAINER_PIC_FE8_SAAR] = sAnims_Painter,
++    [TRAINER_PIC_FE8_SALEH] = sAnims_Painter,
++    [TRAINER_PIC_FE8_TETHYS] = sAnims_Painter,
++    [TRAINER_PIC_FE8_TIRADO] = sAnims_Painter,
++    [TRAINER_PIC_FE8_ZONTA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_KNOLL] = sAnims_Painter,
++    [TRAINER_PIC_FE8_NATASHA] = sAnims_Painter,
++    [TRAINER_PIC_FE8_NEIMI] = sAnims_Painter,
+ };
+diff --git a/src/data/trainer_graphics/front_pic_tables.h b/src/data/trainer_graphics/front_pic_tables.h
+index c2ad6ac..03c8989 100644
+--- a/src/data/trainer_graphics/front_pic_tables.h
++++ b/src/data/trainer_graphics/front_pic_tables.h
+@@ -148,6 +148,46 @@ const struct MonCoords gTrainerFrontPicCoords[] =
+     {.size = 8, .y_offset = 1},
+     {.size = 8, .y_offset = 1},
+     {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
++    {.size = 8, .y_offset = 1},
+ };
+ 
+ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
+@@ -300,6 +340,46 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
+     TRAINER_SPRITE(RUIN_MANIAC, gTrainerFrontPic_RuinManiac, 0x800),
+     TRAINER_SPRITE(LADY, gTrainerFrontPic_Lady, 0x800),
+     TRAINER_SPRITE(PAINTER, gTrainerFrontPic_Painter, 0x800),
++    TRAINER_SPRITE(FE8_AIAS, gTrainerFrontPic_FE8Aias, 0x800),
++    TRAINER_SPRITE(FE8_AMELIA, gTrainerFrontPic_FE8Amelia, 0x800),
++    TRAINER_SPRITE(FE8_ARTUR, gTrainerFrontPic_FE8Artur, 0x800),
++    TRAINER_SPRITE(FE8_BAZBA, gTrainerFrontPic_FE8Bazba, 0x800),
++    TRAINER_SPRITE(FE8_BERAN, gTrainerFrontPic_FE8Beran, 0x800),
++    TRAINER_SPRITE(FE8_BREGUET, gTrainerFrontPic_FE8Breguet, 0x800),
++    TRAINER_SPRITE(FE8_CAELLACH, gTrainerFrontPic_FE8Caellach, 0x800),
++    TRAINER_SPRITE(FE8_CARLYLE, gTrainerFrontPic_FE8Carlyle, 0x800),
++    TRAINER_SPRITE(FE8_DARA, gTrainerFrontPic_FE8Dara, 0x800),
++    TRAINER_SPRITE(FE8_EWAN, gTrainerFrontPic_FE8Ewan, 0x800),
++    TRAINER_SPRITE(FE8_FADO, gTrainerFrontPic_FE8Fado, 0x800),
++    TRAINER_SPRITE(FE8_FOMORTIIS, gTrainerFrontPic_FE8Fomortiis, 0x800),
++    TRAINER_SPRITE(FE8_FORDE, gTrainerFrontPic_FE8Forde, 0x800),
++    TRAINER_SPRITE(FE8_FRANZ, gTrainerFrontPic_FE8Franz, 0x800),
++    TRAINER_SPRITE(FE8_FRELIAN, gTrainerFrontPic_FE8Frelian, 0x800),
++    TRAINER_SPRITE(FE8_GERIK, gTrainerFrontPic_FE8Gerik, 0x800),
++    TRAINER_SPRITE(FE8_GHEB, gTrainerFrontPic_FE8Gheb, 0x800),
++    TRAINER_SPRITE(FE8_GLEN, gTrainerFrontPic_FE8Glen, 0x800),
++    TRAINER_SPRITE(FE8_HAYDEN, gTrainerFrontPic_FE8Hayden, 0x800),
++    TRAINER_SPRITE(FE8_ISMAIRE, gTrainerFrontPic_FE8Ismaire, 0x800),
++    TRAINER_SPRITE(FE8_KLIMT, gTrainerFrontPic_FE8Klimt, 0x800),
++    TRAINER_SPRITE(FE8_KYLE, gTrainerFrontPic_FE8Kyle, 0x800),
++    TRAINER_SPRITE(FE8_MANSEL, gTrainerFrontPic_FE8Mansel, 0x800),
++    TRAINER_SPRITE(FE8_MORVA, gTrainerFrontPic_FE8Morva, 0x800),
++    TRAINER_SPRITE(FE8_MURRAY, gTrainerFrontPic_FE8Murray, 0x800),
++    TRAINER_SPRITE(FE8_NOVALA, gTrainerFrontPic_FE8Novala, 0x800),
++    TRAINER_SPRITE(FE8_ONEILL, gTrainerFrontPic_FE8ONeill, 0x800),
++    TRAINER_SPRITE(FE8_ORSON, gTrainerFrontPic_FE8Orson, 0x800),
++    TRAINER_SPRITE(FE8_PABLO, gTrainerFrontPic_FE8Pablo, 0x800),
++    TRAINER_SPRITE(FE8_RENNAC, gTrainerFrontPic_FE8Rennac, 0x800),
++    TRAINER_SPRITE(FE8_RIEV, gTrainerFrontPic_FE8Riev, 0x800),
++    TRAINER_SPRITE(FE8_ROSS, gTrainerFrontPic_FE8Ross, 0x800),
++    TRAINER_SPRITE(FE8_SAAR, gTrainerFrontPic_FE8Saar, 0x800),
++    TRAINER_SPRITE(FE8_SALEH, gTrainerFrontPic_FE8Saleh, 0x800),
++    TRAINER_SPRITE(FE8_TETHYS, gTrainerFrontPic_FE8Tethys, 0x800),
++    TRAINER_SPRITE(FE8_TIRADO, gTrainerFrontPic_FE8Tirado, 0x800),
++    TRAINER_SPRITE(FE8_ZONTA, gTrainerFrontPic_FE8Zonta, 0x800),
++    TRAINER_SPRITE(FE8_KNOLL, gTrainerFrontPic_FE8Knoll, 0x800),
++    TRAINER_SPRITE(FE8_NATASHA, gTrainerFrontPic_FE8Natasha, 0x800),
++    TRAINER_SPRITE(FE8_NEIMI, gTrainerFrontPic_FE8Neimi, 0x800),
+ };
+ 
+ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
+@@ -452,4 +532,44 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
+     TRAINER_PAL(RUIN_MANIAC, gTrainerPalette_RuinManiac),
+     TRAINER_PAL(LADY, gTrainerPalette_Lady),
+     TRAINER_PAL(PAINTER, gTrainerPalette_Painter),
++    TRAINER_PAL(FE8_AIAS, gTrainerPalette_FE8Aias),
++    TRAINER_PAL(FE8_AMELIA, gTrainerPalette_FE8Amelia),
++    TRAINER_PAL(FE8_ARTUR, gTrainerPalette_FE8Artur),
++    TRAINER_PAL(FE8_BAZBA, gTrainerPalette_FE8Bazba),
++    TRAINER_PAL(FE8_BERAN, gTrainerPalette_FE8Beran),
++    TRAINER_PAL(FE8_BREGUET, gTrainerPalette_FE8Breguet),
++    TRAINER_PAL(FE8_CAELLACH, gTrainerPalette_FE8Caellach),
++    TRAINER_PAL(FE8_CARLYLE, gTrainerPalette_FE8Carlyle),
++    TRAINER_PAL(FE8_DARA, gTrainerPalette_FE8Dara),
++    TRAINER_PAL(FE8_EWAN, gTrainerPalette_FE8Ewan),
++    TRAINER_PAL(FE8_FADO, gTrainerPalette_FE8Fado),
++    TRAINER_PAL(FE8_FOMORTIIS, gTrainerPalette_FE8Fomortiis),
++    TRAINER_PAL(FE8_FORDE, gTrainerPalette_FE8Forde),
++    TRAINER_PAL(FE8_FRANZ, gTrainerPalette_FE8Franz),
++    TRAINER_PAL(FE8_FRELIAN, gTrainerPalette_FE8Frelian),
++    TRAINER_PAL(FE8_GERIK, gTrainerPalette_FE8Gerik),
++    TRAINER_PAL(FE8_GHEB, gTrainerPalette_FE8Gheb),
++    TRAINER_PAL(FE8_GLEN, gTrainerPalette_FE8Glen),
++    TRAINER_PAL(FE8_HAYDEN, gTrainerPalette_FE8Hayden),
++    TRAINER_PAL(FE8_ISMAIRE, gTrainerPalette_FE8Ismaire),
++    TRAINER_PAL(FE8_KLIMT, gTrainerPalette_FE8Klimt),
++    TRAINER_PAL(FE8_KYLE, gTrainerPalette_FE8Kyle),
++    TRAINER_PAL(FE8_MANSEL, gTrainerPalette_FE8Mansel),
++    TRAINER_PAL(FE8_MORVA, gTrainerPalette_FE8Morva),
++    TRAINER_PAL(FE8_MURRAY, gTrainerPalette_FE8Murray),
++    TRAINER_PAL(FE8_NOVALA, gTrainerPalette_FE8Novala),
++    TRAINER_PAL(FE8_ONEILL, gTrainerPalette_FE8ONeill),
++    TRAINER_PAL(FE8_ORSON, gTrainerPalette_FE8Orson),
++    TRAINER_PAL(FE8_PABLO, gTrainerPalette_FE8Pablo),
++    TRAINER_PAL(FE8_RENNAC, gTrainerPalette_FE8Rennac),
++    TRAINER_PAL(FE8_RIEV, gTrainerPalette_FE8Riev),
++    TRAINER_PAL(FE8_ROSS, gTrainerPalette_FE8Ross),
++    TRAINER_PAL(FE8_SAAR, gTrainerPalette_FE8Saar),
++    TRAINER_PAL(FE8_SALEH, gTrainerPalette_FE8Saleh),
++    TRAINER_PAL(FE8_TETHYS, gTrainerPalette_FE8Tethys),
++    TRAINER_PAL(FE8_TIRADO, gTrainerPalette_FE8Tirado),
++    TRAINER_PAL(FE8_ZONTA, gTrainerPalette_FE8Zonta),
++    TRAINER_PAL(FE8_KNOLL, gTrainerPalette_FE8Knoll),
++    TRAINER_PAL(FE8_NATASHA, gTrainerPalette_FE8Natasha),
++    TRAINER_PAL(FE8_NEIMI, gTrainerPalette_FE8Neimi),
+ };
+diff --git a/src/data/trainers.h b/src/data/trainers.h
+index 02afbfd..b33dec8 100644
+--- a/src/data/trainers.h
++++ b/src/data/trainers.h
+@@ -1205,8 +1205,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_LASS_IRIS] = {
+         .trainerClass = TRAINER_CLASS_LASS,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+-        .trainerPic = TRAINER_PIC_LASS,
+-        .trainerName = _("IRIS"),
++        .trainerPic = TRAINER_PIC_FE8_NATASHA,
++        .trainerName = _("NATASHA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -2665,8 +2665,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_BEAUTY_LORI] = {
+         .trainerClass = TRAINER_CLASS_BEAUTY,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+-        .trainerPic = TRAINER_PIC_BEAUTY,
+-        .trainerName = _("LORI"),
++        .trainerPic = TRAINER_PIC_FE8_TETHYS,
++        .trainerName = _("TETHYS"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -2795,8 +2795,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_PSYCHIC_JOHAN] = {
+         .trainerClass = TRAINER_CLASS_PSYCHIC,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+-        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+-        .trainerName = _("JOHAN"),
++        .trainerPic = TRAINER_PIC_FE8_EWAN,
++        .trainerName = _("EWAN"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -2805,8 +2805,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_PSYCHIC_TYRON] = {
+         .trainerClass = TRAINER_CLASS_PSYCHIC,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+-        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+-        .trainerName = _("TYRON"),
++        .trainerPic = TRAINER_PIC_FE8_FADO,
++        .trainerName = _("FADO"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -2815,8 +2815,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_PSYCHIC_CAMERON] = {
+         .trainerClass = TRAINER_CLASS_PSYCHIC,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+-        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+-        .trainerName = _("CAMERON"),
++        .trainerPic = TRAINER_PIC_FE8_FOMORTIIS,
++        .trainerName = _("FOMORTIIS"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -2825,8 +2825,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_PSYCHIC_PRESTON] = {
+         .trainerClass = TRAINER_CLASS_PSYCHIC,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+-        .trainerPic = TRAINER_PIC_PSYCHIC_M,
+-        .trainerName = _("PRESTON"),
++        .trainerPic = TRAINER_PIC_FE8_ARTUR,
++        .trainerName = _("ARTUR"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3365,8 +3365,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_JERRY] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("JERRY"),
++        .trainerPic = TRAINER_PIC_FE8_MANSEL,
++        .trainerName = _("MANSEL"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3375,8 +3375,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_JOSE] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("JOSE"),
++        .trainerPic = TRAINER_PIC_FE8_KLIMT,
++        .trainerName = _("KLIMT"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3385,8 +3385,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_RODNEY] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("RODNEY"),
++        .trainerPic = TRAINER_PIC_FE8_SALEH,
++        .trainerName = _("SALEH"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3415,8 +3415,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_JOSHUA] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("JOSHUA"),
++        .trainerPic = TRAINER_PIC_FE8_MORVA,
++        .trainerName = _("MORVA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3425,8 +3425,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_PARKER] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("PARKER"),
++        .trainerPic = TRAINER_PIC_FE8_PABLO,
++        .trainerName = _("PABLO"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3435,8 +3435,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_ED] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("ED"),
++        .trainerPic = TRAINER_PIC_FE8_KNOLL,
++        .trainerName = _("KNOLL"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3465,8 +3465,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_IVAN] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("IVAN"),
++        .trainerPic = TRAINER_PIC_FE8_NOVALA,
++        .trainerName = _("NOVALA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3476,7 +3476,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_BOSS,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+         .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
+-        .trainerName = _("GIOVANNI"),
++        .trainerName = _("VIGARDE"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3486,7 +3486,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_BOSS,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+         .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
+-        .trainerName = _("GIOVANNI"),
++        .trainerName = _("VIGARDE"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3496,7 +3496,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+         .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
+-        .trainerName = _("GIOVANNI"),
++        .trainerName = _("VIGARDE"),
+         .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -3755,8 +3755,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_26] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_ROSS,
++        .trainerName = _("ROSS"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3765,8 +3765,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_27] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_ONEILL,
++        .trainerName = _("O'NEILL"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3775,8 +3775,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_28] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_GLEN,
++        .trainerName = _("GLEN"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3785,8 +3785,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_29] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_GERIK,
++        .trainerName = _("GERIK"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3795,8 +3795,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_30] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_CARLYLE,
++        .trainerName = _("CARLYLE"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3805,8 +3805,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_31] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_BERAN,
++        .trainerName = _("BERAN"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3815,8 +3815,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_32] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_BAZBA,
++        .trainerName = _("BAZBA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3825,8 +3825,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_33] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_CAELLACH,
++        .trainerName = _("CAELLACH"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3835,8 +3835,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_34] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_FRELIAN,
++        .trainerName = _("FRELIAN"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3845,8 +3845,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_35] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_GHEB,
++        .trainerName = _("GHEB"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3855,8 +3855,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_36] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_HAYDEN,
++        .trainerName = _("HAYDEN"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3865,8 +3865,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_37] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_RENNAC,
++        .trainerName = _("RENNAC"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3875,8 +3875,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_TEAM_ROCKET_GRUNT_38] = {
+         .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
+-        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_M,
+-        .trainerName = _("GRUNT"),
++        .trainerPic = TRAINER_PIC_FE8_ZONTA,
++        .trainerName = _("ZONTA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -3915,8 +3915,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_SAMUEL] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+-        .trainerName = _("SAMUEL"),
++        .trainerPic = TRAINER_PIC_FE8_AIAS,
++        .trainerName = _("AIAS"),
+         .items = {ITEM_SUPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -3925,8 +3925,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_GEORGE] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+-        .trainerName = _("GEORGE"),
++        .trainerPic = TRAINER_PIC_FE8_FRANZ,
++        .trainerName = _("FRANZ"),
+         .items = {ITEM_HYPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -3935,8 +3935,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_COLBY] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+-        .trainerName = _("COLBY"),
++        .trainerPic = TRAINER_PIC_FE8_MURRAY,
++        .trainerName = _("MURRAY"),
+         .items = {ITEM_HYPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -3955,8 +3955,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_ROLANDO] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+-        .trainerName = _("ROLANDO"),
++        .trainerPic = TRAINER_PIC_FE8_BREGUET,
++        .trainerName = _("BREGUET"),
+         .items = {ITEM_HYPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -3995,8 +3995,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_YUJI] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+-        .trainerName = _("YUJI"),
++        .trainerPic = TRAINER_PIC_FE8_KYLE,
++        .trainerName = _("KYLE"),
+         .items = {ITEM_HYPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4005,8 +4005,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_WARREN] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+-        .trainerName = _("WARREN"),
++        .trainerPic = TRAINER_PIC_FE8_FORDE,
++        .trainerName = _("FORDE"),
+         .items = {ITEM_HYPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4015,8 +4015,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_COOLTRAINER_MARY] = {
+         .trainerClass = TRAINER_CLASS_COOLTRAINER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL | F_TRAINER_FEMALE,
+-        .trainerPic = TRAINER_PIC_COOLTRAINER_F,
+-        .trainerName = _("MARY"),
++        .trainerPic = TRAINER_PIC_FE8_ISMAIRE,
++        .trainerName = _("ISMAIRE"),
+         .items = {ITEM_SUPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4096,7 +4096,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR | F_TRAINER_FEMALE,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_LORELEI,
+-        .trainerName = _("LORELEI"),
++        .trainerName = _("SELENA"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4106,7 +4106,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_BRUNO,
+-        .trainerName = _("BRUNO"),
++        .trainerName = _("BINKS"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4116,7 +4116,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR | F_TRAINER_FEMALE,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_AGATHA,
+-        .trainerName = _("AGATHA"),
++        .trainerName = _("SYRENE"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4126,7 +4126,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_LANCE,
+-        .trainerName = _("LANCE"),
++        .trainerName = _("VALTER"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4136,7 +4136,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+         .trainerPic = TRAINER_PIC_LEADER_BROCK,
+-        .trainerName = _("BROCK"),
++        .trainerName = _("SETH"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4146,7 +4146,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+         .trainerPic = TRAINER_PIC_LEADER_MISTY,
+-        .trainerName = _("MISTY"),
++        .trainerName = _("MARISA"),
+         .items = {ITEM_SUPER_POTION},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4156,7 +4156,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+         .trainerPic = TRAINER_PIC_LEADER_LT_SURGE,
+-        .trainerName = _("LT. SURGE"),
++        .trainerName = _("GILLIAM"),
+         .items = {ITEM_SUPER_POTION, ITEM_FULL_HEAL},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4166,7 +4166,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+         .trainerPic = TRAINER_PIC_LEADER_ERIKA,
+-        .trainerName = _("ERIKA"),
++        .trainerName = _("VANESSA"),
+         .items = {ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4176,7 +4176,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+         .trainerPic = TRAINER_PIC_LEADER_KOGA,
+-        .trainerName = _("KOGA"),
++        .trainerName = _("COLM"),
+         .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4186,7 +4186,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+         .trainerPic = TRAINER_PIC_LEADER_BLAINE,
+-        .trainerName = _("BLAINE"),
++        .trainerName = _("GARCIA"),
+         .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4196,7 +4196,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_LEADER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+         .trainerPic = TRAINER_PIC_LEADER_SABRINA,
+-        .trainerName = _("SABRINA"),
++        .trainerName = _("LUTE"),
+         .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_FULL_HEAL},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -4205,8 +4205,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_GENTLEMAN_THOMAS] = {
+         .trainerClass = TRAINER_CLASS_GENTLEMAN,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+-        .trainerPic = TRAINER_PIC_GENTLEMAN,
+-        .trainerName = _("THOMAS"),
++        .trainerPic = TRAINER_PIC_FE8_SAAR,
++        .trainerName = _("SAAR"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -4815,8 +4815,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_GENTLEMAN_BROOKS] = {
+         .trainerClass = TRAINER_CLASS_GENTLEMAN,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+-        .trainerPic = TRAINER_PIC_GENTLEMAN,
+-        .trainerName = _("BROOKS"),
++        .trainerPic = TRAINER_PIC_FE8_TIRADO,
++        .trainerName = _("TIRADO"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -4825,8 +4825,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_GENTLEMAN_LAMAR] = {
+         .trainerClass = TRAINER_CLASS_GENTLEMAN,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_RICH,
+-        .trainerPic = TRAINER_PIC_GENTLEMAN,
+-        .trainerName = _("LAMAR"),
++        .trainerPic = TRAINER_PIC_FE8_ORSON,
++        .trainerName = _("ORSON"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -5106,7 +5106,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_PKMN_PROF,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+         .trainerPic = TRAINER_PIC_PROFESSOR_OAK,
+-        .trainerName = _("PROF. OAK"),
++        .trainerName = _("MOULDER"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -5445,8 +5445,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_SCIENTIST_GIDEON] = {
+         .trainerClass = TRAINER_CLASS_SCIENTIST,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+-        .trainerPic = TRAINER_PIC_SCIENTIST,
+-        .trainerName = _("GIDEON"),
++        .trainerPic = TRAINER_PIC_FE8_RIEV,
++        .trainerName = _("RIEV"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -6075,8 +6075,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_PSYCHIC_LAURA] = {
+         .trainerClass = TRAINER_CLASS_PSYCHIC,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE | F_TRAINER_FEMALE,
+-        .trainerPic = TRAINER_PIC_PSYCHIC_F,
+-        .trainerName = _("LAURA"),
++        .trainerPic = TRAINER_PIC_FE8_DARA,
++        .trainerName = _("DARA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -6165,8 +6165,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_LASS_JOANA] = {
+         .trainerClass = TRAINER_CLASS_LASS,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
+-        .trainerPic = TRAINER_PIC_LASS,
+-        .trainerName = _("JOANA"),
++        .trainerPic = TRAINER_PIC_FE8_AMELIA,
++        .trainerName = _("AMELIA"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -6185,8 +6185,8 @@ const struct Trainer gTrainers[] = {
+     [TRAINER_PICNICKER_MARCY] = {
+         .trainerClass = TRAINER_CLASS_PICNICKER,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_GIRL | F_TRAINER_FEMALE,
+-        .trainerPic = TRAINER_PIC_PICNICKER,
+-        .trainerName = _("MARCY"),
++        .trainerPic = TRAINER_PIC_FE8_NEIMI,
++        .trainerName = _("NEIMI"),
+         .items = {},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+@@ -7346,7 +7346,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_LORELEI,
+-        .trainerName = _("LORELEI"),
++        .trainerName = _("SELENA"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -7356,7 +7356,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_BRUNO,
+-        .trainerName = _("BRUNO"),
++        .trainerName = _("BINKS"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -7366,7 +7366,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_AGATHA,
+-        .trainerName = _("AGATHA"),
++        .trainerName = _("SYRENE"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+@@ -7376,7 +7376,7 @@ const struct Trainer gTrainers[] = {
+         .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+         .trainerPic = TRAINER_PIC_ELITE_FOUR_LANCE,
+-        .trainerName = _("LANCE"),
++        .trainerName = _("VALTER"),
+         .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+         .doubleBattle = FALSE,
+         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
 diff --git a/src/eirika_attack.c b/src/eirika_attack.c
 new file mode 100644
 index 0000000..413bc46
@@ -830,7 +4581,7 @@ index 037b1bf..a4eaa64 100644
      [SPECIES_GROVYLE]     = 0,
      [SPECIES_SCEPTILE]    = 1,
 diff --git a/src/strings.c b/src/strings.c
-index c099555..64fc56d 100644
+index c099555..b2d10f4 100644
 --- a/src/strings.c
 +++ b/src/strings.c
 @@ -52,6 +52,8 @@ ALIGNED(4) const u8 gText_UPDOWNPick_ABUTTONBBUTTONCancel[] = _("{DPAD_UPDOWN}PI
@@ -842,3 +4593,50 @@ index c099555..64fc56d 100644
  const u8 gText_PokedexTableOfContents[] = _("POKéDEX   TABLE OF CONTENTS");
  const u8 gText_PickOK[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}OK");
  const u8 gText_Seen[] = _("Seen:");
+@@ -185,7 +187,7 @@ const u8 gText_NoRoomToStoreItems[] = _("There's no room to\nstore items.");
+ const u8 gText_TossOutHowManyStrVar1s[] = _("Toss out how many\n{STR_VAR_1}(s)?");
+ const u8 gText_ThrewAwayStrVar2StrVar1s[] = _("Threw away {STR_VAR_2}\n{STR_VAR_1}(s).");
+ const u8 gText_ThrowAwayStrVar2OfThisItemQM[] = _("Throw away {STR_VAR_2} of\nthis item?");
+-const u8 gText_OakForbidsUseOfItemHere[] = _("OAK: {PLAYER}!\nThis isn't the time to use that!{PAUSE_UNTIL_PRESS}");
++const u8 gText_OakForbidsUseOfItemHere[] = _("MOULDER: {PLAYER}!\nThis isn't the time to use that!{PAUSE_UNTIL_PRESS}");
+ const u8 gText_CantDismountBike[] = _("You can't dismount your BIKE here.{PAUSE_UNTIL_PRESS}");
+ const u8 gText_ItemfinderResponding[] = _("Huh?\nThe ITEMFINDER's responding!\pThere's an item buried around here!{PAUSE_UNTIL_PRESS}");
+ const u8 gText_ItemfinderShakingWildly[] = _("Oh!\nThe ITEMFINDER's shaking wildly!\pThere's an item buried underfoot!\p‥ ‥ ‥ ‥ ‥ ‥{PAUSE_UNTIL_PRESS}");
+@@ -342,7 +344,7 @@ const u8 gText_NotAble[] = _("NOT ABLE");
+ const u8 gText_Able3[] = _("ABLE!");
+ const u8 gText_NotAble2[] = _("NOT ABLE!");
+ const u8 gText_Learned[] = _("LEARNED");
+-const u8 gText_OakImportantToGetToKnowPokemonThroughly[] = _("OAK: It's important to get to know\nyour POKéMON thoroughly.\p");
++const u8 gText_OakImportantToGetToKnowPokemonThroughly[] = _("MOULDER: It's important to get to know\nyour POKéMON thoroughly.\p");
+ const u8 gText_OakThisIsListOfPokemon[] = _("This is a list of your POKéMON,\n{PLAYER}.\pOpen this to check the skills\nand moves of your POKéMON.\pYou also choose POKéMON here if\nyou want to use an item on one.{PAUSE_UNTIL_PRESS}");
+ const u8 gText_CutATreeOrGrass[] = _("Cut a tree or grass.");
+ const u8 gText_FlyToAKnownTown[] = _("Fly to a known town.");
+@@ -393,8 +395,8 @@ const u8 gText_MailReturnedToBagMessageErased[] = _("The MAIL was returned to th
+ const u8 gText_WithdrawItem[] = _("WITHDRAW\nITEM");
+ const u8 gText_Withdraw[] = _("WITHDRAW");
+ const u8 gText_ReturnToPC[] = _("Return to the PC.");
+-const u8 gText_LtSurge[] = _("LT. SURGE");
+-const u8 gText_Koga[] = _("KOGA");
++const u8 gText_LtSurge[] = _("GILLIAM");
++const u8 gText_Koga[] = _("COLM");
+ const u8 gText_Participate[] = _("さんか する");
+ const u8 gText_Info[] = _("INFO");
+ const u8 gText_Eggs[] = _("EGGS");
+@@ -475,7 +477,7 @@ const u8 gText_BillSPc[] = _("BILL'S PC");
+ const u8 gText_SPc[] = _("{PLAYER}'s PC");
+ const u8 gText_HallOfFame_2[] = _("HALL OF FAME");
+ const u8 gText_LogOff[] = _("LOG OFF");
+-const u8 gText_ProfOakSPc[] = _("PROF. OAK's PC");
++const u8 gText_ProfOakSPc[] = _("MOULDER's PC");
+ const u8 gText_Eevee[] = _("EEVEE");
+ const u8 gText_Flareon[] = _("FLAREON");
+ const u8 gText_Jolteon[] = _("JOLTEON");
+@@ -1269,7 +1271,7 @@ const u8 gText_RefusedBattle[] = _("Refused the battle.{PAUSE 0x3C}");
+ const u8 gFameCheckerText_MainScreenUI[] = _("{START_BUTTON}PICK {DPAD_UPDOWN}SELECT {A_BUTTON}OK");
+ const u8 gFameCheckerText_PickScreenUI[] = _("{START_BUTTON}PICK {DPAD_UPDOWN}SELECT {B_BUTTON}CANCEL");
+ const u8 gFameCheckerText_FlavorTextUI[] = _("{DPAD_ANY}PICK {A_BUTTON}READ {B_BUTTON}CANCEL");
+-const u8 gFameCheckerOakName[] = _("OAK");
++const u8 gFameCheckerOakName[] = _("MOULDER");
+ const u8 gFameCheckerDaisyName[] = _("DAISY");
+ const u8 gFameCheckerBillName[] = _("BILL");
+ const u8 gFameCheckerMrFujiName[] = _("FUJI");
