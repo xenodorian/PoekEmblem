@@ -110,7 +110,9 @@ for c in d['chapters']:
             '\twaitstate', '\tend', '',
             'Story_Arrive_%d::' % n,
             '\tlockall',
-            '\tmsgbox Story_Ch%d_Before, MSGBOX_DEFAULT' % n]
+            '\tshowmonpic %s, 1, 1' % c.get('speaker_before', 'SPECIES_EIRIKA'),
+            '\tmsgbox Story_Ch%d_Before, MSGBOX_DEFAULT' % n,
+            '\thidemonpic']
     for i, b in enumerate(c['battles']):
         if b.get('b') and b.get('partner'):
             inc += ['\tsetvar VAR_0x8004, %s' % b['a'], '\tsetvar VAR_0x8005, %s' % b['b'], '\tsetvar VAR_0x8006, %s' % b['partner'],
@@ -119,7 +121,8 @@ for c in d['chapters']:
             inc += ['\ttrainerbattle_no_intro %s, Story_Ch%d_Defeat' % (b['a'], n)]
     for r in c.get('recruits', []):
         inc += ['\tcall EventScript_Recruit%s' % r]
-    inc += ['\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n,
+    sa = c.get('speaker_after') or ('SPECIES_' + c['recruits'][0].upper() if c.get('recruits') else 'SPECIES_EIRIKA')
+    inc += ['\tshowmonpic %s, 1, 1' % sa, '\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n, '\thidemonpic',
             '\taddvar VAR_STORY_CHAPTER, 1',
             '\tfadescreen FADE_TO_BLACK',
             '\twarp MAP_PALLET_TOWN, 255, %d, %d' % (hx, hy),

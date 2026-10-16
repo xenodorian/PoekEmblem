@@ -10,9 +10,13 @@ Story_Go_0::
 
 Story_Arrive_0::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch0_Before, MSGBOX_DEFAULT
+	hidemonpic
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_27, Story_Ch0_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch0_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -41,9 +45,13 @@ Story_Go_1::
 
 Story_Arrive_1::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch1_Before, MSGBOX_DEFAULT
+	hidemonpic
 	trainerbattle_no_intro TRAINER_COOLTRAINER_ROLANDO, Story_Ch1_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch1_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -72,9 +80,13 @@ Story_Go_2::
 
 Story_Arrive_2::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch2_Before, MSGBOX_DEFAULT
+	hidemonpic
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_31, Story_Ch2_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch2_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -103,13 +115,17 @@ Story_Go_3::
 
 Story_Arrive_3::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch3_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_TEAM_ROCKET_GRUNT_32
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_31
 	setvar VAR_0x8006, TRAINER_LEADER_BROCK
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch3_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -138,13 +154,17 @@ Story_Go_4::
 
 Story_Arrive_4::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch4_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_PSYCHIC_TYRON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_JERRY
 	setvar VAR_0x8006, TRAINER_LEADER_BROCK
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch4_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -173,14 +193,18 @@ Story_Go_5::
 
 Story_Arrive_5::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch5_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_GENTLEMAN_THOMAS
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_36
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitJoshua
+	showmonpic SPECIES_JOSHUA, 1, 1
 	msgbox Story_Ch5_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -209,13 +233,17 @@ Story_Go_6::
 
 Story_Arrive_6::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch6_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_SCIENTIST_IVAN
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_28
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch6_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -244,13 +272,17 @@ Story_Go_7::
 
 Story_Arrive_7::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch7_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_COOLTRAINER_COLBY
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_34
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch7_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -279,13 +311,17 @@ Story_Go_8::
 
 Story_Arrive_8::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch8_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_GENTLEMAN_BROOKS
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_33
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch8_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -314,14 +350,18 @@ Story_Go_9::
 
 Story_Arrive_9::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch9_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_ELITE_FOUR_BRUNO
 	setvar VAR_0x8005, TRAINER_LASS_JOANA
 	setvar VAR_0x8006, TRAINER_LEADER_LT_SURGE
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitTana
+	showmonpic SPECIES_TANA, 1, 1
 	msgbox Story_Ch9_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -350,7 +390,9 @@ Story_Go_10::
 
 Story_Arrive_10::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch10_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_SCIENTIST_PARKER
 	setvar VAR_0x8005, TRAINER_BEAUTY_LORI
 	setvar VAR_0x8006, TRAINER_LEADER_MISTY
@@ -358,7 +400,9 @@ Story_Arrive_10::
 	waitstate
 	call EventScript_RecruitInnes
 	call EventScript_RecruitDuessel
+	showmonpic SPECIES_INNES, 1, 1
 	msgbox Story_Ch10_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -387,7 +431,9 @@ Story_Go_11::
 
 Story_Arrive_11::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch11_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_COOLTRAINER_WARREN
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_29
 	setvar VAR_0x8006, TRAINER_LEADER_ERIKA
@@ -395,7 +441,9 @@ Story_Arrive_11::
 	waitstate
 	call EventScript_RecruitLArachel
 	call EventScript_RecruitDozla
+	showmonpic SPECIES_LARACHEL, 1, 1
 	msgbox Story_Ch11_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -424,14 +472,18 @@ Story_Go_12::
 
 Story_Arrive_12::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch12_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_PSYCHIC_TYRON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_ED
 	setvar VAR_0x8006, TRAINER_LEADER_ERIKA
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitMyrrh
+	showmonpic SPECIES_MYRRH, 1, 1
 	msgbox Story_Ch12_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -460,14 +512,18 @@ Story_Go_13::
 
 Story_Arrive_13::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch13_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_COOLTRAINER_SAMUEL
 	setvar VAR_0x8005, TRAINER_SCIENTIST_PARKER
 	setvar VAR_0x8006, TRAINER_LEADER_KOGA
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitCormag
+	showmonpic SPECIES_CORMAG, 1, 1
 	msgbox Story_Ch13_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -496,13 +552,17 @@ Story_Go_14::
 
 Story_Arrive_14::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch14_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_TEAM_ROCKET_GRUNT_30
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_33
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch14_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -531,13 +591,17 @@ Story_Go_15::
 
 Story_Arrive_15::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch15_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_ELITE_FOUR_LANCE
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_33
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch15_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -566,13 +630,17 @@ Story_Go_16::
 
 Story_Arrive_16::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch16_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_GENTLEMAN_LAMAR
 	setvar VAR_0x8005, TRAINER_PSYCHIC_PRESTON
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch16_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -601,9 +669,13 @@ Story_Go_17::
 
 Story_Arrive_17::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch17_Before, MSGBOX_DEFAULT
+	hidemonpic
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE, Story_Ch17_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch17_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -632,13 +704,17 @@ Story_Go_18::
 
 Story_Arrive_18::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch18_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_PSYCHIC_CAMERON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_GIDEON
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch18_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -667,13 +743,17 @@ Story_Go_19::
 
 Story_Arrive_19::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch19_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_SCIENTIST_GIDEON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_JOSE
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch19_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -702,13 +782,17 @@ Story_Go_20::
 
 Story_Arrive_20::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch20_Before, MSGBOX_DEFAULT
+	hidemonpic
 	setvar VAR_0x8004, TRAINER_SCIENTIST_GIDEON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_JOSHUA
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch20_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -737,9 +821,13 @@ Story_Go_21::
 
 Story_Arrive_21::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch21_Before, MSGBOX_DEFAULT
+	hidemonpic
 	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_SQUIRTLE, Story_Ch21_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch21_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8
@@ -768,9 +856,13 @@ Story_Go_22::
 
 Story_Arrive_22::
 	lockall
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch22_Before, MSGBOX_DEFAULT
+	hidemonpic
 	trainerbattle_no_intro TRAINER_PSYCHIC_CAMERON, Story_Ch22_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch22_After, MSGBOX_DEFAULT
+	hidemonpic
 	addvar VAR_STORY_CHAPTER, 1
 	fadescreen FADE_TO_BLACK
 	warp MAP_PALLET_TOWN, 255, 6, 8

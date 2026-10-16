@@ -186,3 +186,10 @@ Open, in this order:
 3. Port the War and Murder tile tools to vanilla FireRed and build the six custom maps (Renais and Frelia castle interiors, Jehanna hall, Fort Rigwald, Grado throne room, Black Temple).
 4. Pokedex entries, ally dialogue, Oak's lab starter and grass scripts.
 5. Full playthrough test.
+
+## Update 2026-10-16 (agent 2)
+- Build chain verified: decomp_overlay over pret/pokefirered 037335f builds with `make -j8` (12 bytes differ from the earlier finished ROM, data only).
+- Test tooling: `tools/mgba_drv.c` (headless driver, stdin or file), `tools/chapter_test.py`, `tools/trace_chapter.py`. mGBA headers: build from the 0.10.5 source tree include/ plus a stub mgba/flags.h, link libmgba.so.0.10.
+- Win-test run 1 (buffed party, jump into chapter via VAR_STORY_CHAPTER and VAR_STORY_PENDING): chapters 0-3, 5, 7-9, 11, 13-15 passed; 6 and 10 passed in later run; others stalled because the test mon only had Normal moves versus Ghost enemies. Not a confirmed game bug. Testing paused by owner order.
+- Done: FE8 portraits in chapter dialogue (generator `tools/leg3_story.py` emits showmonpic/hidemonpic; fields speaker_before/speaker_after optional in chapters.json). ROM `builds/Pokemon FireRed Eirika Leg3-Portraits.gba`. Compile-only check.
+- Next: walking between nodes, mid-chapter events, custom maps, Leg 1/2 gaps.
