@@ -1,0 +1,16 @@
+run 300
+shot /tmp/claude-0/leg1/q1.png
+run 60
+shot /tmp/claude-0/leg1/q2.png
+run 60
+shot /tmp/claude-0/leg1/q3.png
+run 60
+shot /tmp/claude-0/leg1/q4.png
+run 60
+shot /tmp/claude-0/leg1/q5.png
+run 60
+shot /tmp/claude-0/leg1/q6.png
+run 60
+shot /tmp/claude-0/leg1/q7.png
+run 60
+shot /tmp/claude-0/leg1/q8.png

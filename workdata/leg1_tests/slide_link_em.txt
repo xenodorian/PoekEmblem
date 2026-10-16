@@ -1,0 +1,163 @@
+17:static void BattleIntroSlideLink(u8);
+18-static void BattleIntroSlidePartner(u8);
+19-
+20-static const TaskFunc sBattleIntroSlideFuncs[] =
+21-{
+22-    [BATTLE_ENVIRONMENT_GRASS]      = BattleIntroSlide1,
+23-    [BATTLE_ENVIRONMENT_LONG_GRASS] = BattleIntroSlide1,
+24-    [BATTLE_ENVIRONMENT_SAND]       = BattleIntroSlide2,
+25-    [BATTLE_ENVIRONMENT_UNDERWATER] = BattleIntroSlide2,
+26-    [BATTLE_ENVIRONMENT_WATER]      = BattleIntroSlide2,
+27-    [BATTLE_ENVIRONMENT_POND]       = BattleIntroSlide1,
+28-    [BATTLE_ENVIRONMENT_MOUNTAIN]   = BattleIntroSlide1,
+29-    [BATTLE_ENVIRONMENT_CAVE]       = BattleIntroSlide1,
+30-    [BATTLE_ENVIRONMENT_BUILDING]   = BattleIntroSlide3,
+31-    [BATTLE_ENVIRONMENT_PLAIN]      = BattleIntroSlide3,
+32-};
+33-
+34-#define tState data[0]
+35-#define tEnvironment data[1]
+36-
+37-void HandleIntroSlide(u8 environment)
+38-{
+39-    u8 taskId;
+40-
+41-    if ((gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER) && gPartnerTrainerId != TRAINER_STEVEN_PARTNER)
+42-    {
+43-        taskId = CreateTask(BattleIntroSlidePartner, 0);
+44-    }
+45-    else if (gBattleTypeFlags & BATTLE_TYPE_LINK)
+46-    {
+47-        taskId = CreateTask(BattleIntroSlideLink, 0);
+48-    }
+49-    else if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+50-    {
+51-        taskId = CreateTask(BattleIntroSlide3, 0);
+52-    }
+53-    else if ((gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON) && gGameVersion != VERSION_RUBY)
+54-    {
+55-        environment = BATTLE_ENVIRONMENT_UNDERWATER;
+56-        taskId = CreateTask(BattleIntroSlide2, 0);
+57-    }
+58-    else
+59-    {
+60-        taskId = CreateTask(sBattleIntroSlideFuncs[environment], 0);
+61-    }
+62-
+63-    gTasks[taskId].tState = 0;
+64-    gTasks[taskId].tEnvironment = environment;
+65-    gTasks[taskId].data[2] = 0;
+66-    gTasks[taskId].data[3] = 0;
+67-    gTasks[taskId].data[4] = 0;
+68-    gTasks[taskId].data[5] = 0;
+69-    gTasks[taskId].data[6] = 0;
+70-}
+71-
+72-static void BattleIntroSlideEnd(u8 taskId)
+73-{
+74-    DestroyTask(taskId);
+75-    gBattle_BG1_X = 0;
+76-    gBattle_BG1_Y = 0;
+77-    gBattle_BG2_X = 0;
+78-    gBattle_BG2_Y = 0;
+79-    SetGpuReg(REG_OFFSET_BLDCNT, 0);
+80-    SetGpuReg(REG_OFFSET_BLDALPHA, 0);
+81-    SetGpuReg(REG_OFFSET_BLDY, 0);
+82-    SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR | WININ_WIN1_BG_ALL | WININ_WIN1_OBJ | WININ_WIN1_CLR);
+83-    SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG_ALL | WINOUT_WIN01_OBJ | WINOUT_WIN01_CLR | WINOUT_WINOBJ_BG_ALL | WINOUT_WINOBJ_OBJ | WINOUT_WINOBJ_CLR);
+84-}
+85-
+86-static void BattleIntroSlide1(u8 taskId)
+87-{
+88-    int i;
+89-
+90-    gBattle_BG1_X += 6;
+91-    switch (gTasks[taskId].tState)
+92-    {
+93-    case 0:
+94-        if (gBattleTypeFlags & BATTLE_TYPE_LINK)
+95-        {
+96-            gTasks[taskId].data[2] = 16;
+97-            gTasks[taskId].tState++;
+--
+371:static void BattleIntroSlideLink(u8 taskId)
+372-{
+373-    int i;
+374-
+375-    if (gTasks[taskId].tState > 1 && !gTasks[taskId].data[4])
+376-    {
+377-        u16 var0 = gBattle_BG1_X & 0x8000;
+378-        if (var0 || gBattle_BG1_X < 80)
+379-        {
+380-            gBattle_BG1_X += 3;
+381-            gBattle_BG2_X -= 3;
+382-        }
+383-        else
+384-        {
+385-            CpuFill32(0, (void *)BG_SCREEN_ADDR(28), BG_SCREEN_SIZE);
+386-            CpuFill32(0, (void *)BG_SCREEN_ADDR(30), BG_SCREEN_SIZE);
+387-            gTasks[taskId].data[4] = 1;
+388-        }
+389-    }
+390-
+391-    switch (gTasks[taskId].tState)
+392-    {
+393-    case 0:
+394-        gTasks[taskId].data[2] = 32;
+395-        gTasks[taskId].tState++;
+396-        break;
+397-    case 1:
+398-        if (--gTasks[taskId].data[2] == 0)
+399-        {
+400-            gTasks[taskId].tState++;
+401-            gSprites[gBattleStruct->linkBattleVsSpriteId_V].oam.objMode = ST_OAM_OBJ_WINDOW;
+402-            gSprites[gBattleStruct->linkBattleVsSpriteId_V].callback = SpriteCB_VsLetterInit;
+403-            gSprites[gBattleStruct->linkBattleVsSpriteId_S].oam.objMode = ST_OAM_OBJ_WINDOW;
+404-            gSprites[gBattleStruct->linkBattleVsSpriteId_S].callback = SpriteCB_VsLetterInit;
+405-            SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG_ALL | WININ_WIN0_OBJ | WININ_WIN0_CLR);
+406-            SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WINOBJ_BG_ALL | WINOUT_WINOBJ_OBJ | WINOUT_WINOBJ_CLR | WINOUT_WIN01_BG1 | WINOUT_WIN01_BG2);
+407-        }
+408-        break;
+409-    case 2:
+410-        gBattle_WIN0V -= 0xFF;
+411-        if ((gBattle_WIN0V & 0xFF00) == 0x3000)
+412-        {
+413-            gTasks[taskId].tState++;
+414-            gTasks[taskId].data[2] = DISPLAY_WIDTH;
+415-            gTasks[taskId].data[3] = 32;
+416-            gIntroSlideFlags &= ~1;
+417-        }
+418-        break;
+419-    case 3:
+420-        if (gBattle_WIN0V & 0xFF00)
+421-            gBattle_WIN0V -= 0x3FC;
+422-
+423-        if (gTasks[taskId].data[2])
+424-            gTasks[taskId].data[2] -= 2;
+425-
+426-        // Scanline settings have already been set in CB2_InitBattleInternal()
+427-        for (i = 0; i < DISPLAY_HEIGHT / 2; i++)
+428-            gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer][i] = gTasks[taskId].data[2];
+429-
+430-        for (; i < DISPLAY_HEIGHT; i++)
+431-            gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer][i] = -gTasks[taskId].data[2];
+432-
+433-        if (gTasks[taskId].data[2] == 0)
+434-        {
+435-            gScanlineEffect.state = 3;
+436-            gTasks[taskId].tState++;
+437-            SetBgAttribute(1, BG_ATTR_CHARBASEINDEX, 0);
+438-            SetBgAttribute(2, BG_ATTR_CHARBASEINDEX, 0);
+439-            SetGpuReg(REG_OFFSET_BG1CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_16COLOR | BGCNT_SCREENBASE(28) | BGCNT_TXT256x512);
+440-            SetGpuReg(REG_OFFSET_BG2CNT, BGCNT_PRIORITY(0) | BGCNT_CHARBASE(0) | BGCNT_16COLOR | BGCNT_SCREENBASE(30) | BGCNT_TXT512x256);
+441-        }
+442-        break;
+443-    case 4:
+444-        BattleIntroSlideEnd(taskId);
+445-        break;
+446-    }
+447-}
+448-
+449-static void BattleIntroSlidePartner(u8 taskId)
+450-{
+451-    switch (gTasks[taskId].tState)

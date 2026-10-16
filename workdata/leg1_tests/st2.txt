@@ -1,0 +1,133 @@
+run 300
+keys 1 6
+run 90
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+run 100
+shot /tmp/claude-0/leg1/rc9.png
+r8 2024029
+r8 2024029
+r16 20242a4
+r16 2024308
+r16 202436c
+r16 20243d0
+r16 2024434
+r16 2024498

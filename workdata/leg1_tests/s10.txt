@@ -1,0 +1,29 @@
+run 300
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+run 60
+shot /tmp/claude-0/leg1/h_menu.png
+keys 1 6
+run 20
+keys 1 6
+run 20
+shot /tmp/claude-0/leg1/h_movemenu.png
+
+r8 300747c
+r8 300747d
+r8 300747e
+r8 300747f

@@ -1,0 +1,361 @@
+{
+ "cast": {
+  "Seth": {
+   "role": "Brock",
+   "pics": [
+    "TRAINER_PIC_LEADER_BROCK"
+   ],
+   "trainer": null
+  },
+  "Marisa": {
+   "role": "Misty",
+   "pics": [
+    "TRAINER_PIC_LEADER_MISTY"
+   ],
+   "trainer": null
+  },
+  "Gilliam": {
+   "role": "Lt. Surge",
+   "pics": [
+    "TRAINER_PIC_LEADER_LT_SURGE"
+   ],
+   "trainer": null
+  },
+  "Vanessa": {
+   "role": "Erika",
+   "pics": [
+    "TRAINER_PIC_LEADER_ERIKA"
+   ],
+   "trainer": null
+  },
+  "Colm": {
+   "role": "Koga",
+   "pics": [
+    "TRAINER_PIC_LEADER_KOGA"
+   ],
+   "trainer": null
+  },
+  "Lute": {
+   "role": "Sabrina",
+   "pics": [
+    "TRAINER_PIC_LEADER_SABRINA"
+   ],
+   "trainer": null
+  },
+  "Garcia": {
+   "role": "Blaine",
+   "pics": [
+    "TRAINER_PIC_LEADER_BLAINE"
+   ],
+   "trainer": null
+  },
+  "Vigarde": {
+   "role": "Giovanni",
+   "pics": [
+    "TRAINER_PIC_LEADER_GIOVANNI"
+   ],
+   "trainer": null
+  },
+  "Selena": {
+   "role": "Lorelei",
+   "pics": [
+    "TRAINER_PIC_ELITE_FOUR_LORELEI"
+   ],
+   "trainer": null
+  },
+  "Binks": {
+   "role": "Bruno",
+   "pics": [
+    "TRAINER_PIC_ELITE_FOUR_BRUNO"
+   ],
+   "trainer": null
+  },
+  "Syrene": {
+   "role": "Agatha",
+   "pics": [
+    "TRAINER_PIC_ELITE_FOUR_AGATHA"
+   ],
+   "trainer": null
+  },
+  "Valter": {
+   "role": "Lance",
+   "pics": [
+    "TRAINER_PIC_ELITE_FOUR_LANCE"
+   ],
+   "trainer": null
+  },
+  "Lyon": {
+   "role": "Rival",
+   "pics": [
+    "TRAINER_PIC_RIVAL_EARLY",
+    "TRAINER_PIC_RIVAL_LATE",
+    "TRAINER_PIC_CHAMPION_RIVAL"
+   ],
+   "trainer": null
+  },
+  "Ephraim": {
+   "role": "Red",
+   "pics": [
+    "TRAINER_PIC_RED"
+   ],
+   "trainer": null
+  },
+  "Moulder": {
+   "role": "Prof. Oak (NPC)",
+   "pics": [
+    "TRAINER_PIC_PROFESSOR_OAK"
+   ],
+   "trainer": null
+  },
+  "Aias": {
+   "role": "Trainer AIAS (FE8_AIAS)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+   "old_name": "AIAS"
+  },
+  "Amelia": {
+   "role": "Trainer AMELIA (FE8_AMELIA)",
+   "pics": [],
+   "trainer": "TRAINER_LASS_JOANA",
+   "old_name": "AMELIA"
+  },
+  "Artur": {
+   "role": "Trainer ARTUR (FE8_ARTUR)",
+   "pics": [],
+   "trainer": "TRAINER_PSYCHIC_PRESTON",
+   "old_name": "ARTUR"
+  },
+  "Bazba": {
+   "role": "Trainer BAZBA (FE8_BAZBA)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_32",
+   "old_name": "BAZBA"
+  },
+  "Beran": {
+   "role": "Trainer BERAN (FE8_BERAN)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_31",
+   "old_name": "BERAN"
+  },
+  "Breguet": {
+   "role": "Trainer BREGUET (FE8_BREGUET)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_ROLANDO",
+   "old_name": "BREGUET"
+  },
+  "Caellach": {
+   "role": "Trainer CAELLACH (FE8_CAELLACH)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_33",
+   "old_name": "CAELLACH"
+  },
+  "Carlyle": {
+   "role": "Trainer CARLYLE (FE8_CARLYLE)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_30",
+   "old_name": "CARLYLE"
+  },
+  "Dara": {
+   "role": "Trainer DARA (FE8_DARA)",
+   "pics": [],
+   "trainer": "TRAINER_PSYCHIC_LAURA",
+   "old_name": "DARA"
+  },
+  "Ewan": {
+   "role": "Trainer EWAN (FE8_EWAN)",
+   "pics": [],
+   "trainer": "TRAINER_PSYCHIC_JOHAN",
+   "old_name": "EWAN"
+  },
+  "Fado": {
+   "role": "Trainer FADO (FE8_FADO)",
+   "pics": [],
+   "trainer": "TRAINER_PSYCHIC_TYRON",
+   "old_name": "FADO"
+  },
+  "Fomortiis": {
+   "role": "Trainer FOMORTIIS (FE8_FOMORTIIS)",
+   "pics": [],
+   "trainer": "TRAINER_PSYCHIC_CAMERON",
+   "old_name": "FOMORTIIS"
+  },
+  "Forde": {
+   "role": "Trainer FORDE (FE8_FORDE)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_WARREN",
+   "old_name": "FORDE"
+  },
+  "Franz": {
+   "role": "Trainer FRANZ (FE8_FRANZ)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_GEORGE",
+   "old_name": "FRANZ"
+  },
+  "Frelian": {
+   "role": "Trainer FRELIAN (FE8_FRELIAN)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_34",
+   "old_name": "FRELIAN"
+  },
+  "Gerik": {
+   "role": "Trainer GERIK (FE8_GERIK)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_29",
+   "old_name": "GERIK"
+  },
+  "Gheb": {
+   "role": "Trainer GHEB (FE8_GHEB)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_35",
+   "old_name": "GHEB"
+  },
+  "Glen": {
+   "role": "Trainer GLEN (FE8_GLEN)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_28",
+   "old_name": "GLEN"
+  },
+  "Hayden": {
+   "role": "Trainer HAYDEN (FE8_HAYDEN)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_36",
+   "old_name": "HAYDEN"
+  },
+  "Ismaire": {
+   "role": "Trainer ISMAIRE (FE8_ISMAIRE)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_MARY",
+   "old_name": "ISMAIRE"
+  },
+  "Klimt": {
+   "role": "Trainer KLIMT (FE8_KLIMT)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_JOSE",
+   "old_name": "KLIMT"
+  },
+  "Knoll": {
+   "role": "Trainer ED (SCIENTIST)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_ED",
+   "old_name": "ED"
+  },
+  "Kyle": {
+   "role": "Trainer KYLE (FE8_KYLE)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_YUJI",
+   "old_name": "KYLE"
+  },
+  "Mansel": {
+   "role": "Trainer MANSEL (FE8_MANSEL)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_JERRY",
+   "old_name": "MANSEL"
+  },
+  "Morva": {
+   "role": "Trainer MORVA (FE8_MORVA)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_JOSHUA",
+   "old_name": "MORVA"
+  },
+  "Murray": {
+   "role": "Trainer MURRAY (FE8_MURRAY)",
+   "pics": [],
+   "trainer": "TRAINER_COOLTRAINER_COLBY",
+   "old_name": "MURRAY"
+  },
+  "Natasha": {
+   "role": "Trainer IRIS (LASS)",
+   "pics": [],
+   "trainer": "TRAINER_LASS_IRIS",
+   "old_name": "IRIS"
+  },
+  "Neimi": {
+   "role": "Trainer MARCY (PICNICKER)",
+   "pics": [],
+   "trainer": "TRAINER_PICNICKER_MARCY",
+   "old_name": "MARCY"
+  },
+  "Novala": {
+   "role": "Trainer NOVALA (FE8_NOVALA)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_IVAN",
+   "old_name": "NOVALA"
+  },
+  "O'Neill": {
+   "role": "Trainer O'NEILL (FE8_ONEILL)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_27",
+   "old_name": "O'NEILL"
+  },
+  "Orson": {
+   "role": "Trainer ORSON (FE8_ORSON)",
+   "pics": [],
+   "trainer": "TRAINER_GENTLEMAN_LAMAR",
+   "old_name": "ORSON"
+  },
+  "Pablo": {
+   "role": "Trainer PABLO (FE8_PABLO)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_PARKER",
+   "old_name": "PABLO"
+  },
+  "Rennac": {
+   "role": "Trainer RENNAC (FE8_RENNAC)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_37",
+   "old_name": "RENNAC"
+  },
+  "Riev": {
+   "role": "Trainer RIEV (FE8_RIEV)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_GIDEON",
+   "old_name": "RIEV"
+  },
+  "Ross": {
+   "role": "Trainer ROSS (FE8_ROSS)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_26",
+   "old_name": "ROSS"
+  },
+  "Saar": {
+   "role": "Trainer SAAR (FE8_SAAR)",
+   "pics": [],
+   "trainer": "TRAINER_GENTLEMAN_THOMAS",
+   "old_name": "SAAR"
+  },
+  "Saleh": {
+   "role": "Trainer SALEH (FE8_SALEH)",
+   "pics": [],
+   "trainer": "TRAINER_SCIENTIST_RODNEY",
+   "old_name": "SALEH"
+  },
+  "Tethys": {
+   "role": "Trainer TETHYS (FE8_TETHYS)",
+   "pics": [],
+   "trainer": "TRAINER_BEAUTY_LORI",
+   "old_name": "TETHYS"
+  },
+  "Tirado": {
+   "role": "Trainer TIRADO (FE8_TIRADO)",
+   "pics": [],
+   "trainer": "TRAINER_GENTLEMAN_BROOKS",
+   "old_name": "TIRADO"
+  },
+  "Zonta": {
+   "role": "Trainer ZONTA (FE8_ZONTA)",
+   "pics": [],
+   "trainer": "TRAINER_TEAM_ROCKET_GRUNT_38",
+   "old_name": "ZONTA"
+  }
+ },
+ "allies": [
+  "Cormag",
+  "Dozla",
+  "Duessel",
+  "Innes",
+  "Joshua",
+  "L'Arachel",
+  "Myrrh",
+  "Tana"
+ ]
+}

@@ -1,0 +1,20 @@
+run 300
+keys 8 6
+run 30
+keys 80 6
+run 10
+keys 80 6
+run 10
+keys 80 6
+run 10
+keys 1 6
+run 200
+keys 1 6
+run 100
+shot /tmp/claude-0/leg1/sv_c.png
+keys 1 6
+run 400
+shot /tmp/claude-0/leg1/sv_d.png
+keys 1 6
+run 100
+shot /tmp/claude-0/leg1/sv_e.png

@@ -1,0 +1,25 @@
+run 300
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+keys 1 6
+run 60
+run 60
+shot /tmp/claude-0/leg1/h_menu.png
+keys 1 6
+run 20
+keys 1 6
+run 20
+shot /tmp/claude-0/leg1/h_movemenu.png
+shotseq /tmp/claude-0/leg1/hs 200

@@ -1,0 +1,57 @@
+run 320
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+run 10
+keys 1 8
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_00 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_01 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_02 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_03 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_04 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_05 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_06 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_07 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_08 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_09 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_10 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_11 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_12 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_13 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_14 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_15 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_16 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_17 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_18 50
+keys 1 4
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m2_fly_19 50
+keys 1 4

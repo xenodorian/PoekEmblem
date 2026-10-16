@@ -1,0 +1,148 @@
+run 380
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+keys 1 4
+run 20
+r32 03004f94
+r32 02023bc8
+r32 03004ff0
+r32 03004ff4
+r32 03004ff8
+r32 03004ffc
+shot /tmp/claude-0/leg1/stuck.png

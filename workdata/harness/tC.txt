@@ -1,0 +1,37 @@
+run 320
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_01.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_02.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_03.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_04.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_05.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_06.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_07.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_08.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_09.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_10.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_11.png
+keys 1 8
+run 40
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/C_12.png

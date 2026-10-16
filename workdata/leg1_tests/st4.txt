@@ -1,0 +1,70 @@
+run 300
+keys 1 6
+run 60
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+run 100
+keys 8 6
+run 30
+keys 1 6
+run 80
+r32 3005020
+r32 2029314
+r8 2029314
+r8 2029315
+r8 2029316
+r8 2029317
+r8 2029318
+r8 2029319
+r8 202931a
+r8 202931b

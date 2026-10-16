@@ -1,0 +1,73 @@
+run 380
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r00.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r01.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r02.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r03.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r04.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r05.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r06.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r07.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r08.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r09.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r10.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r11.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r12.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r13.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r14.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r15.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r16.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r17.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r18.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r19.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r20.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r21.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r22.png
+keys 1 4
+run 50
+shot /tmp/claude-0/leg1/r23.png

@@ -1,0 +1,9 @@
+run 330
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+run 120
+shot /tmp/claude-0/leg1/m2.png

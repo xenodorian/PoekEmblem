@@ -1,0 +1,14 @@
+run 300
+keys 8 6
+run 30
+keys 1 6
+run 60
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 1 6
+run 40
+keys 20 6
+run 40
+shot /tmp/claude-0/leg1/mt.png

@@ -1,0 +1,23 @@
+run 100
+run 30
+shot /tmp/claude-0/leg1/f_00.png
+run 30
+shot /tmp/claude-0/leg1/f_01.png
+run 30
+shot /tmp/claude-0/leg1/f_02.png
+run 30
+shot /tmp/claude-0/leg1/f_03.png
+run 30
+shot /tmp/claude-0/leg1/f_04.png
+run 30
+shot /tmp/claude-0/leg1/f_05.png
+run 100
+keys 1 6
+run 60
+shot /tmp/claude-0/leg1/f_06.png
+keys 1 6
+run 60
+shot /tmp/claude-0/leg1/f_07.png
+keys 1 6
+run 80
+shot /tmp/claude-0/leg1/f_08.png

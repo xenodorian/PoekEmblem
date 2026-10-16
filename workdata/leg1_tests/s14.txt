@@ -1,0 +1,15 @@
+run 330
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+run 300
+shot /tmp/claude-0/leg1/m3.png
+keys 1 6
+run 40
+shot /tmp/claude-0/leg1/m4.png
+keys 1 6
+run 3
+shotseq /tmp/claude-0/leg1/hs 220

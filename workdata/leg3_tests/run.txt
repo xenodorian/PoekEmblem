@@ -1,0 +1,1408 @@
+run 300
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_0.png
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_1.png
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_2.png
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_3.png
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_4.png
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_5.png
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+keys 1 4
+run 26
+shot /tmp/claude-0/leg3/OUT_6.png

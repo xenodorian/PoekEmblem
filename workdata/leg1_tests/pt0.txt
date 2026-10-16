@@ -1,0 +1,5 @@
+run 200
+shot /tmp/claude-0/leg1/p0_200.png
+run 400
+shot /tmp/claude-0/leg1/p0_600.png
+r32 03007FFC

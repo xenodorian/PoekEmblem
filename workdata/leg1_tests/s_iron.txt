@@ -1,0 +1,17 @@
+run 330
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+run 300
+keys 1 6
+run 40
+keys 80 6
+run 6
+keys 10 6
+run 10
+keys 1 6
+run 3
+shotseq /tmp/claude-0/leg1/mv_iron 420

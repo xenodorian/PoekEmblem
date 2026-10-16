@@ -1,0 +1,69 @@
+run 300
+keys 1 6
+run 60
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+keys 1 6
+run 45
+run 100
+shot /tmp/claude-0/leg1/rc9.png
+keys 8 6
+run 30
+keys 1 6
+run 80
+shot /tmp/claude-0/leg1/rc10.png
+keys 80 6
+run 10
+keys 80 6
+run 10
+keys 1 6
+run 40
+shot /tmp/claude-0/leg1/rc11.png

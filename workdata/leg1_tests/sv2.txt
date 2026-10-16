@@ -1,0 +1,10 @@
+run 400
+shot /tmp/claude-0/leg1/sw_a.png
+keys 1 6
+run 100
+shot /tmp/claude-0/leg1/sw_b.png
+keys 1 6
+run 100
+keys 1 6
+run 100
+shot /tmp/claude-0/leg1/sw_c.png

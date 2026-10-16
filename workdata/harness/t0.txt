@@ -1,0 +1,3 @@
+run 600
+shot /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/boot.png
+r32 030030f0

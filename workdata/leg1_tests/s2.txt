@@ -1,0 +1,196 @@
+run 400
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_30.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_31.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_32.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_33.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_34.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_35.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_36.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_37.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_38.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_39.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_40.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_41.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_42.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_43.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_44.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_45.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_46.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_47.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_48.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_49.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_50.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_51.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_52.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_53.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_54.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_55.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_56.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_57.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_58.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_59.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_60.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_61.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_62.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_63.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_64.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_65.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_66.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_67.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_68.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_69.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_70.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_71.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_72.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_73.png
+keys 1 6
+run 50
+shot /tmp/claude-0/leg1/b_74.png

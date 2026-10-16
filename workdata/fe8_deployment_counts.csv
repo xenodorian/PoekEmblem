@@ -1,0 +1,61 @@
+chapter,route,source_file,event_group,deploy_slots_normal,deploy_slots_hard
+Prologue,,prologue-eventinfo.h,PrologueEvents,2,2
+Ch 1,,ch1-eventinfo.h,Ch1Events,2,2
+Ch 2,,ch2-eventinfo.h,Ch2Events,5,5
+Ch 3,,ch3-eventinfo.h,Ch3Events,9,9
+Ch 4,,ch4-eventinfo.h,Ch4Events,9,9
+Ch 5,,ch5-eventinfo.h,Ch5EventData,9,9
+Ch 5x,,ch5x-eventinfo.h,Ch5XEvents,4,4
+Ch 6,,ch6-eventinfo.h,Ch6Events,10,10
+Ch 7,,ch7-eventinfo.h,Ch7EventData,10,10
+Ch 8,,ch8-eventinfo.h,Ch8EventData,9,9
+Ch 9,Eirika route,ch9a-eventinfo.h,Ch9EirikaEvents,11,11
+Ch 9,Ephraim route,ch9b-eventinfo.h,Ch9Events,11,11
+Ch 10,Eirika route,ch10a-eventinfo.h,Ch10EirikaEvents,12,12
+Ch 10,Ephraim route,ch10b-eventinfo.h,Ch10EphraimEvents,11,11
+Ch 11,Eirika route,ch11a-eventinfo.h,Ch11EirikaEvents,11,11
+Ch 11,Ephraim route,ch11b-eventinfo.h,Ch11EphraimEvents,11,11
+Ch 12,Eirika route,ch12a-eventinfo.h,Ch12EirikaEventData,12,12
+Ch 12,Ephraim route,ch12b-eventinfo.h,Ch12EphraimEvents,12,12
+Ch 13,Eirika route,ch13a-eventinfo.h,Ch13EirikaEvents,12,12
+Ch 13,Ephraim route,ch13b-eventinfo.h,Ch13EphraimEventData,11,11
+Ch 14,Eirika route,ch14a-eventinfo.h,Ch14EirikaEvents,12,12
+Ch 14,Ephraim route,ch14b-eventinfo.h,Ch14EphraimEventData,12,12
+Ch 15,Eirika route,ch15a-eventinfo.h,Ch15EirikaEvents,12,12
+Ch 15,Ephraim route,ch15b-eventinfo.h,Ch15EphraimEventData,12,12
+Ch 16,Eirika route,ch16a-eventinfo.h,Ch16EirEvents,12,12
+Ch 16,Ephraim route,ch16b-eventinfo.h,Ch16EphraimEventData,12,12
+Ch 17,Eirika route,ch17a-eventinfo.h,Ch17EirikaEvents,12,12
+Ch 17,Ephraim route,ch17b-eventinfo.h,Ch17EphraimEventData,12,12
+Ch 18,Eirika route,ch18a-eventinfo.h,Ch18EirikaEvents,12,12
+Ch 18,Ephraim route,ch18b-eventinfo.h,Ch18EphraimEventData,12,12
+Ch 19,Eirika route,ch19a-eventinfo.h,Ch19EirikaEvents,17,17
+Ch 19,Ephraim route,ch19b-eventinfo.h,Ch19EphraimEventData,17,17
+Ch 20,Eirika route,ch20a-eventinfo.h,Ch20EirikaEvents,18,18
+Ch 20,Ephraim route,ch20b-eventinfo.h,Ch20EphraimEventData,18,18
+Ch 21,Eirika route,ch21a-eventinfo.h,FinalEirikaEvents1,12,12
+Ch 21,Ephraim route,ch21b-eventinfo.h,FinalEphraimEvents1,12,12
+Ch 21x,Eirika route,ch21xa-eventinfo.h,FinalEirikaEvents2,2,2
+Ch 21x,Ephraim route,ch21xb-eventinfo.h,FinalEphraimEvents2,0,0
+Lagdou Ruins 1,side content,ruin1-eventinfo.h,LagdouRuins1Event,8,8
+Lagdou Ruins 2,side content,ruin2-eventinfo.h,LagdouRuins2Event,8,8
+Lagdou Ruins 3,side content,ruin3-eventinfo.h,LagdouRuins3Event,8,8
+Lagdou Ruins 4,side content,ruin4-eventinfo.h,LagdouRuins4Event,10,10
+Lagdou Ruins 5,side content,ruin5-eventinfo.h,LagdouRuins5Event,9,9
+Lagdou Ruins 6,side content,ruin6-eventinfo.h,LagdouRuins6Event,10,10
+Lagdou Ruins 7,side content,ruin7-eventinfo.h,LagdouRuins7Event,11,11
+Lagdou Ruins 8,side content,ruin8-eventinfo.h,LagdouRuins8Event,9,9
+Lagdou Ruins 9,side content,ruin9-eventinfo.h,LagdouRuins9Event,8,8
+Lagdou Ruins 10,side content,ruin10-eventinfo.h,LagdouRuins10Event,8,8
+Tower of Valni 1,side content,tower1-eventinfo.h,TowerOfValni1Events,8,8
+Tower of Valni 2,side content,tower2-eventinfo.h,TowerOfValni2Events,8,8
+Tower of Valni 3,side content,tower3-eventinfo.h,TowerOfValni3Events,8,8
+Tower of Valni 4,side content,tower4-eventinfo.h,TowerOfValni4Events,8,8
+Tower of Valni 5,side content,tower5-eventinfo.h,TowerOfValni5Events,8,8
+Tower of Valni 6,side content,tower6-eventinfo.h,TowerOfValni6Events,8,8
+Tower of Valni 7,side content,tower7-eventinfo.h,TowerOfValni7Events,8,8
+Tower of Valni 8,side content,tower8-eventinfo.h,TowerOfValni8Events,8,8
+Melkaen Coast,,MelkaenCoast-eventinfo.h,MelkaenCoastEvent,9,9
+chunk3B (AnInterestingMap),,chunk3B-eventinfo.h,AnInterestingMapEvents,10,10
+Debug map,,debugmap-eventinfo.h,DebugMapEvents,34,34
+Lords split,,lordsplit-eventinfo.h,LordsSplitEvents,0,0

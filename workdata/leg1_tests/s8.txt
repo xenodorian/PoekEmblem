@@ -1,0 +1,8 @@
+run 30
+shot /tmp/claude-0/leg1/g_00.png
+run 60
+shot /tmp/claude-0/leg1/g_01.png
+run 120
+shot /tmp/claude-0/leg1/g_02.png
+run 200
+shot /tmp/claude-0/leg1/g_03.png

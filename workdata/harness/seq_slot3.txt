@@ -1,0 +1,20 @@
+run 320
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 1 8
+run 40
+keys 80 4
+run 10
+run 10
+keys 1 8
+shotseq /tmp/claude-0/-home-user-PoekEmblem/27b9bd3f-f2d5-5a88-ab9b-85e258b1a44c/scratchpad/harness/seq/m1_slot3 420
