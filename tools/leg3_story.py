@@ -73,12 +73,17 @@ if not os.environ.get('SCRIPTS_ONLY'):
     pp.write_text(parties); tr.write_text(trainers)
 
 # ---- scripts
+AUTOTILED = ('MAP_STORY_RENAIS_CASTLE', 'MAP_STORY_FRELIA_CASTLE', 'MAP_STORY_JEHANNA_HALL', 'MAP_STORY_BLACK_TEMPLE')
 def mapinfo(mid):
     for f in (root/'data/maps').glob('*/map.json'):
         j = json.loads(f.read_text())
         if j.get('id') == mid:
             if j.get('warp_events'):
-                w = j['warp_events'][0]; return w['x'], w['y']
+                w = j['warp_events'][0]
+                # the four autotiled indoor maps (tools/leg9_indoor_maps.py) have their exit warp on the door mat (7,14).
+                # Arrival and the walk-in start one row below it at (7,15); arriving on the warp tile itself is wrong.
+                if w['x'] == 7 and w['y'] == 14 and mid in AUTOTILED: return 7, 15
+                return w['x'], w['y']
             if j.get('object_events'):
                 w = j['object_events'][0]; return w['x'], w['y'] + 1
             w = j['bg_events'][0]; return w['x'], w['y'] + 1
@@ -136,7 +141,7 @@ for c in d['chapters']:
     inc += ['\tshowmonpic %s, 1, 1' % sa, '\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n, '\thidemonpic',
             '\tspecial HealPlayerParty', '\taddmoney %d' % (500 + 250*n), '\tmsgbox Story_Ch%d_Reward, MSGBOX_DEFAULT' % n,
             ] + sum([['\tshowmonpic %s, 1, 1' % sp, '\tmsgbox Story_Ch%d_Epi%d, MSGBOX_DEFAULT' % (n, k), '\thidemonpic'] for k, (sp, t) in enumerate(c.get('epilogue', []))], []) + (
-            ['\tfadescreen FADE_TO_BLACK', '\tmsgbox Story_TheEnd, MSGBOX_DEFAULT'] if c.get('epilogue') else []) + [
+            ['\tfadescreen FADE_TO_BLACK', '\tspecial ShowStoryTheEnd', '\twaitstate'] if c.get('epilogue') else []) + [
             '\taddvar VAR_STORY_CHAPTER, 1',
             '\tfadescreen FADE_TO_BLACK',
             '\twarp MAP_PALLET_TOWN, 255, %d, %d' % (hx, hy),
@@ -151,7 +156,6 @@ for c in d['chapters']:
             'Story_Ch%d_Defeat:' % n, '\t.string "..."', '',
             'Story_Ch%d_Reward:' % n, '\t.string "Your party was fully healed.\\pThe court rewards you with\\n¥%d.$"' % (500 + 250*n), '']
 guide += ['\tmsgbox Story_NoMoreChapters, MSGBOX_DEFAULT', '\trelease', '\tend', '',
-       'Story_TheEnd:', '\t.string "THE SACRED STONES\\nTHE END\\pThank you for playing.$"', '',
        'Story_NoMoreChapters:', '\t.string "The war is over. Thank you for\\nplaying.$"', '']
 arrive += ['\tend', '']
 inc += ['Story_WalkIn:', '\twalk_up', '\twalk_up', '\twalk_up', '\twalk_up', '\tstep_end', '']
