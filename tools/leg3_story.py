@@ -135,6 +135,8 @@ for c in d['chapters']:
     sa = c.get('speaker_after') or ('SPECIES_' + c['recruits'][0].upper() if c.get('recruits') else 'SPECIES_EIRIKA')
     inc += ['\tshowmonpic %s, 1, 1' % sa, '\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n, '\thidemonpic',
             '\tspecial HealPlayerParty', '\taddmoney %d' % (500 + 250*n), '\tmsgbox Story_Ch%d_Reward, MSGBOX_DEFAULT' % n,
+            ] + sum([['\tshowmonpic %s, 1, 1' % sp, '\tmsgbox Story_Ch%d_Epi%d, MSGBOX_DEFAULT' % (n, k), '\thidemonpic'] for k, (sp, t) in enumerate(c.get('epilogue', []))], []) + (
+            ['\tfadescreen FADE_TO_BLACK', '\tmsgbox Story_TheEnd, MSGBOX_DEFAULT'] if c.get('epilogue') else []) + [
             '\taddvar VAR_STORY_CHAPTER, 1',
             '\tfadescreen FADE_TO_BLACK',
             '\twarp MAP_PALLET_TOWN, 255, %d, %d' % (hx, hy),
@@ -145,9 +147,11 @@ for c in d['chapters']:
             ] + sum([['Story_Ch%d_Recruit%s:' % (n, r), '\t.string "%s"' % fmt([t]), ''] for r, t in c.get('recruit_lines', {}).items()], []) + (
             ['Story_Ch%d_AllyTalk:' % n, '\t.string "%s"' % fmt([c['ally_talk']['text']]), ''] if c.get('ally_talk') else []) + [
             'Story_Ch%d_After:' % n, '\t.string "%s"' % fmt(c['after']), '',
+            ] + sum([['Story_Ch%d_Epi%d:' % (n, k), '\t.string "%s"' % fmt([t]), ''] for k, (sp, t) in enumerate(c.get('epilogue', []))], []) + [
             'Story_Ch%d_Defeat:' % n, '\t.string "..."', '',
             'Story_Ch%d_Reward:' % n, '\t.string "Your party was fully healed.\\pThe court rewards you with\\n¥%d.$"' % (500 + 250*n), '']
 guide += ['\tmsgbox Story_NoMoreChapters, MSGBOX_DEFAULT', '\trelease', '\tend', '',
+       'Story_TheEnd:', '\t.string "THE SACRED STONES\\nTHE END\\pThank you for playing.$"', '',
        'Story_NoMoreChapters:', '\t.string "The war is over. Thank you for\\nplaying.$"', '']
 arrive += ['\tend', '']
 inc += ['Story_WalkIn:', '\twalk_up', '\twalk_up', '\twalk_up', '\twalk_up', '\tstep_end', '']

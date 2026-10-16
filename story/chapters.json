@@ -575,7 +575,49 @@
    "ally_talk": {
     "speaker": "SPECIES_INNES",
     "text": "Innes: We have come far. Finish this, Eirika. Renais will rise again."
-   }
+   },
+   "epilogue": [
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: The Sacred Stone is sealed and Magvel sleeps again. Renais will be rebuilt."
+    ],
+    [
+     "SPECIES_INNES",
+     "Innes: Grado is broken. I will take Frelia's banner home, and I owe you my life, Eirika."
+    ],
+    [
+     "SPECIES_TANA",
+     "Tana: Peace suits the skies over Frelia. I will fly the borders every dawn."
+    ],
+    [
+     "SPECIES_LARACHEL",
+     "L'Arachel: Naturally the Rhoden hero saved the world! I shall write a ballad of it."
+    ],
+    [
+     "SPECIES_DOZLA",
+     "Dozla: Hah! A good war, and a better feast. Pour me another!"
+    ],
+    [
+     "SPECIES_JOSHUA",
+     "Joshua: Not bad for a gambler's luck. I will see what Jehanna's tables are like now."
+    ],
+    [
+     "SPECIES_DUESSEL",
+     "Duessel: The Obsidian guards the king no more. I will guard the peace instead."
+    ],
+    [
+     "SPECIES_CORMAG",
+     "Cormag: Grado's wyverns will answer to no emperor again. I will see to it."
+    ],
+    [
+     "SPECIES_MYRRH",
+     "Myrrh: The dragon sleeps. I am a child again, and I am happy."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Thank you, all of you. The war is over. Let us go home."
+    ]
+   ]
   }
  ],
  "parties": {}
