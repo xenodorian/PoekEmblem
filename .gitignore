@@ -3,3 +3,4 @@
 *.gb
 *.gbc
 *.sav
+tools/__pycache__/

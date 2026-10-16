@@ -1,0 +1,14 @@
+run 400
+shot emu/c0.png
+keys 20 20
+run 4
+keys 40 36
+run 10
+keys 20 36
+run 10
+keys 40 130
+run 20
+shot emu/c1.png
+keys 40 50
+run 20
+shot emu/c2.png
