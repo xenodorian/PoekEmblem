@@ -33,9 +33,12 @@ class Drv:
     def close(s):
         s.p.stdin.write('quit\n'); s.p.stdin.flush(); s.p.wait()
 
+_rot = [0]
+MOVES = [0xe8, 0xd3, 0xd2]   # Metal Claw, Steel Wing, Fury Cutter
 def buff(d, n=1):
     d.cmd('w32 02023c08 3c3c3c3c'); d.cmd('w32 02023c30 0'); d.cmd('w16 02023c0c 2bc')
-    d.cmd('w32 02023bf0 00d300e8'); d.cmd('w32 02023bf4 000000d2')  # Metal Claw, Steel Wing, Fury Cutter (hit Ghost types)
+    _rot[0] += 1; m = MOVES[_rot[0] // 3 % 3:] + MOVES[:_rot[0] // 3 % 3]   # rotate slot 1 so a Disabled move cannot stall the run
+    d.cmd('w32 02023bf0 %04x%04x' % (m[1], m[0])); d.cmd('w32 02023bf4 0000%04x' % m[2])  # Metal Claw, Steel Wing, Fury Cutter (hit Ghost types)
     if FAST:
         for b in (1, 3):
             a = 0x02023be4 + 0x58*b + 0x28
@@ -54,6 +57,7 @@ def run(rom, out, ch, maxframes=40000):
     d.cmd('w16p %x %x 1' % (SB1, V_PEND))
     res = 'HANG'; f = 0; last = None; stall = 0; shots = 0
     while f < maxframes:
+        if os.environ.get('CYCLE') == '1' and (f // 16) % 9 == 8: d.cmd('keys 80 4'); d.cmd('run 8')   # cycle the move cursor so a Disabled move does not stall the run
         d.cmd('keys 1 4'); d.cmd('run 12'); f += 16
         buff(d)  # keep HP topped
         if f % 800 == 0:

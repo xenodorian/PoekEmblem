@@ -13,3 +13,4 @@ LOG step 10 Source tree v2 and IPS: commit cffc470, decomp_full_v2.tar.gz, patch
 2026-10-16 Step 11 (agent 3) Eirika bike/surf/fish/item/VS Seeker overworld sprites. ROM builds/Pokemon FireRed Eirika Leg5-Vehicles.gba, tools/leg5_eirika_vehicles.py. Compile check only. Blockers: none.
 2026-10-16 Step 12 (agent 3) Story map NPCs, treasure, signs, collision. ROM builds/Pokemon FireRed Eirika Leg5-StoryMapObjects.gba, tools/leg5_story_map_objects.py. Compile check only. Blockers: none (no new furniture tiles).
 2026-10-16 Step 13 (agent 3) Chapter rewards (heal + money) and fixed story map arrival coordinates. ROM builds/Pokemon FireRed Eirika Leg5-Rewards.gba. Compile check only. Blockers: none.
+2026-10-16 Step 14 (agent 3) Clean story map floors; step 3 tests: all 23 chapters pass headless (test party moves rotate); six maps entered and checked in emulator. ROM builds/Pokemon FireRed Eirika Leg5-CleanFloors.gba, decomp_full_v4.tar.gz. Blockers: none.

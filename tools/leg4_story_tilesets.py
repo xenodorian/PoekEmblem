@@ -9,6 +9,7 @@ import numpy as np
 from PIL import Image
 fe8, root = Path(sys.argv[1]), Path(sys.argv[2])
 EXTRA = 6; FLOOR_ROW = 8
+import os; FLOOR_MODE = os.environ.get('FLOOR_MODE', 'repeat')
 ROOMS = [  # map dir, tileset dir, C name, FE8 backdrop
  ('Story_RenaisCastle', 'story_renais_castle', 'StoryRenaisCastle', 'bg_Renais_Chamber', 'LAYOUT_STORY_RENAIS_CASTLE'),
  ('Story_FreliaCastle', 'story_frelia_castle', 'StoryFreliaCastle', 'bg_Castle_Interior', 'LAYOUT_STORY_FRELIA_CASTLE'),
@@ -32,7 +33,12 @@ def build(name, mapdir, tsdir, cname, bg, layout):
     assert img.size == (240, 160)
     # keep the top 112 px, stretch the bottom 48 px (floor) to 144 px so the floor gets deeper
     ext = Image.new('RGB', (240, 160 + 16*EXTRA)); ext.paste(img.crop((0, 0, 240, 112)), (0, 0))
-    ext.paste(img.crop((0, 112, 240, 160)).resize((240, 48 + 16*EXTRA), Image.Resampling.NEAREST), (0, 112))
+    if FLOOR_MODE == 'repeat':   # keep the original floor, then repeat its 16 px row 8 so the floor stays clean and tile friendly
+        ext.paste(img.crop((0, 112, 240, 144)), (0, 112))
+        band = img.crop((0, 128, 240, 144))
+        for k in range(7): ext.paste(band, (0, 144 + 16*k))
+    else:
+        ext.paste(img.crop((0, 112, 240, 160)).resize((240, 48 + 16*EXTRA), Image.Resampling.NEAREST), (0, 112))
     a = np.asarray(ext).astype(int)
     H, W = a.shape[0] // 8, 30
     tiles = a.reshape(H, 8, W, 8, 3).transpose(0, 2, 1, 3, 4).reshape(H*W, 64, 3)
