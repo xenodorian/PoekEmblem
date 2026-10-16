@@ -18,8 +18,8 @@ MAPS = {
    signs=[(7, 7, 'The royal altar of Renais.\\pKing Fado once knelt here.'), (3, 7, 'A banner of Renais.\\nIt shows the white lion.')]),
  'Story_FreliaCastle': dict(
    block=EDGE(1, 13) + [(2, y) for y in range(8, 12)] + [(12, y) for y in range(8, 12)],
-   npcs=[('MAN', 5, 9, 'FACE_DOWN', 'Knight', 'FRELIAN KNIGHT: Welcome to\\nCastle Frelia. Princess Ismaire\\nwill see you shortly.'),
-         ('MAN', 9, 9, 'FACE_DOWN', 'Knight2', 'FRELIAN KNIGHT: Our knights\\nstand with Renais.'),
+   npcs=[('POLICEMAN', 5, 9, 'FACE_DOWN', 'Knight', 'FRELIAN KNIGHT: Welcome to\\nCastle Frelia. Princess Ismaire\\nwill see you shortly.'),
+         ('POLICEMAN', 9, 9, 'FACE_DOWN', 'Knight2', 'FRELIAN KNIGHT: Our knights\\nstand with Renais.'),
          ('LASS', 4, 13, 'WANDER_AROUND', 'Page', 'PAGE: The garden is lovely\\nthis time of year.'),
          ('GENTLEMAN', 10, 13, 'WANDER_AROUND', 'Noble', 'NOBLE: Prince Innes is a fine\\narcher, they say.')],
    items=[('ITEM_FULL_RESTORE', 3, 14, 'FLAG_HIDDEN_ITEM_UNUSED_0x10', 'Chest')],

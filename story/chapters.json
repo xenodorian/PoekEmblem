@@ -16,6 +16,28 @@
    ],
    "after": [
     "O'Neill falls back. The road to the border is open."
+   ],
+   "label": "0",
+   "skirmish_theme": "brute",
+   "scene_before": [
+    [
+     null,
+     "Seth: Princess Eirika, the king has fallen. Grado is inside the walls."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Father... Then we fight our way out."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Seth: Frelia will shelter us. Ephraim is the one hope Renais has left."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: I will not let Renais fall for nothing."
+    ]
    ]
   },
   {
@@ -36,7 +58,29 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Ephraim is in Frelia. We cannot stop now."
-   }
+   },
+   "label": "1",
+   "skirmish_theme": "knight",
+   "scene_before": [
+    [
+     null,
+     "Seth: Grado soldiers hold the road. Stay behind me, Princess."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Frelia is just beyond the border. Keep moving."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Seth: The Mulan border is behind us. Lyon is with Grado, Princess."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Lyon... I cannot believe he would let this happen."
+    ]
+   ]
   },
   {
    "id": 2,
@@ -57,7 +101,29 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "Stay close. The border fort is ahead."
-   }
+   },
+   "label": "2",
+   "skirmish_theme": "brute",
+   "scene_before": [
+    [
+     null,
+     "Ross: Eirika! Garcia and I will cover the pass."
+    ],
+    [
+     null,
+     "Garcia: Hah! A few bandits. Leave them to me."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Ross: Ow. Did we win? Dad would be proud."
+    ],
+    [
+     null,
+     "Ephraim: Eirika! I came as fast as I could. Are you hurt?"
+    ]
+   ]
   },
   {
    "id": 3,
@@ -79,7 +145,29 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "These bandits are not Grado's. They only want the pass."
-   }
+   },
+   "label": "3",
+   "skirmish_theme": "brute",
+   "scene_before": [
+    [
+     null,
+     "Seth: Borgo Ridge ahead. Bandits, and worse, I fear."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Stay close, Seth. We cannot be delayed."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Colm: Easy, Princess. I only steal from people who deserve it."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then you may travel with us, Colm. Please behave."
+    ]
+   ]
   },
   {
    "id": 4,
@@ -101,10 +189,76 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "The dead should not walk. Something is waking them."
-   }
+   },
+   "label": "4",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "Seth: The dead walk here. I have never seen the like."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Something is calling them. Hold steady."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Seth: The graveyard is quiet again. Whatever stirred them is gone."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Magvel is not what it was. We should hurry."
+    ]
+   ]
   },
   {
    "id": 5,
+   "label": "5x",
+   "title": "Unbroken Heart",
+   "map": "MAP_STORY_RENAIS_CASTLE",
+   "before": [
+    "Eirika dreams of Renais. A shadow of the siege plays out once more."
+   ],
+   "battles": [
+    {
+     "a": "TRAINER_COOLTRAINER_GEORGE",
+     "boss": true,
+     "theme": "knight"
+    }
+   ],
+   "skirmish_theme": "knight",
+   "scene_before": [
+    [
+     null,
+     "Zonta: Renais will fall again, Princess. Again and again."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: No. This time I stand and fight."
+    ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "I will not run from my own home again."
+   },
+   "after": [
+    "Zonta fades. The dream releases Eirika."
+   ],
+   "scene_after": [
+    [
+     null,
+     "Seth: Princess? You were speaking in your sleep."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Only a memory, Seth. I am ready now."
+    ]
+   ]
+  },
+  {
+   "id": 6,
    "title": "The Empire's Reach",
    "map": "MAP_PEWTER_CITY",
    "before": [
@@ -129,10 +283,32 @@
    },
    "recruit_lines": {
     "Joshua": "Joshua: Heh. A princess on the run? I will lend my sword. Fair pay, fair play."
-   }
+   },
+   "label": "5",
+   "skirmish_theme": "brute",
+   "scene_before": [
+    [
+     null,
+     "Seth: Grado holds the city. Be ready for anything."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Joshua. We meet again at last."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Joshua: Tch. Grado pays badly. You pay better, Princess."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then ride with us, Joshua. We are going to Renvall."
+    ]
+   ]
   },
   {
-   "id": 6,
+   "id": 7,
    "title": "Victims of War",
    "map": "MAP_ROUTE2",
    "before": [
@@ -155,10 +331,32 @@
    "ally_talk": {
     "speaker": "SPECIES_JOSHUA",
     "text": "Joshua: Villagers first, coin later. Even I cannot take pay from this lot."
-   }
+   },
+   "label": "6",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "Novala: Burn the villages. Leave nothing for Renais."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Whole villages stand empty. Who does this?"
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Seth: The last of Novala's mages have fled. The survivors are safe."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: I will remember every name on this road."
+    ]
+   ]
   },
   {
-   "id": 7,
+   "id": 8,
    "title": "Waterside Renvall",
    "map": "MAP_VERMILION_CITY",
    "before": [
@@ -181,10 +379,32 @@
    "ally_talk": {
     "speaker": "SPECIES_JOSHUA",
     "text": "Joshua: Harbor towns are easy to love. Shame about the guards."
-   }
+   },
+   "label": "7",
+   "skirmish_theme": "water",
+   "scene_before": [
+    [
+     null,
+     "Murray: Renvall is ours. Take the docks and leave nothing."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: The harbor is the key to the coast. Take it back."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Seth: The docks are clear. A ship can take us to Frelia."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then we sail. Ephraim must be told of this."
+    ]
+   ]
   },
   {
-   "id": 8,
+   "id": 9,
    "title": "It's a Trap!",
    "map": "MAP_STORY_FORT_RIGWALD",
    "before": [
@@ -203,10 +423,36 @@
    "mid": {
     "speaker": "SPECIES_EIRIKA",
     "text": "This is a trap. Watch every step."
+   },
+   "label": "8",
+   "skirmish_theme": "archer",
+   "scene_before": [
+    [
+     null,
+     "Tirado: A trap, Princess. The road ends here."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Seth, they knew we would come. Hold the line."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Ephraim: Eirika, we must split here. I will march on Grado itself."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then I will go to Frelia and find Prince Innes. Be careful, brother."
+    ]
+   ],
+   "ally_talk": {
+    "speaker": "SPECIES_JOSHUA",
+    "text": "Joshua: A trap, hm? I have been in worse card games. Stay sharp."
    }
   },
   {
-   "id": 9,
+   "id": 10,
    "title": "Distant Blade",
    "map": "MAP_CERULEAN_CITY",
    "before": [
@@ -231,10 +477,36 @@
    },
    "recruit_lines": {
     "Tana": "Tana: Princess Eirika! I am Tana of Frelia. Innes is waiting. Let me guide you."
+   },
+   "label": "9",
+   "skirmish_theme": "brute",
+   "scene_before": [
+    [
+     null,
+     "Tana: Princess Eirika! Frelia's walls are in sight."
+    ],
+    [
+     null,
+     "Amelia: Um, hello! I am only a recruit, but I will help!"
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Tana: Prince Innes holds Port Kiris against the revolt."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then we go to him. Thank you, Tana."
+    ]
+   ],
+   "ally_talk": {
+    "speaker": "SPECIES_JOSHUA",
+    "text": "Joshua: Frelia pays in real gold. I like this castle already."
    }
   },
   {
-   "id": 10,
+   "id": 11,
    "title": "Revolt at Carcino",
    "map": "MAP_VERMILION_CITY",
    "before": [
@@ -261,10 +533,36 @@
    "recruit_lines": {
     "Innes": "Innes: Eirika. Your fight is mine now. Frelia's bow will cover you.",
     "Duessel": "Duessel: I serve no throne now, only honor. My axe is yours, Princess."
+   },
+   "label": "10",
+   "skirmish_theme": "water",
+   "scene_before": [
+    [
+     null,
+     "Gerik: Mercenaries for hire. Pay well and we cover your flank."
+    ],
+    [
+     null,
+     "Tethys: Hmm, a princess. How exciting."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Innes: Eirika, the revolt is quelled. Your timing was good."
+    ],
+    [
+     null,
+     "Ephraim (letter): Grado's border forts have fallen to me. I march on the capital."
+    ]
+   ],
+   "ally_talk": {
+    "speaker": "SPECIES_TANA",
+    "text": "Tana: Port Kiris is in an uproar. Innes will want a report, Princess."
    }
   },
   {
-   "id": 11,
+   "id": 12,
    "title": "Creeping Darkness",
    "map": "MAP_LAVENDER_TOWN",
    "before": [
@@ -291,10 +589,36 @@
    "recruit_lines": {
     "LArachel": "L'Arachel: Fear not! The great L'Arachel has arrived to rescue you!",
     "Dozla": "Dozla: Dozla is strong. Dozla will fight for you. Let us go!"
+   },
+   "label": "11",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "L'Arachel: Fear not, for I, L'Arachel, have come!"
+    ],
+    [
+     null,
+     "Dozla: Dozla follows. Princess L'Arachel talks too much."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "L'Arachel: The dead will not rise again while I have my staff!"
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: We should find out what is waking them."
+    ]
+   ],
+   "ally_talk": {
+    "speaker": "SPECIES_INNES",
+    "text": "Innes: Dead men in the streets. Grado has stooped very low."
    }
   },
   {
-   "id": 12,
+   "id": 13,
    "title": "Village of Silence",
    "map": "MAP_ROUTE9",
    "before": [
@@ -319,10 +643,36 @@
    },
    "recruit_lines": {
     "Myrrh": "Myrrh: Um... I am Myrrh. I can fight. May I stay with you? I am hungry, too."
+   },
+   "label": "12",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "Maelduin: Quiet, quiet. The village sleeps. Do not wake it."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Something is wrong here. Stay together."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Fado: ...Peace, at last."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Poor man. The village can rest now."
+    ]
+   ],
+   "ally_talk": {
+    "speaker": "SPECIES_DOZLA",
+    "text": "Dozla: Quiet village. Dozla does not like quiet. Dozla likes loud."
    }
   },
   {
-   "id": 13,
+   "id": 14,
    "title": "Hamill Canyon",
    "map": "MAP_ROCK_TUNNEL_1F",
    "before": [
@@ -347,10 +697,36 @@
    },
    "recruit_lines": {
     "Cormag": "Cormag: Grado betrayed my honor. I will ride with you, Princess, and prove it."
+   },
+   "label": "13",
+   "skirmish_theme": "wyvern",
+   "scene_before": [
+    [
+     null,
+     "Aias: Hamill Canyon is Grado's. Turn back."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: We cannot. The only road to Jehanna runs through it."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Amelia: I am a real knight now, Princess! Well, nearly."
+    ],
+    [
+     null,
+     "Ephraim (letter): Grado's General Duessel was not at the front. Be watchful."
+    ]
+   ],
+   "ally_talk": {
+    "speaker": "SPECIES_DUESSEL",
+    "text": "Duessel: Wyverns, Princess. I will hold the canyon mouth. Go on."
    }
   },
   {
-   "id": 14,
+   "id": 15,
    "title": "Queen of White Dunes",
    "map": "MAP_CELADON_CITY",
    "before": [
@@ -373,10 +749,32 @@
    "ally_talk": {
     "speaker": "SPECIES_CORMAG",
     "text": "Cormag: Carlyle fought well. I knew him once. Let us finish this quickly."
-   }
+   },
+   "label": "14",
+   "skirmish_theme": "knight",
+   "scene_before": [
+    [
+     null,
+     "Caellach: Jehanna's queen has sold the desert to Grado."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then we take it back, for her people."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Rennac: Hmm. A scavenger, perhaps. Fine, I will fight for coin."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Welcome, Rennac. The desert is open."
+    ]
+   ]
   },
   {
-   "id": 15,
+   "id": 16,
    "title": "Scorched Sand",
    "map": "MAP_STORY_JEHANNA_HALL",
    "before": [
@@ -399,10 +797,32 @@
    "ally_talk": {
     "speaker": "SPECIES_DOZLA",
     "text": "Dozla: Hot sand. Heavy armor. Dozla is fine, but Dozla wants water."
-   }
+   },
+   "label": "15",
+   "skirmish_theme": "wyvern",
+   "scene_before": [
+    [
+     null,
+     "Valter: Heh heh. A lost princess in my desert."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Valter. You will answer for Renais."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Valter: Curse you... Grado will..."
+    ],
+    [
+     null,
+     "Ephraim (letter): The Sacred Stone is in the Black Temple, Eirika. We must reach it first."
+    ]
+   ]
   },
   {
-   "id": 16,
+   "id": 17,
    "title": "Ruled by Madness",
    "map": "MAP_FUCHSIA_CITY",
    "before": [
@@ -425,10 +845,32 @@
    "ally_talk": {
     "speaker": "SPECIES_LARACHEL",
     "text": "L'Arachel: Orson has lost his mind! Do not worry, my staff will mend you."
-   }
+   },
+   "label": "16",
+   "skirmish_theme": "rider",
+   "scene_before": [
+    [
+     null,
+     "Orson: Frelia, Renais... all will burn. Ha ha ha!"
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: This is not the Orson I knew."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Orson: ...What have I done?"
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: It was not you. Rest now."
+    ]
+   ]
   },
   {
-   "id": 17,
+   "id": 18,
    "title": "River of Regrets",
    "map": "MAP_PALLET_TOWN",
    "before": [
@@ -436,7 +878,9 @@
    ],
    "battles": [
     {
-     "a": "TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE"
+     "a": "TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE",
+     "b": "TRAINER_CHANNELER_PATRICIA",
+     "partner": "TRAINER_LEADER_MISTY"
     }
    ],
    "after": [
@@ -449,10 +893,32 @@
    "ally_talk": {
     "speaker": "SPECIES_MYRRH",
     "text": "Myrrh: The river is sad. I can feel it. Lyon, please stop."
-   }
+   },
+   "label": "17",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "Syrene: Princess Eirika. Renais has suffered enough."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Lyon! Why have you done this?"
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Syrene: Lyon is possessed by the Demon King. Please, save him."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then we go to the temple and end this."
+    ]
+   ]
   },
   {
-   "id": 18,
+   "id": 19,
    "title": "Two Faces of Evil",
    "map": "MAP_ROUTE19",
    "before": [
@@ -475,10 +941,32 @@
    "ally_talk": {
     "speaker": "SPECIES_INNES",
     "text": "Innes: That monster is no Grado soldier. Keep your bow ready, Tana."
-   }
+   },
+   "label": "18",
+   "skirmish_theme": "water",
+   "scene_before": [
+    [
+     null,
+     "Innes: This river is cursed. Tana, scout ahead."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Two faces of evil. Stand together."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Ephraim: Eirika! You made it. I am glad to see you safe."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: And you, brother. Together we finish this war."
+    ]
+   ]
   },
   {
-   "id": 19,
+   "id": 20,
    "title": "Last Hope",
    "map": "MAP_CERULEAN_CAVE_1F",
    "before": [
@@ -501,10 +989,32 @@
    "ally_talk": {
     "speaker": "SPECIES_TANA",
     "text": "Tana: The summit is cold, but I flew higher than this once. We are nearly there."
-   }
+   },
+   "label": "19",
+   "skirmish_theme": "wyvern",
+   "scene_before": [
+    [
+     null,
+     "Ephraim: The summit is ahead. Riev's priests guard it."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Neleras is the way to the Sacred Stone. We climb."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Ephraim: The path to the temple is open. Stay together."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Whatever waits inside, we face it together."
+    ]
+   ]
   },
   {
-   "id": 20,
+   "id": 21,
    "title": "Darkling Woods",
    "map": "MAP_VIRIDIAN_FOREST",
    "before": [
@@ -527,10 +1037,32 @@
    "ally_talk": {
     "speaker": "SPECIES_DUESSEL",
     "text": "Duessel: Dark woods, darker purpose. Stay close, Princess. I will take the front."
-   }
+   },
+   "label": "20",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "Riev: The Sacred Stone belongs to Grado. You are too late."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Lyon is not himself. He is being used."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Ephraim: Riev and Morva fall. The way is open."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Then let us save Lyon before it is too late."
+    ]
+   ]
   },
   {
-   "id": 21,
+   "id": 22,
    "title": "Sacred Stone",
    "map": "MAP_STORY_GRADO_THRONE_ROOM",
    "before": [
@@ -538,7 +1070,9 @@
    ],
    "battles": [
     {
-     "a": "TRAINER_CHAMPION_FIRST_SQUIRTLE"
+     "a": "TRAINER_CHAMPION_FIRST_SQUIRTLE",
+     "b": "TRAINER_CHANNELER_CARLY",
+     "partner": "TRAINER_LEADER_SABRINA"
     }
    ],
    "after": [
@@ -551,10 +1085,32 @@
    "ally_talk": {
     "speaker": "SPECIES_MYRRH",
     "text": "Myrrh: Lyon is not himself. Eirika, please save him if you can."
-   }
+   },
+   "label": "21",
+   "skirmish_theme": "knight",
+   "scene_before": [
+    [
+     null,
+     "Lyon: Eirika... Run. Please, run."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Lyon! Fight it. I am here."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Lyon: Thank you, Eirika. ...I am sorry for everything."
+    ],
+    [
+     null,
+     "Ephraim: The Demon King wakes. Eirika, he is here!"
+    ]
+   ]
   },
   {
-   "id": 22,
+   "id": 23,
    "title": "Sacred Stone (Final)",
    "map": "MAP_STORY_BLACK_TEMPLE",
    "before": [
@@ -562,7 +1118,10 @@
    ],
    "battles": [
     {
-     "a": "TRAINER_PSYCHIC_CAMERON"
+     "a": "TRAINER_PSYCHIC_CAMERON",
+     "b": "TRAINER_CHANNELER_HOPE",
+     "partner": "TRAINER_LEADER_LT_SURGE",
+     "boss": true
     }
    ],
    "after": [
@@ -580,6 +1139,10 @@
     [
      "SPECIES_EIRIKA",
      "Eirika: The Sacred Stone is sealed and Magvel sleeps again. Renais will be rebuilt."
+    ],
+    [
+     null,
+     "Ephraim: Renais is free, Eirika. I will help you rebuild it, stone by stone."
     ],
     [
      "SPECIES_INNES",
@@ -617,8 +1180,31 @@
      "SPECIES_EIRIKA",
      "Eirika: Thank you, all of you. The war is over. Let us go home."
     ]
+   ],
+   "label": "21x",
+   "skirmish_theme": "dark",
+   "scene_before": [
+    [
+     null,
+     "Fomortiis: Foolish children. I am the Demon King."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Ephraim, we finish this together."
+    ]
+   ],
+   "scene_after": [
+    [
+     null,
+     "Ephraim: It is done. The Sacred Stone is sealed."
+    ],
+    [
+     "SPECIES_EIRIKA",
+     "Eirika: Magvel is at peace. Renais will rise again."
+    ]
    ]
   }
  ],
- "parties": {}
+ "parties": {},
+ "v12": true
 }

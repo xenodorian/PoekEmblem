@@ -262,3 +262,8 @@ Open, in this order (historical list, see the Leg10 section at the end for the l
 ## Leg11 (wall fix, build only, compile checked)
 - Owner order: one wall style per room, wall width must equal floor width, audit all story maps. Done in tools/indoor_tiling.py validate() and tools/leg9_indoor_maps.py. Details in docs/INDOOR_TILING.md ("Wall rules").
 - ROM `builds/Pokemon FireRed Eirika Leg11-WallFix.gba`, IPS `patches/FireRed_Eirika_Leg11_WallFix.ips`, source tree `decomp_full_v11.tar.gz`. Offline render: `docs/img/indoor_walls_fixed.png`. Not run in an emulator.
+
+## Update 2026-10-16 (Leg12, story depth, build only)
+- Audit in `docs/STORY_GAPS.md`. Built: skirmish battle first in every chapter, chapter 5x, per chapter partner and enemy clones (fixes last-use level scaling), doubles for chapters 17, 21, 21x, 4 extra scene lines per chapter, Ephraim cameos, ally lines for chapters 8 to 13, Frelia guard sprite. Generator `tools/leg3_story.py` now resolves battles and clones (chapter labels via `label`); content was added by `tools/leg12_expand_story.py`, `leg12_expand_story2.py`, `leg12_expand_story3.py` (one time, already applied to story/chapters.json). Audit tool `tools/story_audit.py`.
+- Compile check only, nothing run. ROM `builds/Pokemon FireRed Eirika Leg12-StoryDepth.gba`, IPS `patches/FireRed_Eirika_Leg12_StoryDepth.ips` (round trip verified), source `decomp_full_v12.tar.gz` (carries no mb_*.gba; copy from pret before make). Overflow scan unchanged (173, same baseline).
+- Not built: optional dungeons (Tower of Valni, Lagdou Ruins, Melkaen Coast). Open (emulator or owner): see the Leg10 live open list.

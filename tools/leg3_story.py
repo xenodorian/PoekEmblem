@@ -9,7 +9,7 @@ opp = (root/'include/constants/opponents.h').read_text()
 def need(t):
     if not re.search(r'#define %s\s' % t, opp): raise SystemExit('unknown trainer ' + t)
 
-LV = [5,6,8,10,12,13,14,16,18,20,22,24,26,28,30,32,34,38,42,46,50,55,60]
+LV = [5,6,8,10,12,12,13,14,16,18,20,22,24,26,28,30,32,34,38,42,46,50,55,60]
 FAM = {
  'brute':  [[('MANKEY',1),('PRIMEAPE',28)],[('MACHOP',1),('MACHOKE',28),('MACHAMP',45)],[('RATTATA',1),('RATICATE',20)],[('PINSIR',20)]],
  'knight': [[('GEODUDE',1),('GRAVELER',25),('GOLEM',40)],[('ONIX',1)],[('RHYHORN',1),('RHYDON',42)],[('SANDSHREW',1),('SANDSLASH',22)]],
@@ -45,6 +45,49 @@ def pick(theme, lvl, k):
         if lvl >= mn: best = sp
     return best
 
+# ---- Leg12: resolve battles (skirmish battle first, fresh trainers, one party per trainer per chapter via clones)
+trall = (root/'src/data/trainers.h').read_text()
+allids = re.findall(r'\[(TRAINER_\w+)\] =', trall)
+reserved = set()
+for c in d['chapters']:
+    for b in c['battles']:
+        for k in ('a', 'b', 'partner'):
+            if b.get(k): reserved.add(b[k])
+POOLP = {'brute': ['BLACK_BELT_', 'BIKER_', 'CUE_BALL_'], 'knight': ['HIKER_', 'ENGINEER_', 'BURGLAR_', 'TEAM_ROCKET_GRUNT'],
+         'rider': ['JUGGLER_', 'GAMER_', 'TAMER_'], 'archer': ['BIRD_KEEPER_'], 'mage': ['PSYCHIC_', 'SCIENTIST_', 'POKEMANIAC_'],
+         'dark': ['CHANNELER_', 'POKEMANIAC_', 'SUPER_NERD_'], 'water': ['SAILOR_', 'FISHERMAN_', 'SWIMMER_MALE_'],
+         'wyvern': ['TAMER_', 'DRAGON_TAMER', 'COOLTRAINER_'], 'plant': ['CAMPER_', 'PICNICKER_', 'LASS_']}
+FRESH_THEME = {}
+def fresh(theme):
+    for pre in POOLP[theme]:
+        for t in allids:
+            if t.startswith('TRAINER_' + pre) and t not in reserved:
+                reserved.add(t); FRESH_THEME[t] = theme; return t
+    raise SystemExit('fresh pool empty ' + theme)
+RSPOOL = [t for t in allids if t.startswith('TRAINER_RS_') and t not in reserved]
+CLONES = {}   # new id -> original id
+seen_in = {}  # trainer -> chapter that first uses it
+for c in d['chapters']:
+    if not c.get('_resolved'):
+        main = c['battles']
+        if c.get('skirmish_theme'):
+            th = c['skirmish_theme']; m0 = main[-1]
+            sk = {'a': fresh(th)}
+            if m0.get('b') and m0.get('partner'): sk['b'] = fresh(th); sk['partner'] = m0['partner']
+            c['battles'] = [sk] + main
+        for b in c['battles']:
+            for k in ('a', 'b', 'partner'):
+                t = b.get(k)
+                if not t: continue
+                if t in seen_in and seen_in[t] != c['id']:
+                    nt = c.setdefault('_clone', {}).get(t)
+                    if not nt:
+                        nt = RSPOOL.pop(0); c['_clone'][t] = nt; CLONES[nt] = CLONES.get(t, t)
+                    b[k] = nt; t = nt
+                seen_in.setdefault(t, c['id'])
+        c['_resolved'] = True
+orig_THEME_get = None
+
 plan = {}   # trainer -> (chapter, count, boss)
 for c in d['chapters']:
     L = LV[c['id']]
@@ -53,13 +96,25 @@ for c in d['chapters']:
             t = b.get(key)
             if not t: continue
             need(t)
+            if b.get('theme') and key == 'a': THEME[t] = b['theme']
+            if t in CLONES: THEME[t] = THEME[CLONES[t]]
+            if t in FRESH_THEME: THEME[t] = FRESH_THEME[t]
+            if t not in THEME and c.get('skirmish_theme'): THEME[t] = c['skirmish_theme']
             if t not in THEME: raise SystemExit('no theme for ' + t)
-            boss = key == 'a' and t in BOSSES
+            boss = key == 'a' and (t in BOSSES or b.get('boss'))
             plan[(t)] = (L + (2 if boss else 0), cnt if boss or key == 'partner' else 2, key)
 
 # ---- write parties (always no-item default-move type)
 pp = root/'src/data/trainer_parties.h'; tr = root/'src/data/trainers.h'
 parties = pp.read_text(); trainers = tr.read_text()
+for nt, ot in CLONES.items():
+    ob = re.search(r'    \[%s\] = \{.*?\n    \},\n' % ot, trainers, re.S).group(0)
+    nb = ob.replace('[%s]' % ot, '[%s]' % nt)
+    nb = re.sub(r'\.party = (\w+)\((\w+)\),', lambda mm: '.party = %s(sParty_StoryClone_%s),' % (mm.group(1), nt[8:]), nb)
+    trainers = re.sub(r'    \[%s\] = \{.*?\n    \},\n' % nt, lambda mm: nb, trainers, count=1, flags=re.S)
+    sym = 'sParty_StoryClone_' + nt[8:]
+    if sym not in parties:
+        parties += '\nstatic const struct TrainerMonNoItemDefaultMoves %s[] = {\n    { .iv = 31, .lvl = 5, .species = SPECIES_RATTATA },\n};\n' % sym
 for t, (lvl, cnt, key) in plan.items():
     m = re.search(r'\[%s\] = \{.*?\.party = (\w+)\((\w+)\),' % t, trainers, re.S)
     macro, sym = m.group(1), m.group(2)
@@ -100,6 +155,18 @@ def fmt(paras):
         out.append(s)
     return '\\p'.join(out) + '$'
 
+def say(n, tag, lines):
+    out = []
+    for k, (sp, t) in enumerate(lines):
+        if sp: out.append('\tshowmonpic %s, 1, 1' % sp)
+        out.append('\tmsgbox Story_Ch%d_%s%d, MSGBOX_DEFAULT' % (n, tag, k))
+        if sp: out.append('\thidemonpic')
+    return out
+def say_text(n, tag, lines):
+    out = []
+    for k, (sp, t) in enumerate(lines):
+        out += ['Story_Ch%d_%s%d:' % (n, tag, k), '\t.string "%s"' % fmt([t]), '']
+    return out
 hx, hy = mapinfo('MAP_PALLET_TOWN'); hy += 1
 inc = ['@ Generated by tools/leg3_story.py from story/chapters.json. Do not edit by hand.', '']
 guide = ['EventScript_StoryGuide::', '\tlock', '\tfaceplayer']
@@ -118,7 +185,7 @@ for c in d['chapters']:
             '\tlockall',
             '\tshowmonpic %s, 1, 1' % c.get('speaker_before', 'SPECIES_EIRIKA'),
             '\tmsgbox Story_Ch%d_Before, MSGBOX_DEFAULT' % n,
-            '\thidemonpic']
+            '\thidemonpic'] + say(n, 'SB', c.get('scene_before', []))
     inc += ['\tapplymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn', '\twaitmovement 0']
     for i, b in enumerate(c['battles']):
         if i == 1 and c.get('mid'):
@@ -138,21 +205,21 @@ for c in d['chapters']:
     if len(c['battles']) < 2 and c.get('mid'):
         inc += ['\tshowmonpic %s, 1, 1' % c['mid']['speaker'], '\tmsgbox Story_Ch%d_Mid, MSGBOX_DEFAULT' % n, '\thidemonpic']
     sa = c.get('speaker_after') or ('SPECIES_' + c['recruits'][0].upper() if c.get('recruits') else 'SPECIES_EIRIKA')
-    inc += ['\tshowmonpic %s, 1, 1' % sa, '\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n, '\thidemonpic',
+    inc += ['\tshowmonpic %s, 1, 1' % sa, '\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n, '\thidemonpic'] + say(n, 'SA', c.get('scene_after', [])) + [
             '\tspecial HealPlayerParty', '\taddmoney %d' % (500 + 250*n), '\tmsgbox Story_Ch%d_Reward, MSGBOX_DEFAULT' % n,
-            ] + sum([['\tshowmonpic %s, 1, 1' % sp, '\tmsgbox Story_Ch%d_Epi%d, MSGBOX_DEFAULT' % (n, k), '\thidemonpic'] for k, (sp, t) in enumerate(c.get('epilogue', []))], []) + (
+            ] + say(n, 'Epi', c.get('epilogue', [])) + (
             ['\tfadescreen FADE_TO_BLACK', '\tspecial ShowStoryTheEnd', '\twaitstate'] if c.get('epilogue') else []) + [
             '\taddvar VAR_STORY_CHAPTER, 1',
             '\tfadescreen FADE_TO_BLACK',
             '\twarp MAP_PALLET_TOWN, 255, %d, %d' % (hx, hy),
             '\twaitstate', '\tend', '']
-    inc += ['Story_Ch%d_Title:' % n, '\t.string "CHAPTER %d\\n%s$"' % (n, c['title'].upper().replace('"', '')), '',
+    inc += ['Story_Ch%d_Title:' % n, '\t.string "CHAPTER %s\\n%s$"' % (c.get('label', n), c['title'].upper().replace('"', '')), '',
             'Story_Ch%d_Before:' % n, '\t.string "%s"' % fmt(c['before']), '',
             'Story_Ch%d_Mid:' % n, '\t.string "%s"' % fmt([c['mid']['text'] if c.get('mid') else '...']), '',
             ] + sum([['Story_Ch%d_Recruit%s:' % (n, r), '\t.string "%s"' % fmt([t]), ''] for r, t in c.get('recruit_lines', {}).items()], []) + (
             ['Story_Ch%d_AllyTalk:' % n, '\t.string "%s"' % fmt([c['ally_talk']['text']]), ''] if c.get('ally_talk') else []) + [
             'Story_Ch%d_After:' % n, '\t.string "%s"' % fmt(c['after']), '',
-            ] + sum([['Story_Ch%d_Epi%d:' % (n, k), '\t.string "%s"' % fmt([t]), ''] for k, (sp, t) in enumerate(c.get('epilogue', []))], []) + [
+            ] + say_text(n, 'Epi', c.get('epilogue', [])) + say_text(n, 'SB', c.get('scene_before', [])) + say_text(n, 'SA', c.get('scene_after', [])) + [
             'Story_Ch%d_Defeat:' % n, '\t.string "..."', '',
             'Story_Ch%d_Reward:' % n, '\t.string "Your party was fully healed.\\pThe court rewards you with\\n¥%d.$"' % (500 + 250*n), '']
 guide += ['\tmsgbox Story_NoMoreChapters, MSGBOX_DEFAULT', '\trelease', '\tend', '',
