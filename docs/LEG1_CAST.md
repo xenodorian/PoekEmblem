@@ -5,9 +5,9 @@ Every FE8 character has one FireRed identity and uses FE8 portrait art. Generate
 - Eirika is the player (the female protagonist, now also the party Pokemon EIRIKA).
 - The 8 Leg 2 allies (Cormag, Dozla, Duessel, Innes, Joshua, L'Arachel, Myrrh, Tana) are Pokemon, not trainers, so they have no trainer slot here.
 - Unique FireRed characters (leaders, Elite Four, Giovanni, rival, Red, Oak) were matched on role and gender. The FE8 class of each choice comes from `src/data_characters.c` (default class).
-- Every other character took over one ordinary trainer from a map script (not in the VS Seeker rematch table, not a double battle) whose current picture is a class that suits them (knights to Cooltrainer M/Gentleman, brutes and soldiers to Rocket Grunt M and similar, mages to Psychic M/Scientist, women to Lass, Beauty, Cooltrainer F or Psychic F). Gender for Dara is unverified.
-- Lyon uses the same portrait for all rival pictures except the Champion fight, which uses the evil Lyon portrait.
-- Fomortiis and Dara have no portrait of their own in FE8, so the generic Demon King and Druid class cards were used.
+- Every other character took over one ordinary trainer from a map script (not in the VS Seeker rematch table, not a double battle) whose current picture is a class that suits them (knights to Cooltrainer M/Gentleman, brutes and soldiers to Rocket Grunt M and similar, mages to Psychic M/Scientist, women to Lass, Beauty, Cooltrainer F or Psychic F).
+- Lyon uses his normal portrait for every rival picture, including the Champion fight.
+- Fomortiis (male) and Dara (female) have no portrait of their own in FE8, so the generic Demon King and Druid class cards were used.
 - Names inside dialogue were replaced as well: PROF. OAK and OAK to MOULDER, and the leaders and Elite Four to their new names. BILL and DAISY stay, since they only have overworld sprites.
 
 | FE8 character | FireRed identity | Detail |
@@ -27,43 +27,43 @@ Every FE8 character has one FireRed identity and uses FE8 portrait art. Generate
 | Lyon | Rival | replaces RIVAL_EARLY, RIVAL_LATE, CHAMPION_RIVAL |
 | Ephraim | Red | replaces RED |
 | Moulder | Prof. Oak (NPC) | replaces PROFESSOR_OAK |
-| Aias | trainer slot COOLSAMUEL | was AIAS, FE8_AIAS picture |
-| Amelia | trainer slot LASS_JOANA | was AMELIA, FE8_AMELIA picture |
-| Artur | trainer slot PSYCHIC_PRESTON | was ARTUR, FE8_ARTUR picture |
-| Bazba | trainer slot TEAM_ROCKET_GRUNT_32 | was BAZBA, FE8_BAZBA picture |
-| Beran | trainer slot TEAM_ROCKET_GRUNT_31 | was BERAN, FE8_BERAN picture |
-| Breguet | trainer slot COOLROLANDO | was BREGUET, FE8_BREGUET picture |
-| Caellach | trainer slot TEAM_ROCKET_GRUNT_33 | was CAELLACH, FE8_CAELLACH picture |
-| Carlyle | trainer slot TEAM_ROCKET_GRUNT_30 | was CARLYLE, FE8_CARLYLE picture |
-| Dara | trainer slot PSYCHIC_LAURA | was DARA, FE8_DARA picture |
-| Ewan | trainer slot PSYCHIC_JOHAN | was EWAN, FE8_EWAN picture |
-| Fado | trainer slot PSYCHIC_TYRON | was FADO, FE8_FADO picture |
-| Fomortiis | trainer slot PSYCHIC_CAMERON | was FOMORTIIS, FE8_FOMORTIIS picture |
-| Forde | trainer slot COOLWARREN | was FORDE, FE8_FORDE picture |
-| Franz | trainer slot COOLGEORGE | was FRANZ, FE8_FRANZ picture |
-| Frelian | trainer slot TEAM_ROCKET_GRUNT_34 | was FRELIAN, FE8_FRELIAN picture |
-| Gerik | trainer slot TEAM_ROCKET_GRUNT_29 | was GERIK, FE8_GERIK picture |
-| Gheb | trainer slot TEAM_ROCKET_GRUNT_35 | was GHEB, FE8_GHEB picture |
-| Glen | trainer slot TEAM_ROCKET_GRUNT_28 | was GLEN, FE8_GLEN picture |
-| Hayden | trainer slot TEAM_ROCKET_GRUNT_36 | was HAYDEN, FE8_HAYDEN picture |
-| Ismaire | trainer slot COOLMARY | was ISMAIRE, FE8_ISMAIRE picture |
-| Klimt | trainer slot SCIENTIST_JOSE | was KLIMT, FE8_KLIMT picture |
+| Aias | trainer slot COOLSAMUEL | was SAMUEL, COOLTRAINER_M picture |
+| Amelia | trainer slot LASS_JOANA | was JOANA, LASS picture |
+| Artur | trainer slot PSYCHIC_PRESTON | was PRESTON, PSYCHIC_M picture |
+| Bazba | trainer slot TEAM_ROCKET_GRUNT_32 | was GRUNT, ROCKET_GRUNT_M picture |
+| Beran | trainer slot TEAM_ROCKET_GRUNT_31 | was GRUNT, ROCKET_GRUNT_M picture |
+| Breguet | trainer slot COOLROLANDO | was ROLANDO, COOLTRAINER_M picture |
+| Caellach | trainer slot TEAM_ROCKET_GRUNT_33 | was GRUNT, ROCKET_GRUNT_M picture |
+| Carlyle | trainer slot TEAM_ROCKET_GRUNT_30 | was GRUNT, ROCKET_GRUNT_M picture |
+| Dara | trainer slot PSYCHIC_LAURA | was LAURA, PSYCHIC_F picture |
+| Ewan | trainer slot PSYCHIC_JOHAN | was JOHAN, PSYCHIC_M picture |
+| Fado | trainer slot PSYCHIC_TYRON | was TYRON, PSYCHIC_M picture |
+| Fomortiis | trainer slot PSYCHIC_CAMERON | was CAMERON, PSYCHIC_M picture |
+| Forde | trainer slot COOLWARREN | was WARREN, COOLTRAINER_M picture |
+| Franz | trainer slot COOLGEORGE | was GEORGE, COOLTRAINER_M picture |
+| Frelian | trainer slot TEAM_ROCKET_GRUNT_34 | was GRUNT, ROCKET_GRUNT_M picture |
+| Gerik | trainer slot TEAM_ROCKET_GRUNT_29 | was GRUNT, ROCKET_GRUNT_M picture |
+| Gheb | trainer slot TEAM_ROCKET_GRUNT_35 | was GRUNT, ROCKET_GRUNT_M picture |
+| Glen | trainer slot TEAM_ROCKET_GRUNT_28 | was GRUNT, ROCKET_GRUNT_M picture |
+| Hayden | trainer slot TEAM_ROCKET_GRUNT_36 | was GRUNT, ROCKET_GRUNT_M picture |
+| Ismaire | trainer slot COOLMARY | was MARY, COOLTRAINER_F picture |
+| Klimt | trainer slot SCIENTIST_JOSE | was JOSE, SCIENTIST picture |
 | Knoll | trainer slot SCIENTIST_ED | was ED, SCIENTIST picture |
-| Kyle | trainer slot COOLYUJI | was KYLE, FE8_KYLE picture |
-| Mansel | trainer slot SCIENTIST_JERRY | was MANSEL, FE8_MANSEL picture |
-| Morva | trainer slot SCIENTIST_JOSHUA | was MORVA, FE8_MORVA picture |
-| Murray | trainer slot COOLCOLBY | was MURRAY, FE8_MURRAY picture |
+| Kyle | trainer slot COOLYUJI | was YUJI, COOLTRAINER_M picture |
+| Mansel | trainer slot SCIENTIST_JERRY | was JERRY, SCIENTIST picture |
+| Morva | trainer slot SCIENTIST_JOSHUA | was JOSHUA, SCIENTIST picture |
+| Murray | trainer slot COOLCOLBY | was COLBY, COOLTRAINER_M picture |
 | Natasha | trainer slot LASS_IRIS | was IRIS, LASS picture |
 | Neimi | trainer slot PICNICKER_MARCY | was MARCY, PICNICKER picture |
-| Novala | trainer slot SCIENTIST_IVAN | was NOVALA, FE8_NOVALA picture |
-| O'Neill | trainer slot TEAM_ROCKET_GRUNT_27 | was O'NEILL, FE8_ONEILL picture |
-| Orson | trainer slot GENTLEMAN_LAMAR | was ORSON, FE8_ORSON picture |
-| Pablo | trainer slot SCIENTIST_PARKER | was PABLO, FE8_PABLO picture |
-| Rennac | trainer slot TEAM_ROCKET_GRUNT_37 | was RENNAC, FE8_RENNAC picture |
-| Riev | trainer slot SCIENTIST_GIDEON | was RIEV, FE8_RIEV picture |
-| Ross | trainer slot TEAM_ROCKET_GRUNT_26 | was ROSS, FE8_ROSS picture |
-| Saar | trainer slot GENTLEMAN_THOMAS | was SAAR, FE8_SAAR picture |
-| Saleh | trainer slot SCIENTIST_RODNEY | was SALEH, FE8_SALEH picture |
-| Tethys | trainer slot BEAUTY_LORI | was TETHYS, FE8_TETHYS picture |
-| Tirado | trainer slot GENTLEMAN_BROOKS | was TIRADO, FE8_TIRADO picture |
-| Zonta | trainer slot TEAM_ROCKET_GRUNT_38 | was ZONTA, FE8_ZONTA picture |
+| Novala | trainer slot SCIENTIST_IVAN | was IVAN, SCIENTIST picture |
+| O'Neill | trainer slot TEAM_ROCKET_GRUNT_27 | was GRUNT, ROCKET_GRUNT_M picture |
+| Orson | trainer slot GENTLEMAN_LAMAR | was LAMAR, GENTLEMAN picture |
+| Pablo | trainer slot SCIENTIST_PARKER | was PARKER, SCIENTIST picture |
+| Rennac | trainer slot TEAM_ROCKET_GRUNT_37 | was GRUNT, ROCKET_GRUNT_M picture |
+| Riev | trainer slot SCIENTIST_GIDEON | was GIDEON, SCIENTIST picture |
+| Ross | trainer slot TEAM_ROCKET_GRUNT_26 | was GRUNT, ROCKET_GRUNT_M picture |
+| Saar | trainer slot GENTLEMAN_THOMAS | was THOMAS, GENTLEMAN picture |
+| Saleh | trainer slot SCIENTIST_RODNEY | was RODNEY, SCIENTIST picture |
+| Tethys | trainer slot BEAUTY_LORI | was LORI, BEAUTY picture |
+| Tirado | trainer slot GENTLEMAN_BROOKS | was BROOKS, GENTLEMAN picture |
+| Zonta | trainer slot TEAM_ROCKET_GRUNT_38 | was GRUNT, ROCKET_GRUNT_M picture |

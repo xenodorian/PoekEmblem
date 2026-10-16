@@ -33,7 +33,7 @@ def install(const, name, variant=None):
     a, ap = art(name, variant); png, p = files(const)
     shutil.copy(a, png); shutil.copy(ap, p)
 
-variants = {'TRAINER_PIC_RIVAL_EARLY': None, 'TRAINER_PIC_RIVAL_LATE': None, 'TRAINER_PIC_CHAMPION_RIVAL': 'Lyon_evil'}
+variants = {}  # Lyon's normal portrait is used for every rival picture
 for n, c in cast.items():
     for pc in c['pics']:
         install(pc, n, variants.get(pc))
