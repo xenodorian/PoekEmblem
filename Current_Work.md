@@ -193,3 +193,4 @@ Open, in this order:
 - Win-test run 1 (buffed party, jump into chapter via VAR_STORY_CHAPTER and VAR_STORY_PENDING): chapters 0-3, 5, 7-9, 11, 13-15 passed; 6 and 10 passed in later run; others stalled because the test mon only had Normal moves versus Ghost enemies. Not a confirmed game bug. Testing paused by owner order.
 - Done: FE8 portraits in chapter dialogue (generator `tools/leg3_story.py` emits showmonpic/hidemonpic; fields speaker_before/speaker_after optional in chapters.json). ROM `builds/Pokemon FireRed Eirika Leg3-Portraits.gba`. Compile-only check.
 - Next: walking between nodes, mid-chapter events, custom maps, Leg 1/2 gaps.
+- Done: walk-in (4 steps up via applymovement) and mid-chapter event with portrait between battles or before the After text. ROM builds/Pokemon FireRed Eirika Leg3-Walk-Mid.gba. Compile check only.

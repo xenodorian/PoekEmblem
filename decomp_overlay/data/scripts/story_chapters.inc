@@ -13,6 +13,8 @@ Story_Arrive_0::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch0_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_27, Story_Ch0_Defeat
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch0_After, MSGBOX_DEFAULT
@@ -28,6 +30,9 @@ Story_Ch0_Title:
 
 Story_Ch0_Before:
 	.string "Grado's army has broken the peace\nand marched on Renais. The castle\pis burning.\pEirika, you must run. Find your\nbrother Ephraim in Frelia.$"
+
+Story_Ch0_Mid:
+	.string "...$"
 
 Story_Ch0_After:
 	.string "O'Neill falls back. The road to\nthe border is open.$"
@@ -48,7 +53,12 @@ Story_Arrive_1::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch1_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_COOLTRAINER_ROLANDO, Story_Ch1_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch1_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch1_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -63,6 +73,9 @@ Story_Ch1_Title:
 
 Story_Ch1_Before:
 	.string "Grado soldiers hunt the royal\nparty on the road to the border.$"
+
+Story_Ch1_Mid:
+	.string "Ephraim is in Frelia. We cannot\nstop now.$"
 
 Story_Ch1_After:
 	.string "Breguet is beaten. The border at\nMulan is close.$"
@@ -83,7 +96,12 @@ Story_Arrive_2::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch2_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_31, Story_Ch2_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch2_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch2_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -98,6 +116,9 @@ Story_Ch2_Title:
 
 Story_Ch2_Before:
 	.string "Bandits hold the border town. Ross\nand Garcia stand in their way.$"
+
+Story_Ch2_Mid:
+	.string "Stay close. The border fort is\nahead.$"
 
 Story_Ch2_After:
 	.string "Ross and Garcia join the party.$"
@@ -118,11 +139,16 @@ Story_Arrive_3::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch3_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_TEAM_ROCKET_GRUNT_32
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_31
 	setvar VAR_0x8006, TRAINER_LEADER_BROCK
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch3_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch3_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -137,6 +163,9 @@ Story_Ch3_Title:
 
 Story_Ch3_Before:
 	.string "Borgo Ridge is full of bandits.\nSeth rides at your side.$"
+
+Story_Ch3_Mid:
+	.string "These bandits are not Grado's.\nThey only want the pass.$"
 
 Story_Ch3_After:
 	.string "Colm, a thief of Renais, offers\nhis help.$"
@@ -157,11 +186,16 @@ Story_Arrive_4::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch4_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_PSYCHIC_TYRON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_JERRY
 	setvar VAR_0x8006, TRAINER_LEADER_BROCK
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch4_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch4_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -176,6 +210,9 @@ Story_Ch4_Title:
 
 Story_Ch4_Before:
 	.string "The dead walk in Zaha Woods.\nSomething old has woken.$"
+
+Story_Ch4_Mid:
+	.string "The dead should not walk.\nSomething is waking them.$"
 
 Story_Ch4_After:
 	.string "The graveyard falls quiet.$"
@@ -196,12 +233,17 @@ Story_Arrive_5::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch5_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_GENTLEMAN_THOMAS
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_36
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitJoshua
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch5_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_JOSHUA, 1, 1
 	msgbox Story_Ch5_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -216,6 +258,9 @@ Story_Ch5_Title:
 
 Story_Ch5_Before:
 	.string "Grado troops hold the city. A\nswordsman named Joshua watches\pfrom the walls.$"
+
+Story_Ch5_Mid:
+	.string "Grado's soldiers are everywhere.\nKeep moving.$"
 
 Story_Ch5_After:
 	.string "Joshua joins you for a fee and a\nlaugh.$"
@@ -236,11 +281,16 @@ Story_Arrive_6::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch6_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_SCIENTIST_IVAN
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_28
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch6_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch6_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -255,6 +305,9 @@ Story_Ch6_Title:
 
 Story_Ch6_Before:
 	.string "A burned village. Novala's dark\nmages are close.$"
+
+Story_Ch6_Mid:
+	.string "Whole villages stand empty. I will\nnot forget this.$"
 
 Story_Ch6_After:
 	.string "The villagers are safe for now.$"
@@ -275,11 +328,16 @@ Story_Arrive_7::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch7_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_COOLTRAINER_COLBY
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_34
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch7_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch7_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -294,6 +352,9 @@ Story_Ch7_Title:
 
 Story_Ch7_Before:
 	.string "Pirates and Grado knights fight\nover the Renvall docks.$"
+
+Story_Ch7_Mid:
+	.string "The coast road is open. Let us\nhurry.$"
 
 Story_Ch7_After:
 	.string "Murray is down. The harbor is\nyours.$"
@@ -314,11 +375,16 @@ Story_Arrive_8::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch8_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_GENTLEMAN_BROOKS
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_33
 	setvar VAR_0x8006, TRAINER_LEADER_BLAINE
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch8_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch8_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -333,6 +399,9 @@ Story_Ch8_Title:
 
 Story_Ch8_Before:
 	.string "A trap at Renvall. Tirado,\nCaellach and Selena spring it.$"
+
+Story_Ch8_Mid:
+	.string "This is a trap. Watch every step.$"
 
 Story_Ch8_After:
 	.string "The way splits. Eirika goes to\nfind Frelia and Prince Innes.$"
@@ -353,12 +422,17 @@ Story_Arrive_9::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch9_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_ELITE_FOUR_BRUNO
 	setvar VAR_0x8005, TRAINER_LASS_JOANA
 	setvar VAR_0x8006, TRAINER_LEADER_LT_SURGE
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitTana
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch9_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_TANA, 1, 1
 	msgbox Story_Ch9_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -373,6 +447,9 @@ Story_Ch9_Title:
 
 Story_Ch9_Before:
 	.string "Frelia's castle. Tana and Amelia\nwait on the wall.$"
+
+Story_Ch9_Mid:
+	.string "A lone fighter holds the road\nahead.$"
 
 Story_Ch9_After:
 	.string "Tana the pegasus rider joins you.$"
@@ -393,6 +470,8 @@ Story_Arrive_10::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch10_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_SCIENTIST_PARKER
 	setvar VAR_0x8005, TRAINER_BEAUTY_LORI
 	setvar VAR_0x8006, TRAINER_LEADER_MISTY
@@ -400,6 +479,9 @@ Story_Arrive_10::
 	waitstate
 	call EventScript_RecruitInnes
 	call EventScript_RecruitDuessel
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch10_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_INNES, 1, 1
 	msgbox Story_Ch10_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -414,6 +496,9 @@ Story_Ch10_Title:
 
 Story_Ch10_Before:
 	.string "Port Kiris is in revolt. Innes of\nFrelia needs help.$"
+
+Story_Ch10_Mid:
+	.string "Carcino is in revolt. Hold the\nline.$"
 
 Story_Ch10_After:
 	.string "Innes and Duessel join you.$"
@@ -434,6 +519,8 @@ Story_Arrive_11::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch11_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_COOLTRAINER_WARREN
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_29
 	setvar VAR_0x8006, TRAINER_LEADER_ERIKA
@@ -441,6 +528,9 @@ Story_Arrive_11::
 	waitstate
 	call EventScript_RecruitLArachel
 	call EventScript_RecruitDozla
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch11_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_LARACHEL, 1, 1
 	msgbox Story_Ch11_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -455,6 +545,9 @@ Story_Ch11_Title:
 
 Story_Ch11_Before:
 	.string "The dead walk again. L'Arachel and\nDozla are lost in the mist.$"
+
+Story_Ch11_Mid:
+	.string "The temple is quiet. Too quiet.$"
 
 Story_Ch11_After:
 	.string "L'Arachel and Dozla join you.$"
@@ -475,12 +568,17 @@ Story_Arrive_12::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch12_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_PSYCHIC_TYRON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_ED
 	setvar VAR_0x8006, TRAINER_LEADER_ERIKA
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitMyrrh
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch12_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_MYRRH, 1, 1
 	msgbox Story_Ch12_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -495,6 +593,9 @@ Story_Ch12_Title:
 
 Story_Ch12_Before:
 	.string "A quiet village where nobody\nspeaks. Myrrh waits in a house.$"
+
+Story_Ch12_Mid:
+	.string "No one answers. Something is wrong\nin this village.$"
 
 Story_Ch12_After:
 	.string "Myrrh the dragon girl joins you.$"
@@ -515,12 +616,17 @@ Story_Arrive_13::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch13_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_COOLTRAINER_SAMUEL
 	setvar VAR_0x8005, TRAINER_SCIENTIST_PARKER
 	setvar VAR_0x8006, TRAINER_LEADER_KOGA
 	special StartPartnerBattle
 	waitstate
 	call EventScript_RecruitCormag
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch13_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_CORMAG, 1, 1
 	msgbox Story_Ch13_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -535,6 +641,9 @@ Story_Ch13_Title:
 
 Story_Ch13_Before:
 	.string "A canyon pass guarded by wyvern\nriders. Cormag rides with Grado.$"
+
+Story_Ch13_Mid:
+	.string "The canyon narrows. Stay in\nformation.$"
 
 Story_Ch13_After:
 	.string "Cormag changes sides and joins\nyou.$"
@@ -555,11 +664,16 @@ Story_Arrive_14::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch14_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_TEAM_ROCKET_GRUNT_30
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_33
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch14_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch14_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -574,6 +688,9 @@ Story_Ch14_Title:
 
 Story_Ch14_Before:
 	.string "Jehanna's desert hall. The queen\nholds the sand.$"
+
+Story_Ch14_Mid:
+	.string "The desert wind is cruel. Keep\nyour strength.$"
 
 Story_Ch14_After:
 	.string "Carlyle yields. The way across the\ndesert is open.$"
@@ -594,11 +711,16 @@ Story_Arrive_15::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch15_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_ELITE_FOUR_LANCE
 	setvar VAR_0x8005, TRAINER_TEAM_ROCKET_GRUNT_33
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch15_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch15_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -613,6 +735,9 @@ Story_Ch15_Title:
 
 Story_Ch15_Before:
 	.string "Valter's wyverns burn the dunes.$"
+
+Story_Ch15_Mid:
+	.string "Sand and silence. The Queen waits.$"
 
 Story_Ch15_After:
 	.string "Valter retreats toward Grado.$"
@@ -633,11 +758,16 @@ Story_Arrive_16::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch16_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_GENTLEMAN_LAMAR
 	setvar VAR_0x8005, TRAINER_PSYCHIC_PRESTON
 	setvar VAR_0x8006, TRAINER_LEADER_SABRINA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch16_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch16_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -652,6 +782,9 @@ Story_Ch16_Title:
 
 Story_Ch16_Before:
 	.string "A fortress ruled by a mad lord.$"
+
+Story_Ch16_Mid:
+	.string "His madness is not his own.$"
 
 Story_Ch16_After:
 	.string "Orson's madness breaks.$"
@@ -672,7 +805,12 @@ Story_Arrive_17::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch17_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE, Story_Ch17_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch17_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch17_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -687,6 +825,9 @@ Story_Ch17_Title:
 
 Story_Ch17_Before:
 	.string "Renais again. Lyon stands in the\nruins of the castle.$"
+
+Story_Ch17_Mid:
+	.string "Lyon, why? We were friends.$"
 
 Story_Ch17_After:
 	.string "Lyon is shaken, not beaten. Syrene\nsteps forward.$"
@@ -707,11 +848,16 @@ Story_Arrive_18::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch18_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_PSYCHIC_CAMERON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_GIDEON
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch18_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch18_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -726,6 +872,9 @@ Story_Ch18_Title:
 
 Story_Ch18_Before:
 	.string "Narube River. Something bad rises\nfrom the water.$"
+
+Story_Ch18_Mid:
+	.string "Two faces, and neither is the boy\nI knew.$"
 
 Story_Ch18_After:
 	.string "The gorgon sinks.$"
@@ -746,11 +895,16 @@ Story_Arrive_19::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch19_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_SCIENTIST_GIDEON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_JOSE
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch19_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch19_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -765,6 +919,9 @@ Story_Ch19_Title:
 
 Story_Ch19_Before:
 	.string "Neleras Peak. Riev's priests stand\nin the way.$"
+
+Story_Ch19_Mid:
+	.string "We have no way back now.$"
 
 Story_Ch19_After:
 	.string "The summit is clear.$"
@@ -785,11 +942,16 @@ Story_Arrive_20::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch20_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	setvar VAR_0x8004, TRAINER_SCIENTIST_GIDEON
 	setvar VAR_0x8005, TRAINER_SCIENTIST_JOSHUA
 	setvar VAR_0x8006, TRAINER_ELITE_FOUR_AGATHA
 	special StartPartnerBattle
 	waitstate
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch20_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch20_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -804,6 +966,9 @@ Story_Ch20_Title:
 
 Story_Ch20_Before:
 	.string "The woods are black. Riev and\nMorva wait.$"
+
+Story_Ch20_Mid:
+	.string "The Darkling Woods swallow the\nlight.$"
 
 Story_Ch20_After:
 	.string "The way to the temple is open.$"
@@ -824,7 +989,12 @@ Story_Arrive_21::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch21_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_CHAMPION_FIRST_SQUIRTLE, Story_Ch21_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch21_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch21_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -839,6 +1009,9 @@ Story_Ch21_Title:
 
 Story_Ch21_Before:
 	.string "Lyon, now possessed, waits at the\nend of the road.$"
+
+Story_Ch21_Mid:
+	.string "The Sacred Stone is close.$"
 
 Story_Ch21_After:
 	.string "Lyon's body falls. The Demon King\nwakes.$"
@@ -859,7 +1032,12 @@ Story_Arrive_22::
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch22_Before, MSGBOX_DEFAULT
 	hidemonpic
+	applymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn
+	waitmovement 0
 	trainerbattle_no_intro TRAINER_PSYCHIC_CAMERON, Story_Ch22_Defeat
+	showmonpic SPECIES_EIRIKA, 1, 1
+	msgbox Story_Ch22_Mid, MSGBOX_DEFAULT
+	hidemonpic
 	showmonpic SPECIES_EIRIKA, 1, 1
 	msgbox Story_Ch22_After, MSGBOX_DEFAULT
 	hidemonpic
@@ -875,11 +1053,21 @@ Story_Ch22_Title:
 Story_Ch22_Before:
 	.string "Fomortiis rises.$"
 
+Story_Ch22_Mid:
+	.string "This ends here.$"
+
 Story_Ch22_After:
 	.string "Fomortiis is destroyed. Magvel is\nat peace. The end.$"
 
 Story_Ch22_Defeat:
 	.string "..."
+
+Story_WalkIn:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 EventScript_StoryGuide::
 	lock

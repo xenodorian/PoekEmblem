@@ -113,7 +113,10 @@ for c in d['chapters']:
             '\tshowmonpic %s, 1, 1' % c.get('speaker_before', 'SPECIES_EIRIKA'),
             '\tmsgbox Story_Ch%d_Before, MSGBOX_DEFAULT' % n,
             '\thidemonpic']
+    inc += ['\tapplymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn', '\twaitmovement 0']
     for i, b in enumerate(c['battles']):
+        if i == 1 and c.get('mid'):
+            inc += ['\tshowmonpic %s, 1, 1' % c['mid']['speaker'], '\tmsgbox Story_Ch%d_Mid, MSGBOX_DEFAULT' % n, '\thidemonpic']
         if b.get('b') and b.get('partner'):
             inc += ['\tsetvar VAR_0x8004, %s' % b['a'], '\tsetvar VAR_0x8005, %s' % b['b'], '\tsetvar VAR_0x8006, %s' % b['partner'],
                     '\tspecial StartPartnerBattle', '\twaitstate']
@@ -121,6 +124,8 @@ for c in d['chapters']:
             inc += ['\ttrainerbattle_no_intro %s, Story_Ch%d_Defeat' % (b['a'], n)]
     for r in c.get('recruits', []):
         inc += ['\tcall EventScript_Recruit%s' % r]
+    if len(c['battles']) < 2 and c.get('mid'):
+        inc += ['\tshowmonpic %s, 1, 1' % c['mid']['speaker'], '\tmsgbox Story_Ch%d_Mid, MSGBOX_DEFAULT' % n, '\thidemonpic']
     sa = c.get('speaker_after') or ('SPECIES_' + c['recruits'][0].upper() if c.get('recruits') else 'SPECIES_EIRIKA')
     inc += ['\tshowmonpic %s, 1, 1' % sa, '\tmsgbox Story_Ch%d_After, MSGBOX_DEFAULT' % n, '\thidemonpic',
             '\taddvar VAR_STORY_CHAPTER, 1',
@@ -129,11 +134,13 @@ for c in d['chapters']:
             '\twaitstate', '\tend', '']
     inc += ['Story_Ch%d_Title:' % n, '\t.string "CHAPTER %d\\n%s$"' % (n, c['title'].upper().replace('"', '')), '',
             'Story_Ch%d_Before:' % n, '\t.string "%s"' % fmt(c['before']), '',
+            'Story_Ch%d_Mid:' % n, '\t.string "%s"' % fmt([c['mid']['text'] if c.get('mid') else '...']), '',
             'Story_Ch%d_After:' % n, '\t.string "%s"' % fmt(c['after']), '',
             'Story_Ch%d_Defeat:' % n, '\t.string "..."', '']
 guide += ['\tmsgbox Story_NoMoreChapters, MSGBOX_DEFAULT', '\trelease', '\tend', '',
        'Story_NoMoreChapters:', '\t.string "The war is over. Thank you for\\nplaying.$"', '']
 arrive += ['\tend', '']
+inc += ['Story_WalkIn:', '\twalk_up', '\twalk_up', '\twalk_up', '\twalk_up', '\tstep_end', '']
 sw = guide + arrive
 (root/'data/scripts/story_chapters.inc').write_text('\n'.join(inc + sw) + '\n')
 print('chapters', len(d['chapters']), 'trainers', len(plan))

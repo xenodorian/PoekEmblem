@@ -32,7 +32,11 @@
    ],
    "after": [
     "Breguet is beaten. The border at Mulan is close."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Ephraim is in Frelia. We cannot stop now."
+   }
   },
   {
    "id": 2,
@@ -49,7 +53,11 @@
    ],
    "after": [
     "Ross and Garcia join the party."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Stay close. The border fort is ahead."
+   }
   },
   {
    "id": 3,
@@ -67,7 +75,11 @@
    ],
    "after": [
     "Colm, a thief of Renais, offers his help."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "These bandits are not Grado's. They only want the pass."
+   }
   },
   {
    "id": 4,
@@ -85,7 +97,11 @@
    ],
    "after": [
     "The graveyard falls quiet."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The dead should not walk. Something is waking them."
+   }
   },
   {
    "id": 5,
@@ -106,7 +122,11 @@
    ],
    "after": [
     "Joshua joins you for a fee and a laugh."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Grado's soldiers are everywhere. Keep moving."
+   }
   },
   {
    "id": 6,
@@ -124,7 +144,11 @@
    ],
    "after": [
     "The villagers are safe for now."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Whole villages stand empty. I will not forget this."
+   }
   },
   {
    "id": 7,
@@ -142,7 +166,11 @@
    ],
    "after": [
     "Murray is down. The harbor is yours."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The coast road is open. Let us hurry."
+   }
   },
   {
    "id": 8,
@@ -160,7 +188,11 @@
    ],
    "after": [
     "The way splits. Eirika goes to find Frelia and Prince Innes."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "This is a trap. Watch every step."
+   }
   },
   {
    "id": 9,
@@ -181,7 +213,11 @@
    ],
    "after": [
     "Tana the pegasus rider joins you."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "A lone fighter holds the road ahead."
+   }
   },
   {
    "id": 10,
@@ -203,7 +239,11 @@
    ],
    "after": [
     "Innes and Duessel join you."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Carcino is in revolt. Hold the line."
+   }
   },
   {
    "id": 11,
@@ -225,7 +265,11 @@
    ],
    "after": [
     "L'Arachel and Dozla join you."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The temple is quiet. Too quiet."
+   }
   },
   {
    "id": 12,
@@ -246,7 +290,11 @@
    ],
    "after": [
     "Myrrh the dragon girl joins you."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "No one answers. Something is wrong in this village."
+   }
   },
   {
    "id": 13,
@@ -267,7 +315,11 @@
    ],
    "after": [
     "Cormag changes sides and joins you."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The canyon narrows. Stay in formation."
+   }
   },
   {
    "id": 14,
@@ -285,7 +337,11 @@
    ],
    "after": [
     "Carlyle yields. The way across the desert is open."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The desert wind is cruel. Keep your strength."
+   }
   },
   {
    "id": 15,
@@ -303,7 +359,11 @@
    ],
    "after": [
     "Valter retreats toward Grado."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Sand and silence. The Queen waits."
+   }
   },
   {
    "id": 16,
@@ -321,7 +381,11 @@
    ],
    "after": [
     "Orson's madness breaks."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "His madness is not his own."
+   }
   },
   {
    "id": 17,
@@ -337,7 +401,11 @@
    ],
    "after": [
     "Lyon is shaken, not beaten. Syrene steps forward."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Lyon, why? We were friends."
+   }
   },
   {
    "id": 18,
@@ -355,7 +423,11 @@
    ],
    "after": [
     "The gorgon sinks."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "Two faces, and neither is the boy I knew."
+   }
   },
   {
    "id": 19,
@@ -373,7 +445,11 @@
    ],
    "after": [
     "The summit is clear."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "We have no way back now."
+   }
   },
   {
    "id": 20,
@@ -391,7 +467,11 @@
    ],
    "after": [
     "The way to the temple is open."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The Darkling Woods swallow the light."
+   }
   },
   {
    "id": 21,
@@ -407,7 +487,11 @@
    ],
    "after": [
     "Lyon's body falls. The Demon King wakes."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "The Sacred Stone is close."
+   }
   },
   {
    "id": 22,
@@ -423,7 +507,11 @@
    ],
    "after": [
     "Fomortiis is destroyed. Magvel is at peace. The end."
-   ]
+   ],
+   "mid": {
+    "speaker": "SPECIES_EIRIKA",
+    "text": "This ends here."
+   }
   }
  ],
  "parties": {}
