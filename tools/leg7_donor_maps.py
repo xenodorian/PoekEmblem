@@ -9,6 +9,8 @@ root = Path(sys.argv[1])
 SWITCH = {
  'Story_FortRigwald': ('PokemonLeague_BrunosRoom', (6, 10),
      {'Soldier': (4, 8), 'Scout': (9, 6), 'Recruit': (3, 4), 'Chest': (11, 4)}),
+ 'Story_BlackTemple': ('PokemonTower_6F', (11, 16),
+     {'Cultist': (8, 6), 'Cultist2': (16, 8), 'Hermit': (4, 8), 'Chest': (3, 6)}),
  'Story_GradoThroneRoom': ('PokemonLeague_ChampionsRoom', (6, 18),
      {'Guard': (4, 6), 'Guard2': (8, 6), 'Advisor': (6, 9), 'Mage': (10, 11), 'Chest': (1, 12)}),
 }
