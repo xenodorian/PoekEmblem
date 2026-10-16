@@ -686,10 +686,18 @@ index 5cef7c4..caf8b47 100644
          case SAVE_STATUS_NO_FLASH:
              SetStdFrame0OnBg(0);
 diff --git a/src/new_game.c b/src/new_game.c
-index 3768b3c..3fa6e76 100644
+index 3768b3c..38abf10 100644
 --- a/src/new_game.c
 +++ b/src/new_game.c
-@@ -29,6 +29,8 @@
+@@ -3,6 +3,7 @@
+ #include "random.h"
+ #include "overworld.h"
+ #include "constants/maps.h"
++#include "constants/region_map_sections.h"
+ #include "load_save.h"
+ #include "item_menu.h"
+ #include "tm_case.h"
+@@ -29,6 +30,8 @@
  #include "berry_powder.h"
  #include "pokemon_jump.h"
  #include "event_scripts.h"
@@ -698,16 +706,18 @@ index 3768b3c..3fa6e76 100644
  
  // this file's functions
  static void ResetMiniGamesResults(void);
-@@ -104,6 +106,18 @@ void ResetMenuAndMonGlobals(void)
+@@ -104,6 +107,20 @@ void ResetMenuAndMonGlobals(void)
      ResetSpecialVars();
  }
  
 +static void CreateStarterEirika(void)
 +{
 +    u16 nationalDexNum = SpeciesToNationalPokedexNum(SPECIES_EIRIKA);
++    u8 metLocation = MAPSEC_PALLET_TOWN;
 +
 +    // Level 5, every IV 31, always female
 +    CreateMon(&gPlayerParty[0], SPECIES_EIRIKA, 5, 31, FALSE, 0, OT_ID_PLAYER_ID, 0);
++    SetMonData(&gPlayerParty[0], MON_DATA_MET_LOCATION, &metLocation);
 +    gPlayerPartyCount = 1;
 +    FlagSet(FLAG_SYS_POKEMON_GET);
 +    GetSetPokedexFlag(nationalDexNum, FLAG_SET_SEEN);
@@ -717,7 +727,7 @@ index 3768b3c..3fa6e76 100644
  void NewGameInitData(void)
  {
      u8 rivalName[PLAYER_NAME_LENGTH + 1];
-@@ -134,6 +148,7 @@ void NewGameInitData(void)
+@@ -134,6 +151,7 @@ void NewGameInitData(void)
      gPlayerPartyCount = 0;
      ZeroPlayerPartyMons();
      ResetPokemonStorageSystem();
