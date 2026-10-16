@@ -21,7 +21,8 @@ Layout legend: space void, `#` FE8 wall, `=` FireRed cream wall, `.` floor, `c` 
 2. **Floor shading is an edge rule** (`EDGE`, `CONVEX`). Non floor on the north makes the top two quadrants of the cell dark, south the bottom two, and so on.
    Dark on two sides is a concave corner (3 quadrants dark), diagonal only is a convex corner (1 quadrant dark), 3 or 4 sides is the union.
    Dark is only a palette swap (palette 8 is palette 7 times 0.8), so no extra tile data is needed.
-3. **Floor variants.** `floorB` is an accent and may never touch another `floorB` on either axis (`x + 2y = 0 mod 4`). validate() checks it.
+3. **Floor variants.** `floorB` is an accent: a hash of (x, y, room seed) picks about one cell in five, and a cell never becomes an accent if its west or north neighbour is one, so accents never touch on either axis (`accent_adjacent` in validate()). There is no fixed lattice any more. All other cells use `floorA` or its horizontal, vertical or both mirrored forms (picked by the same hash). The mirrors reuse the same 8x8 tiles through the tile flip bits, so they cost no tile data. Each room passes its own `seed` to `autotile()`.
+3b. **Wall end corner blocks.** An FE8 wall cell (`#`, cap or face) with void beside it is a wall end. Its outer column of quadrants uses palette 10 (the wall palette times 0.65), so the end of a wall reads as a shaded corner. Again a palette swap only (key = void west / void east, like the floor EDGE table).
 4. **Rug** (`RUG_EDGE`): key = (N, S, E, W) is not rug. One missing side gives an edge block (68, 92, 86, 83), two give a corner (67, 70, 91, 94),
    none gives the centre (69). A one cell wide rug, or a rug with an inner corner (diagonal-only gap), has no FireRed block and is **rejected**.
 5. **Door.** `D` must sit on the last row. The 3 cells above it must be plain floor and become the mat (18, 19, 20), the 3 cells of the last row become 26, 27, 28
@@ -49,7 +50,7 @@ FE8 art comes from the decomp's `graphics/bg/*.png` (the game's own backgrounds)
 
 ## Known gaps
 * No inner rug corner and no one wide runner (FireRed has no blocks for them), so layouts needing them are rejected.
-* Wall ends have no corner blocks (FireRed walls are void at the sides); only floor shading and rugs have concave and convex corners.
+* Wall end corners are a shade only (no true corner art). The FireRed cream panel has no corner blocks at all, so a cream wall must not end beside void: put FE8 wall (`#`) at the ends, as the story maps do.
 * FE8 wall style and FireRed cream panel only meet at a straight vertical seam.
 
 ## Test room and how it was checked
@@ -59,3 +60,8 @@ In the emulator: `emit DIR` wrote the tileset and `map.bin` (copy in `workdata/i
 `Story_BlackTemple` layout (same 15x16 size, same primary tileset) and the new game start warp (temporary, not shipped), then `make -j8` and
 `workdata/harness/bin/shot_save` with `workdata/indoor_tiling_test/walk_script.txt`. Screenshots: `docs/img/indoor_tiling_test_emulator.png`.
 (After changing a layout .bin, `touch data/layouts/layouts.json` so make rebuilds the layout data.) The test ROM is not committed (ROMs are ignored).
+
+## Where it is used
+`tools/leg9_indoor_maps.py DECOMP_DIR` applies it to four story maps (15 x 16 each, door at column 7): Renais Castle (throne hall, red carpet, plants, windows, shelves, cabinets), Frelia Castle (council table on a rug island), Jehanna Hall (dais rug, window) and Black Temple (dark FE8 walls, altar table). It rewrites each map's secondary tileset (17 tiles, under 50 metatiles), `map.bin`, `border.bin`, the `-num_tiles` line in `tileset_rules.mk`, and moves NPCs, the treasure ball and the signs to valid cells (the asserts check: walkable cell, not on the walk in column x = 7 rows 11 to 15, signs on the wall face row with floor below). The exit warp is on the door mat (7,14); the chapter scripts still arrive at (7,15) and walk up 4.
+Fort Rigwald and the Grado Throne Room stay on the FireRed League donor interiors (`tools/leg7_donor_maps.py`): the autotiler has no room type for them (no bright hall, no stairs or dais blocks), so it does not clearly beat the donors there.
+Run order on a tree: leg4_story_tilesets.py, leg5_story_map_objects.py, leg7_donor_maps.py, leg9_indoor_maps.py (this resets the Black Temple layout to its own if leg7 switched it to a donor), then leg3_story.py. Not emulator checked (owner: build only).

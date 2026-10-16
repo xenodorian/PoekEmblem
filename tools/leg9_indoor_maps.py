@@ -113,6 +113,7 @@ for mapdir, (seed, tsdir, layout, npcs, signs) in ROOMS.items():
     # object events and signs on valid cells; the walk in (7,14) up to (7,11) and the mat must stay clear
     ids, coll, lay = res['ids'], res['coll'], res['layout']
     mj = json.loads((root / 'data/maps' / mapdir / 'map.json').read_text())
+    mj['layout'] = 'LAYOUT_' + re.sub(r'(?<!^)(?=[A-Z])', '_', mapdir).upper().replace('__', '_')   # undo a donor layout switch (leg7) if present
     taken = set()
     for o in mj['object_events']:
         nm = o['script'].split('_EventScript_')[1]

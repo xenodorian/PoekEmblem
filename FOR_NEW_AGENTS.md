@@ -35,3 +35,10 @@ Written by a Grok session that started from scratch. It lists what cost time so 
 
 ## Known state
 See Current_Work.md. Chapters 4, 12 and 16-22 stalled in one test only because the test Eirika had Normal moves vs Ghost enemies; that is a test setup issue.
+
+## Update (Leg9, indoor maps)
+* Latest source tree: `decomp_full_v9.tar.gz` (unpack a copy, copy `data/mb_*.gba` from pret, `make -j8`). It is built from v7 plus the Leg9 steps. Note: another agent's `decomp_full_v8.tar.gz` (Black Temple on the Pokemon Tower 6F donor layout) was made in parallel and is NOT merged into v9. Check `git log` before you pick a tarball, and never overwrite an existing `decomp_full_vN.tar.gz`: use the next free number.
+* Indoor maps are made by `tools/indoor_tiling.py` (rules in `docs/INDOOR_TILING.md`) through `tools/leg9_indoor_maps.py`. To change a room, edit its character grid in leg9_indoor_maps.py (legend in the doc), rerun on a fresh tree, build.
+* Text lives in `story/chapters.json` (run `tools/leg3_story.py story/chapters.json DECOMP`, then re-apply the arrival y 15 for the four autotiled maps, the generator writes 14) and `tools/leg4_dex.py` (Pokedex text, kept in sync with `src/data/pokemon/pokedex_text_allies.h`). Run `tools/check_overflow.py DECOMP`; lines must stay at 36 glyphs or fewer.
+* ROMs in `builds/` are git-ignored on purpose (commercial). Commit the IPS in `patches/` (apply to vanilla FireRed USA rev 0) and the tarball.
+* Style: no em dashes, no emoji. Player overworld sprites stay Leaf vanilla.
