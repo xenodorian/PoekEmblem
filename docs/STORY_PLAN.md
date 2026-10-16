@@ -121,3 +121,11 @@ Custom maps (built last, with the War and Murder tile tools): castle interiors f
 - Tested in mGBA: chapter 3 end to end (warp to Route 3, text, double battle with Seth, win, text, return).
 - Smoke test: all 23 chapters were started from a test hook in mGBA. Each one warps to its node map, shows its scene and starts its battle without a crash or hang. A level 5 Eirika loses many of them, and the loss path (whiteout, back to the player's room, chapter can be retried) worked. Not yet tested: winning every chapter and the recruit calls inside chapters.
 - Not done: walking between nodes on foot, custom maps, per-chapter FE8 portraits in dialogue, mid-chapter events.
+
+## Status as of Leg10 (2026-10-16, agent 8)
+The "Order of work" and the "Built so far" lists above are historical. Current state:
+- All 23 chapters, portraits, walk-in, mid-chapter events, recruits, ally lines, rewards and the epilogue with THE END title card are built (compile checked). Chapter win tests passed in headless runs (see Current_Work.md for exact coverage).
+- The six story maps exist: Renais Castle, Frelia Castle, Jehanna Hall and Black Temple are autotiled indoor rooms (FE8 floor and walls, FireRed furniture; `tools/indoor_tiling.py`, `tools/leg9_indoor_maps.py`); Fort Rigwald and the Grado Throne Room use FireRed League interiors (`tools/leg7_donor_maps.py`). Arrival is (7,15) for the four autotiled maps (generator `tools/leg3_story.py`), (6,10) for the Fort and (6,18) for the Throne Room.
+- Deploy and party: `docs/DEPLOY_AND_PARTY.md`. No deploy screen is planned.
+- Artifact inventory (ROMs, IPS, tarballs): `docs/ARTIFACTS.md`.
+- Still open: see the Open list at the end of Current_Work.md. Everything left needs emulator viewing (the four rooms, the THE END card, ally lines on screen) or owner art decisions.

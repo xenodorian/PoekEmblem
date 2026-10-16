@@ -4,7 +4,7 @@
 
 ### FE8 (Sacred Stones BE8E) source
 - Portraits are typically in the portrait table (FEBuilderGBA → Portrait Editor).
-- Approximate range for unit portraits often around 0x5B0000–0x6x0000 (confirm with FEBuilder or Emblem-Magic).
+- Approximate range for unit portraits often around 0x5B0000 to 0x6x0000 (confirm with FEBuilder or Emblem-Magic).
 - Map sprites (standing/walking) in the class/map sprite tables.
 - Export as 16-color PNG + palette via FEBuilderGBA (recommended) or GBAGE-style tools.
 

@@ -42,3 +42,11 @@ See Current_Work.md. Chapters 4, 12 and 16-22 stalled in one test only because t
 * Text lives in `story/chapters.json` (run `tools/leg3_story.py story/chapters.json DECOMP`, then re-apply the arrival y 15 for the four autotiled maps, the generator writes 14) and `tools/leg4_dex.py` (Pokedex text, kept in sync with `src/data/pokemon/pokedex_text_allies.h`). Run `tools/check_overflow.py DECOMP`; lines must stay at 36 glyphs or fewer.
 * ROMs in `builds/` are git-ignored on purpose (commercial). Commit the IPS in `patches/` (apply to vanilla FireRed USA rev 0) and the tarball.
 * Style: no em dashes, no emoji. Player overworld sprites stay Leaf vanilla.
+
+## Update (Leg10)
+* Latest source tree: `decomp_full_v10.tar.gz` (v9 plus the THE END title card and the generator arrival fix). Full inventory of every ROM, IPS and tarball: `docs/ARTIFACTS.md` (regenerate with `python3 tools/list_artifacts.py`). Next free tarball number is v11.
+* Regenerate chapter scripts with `SCRIPTS_ONLY=1 python3 tools/leg3_story.py story/chapters.json <tree>`. Arrival for the four autotiled maps is (7,15); do not hand patch story_chapters.inc.
+* THE END is a real title card: `tools/leg10_the_end_card.py` makes the graphics, `src/story_the_end.c` shows it (`special ShowStoryTheEnd`). Compile checked only, not yet viewed in an emulator.
+* Rebuild order for story maps: leg4_story_tilesets.py (PROPS=0), leg5_story_map_objects.py, leg7_donor_maps.py, leg9_indoor_maps.py, then SCRIPTS_ONLY=1 leg3_story.py.
+* A previous worker briefly overwrote a local tarball. Check `git status` for modified tarballs before committing and never reuse a name.
+* Deploy and party model: `docs/DEPLOY_AND_PARTY.md`.
