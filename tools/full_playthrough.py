@@ -105,7 +105,7 @@ while ch < NCH and f < 5000000:
     v = None
     start = f; first = True; shots = 0
     # play the chapter: mash A
-    while f - start < 60000:
+    while f - start < (200000 if ch == NCH - 1 else 60000):
         mash_body(f); f += 16
         if not NOBUFF: ct.buff(d, 1)
         it = (f - start) // 16
