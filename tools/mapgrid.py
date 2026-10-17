@@ -34,16 +34,20 @@ def grid(root, mapname):
     _cache[key] = g; return g
 OK_WALK = {0x00, 0x02, 0x03, 0x08, 0x21}   # normal ground, tall grass, long grass, cave floor, sand (anything else is not planned through)
 def walkable(g, x, y):
-    return 0 <= x < g['w'] and 0 <= y < g['h'] and g['coll'][y][x] == 0 and g['beh'][y][x] in OK_WALK and g['terrain'][y][x] == 0
+    return 0 <= x < g['w'] and 0 <= y < g['h'] and g['coll'][y][x] == 0 and g['beh'][y][x] in OK_WALK and g['terrain'][y][x] in (0, 1)
 def bfs(g, start, blocked=()):
-    from collections import deque
-    dist = {start: 0}; q = deque([start]); par = {start: None}
+    """Dijkstra over walkable cells (tall grass costs 4 so paths avoid wild encounters when they can). Returns (dist, parent)."""
+    import heapq
+    dist = {start: 0}; par = {start: None}; q = [(0, start)]
     while q:
-        c = q.popleft()
+        dd, c = heapq.heappop(q)
+        if dd > dist[c]: continue
         for dx, dy, k in ((0, -1, 'U'), (0, 1, 'D'), (-1, 0, 'L'), (1, 0, 'R')):
             n = (c[0] + dx, c[1] + dy)
-            if n in dist or n in blocked or n in g['objs'] or not walkable(g, *n): continue
-            dist[n] = dist[c] + 1; par[n] = (c, k); q.append(n)
+            if n in blocked or n in g['objs'] or not walkable(g, *n): continue
+            nd = dd + (4 if g['beh'][n[1]][n[0]] in (2, 3) else 1)
+            if nd < dist.get(n, 1 << 30):
+                dist[n] = nd; par[n] = (c, k); heapq.heappush(q, (nd, n))
     return dist, par
 def path(par, goal):
     out = []; c = goal

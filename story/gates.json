@@ -6,16 +6,16 @@
    29
   ],
   "gate": [
-   20,
-   27
+   19,
+   18
   ],
   "elev": 3,
   "guide": [
-   21,
-   27
+   19,
+   17
   ],
-  "dist": 16,
-  "reachable": 70
+  "dist": 40,
+  "reachable": 556
  },
  "MAP_ROUTE3": {
   "dir": "Route3",
@@ -33,7 +33,7 @@
    9
   ],
   "dist": 40,
-  "reachable": 479
+  "reachable": 595
  },
  "MAP_VIRIDIAN_FOREST": {
   "dir": "ViridianForest",
@@ -51,7 +51,7 @@
    40
   ],
   "dist": 40,
-  "reachable": 509
+  "reachable": 1584
  },
  "MAP_PEWTER_CITY": {
   "dir": "PewterCity",
@@ -87,7 +87,7 @@
    0
   ],
   "dist": 18,
-  "reachable": 72
+  "reachable": 121
  },
  "MAP_VERMILION_CITY": {
   "dir": "VermilionCity",
@@ -177,7 +177,7 @@
    5
   ],
   "dist": 40,
-  "reachable": 429
+  "reachable": 509
  },
  "MAP_ROCK_TUNNEL_1F": {
   "dir": "RockTunnel_1F",
@@ -267,7 +267,7 @@
    12
   ],
   "dist": 37,
-  "reachable": 104
+  "reachable": 139
  },
  "MAP_CERULEAN_CAVE_1F": {
   "dir": "CeruleanCave_1F",

@@ -216,7 +216,7 @@ for c in d['chapters']:
             '\tshowmonpic %s, 1, 1' % c.get('speaker_before', 'SPECIES_EIRIKA'),
             '\tmsgbox Story_Ch%d_Before, MSGBOX_DEFAULT' % n,
             '\thidemonpic'] + say(n, 'SB', c.get('scene_before', []))
-    inc += ['\tapplymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn', '\twaitmovement 0']
+    if c['map'] in HUBS: inc += ['\tapplymovement OBJ_EVENT_ID_PLAYER, Story_WalkIn', '\twaitmovement 0']
     for i, b in enumerate(c['battles']):
         if i == 1 and c.get('mid'):
             inc += ['\tshowmonpic %s, 1, 1' % c['mid']['speaker'], '\tmsgbox Story_Ch%d_Mid, MSGBOX_DEFAULT' % n, '\thidemonpic']

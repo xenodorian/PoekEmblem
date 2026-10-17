@@ -319,3 +319,7 @@ Owner order t81u: remove level push and free healing, Pokemon Centers and Marts 
 - Pipeline on a tree: leg5, leg7, leg9, `python3 tools/leg19_camp.py T`, `SCRIPTS_ONLY=1 python3 tools/leg3_story.py story/chapters.json T`, `python3 tools/leg19_levels.py T /workspace/pokefirered docs/LEVEL_CURVE.md`, make.
 - Built ROM `builds/Pokemon FireRed Eirika Leg19-WorldFlow.gba` (compile ok, NOT yet tested in the emulator).
 - NEXT: emulator test of new game, center and mart doors, gate, whiteout; then update tools/full_playthrough.py to walk (tools/mapgrid.py BFS), run it, docs, release.
+
+## Leg19 checkpoint 2
+- Tree /workspace/L19/pf_eirika_work, ROM /workspace/L19/rom2.gba (WalkIn only on hubs). Playthrough (SERVICES=1) passed idx 0..10, stuck idx 11 Cerulean gate walk (30,31) unreachable. Logs /workspace/L19/pt.log.
+- NEXT: fix gate for Cerulean, rerun: MGBA_DRV=/workspace/mgba_drv2 SERVICES=1 SERVICE_CHAPTERS=1,3,10,15,22 python3 tools/full_playthrough.py /workspace/L19/rom2.gba /workspace/L19/pt
