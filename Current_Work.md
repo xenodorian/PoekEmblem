@@ -303,3 +303,7 @@ Open, in this order (historical list, see the Leg10 section at the end for the l
 ### Leg18 checkpoint 4 (2026-10-17): full playthrough PASS
 - Fresh new game, real input, all 24 story chapters (idx 0 to 23 including 5x and 21x) PASS, final chapter var 24, THE END card shown (docs/PLAYTHROUGH_REPORT.md, docs/img/playthrough/). Harness: MGBA_DRV=/workspace/mgba_drv2 python3 tools/full_playthrough.py ROM OUT (about 10 minutes, run detached with setsid nohup, poll the log).
 - NEXT: rebuild release: python3 tools/make_ips.py "Pokemon - FireRed Version (USA).gba" "builds/Pokemon FireRed Eirika Leg18-PlayableFlow.gba" patches/PokemblemTheSacredStones.ips (after archiving the old IPS and release GBA as _pre_playableflow), tools/apply_ips.py to release/, check SHA-1, push.
+
+## Leg18 final (2026-10-17)
+- Release rebuilt: patches/PokemblemTheSacredStones.ips (applied to vanilla BPRE 41cb23d8...) gives release/PokemblemTheSacredStones.gba, SHA-1 8a0435c5f1ac3a6bc787d786fcf69c4d6db42691, identical to builds/Pokemon FireRed Eirika Leg18-PlayableFlow.gba (the ROM used in the full playthrough). Previous release: patches/archive and release/archive as _pre_playableflow.
+- Playthrough report: docs/PLAYTHROUGH_REPORT.md. Flow: docs/STORY_FLOW.md.
