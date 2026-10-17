@@ -1,0 +1,128 @@
+after intro: chapter var 0
+chapter idx 0 PASS (5760 frames, 8s) map 012a
+   walk center door -> (3, 14) ok=True map=Story_RenaisCastle pos=(3, 14)
+   walk nurse -> (7, 4) ok=True map=Story_CampCenter pos=(7, 4)
+   center heal: hp 1 -> 1792 (max 1792), map Story_CampCenter
+   walk center exit -> (7, 8) ok=True map=Story_RenaisCastle pos=(3, 13)
+   walk mart door -> (11, 14) ok=True map=Story_RenaisCastle pos=(11, 14)
+   walk clerk -> (4, 3) ok=True map=Story_CampMart pos=(4, 3)
+   walk mart exit -> (4, 7) ok=True map=Story_CampMart pos=(4, 7)
+   walk middle door -> (7, 14) ok=True map=Story_RenaisCastle pos=(7, 14)
+  departed: map Route1 pos (6, 29)
+chapter idx 1 PASS (8320 frames, 21s) map 1303
+   walk gate -> (19, 18) ok=True map=Route1 pos=(19, 18)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FreliaCastle pos (7, 15)
+chapter idx 2 PASS (7680 frames, 30s) map 022a
+   walk center door -> (3, 14) ok=True map=Story_FreliaCastle pos=(3, 14)
+   walk nurse -> (7, 4) ok=True map=Story_CampCenter pos=(7, 4)
+   center heal: hp 1 -> 1792 (max 1792), map Story_CampCenter
+   walk center exit -> (7, 8) ok=True map=Story_FreliaCastle pos=(3, 13)
+   walk mart door -> (11, 14) ok=True map=Story_FreliaCastle pos=(11, 14)
+   walk clerk -> (4, 3) ok=True map=Story_CampMart pos=(4, 3)
+   walk mart exit -> (4, 7) ok=True map=Story_CampMart pos=(4, 7)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FreliaCastle pos (7, 14)
+chapter idx 3 PASS (15040 frames, 49s) map 1503
+   blocked tile (40, 10), replanning
+   walk gate -> (39, 9) ok=True map=Route3 pos=(39, 9)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FreliaCastle pos (7, 14)
+chapter idx 4 PASS (14560 frames, 77s) map 0001
+   walk gate -> (47, 40) ok=True map=ViridianForest pos=(47, 40)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_RenaisCastle pos (7, 15)
+chapter idx 5 PASS (7040 frames, 87s) map 012a
+   walk hub door to camp -> (7, 14) ok=True map=Story_RenaisCastle pos=(7, 14)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FreliaCastle pos (7, 14)
+chapter idx 6 PASS (14720 frames, 102s) map 0203
+   walk gate -> (6, 25) ok=True map=PewterCity pos=(6, 25)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FreliaCastle pos (7, 14)
+chapter idx 7 PASS (14240 frames, 117s) map 1403
+   walk gate -> (10, 0) ok=True map=Route2 pos=(10, 0)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FreliaCastle pos (7, 14)
+chapter idx 8 PASS (13760 frames, 131s) map 0503
+   walk gate -> (24, 20) ok=True map=VermilionCity pos=(24, 20)
+   walk middle door -> (7, 14) ok=True map=Story_FreliaCastle pos=(7, 14)
+  departed: map Story_FortRigwald pos (7, 15)
+chapter idx 9 PASS (14400 frames, 147s) map 042a
+   walk center door -> (3, 14) ok=True map=Story_FortRigwald pos=(3, 14)
+   walk nurse -> (7, 4) ok=True map=Story_CampCenter pos=(7, 4)
+   center heal: hp 1 -> 1792 (max 1792), map Story_CampCenter
+   walk center exit -> (7, 8) ok=True map=Story_FortRigwald pos=(3, 13)
+   walk mart door -> (11, 14) ok=True map=Story_FortRigwald pos=(11, 14)
+   walk clerk -> (4, 3) ok=True map=Story_CampMart pos=(4, 3)
+   walk mart exit -> (4, 7) ok=True map=Story_CampMart pos=(4, 7)
+   walk middle door -> (7, 14) ok=True map=Story_FortRigwald pos=(7, 14)
+  departed: map CeruleanCity pos (10, 11)
+chapter idx 10 PASS (15520 frames, 168s) map 0303
+   blocked tile (26, 31), replanning
+   walk gate -> (30, 31) ok=True map=CeruleanCity pos=(30, 31)
+   walk middle door -> (7, 14) ok=True map=Story_FortRigwald pos=(7, 14)
+  departed: map Story_FortRigwald pos (7, 14)
+chapter idx 11 PASS (16320 frames, 199s) map 0a03
+   walk gate -> (15, 12) ok=True map=SaffronCity pos=(15, 12)
+   walk middle door -> (7, 14) ok=True map=Story_FortRigwald pos=(7, 14)
+  departed: map Story_FortRigwald pos (7, 14)
+chapter idx 12 PASS (16800 frames, 217s) map 0403
+   walk gate -> (1, 17) ok=True map=LavenderTown pos=(1, 17)
+   walk middle door -> (7, 14) ok=True map=Story_FortRigwald pos=(7, 14)
+  departed: map Story_FortRigwald pos (7, 14)
+chapter idx 13 PASS (15520 frames, 233s) map 1b03
+   walk gate -> (23, 6) ok=True map=Route9 pos=(23, 6)
+   walk middle door -> (7, 14) ok=True map=Story_JehannaHall pos=(7, 14)
+  departed: map Story_JehannaHall pos (7, 14)
+chapter idx 14 PASS (14080 frames, 254s) map 5101
+   walk gate -> (42, 7) ok=True map=RockTunnel_1F pos=(42, 7)
+   walk center door -> (3, 14) ok=True map=Story_JehannaHall pos=(3, 14)
+   walk nurse -> (7, 4) ok=True map=Story_CampCenter pos=(7, 4)
+   center heal: hp 1 -> 1792 (max 1792), map Story_CampCenter
+   walk center exit -> (7, 8) ok=True map=Story_JehannaHall pos=(3, 13)
+   walk mart door -> (11, 14) ok=True map=Story_JehannaHall pos=(11, 14)
+   walk clerk -> (4, 3) ok=True map=Story_CampMart pos=(4, 3)
+   walk mart exit -> (4, 7) ok=True map=Story_CampMart pos=(4, 7)
+   walk middle door -> (7, 14) ok=True map=Story_JehannaHall pos=(7, 14)
+  departed: map Story_JehannaHall pos (7, 14)
+chapter idx 15 PASS (24000 frames, 291s) map 0603
+   walk gate -> (12, 25) ok=True map=CeladonCity pos=(12, 25)
+   walk middle door -> (7, 14) ok=True map=Story_JehannaHall pos=(7, 14)
+  departed: map Story_JehannaHall pos (7, 15)
+chapter idx 16 PASS (17120 frames, 310s) map 032a
+   walk middle door -> (7, 14) ok=True map=Story_JehannaHall pos=(7, 14)
+  departed: map Story_JehannaHall pos (7, 14)
+chapter idx 17 PASS (16960 frames, 327s) map 0703
+   walk gate -> (18, 19) ok=True map=FuchsiaCity pos=(18, 19)
+   walk middle door -> (7, 14) ok=True map=Story_GradoThroneRoom pos=(7, 14)
+  departed: map Story_GradoThroneRoom pos (7, 14)
+chapter idx 18 PASS (16640 frames, 345s) map 0003
+   walk gate -> (20, 19) ok=True map=PalletTown pos=(20, 19)
+   walk middle door -> (7, 14) ok=True map=Story_GradoThroneRoom pos=(7, 14)
+  departed: map Story_GradoThroneRoom pos (7, 14)
+chapter idx 19 PASS (14880 frames, 360s) map 2903
+   walk gate -> (26, 12) ok=True map=Route22 pos=(26, 12)
+   walk middle door -> (7, 14) ok=True map=Story_GradoThroneRoom pos=(7, 14)
+  departed: map CeruleanCave_1F pos (33, 21)
+chapter idx 20 PASS (20640 frames, 384s) map 4801
+   walk gate -> (38, 14) ok=True map=CeruleanCave_1F pos=(38, 14)
+   walk middle door -> (7, 14) ok=True map=Story_GradoThroneRoom pos=(7, 14)
+  departed: map Story_GradoThroneRoom pos (7, 14)
+chapter idx 21 PASS (28640 frames, 413s) map 2701
+   walk gate -> (5, 14) ok=True map=VictoryRoad_1F pos=(5, 14)
+   walk center door -> (3, 14) ok=True map=Story_GradoThroneRoom pos=(3, 14)
+   walk nurse -> (7, 4) ok=True map=Story_CampCenter pos=(7, 4)
+   center heal: hp 1 -> 1792 (max 1792), map Story_CampCenter
+   walk center exit -> (7, 8) ok=True map=Story_GradoThroneRoom pos=(3, 13)
+   walk mart door -> (11, 14) ok=True map=Story_GradoThroneRoom pos=(11, 14)
+   walk clerk -> (4, 3) ok=True map=Story_CampMart pos=(4, 3)
+   walk mart exit -> (4, 7) ok=True map=Story_CampMart pos=(4, 7)
+   walk middle door -> (7, 14) ok=True map=Story_GradoThroneRoom pos=(7, 14)
+  departed: map Story_GradoThroneRoom pos (7, 15)
+chapter idx 22 PASS (18720 frames, 441s) map 052a
+   walk hub door to camp -> (7, 14) ok=True map=Story_GradoThroneRoom pos=(7, 14)
+   walk middle door -> (7, 14) ok=True map=Story_BlackTemple pos=(7, 14)
+  departed: map Story_BlackTemple pos (7, 15)
+chapter idx 23 PASS (60960 frames, 502s) map 062a
+final chapter var 24
