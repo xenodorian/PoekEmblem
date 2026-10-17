@@ -1,0 +1,26 @@
+after intro: chapter var 0
+chapter idx 0 PASS (6560 frames, 8s) map 012a
+chapter idx 1 PASS (7680 frames, 16s) map 022a
+chapter idx 2 PASS (6080 frames, 24s) map 022a
+chapter idx 3 PASS (13120 frames, 38s) map 022a
+chapter idx 4 PASS (14560 frames, 53s) map 022a
+chapter idx 5 PASS (8160 frames, 61s) map 022a
+chapter idx 6 PASS (15040 frames, 77s) map 022a
+chapter idx 7 PASS (16640 frames, 93s) map 1403
+chapter idx 8 PASS (13760 frames, 107s) map 022a
+chapter idx 9 PASS (16800 frames, 126s) map 042a
+chapter idx 10 PASS (13120 frames, 141s) map 042a
+chapter idx 11 PASS (16000 frames, 157s) map 042a
+chapter idx 12 PASS (15680 frames, 172s) map 042a
+chapter idx 13 PASS (14560 frames, 187s) map 1b03
+chapter idx 14 PASS (17760 frames, 205s) map 032a
+chapter idx 15 PASS (15680 frames, 222s) map 032a
+chapter idx 16 PASS (28000 frames, 252s) map 032a
+chapter idx 17 PASS (15200 frames, 268s) map 0703
+chapter idx 18 PASS (16320 frames, 284s) map 0003
+chapter idx 19 PASS (21280 frames, 305s) map 052a
+chapter idx 20 PASS (18880 frames, 325s) map 052a
+chapter idx 21 PASS (32800 frames, 358s) map 0001
+chapter idx 22 PASS (19040 frames, 537s) map 052a
+chapter idx 23 PASS (29920 frames, 570s) map 062a
+final chapter var 24

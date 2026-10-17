@@ -49,6 +49,7 @@ while ch < NCH and f < 5000000:
             last_img = cur
         if not NOBUFF: ct.buff(d, 1)
         it = (f - start) // 16
+        if ch == NCH - 1 and it % 6 == 0: shot('end_%03d' % (it // 6))   # capture the epilogue and THE END card
         if it % 25 == 0 and shots < 12: shot('ch%02d_play_%02d' % (ch, shots)); shots += 1
         if it % 10 == 0:
             v = d.var(ct.V_CH)
