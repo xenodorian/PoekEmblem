@@ -44,3 +44,4 @@ LOG step 10 Source tree v2 and IPS: commit cffc470, decomp_full_v2.tar.gz, patch
 2026-10-17 Leg19 step A: level curve (tools/level_curve.py), wild tables per chapter map (tools/leg19_levels.py), docs/LEVEL_CURVE.md. Not yet built into a ROM.
 Leg19 checkpoint 2: hub-only walk-in, mart exit fix; playthrough passes idx 0-10, stuck idx 11 (Cerulean gate)
 - ckpt2b: walk replan around blockers, final-chapter level boost (harness only). Full run through idx 22 passed; idx 23 final boss needed boost. Rerunning: log /workspace/L19/pt.log
+Leg19 final: release rebuilt, SHA-1 90c225e3, playthrough 24/24 + THE END, v19 tarball

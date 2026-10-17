@@ -2,7 +2,7 @@
 
 ROM: `builds/Pokemon FireRed Eirika Leg19-WorldFlow.gba` (release `release/PokemblemTheSacredStones.gba` is identical). Run from a fresh new game (no save, no save state) with `tools/full_playthrough.py` (headless mGBA, `tools/mgba_drv.c`, `tools/walk_lib.py`). Log: `docs/img/playthrough/w19_playthrough_log.txt`, per chapter results `w19_result.txt`. Screens: `docs/img/playthrough/w19_*.png`.
 
-Result: all 24 chapters (index 0 to 23) passed, then the epilogue and the closing message ("The war is over. Thank you for playing.") were reached. Every one of the 40+ walks (to the gate, to the camp doors) reported ok=True; nothing was warped by memory writes.
+Result: all 24 chapters (index 0 to 23) passed, then the epilogue, the THE END card (`w19_THE_END_card.png`) and the closing message in the Black Temple camp were reached. Every one of the 40+ walks (to the gate, to the camp doors) reported ok=True; nothing was warped by memory writes.
 
 ## What the run does
 
@@ -22,4 +22,4 @@ Result: all 24 chapters (index 0 to 23) passed, then the epilogue and the closin
 - Entry by walking: the chapter maps have no warps or connections. Only the gate tile (beside a guide NPC) leaves the map.
 - Camps have three doors (center, chapter, mart); wild tables follow `docs/LEVEL_CURVE.md`.
 
-Known limits: no THE END card appears in this build, the run ends on the closing message in the Black Temple camp; chapter maps with little reachable land (Route 2, Route 22, Cerulean Cave, Victory Road) have short walks.
+Known limits: chapter maps with little reachable land (Route 2, Route 22, Cerulean Cave, Victory Road) have short walks.

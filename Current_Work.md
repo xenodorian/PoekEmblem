@@ -323,3 +323,10 @@ Owner order t81u: remove level push and free healing, Pokemon Centers and Marts 
 ## Leg19 checkpoint 2
 - Tree /workspace/L19/pf_eirika_work, ROM /workspace/L19/rom2.gba (WalkIn only on hubs). Playthrough (SERVICES=1) passed idx 0..10, stuck idx 11 Cerulean gate walk (30,31) unreachable. Logs /workspace/L19/pt.log.
 - NEXT: fix gate for Cerulean, rerun: MGBA_DRV=/workspace/mgba_drv2 SERVICES=1 SERVICE_CHAPTERS=1,3,10,15,22 python3 tools/full_playthrough.py /workspace/L19/rom2.gba /workspace/L19/pt
+
+## Leg19 DONE (final)
+- Build `builds/Pokemon FireRed Eirika Leg19-WorldFlow.gba`, SHA-1 90c225e3a45f1b7f1f296e4e576e6c6de4fb0dc0 (release GBA identical, rebuilt from patches/PokemblemTheSacredStones.ips on vanilla BPRE). Source: decomp_full_v19.tar.gz.
+- Old release archived as *_pre_worldflow in patches/archive and release/archive.
+- Full playthrough 24/24 chapters, all walks ok, THE END reached: docs/PLAYTHROUGH_REPORT.md, docs/img/playthrough/w19_*.
+- Harness-only: HP/stat top-up, battle level 60 for chapters 22-23.
+- Open: only 8 of 23 vanilla routes used for wild tables; no corridor maps between camp and chapter map; no human balance test.
