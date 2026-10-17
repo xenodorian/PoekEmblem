@@ -46,7 +46,7 @@ def buff(d, n=1):
             d.cmd('w16 %x 1' % a)
     for i in range(n):
         b = PARTY + 100*i
-        d.cmd('w8 %x 64' % (b+0x54))
+        if os.environ.get('BUFFLEVEL', '1') != '0': d.cmd('w8 %x 64' % (b+0x54))
         d.cmd('w16 %x 700' % (b+0x56)); d.cmd('w16 %x 700' % (b+0x58))
         for o in (0x5A, 0x5C, 0x5E, 0x60, 0x62): d.cmd('w16 %x 600' % (b+o))
 
