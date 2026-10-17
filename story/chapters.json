@@ -508,7 +508,7 @@
   {
    "id": 11,
    "title": "Revolt at Carcino",
-   "map": "MAP_VERMILION_CITY",
+   "map": "MAP_SAFFRON_CITY",
    "before": [
     "Port Kiris is in revolt. Innes of Frelia needs help."
    ],
@@ -1016,7 +1016,7 @@
   {
    "id": 21,
    "title": "Darkling Woods",
-   "map": "MAP_VIRIDIAN_FOREST",
+   "map": "MAP_VICTORY_ROAD_1F",
    "before": [
     "The woods are black. Riev and Morva wait."
    ],
@@ -1059,6 +1059,10 @@
      "SPECIES_EIRIKA",
      "Eirika: Then let us save Lyon before it is too late."
     ]
+   ],
+   "arrive": [
+    11,
+    20
    ]
   },
   {

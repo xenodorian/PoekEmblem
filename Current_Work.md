@@ -307,3 +307,9 @@ Open, in this order (historical list, see the Leg10 section at the end for the l
 ## Leg18 final (2026-10-17)
 - Release rebuilt: patches/PokemblemTheSacredStones.ips (applied to vanilla BPRE 41cb23d8...) gives release/PokemblemTheSacredStones.gba, SHA-1 8a0435c5f1ac3a6bc787d786fcf69c4d6db42691, identical to builds/Pokemon FireRed Eirika Leg18-PlayableFlow.gba (the ROM used in the full playthrough). Previous release: patches/archive and release/archive as _pre_playableflow.
 - Playthrough report: docs/PLAYTHROUGH_REPORT.md. Flow: docs/STORY_FLOW.md.
+
+## Leg19: world flow (2026-10-17, IN PROGRESS)
+Owner order t81u: remove level push and free healing, Pokemon Centers and Marts as buildings in the camp maps, stagger vanilla route levels over chapters, walk between maps (no teleport menus).
+- Working tree: /workspace/L19/pf_eirika_work (unpacked decomp_full_v18.tar.gz, plus `cp /workspace/pokefirered/data/mb_*.gba data/`; `make -j8` works, apt installed make and arm-none-eabi on the box). Toolchain note: `sudo apt-get update && sudo apt-get install -y make binutils-arm-none-eabi gcc-arm-none-eabi g++ libpng-dev`. Rebuild v18 ROM check: SHA-1 8a0435c5 reproduces.
+- Step A (done in tools, NOT yet built): `tools/level_curve.py` (LV table, monotonic 5..60), `tools/leg19_levels.py DECOMP /workspace/pokefirered docs/LEVEL_CURVE.md` writes wild tables into the tree's src/data/wild_encounters.json (FireRed entries), `docs/LEVEL_CURVE.md` has the chapter to level to route table. chapters.json: idx 11 map is now Saffron City and idx 21 is Victory Road 1F (arrive [11,20]) so no map repeats (a map has one wild table).
+- Step B and C (next): remove StoryLevelCatchUp and HealPlayerParty in tools/leg3_story.py; camp Pokemon Center and Mart maps shared by all hubs, door coord events on three-door hub rooms; gates on chapter maps; whiteout to the camp center. Not started.

@@ -9,7 +9,8 @@ opp = (root/'include/constants/opponents.h').read_text()
 def need(t):
     if not re.search(r'#define %s\s' % t, opp): raise SystemExit('unknown trainer ' + t)
 
-LV = [5,6,8,10,12,12,13,14,16,18,20,22,24,26,28,30,32,34,38,42,46,50,55,60]
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from level_curve import LV   # Leg19: monotonic curve, single source of truth (tools/level_curve.py)
 FAM = {
  'brute':  [[('MANKEY',1),('PRIMEAPE',28)],[('MACHOP',1),('MACHOKE',28),('MACHAMP',45)],[('RATTATA',1),('RATICATE',20)],[('PINSIR',20)]],
  'knight': [[('GEODUDE',1),('GRAVELER',25),('GOLEM',40)],[('ONIX',1)],[('RHYHORN',1),('RHYDON',42)],[('SANDSHREW',1),('SANDSLASH',22)]],
