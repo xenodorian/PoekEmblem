@@ -22,7 +22,7 @@ if os.environ.get('START_CH'):   # debugging jump only
     d.cmd('w16p %x %x %x' % (ct.SB1, ct.V_CH, int(os.environ['START_CH']))); d.cmd('w16p %x %x 1' % (ct.SB1, ct.V_PEND)); ct.buff(d)
 ch = d.var(ct.V_CH); print('after intro: chapter var', ch, flush=True)
 shot('new_game_start')
-f = 0; log = []; last_img = None
+pmn = [0]; f = 0; log = []; last_img = None
 while ch < NCH and f < 5000000:
     v = None
     start = f; first = True; shots = 0
@@ -33,8 +33,10 @@ while ch < NCH and f < 5000000:
             d.cmd('shot /tmp/pm_%d.png' % os.getpid()); d.cmd('r8 02024029', True)
             try:
                 from PIL import Image
-                if Image.open('/tmp/pm_%d.png' % os.getpid()).convert('RGB').getpixel((200, 100)) == (74, 173, 165):
-                    tap(0x80, 4, 10); tap(1, 4, 20); tap(1, 4, 20)
+                if Image.open('/tmp/pm_%d.png' % os.getpid()).convert('RGB').getpixel((5, 5)) == (33, 107, 99):   # party menu background
+                    pmn[0] += 1
+                    for key in ((0x40, 0x10), (0x10,), (0x80, 0x10), (0x80,))[pmn[0] % 4]: tap(key, 4, 10)
+                    tap(1, 4, 20); tap(1, 4, 20)
             except Exception: pass
         if (f // 16) % 9 == 0:   # B backs out of the party/summary screens, UP+LEFT puts the battle cursor back on FIGHT
             tap(2, 4, 12); tap(2, 4, 12); tap(0x40, 4, 8); tap(0x20, 4, 8)
