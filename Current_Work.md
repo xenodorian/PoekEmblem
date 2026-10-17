@@ -295,3 +295,7 @@ Open, in this order (historical list, see the Leg10 section at the end for the l
 
 ### Leg18 checkpoint 2 (2026-10-17)
 - Buffed playthrough from a fresh new game with the Leg18 ROM: chapters idx 0 to 14 PASS, idx 15 (Celadon, label 14 "Queen of White Dunes" is idx 15) STUCK, under investigation (screens in /workspace/L18/pt, not yet in docs/img). Harness fixes: tools/full_playthrough.py now taps B,B,UP,LEFT every 9 loops (backs out of the battle party/summary screens and puts the battle cursor on FIGHT). Next: look at /workspace/L18/pt/ch15_*.png, fix, continue with START_CH=15 python3 tools/full_playthrough.py ROMCOPY OUT.
+
+### Leg18 checkpoint 3 (2026-10-17): box tools were wiped
+- The box lost make, arm-none-eabi-gcc, libmgba and g++ (only gcc, python3, git remain). Rebuilt mGBA headless: `pip install --user --break-system-packages cmake ninja`, edit /workspace/mgbadev/src/CMakeLists.txt line 12 to `project(mGBA C)` (restore afterwards), cmake -G Ninja in /workspace/mgbadev/bld with Qt/SDL/GL/ffmpeg/etc OFF, then `gcc tools/mgba_drv.c -I src/include -I bld/include -Lbld -lmgba -Wl,-rpath,bld -o /workspace/mgba_drv2`. Run the harness with `MGBA_DRV=/workspace/mgba_drv2`.
+- No ARM toolchain on the box now, so ROM rebuilds are impossible until it is reinstalled. The Leg18 ROM (builds/Pokemon FireRed Eirika Leg18-PlayableFlow.gba) is already built from decomp_full_v18.tar.gz. If a blocker needs a source fix, an ARM gcc is needed first.
