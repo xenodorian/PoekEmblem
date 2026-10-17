@@ -10,3 +10,6 @@ To build the ROM yourself, apply the IPS to a clean Pokemon FireRed (USA) ROM, S
     python3 tools/apply_ips.py apply "Pokemon - FireRed Version (USA).gba" patches/PokemblemTheSacredStones.ips PokemblemTheSacredStones.gba
 
 The result must have SHA-1 `7adcc1dd4a928d17b18eed1ae6271ed6300e5eac`. Never patch over your only copy of a ROM.
+
+## Update: Eirika overworld sprite (Leg16)
+The player's walking and running overworld sprite is now Eirika (blue hair, gold armor, red tunic, white skirt, red boots) instead of Leaf's. `patches/PokemblemTheSacredStones.ips` and `release/PokemblemTheSacredStones.gba` include it (SHA-1 of the ROM: `b788d9d7eee69038f6726d0dd6f37d8ab834b701`). The earlier release is kept in `patches/archive/` and `release/archive/`.

@@ -21,7 +21,8 @@ The base ROM is `Pokemon - FireRed Version (USA).gba` (BPRE, SHA-1 `41cb23d8dccc
 | decomp_full_v12.tar.gz | 20.9 | yes |
 | decomp_full_v13.tar.gz | 20.9 | NO |
 | decomp_full_v14.tar.gz | 20.9 | yes |
-| decomp_full_v15.tar.gz | 20.9 | NO |
+| decomp_full_v15.tar.gz | 20.9 | yes |
+| decomp_full_v16.tar.gz | 20.9 | yes |
 
 Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pokefirered, run `make -j8`. Tarballs carry no build output.
 
@@ -55,7 +56,8 @@ Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pok
 | Pokemon FireRed Eirika Leg12-StoryDepth.gba | 16.8 | ac13354df096 | FireRed_Eirika_Leg12_StoryDepth.ips | yes |
 | Pokemon FireRed Eirika Leg13a-TowerOfValni.gba | 16.8 | 48feb665a0b1 | FireRed_Eirika_Leg13a_TowerOfValni.ips | NO |
 | Pokemon FireRed Eirika Leg14-EndCardFix.gba | 16.8 | 0cba9e489bcf | FireRed_Eirika_Leg14_EndCardFix.ips | yes |
-| Pokemon FireRed Eirika Leg15-BlackTempleWeather.gba | 16.8 | 7adcc1dd4a92 | FireRed_Eirika_Leg15_BlackTempleWeather.ips | NO |
+| Pokemon FireRed Eirika Leg15-BlackTempleWeather.gba | 16.8 | 7adcc1dd4a92 | FireRed_Eirika_Leg15_BlackTempleWeather.ips | yes |
+| Pokemon FireRed Eirika Leg16-EirikaSprite.gba | 16.8 | b788d9d7eee6 | none (make with tools/make_ips.py) | yes |
 
 ## IPS patches in patches/
 
@@ -84,9 +86,3 @@ Unpack a copy (top folder `pf_eirika_work/`), copy `data/mb_*.gba` from pret/pok
 
 - chapter3_test_hook.gba
 - partner_battle_test_hook.gba
-
-## Final release (Leg15)
-
-- `release/PokemblemTheSacredStones.gba`: 16777216 bytes, SHA-1 `7adcc1dd4a928d17b18eed1ae6271ed6300e5eac`. Byte-identical to `builds/Pokemon FireRed Eirika Leg15-BlackTempleWeather.gba`.
-- `patches/PokemblemTheSacredStones.ips`: 9461933 bytes, one IPS with every change, applies to vanilla Pokemon FireRed (USA) BPRE, SHA-1 `41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`.
-- Source: `decomp_full_v15.tar.gz` (v14 plus the Black Temple weather fix). Intermediate: `patches/FireRed_Eirika_Leg15_BlackTempleWeather.ips`.
