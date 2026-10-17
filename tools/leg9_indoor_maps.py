@@ -114,6 +114,27 @@ for mapdir, (seed, tsdir, layout, npcs, signs) in ROOMS.items():
     ids, coll, lay = res['ids'], res['coll'], res['layout']
     mj = json.loads((root / 'data/maps' / mapdir / 'map.json').read_text())
     mj['layout'] = 'LAYOUT_' + re.sub(r'(?<!^)(?=[A-Z])', '_', mapdir).upper().replace('__', '_')   # undo a donor layout switch (leg7) if present
+    taken = {tuple(v) for v in npcs.values()}
+    def reach9(blocked):
+        seen = {(7, 14)}; st = [(7, 14)]
+        while st:
+            cx, cy = st.pop()
+            for nx, ny in ((cx+1, cy), (cx-1, cy), (cx, cy+1), (cx, cy-1)):
+                if 0 <= nx < 15 and 0 <= ny < 16 and (nx, ny) not in seen and lay[ny][nx] in '.c' and not coll[ny][nx] and (nx, ny) not in blocked:
+                    seen.add((nx, ny)); st.append((nx, ny))
+        return seen
+    npcs = dict(npcs)
+    for o in mj['object_events']:      # Leg17 service NPCs: auto place on a free cell, keep every free cell reachable and column 7 clear
+        nm = o['script'].split('_EventScript_')[1]
+        if nm in npcs: continue
+        free0 = reach9(taken)
+        cand = sorted(((abs(cx-7) * -1 + 3 * abs(cy-10), cx, cy) for (cx, cy) in free0
+                       if cy <= 13 and cx != 7 and (cx, cy) not in taken and lay[cy][cx] == '.'))
+        for _, cx, cy in cand:
+            if len(reach9(taken | {(cx, cy)})) == len(free0) - 1:
+                npcs[nm] = (cx, cy); taken.add((cx, cy)); break
+        else:
+            raise SystemExit('no cell for ' + nm)
     taken = set()
     for o in mj['object_events']:
         nm = o['script'].split('_EventScript_')[1]

@@ -54,6 +54,35 @@ MAPS = {
    items=[('ITEM_ELIXIR', 11, 9, 'FLAG_HIDDEN_ITEM_UNUSED_0x2D', 'Chest')],
    signs=[(7, 7, 'An ancient altar. Dark\\nenergy pulses within.')]),
 }
+
+# Leg17: healer and vendor NPCs. Vendor stock labels are the vanilla FireRed mart lists (global labels in the vanilla
+# map scripts), so the inventories are exact copies by reference. Chronological order follows the FireRed route.
+# kind: 'heal' | 'mart' (data = list of (prompt, label), several = chained yes/no menu)
+SERVICES = {
+ 'Story_RenaisCastle': [('NURSE', 'Healer', 'heal', None, 'CLERIC: Rest a moment, Princess.\\nLet me tend to your party.'),
+                        ('CLERK', 'VendorViridian', 'mart', [('', 'ViridianCity_Mart_Items')], 'VENDOR: The castle stores are\\nopen to you, Princess.'),
+                        ('CLERK', 'VendorPewter', 'mart', [('', 'PewterCity_Mart_Items')], 'MERCHANT: Supplies for the road,\\nPrincess?')],
+ 'Story_FreliaCastle': [('NURSE', 'Healer', 'heal', None, 'FRELIAN CLERIC: You look weary.\\nLet me heal your party.'),
+                        ('CLERK', 'VendorCerulean', 'mart', [('', 'CeruleanCity_Mart_Items')], 'FRELIAN QUARTERMASTER: Take what\\nyou need for the march.'),
+                        ('CLERK', 'VendorVermilion', 'mart', [('', 'VermilionCity_Mart_Items')], 'TRADER: Goods from the ports.')],
+ 'Story_FortRigwald': [('NURSE', 'Healer', 'heal', None, 'FIELD CLERIC: Hold still. I will\\nmend your party.'),
+                       ('CLERK', 'VendorLavender', 'mart', [('', 'LavenderTown_Mart_Items')], 'SUTLER: Rations and remedies.'),
+                       ('CLERK', 'VendorCeladon2F', 'mart', [('', 'CeladonCity_DepartmentStore_2F_Items')], 'ARMORY CLERK: Fort stores,\\nfreshly stocked.')],
+ 'Story_JehannaHall': [('NURSE', 'Healer', 'heal', None, 'PRIEST: The desert sun is cruel.\\nLet me heal your party.'),
+                       ('CLERK', 'VendorCeladonBig', 'mart',
+                        [('Care to see the vitamins?', 'CeladonCity_DepartmentStore_5F_Vitamins'),
+                         ('How about battle items?', 'CeladonCity_DepartmentStore_5F_XItems'),
+                         ('Perhaps some TMs?', 'CeladonCity_DepartmentStore_2F_TMs'),
+                         ('Or evolution stones?', 'CeladonCity_DepartmentStore_4F_Items')],
+                        'GRAND MERCHANT: My stock is vast.\\nVitamins, battle items, TMs, stones.'),
+                       ('CLERK', 'VendorFuchsia', 'mart', [('', 'FuchsiaCity_Mart_Items')], 'CARAVAN TRADER: Wares from\\nthe far east.')],
+ 'Story_GradoThroneRoom': [('NURSE', 'Healer', 'heal', None, 'COURT HEALER: Even in this hall,\\nI can mend your party.'),
+                           ('CLERK', 'VendorSaffron', 'mart', [('', 'SaffronCity_Mart_Items')], 'IMPERIAL SUPPLIER: Fine goods\\nfor the discerning.'),
+                           ('CLERK', 'VendorCinnabar', 'mart', [('', 'CinnabarIsland_Mart_Items')], 'ARMS DEALER: Only the best.')],
+ 'Story_BlackTemple': [('NURSE', 'Healer', 'heal', None, 'WANDERING PRIEST: Light still\\nburns here. Let me heal you.'),
+                       ('CLERK', 'VendorIndigo', 'mart', [('', 'IndigoPlateau_PokemonCenter_1F_Items')], 'LAST MERCHANT: The final stock\\nbefore the end.'),
+                       ('CLERK', 'VendorSeven', 'mart', [('', 'SevenIsland_Mart_Items')], 'RELIC DEALER: Rare goods,\\nfair prices.')],
+}
 sys.path.insert(0, str(Path(__file__).parent))
 from leg6_props import block_cells
 BG = {'Story_RenaisCastle': 'bg_Renais_Chamber', 'Story_FreliaCastle': 'bg_Castle_Interior', 'Story_JehannaHall': 'bg_White_Chamber',
@@ -69,6 +98,30 @@ for mapdir, d in MAPS.items():
             x, y = cand[0][1], cand[0][2]
         taken.add((x, y)); fixed.append((n[0], x, y) + tuple(n[3:]))
     d['npcs'] = fixed
+    # Leg17 services: place on nearest free cell, keep every walkable cell reachable from the entry (7,15)
+    def reachable(blocked):
+        seen = {(7, 15)}; st = [(7, 15)]
+        while st:
+            cx, cy = st.pop()
+            for nx, ny in ((cx+1, cy), (cx-1, cy), (cx, cy+1), (cx, cy-1)):
+                if 0 <= nx < 15 and 8 <= ny < 16 and (nx, ny) not in seen and (nx, ny) not in blocked:
+                    seen.add((nx, ny)); st.append((nx, ny))
+        return seen
+    d['services'] = []
+    pref = [(2, 9), (12, 9), (3, 11), (11, 11)]
+    for k, sv in enumerate(SERVICES[mapdir]):
+        gfx, nm, kind, data, txt = sv
+        objset = {(n[1], n[2]) for n in d['npcs']} | {(i[1], i[2]) for i in d['items']} | {(q[0], q[1]) for q in d['services']}
+        free0 = reachable(set(d['block']) | objset)
+        px, py = pref[k % len(pref)]
+        cand = sorted(((abs(cx-px)+abs(cy-py), cx, cy) for (cx, cy) in free0 if cx != 7 and (cx, cy) not in objset and cy <= 14))
+        for _, cx, cy in cand:
+            blk = set(d['block']) | objset | {(cx, cy)}
+            r = reachable(blk)
+            if len(r) == len(free0) - 1 and all(((n[1], n[2]) in objset) for n in d['npcs']):
+                d['services'].append((cx, cy, gfx, nm, kind, data, txt)); break
+        else:
+            raise SystemExit('no cell for service %s on %s' % (nm, mapdir))
     # collision
     p = root / 'data/layouts' / mapdir / 'map.bin'
     w = 15
@@ -93,6 +146,31 @@ for mapdir, d in MAPS.items():
         objs.append(dict(type='object', graphics_id='OBJ_EVENT_GFX_ITEM_BALL', x=x, y=y, elevation=3, movement_type='MOVEMENT_TYPE_LOOK_AROUND' if False else 'MOVEMENT_TYPE_FACE_DOWN',
                          movement_range_x=0, movement_range_y=0, trainer_type='TRAINER_TYPE_NONE', trainer_sight_or_berry_tree_id='0', script=lab, flag=flag))
         scripts.append('%s::\n\tfinditem %s\n\tend\n' % (lab, item))
+    for cx, cy, gfx, nm, kind, data, txt in d['services']:
+        lab = '%s_EventScript_%s' % (mapdir, nm)
+        objs.append(dict(type='object', graphics_id='OBJ_EVENT_GFX_' + gfx, x=cx, y=cy, elevation=3, movement_type='MOVEMENT_TYPE_FACE_DOWN',
+                         movement_range_x=0, movement_range_y=0, trainer_type='TRAINER_TYPE_NONE', trainer_sight_or_berry_tree_id='0', script=lab, flag='0'))
+        if kind == 'heal':
+            T = '%s_Text_%s' % (mapdir, nm)
+            scripts.append('%s::\n\tlock\n\tfaceplayer\n\tmsgbox %s, MSGBOX_DEFAULT\n\tmsgbox %s_HealAsk, MSGBOX_YESNO\n'
+                           '\tcompare VAR_RESULT, 0\n\tgoto_if_eq %s_Heal_No\n\tspecial HealPlayerParty\n\tplayfanfare MUS_HEAL\n\twaitfanfare\n'
+                           '\tmsgbox %s_Healed, MSGBOX_DEFAULT\n\trelease\n\tend\n\n%s_Heal_No:\n\tmsgbox %s_HealNo, MSGBOX_DEFAULT\n\trelease\n\tend\n'
+                           % (lab, T, T, lab, T, lab, T))
+            texts += [(nm, txt), (nm + '_HealAsk', 'Shall I heal your party?'), (nm + '_Healed', 'Your party is fully healed.\\nGo with courage, Princess.'),
+                      (nm + '_HealNo', 'Take care out there.')]
+        else:
+            T = '%s_Text_%s' % (mapdir, nm)
+            body = '%s::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_%s, MSGBOX_DEFAULT\n' % (lab, mapdir, nm)
+            tl = [(nm, txt)]
+            for j, (prompt, lbl) in enumerate(data):
+                if prompt:
+                    body += '\tmsgbox %s_Ask%d, MSGBOX_YESNO\n\tcompare VAR_RESULT, 0\n\tgoto_if_eq %s_Next%d\n' % (T, j, lab, j)
+                    tl.append((nm + '_Ask%d' % j, prompt))
+                body += '\tmessage Text_MayIHelpYou\n\twaitmessage\n\tpokemart %s\n\tmsgbox Text_PleaseComeAgain, MSGBOX_DEFAULT\n\trelease\n\tend\n' % lbl
+                if prompt: body += '%s_Next%d:\n' % (lab, j)
+            body += '\tmsgbox %s_Bye, MSGBOX_DEFAULT\n\trelease\n\tend\n' % T if len(data) > 1 else ''
+            if len(data) > 1: tl.append((nm + '_Bye', 'Come back any time.'))
+            scripts.append(body); texts += tl
     bgs = []
     for k, (x, y, txt) in enumerate(d['signs']):
         lab = '%s_EventScript_Sign%d' % (mapdir, k)
