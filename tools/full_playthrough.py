@@ -29,6 +29,8 @@ while ch < NCH and f < 5000000:
     # play the chapter: mash A
     while f - start < 60000:
         tap(1, 4, 12); f += 16
+        if (f // 16) % 9 == 0:   # B backs out of the party/summary screens, UP+LEFT puts the battle cursor back on FIGHT
+            tap(2, 4, 12); tap(2, 4, 12); tap(0x40, 4, 8); tap(0x20, 4, 8)
         if not NOBUFF: ct.buff(d, 1)
         it = (f - start) // 16
         if it % 25 == 0 and shots < 12: shot('ch%02d_play_%02d' % (ch, shots)); shots += 1
