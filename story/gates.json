@@ -1,0 +1,308 @@
+{
+ "MAP_ROUTE1": {
+  "dir": "Route1",
+  "arrive": [
+   6,
+   29
+  ],
+  "gate": [
+   20,
+   27
+  ],
+  "elev": 3,
+  "guide": [
+   21,
+   27
+  ],
+  "dist": 16,
+  "reachable": 70
+ },
+ "MAP_ROUTE3": {
+  "dir": "Route3",
+  "arrive": [
+   70,
+   14
+  ],
+  "gate": [
+   39,
+   9
+  ],
+  "elev": 3,
+  "guide": [
+   38,
+   9
+  ],
+  "dist": 40,
+  "reachable": 479
+ },
+ "MAP_VIRIDIAN_FOREST": {
+  "dir": "ViridianForest",
+  "arrive": [
+   29,
+   62
+  ],
+  "gate": [
+   47,
+   40
+  ],
+  "elev": 3,
+  "guide": [
+   48,
+   40
+  ],
+  "dist": 40,
+  "reachable": 509
+ },
+ "MAP_PEWTER_CITY": {
+  "dir": "PewterCity",
+  "arrive": [
+   17,
+   6
+  ],
+  "gate": [
+   6,
+   25
+  ],
+  "elev": 3,
+  "guide": [
+   6,
+   26
+  ],
+  "dist": 40,
+  "reachable": 887
+ },
+ "MAP_ROUTE2": {
+  "dir": "Route2",
+  "arrive": [
+   5,
+   13
+  ],
+  "gate": [
+   10,
+   0
+  ],
+  "elev": 3,
+  "guide": [
+   11,
+   0
+  ],
+  "dist": 18,
+  "reachable": 72
+ },
+ "MAP_VERMILION_CITY": {
+  "dir": "VermilionCity",
+  "arrive": [
+   22,
+   34
+  ],
+  "gate": [
+   24,
+   20
+  ],
+  "elev": 3,
+  "guide": [
+   23,
+   20
+  ],
+  "dist": 40,
+  "reachable": 534
+ },
+ "MAP_CERULEAN_CITY": {
+  "dir": "CeruleanCity",
+  "arrive": [
+   10,
+   11
+  ],
+  "gate": [
+   30,
+   31
+  ],
+  "elev": 3,
+  "guide": [
+   31,
+   31
+  ],
+  "dist": 40,
+  "reachable": 505
+ },
+ "MAP_SAFFRON_CITY": {
+  "dir": "SaffronCity",
+  "arrive": [
+   33,
+   30
+  ],
+  "gate": [
+   15,
+   12
+  ],
+  "elev": 3,
+  "guide": [
+   15,
+   11
+  ],
+  "dist": 40,
+  "reachable": 744
+ },
+ "MAP_LAVENDER_TOWN": {
+  "dir": "LavenderTown",
+  "arrive": [
+   18,
+   6
+  ],
+  "gate": [
+   1,
+   17
+  ],
+  "elev": 3,
+  "guide": [
+   1,
+   18
+  ],
+  "dist": 28,
+  "reachable": 235
+ },
+ "MAP_ROUTE9": {
+  "dir": "Route9",
+  "arrive": [
+   14,
+   11
+  ],
+  "gate": [
+   23,
+   6
+  ],
+  "elev": 3,
+  "guide": [
+   23,
+   5
+  ],
+  "dist": 40,
+  "reachable": 429
+ },
+ "MAP_ROCK_TUNNEL_1F": {
+  "dir": "RockTunnel_1F",
+  "arrive": [
+   17,
+   2
+  ],
+  "gate": [
+   42,
+   7
+  ],
+  "elev": 3,
+  "guide": [
+   43,
+   7
+  ],
+  "dist": 40,
+  "reachable": 254
+ },
+ "MAP_CELADON_CITY": {
+  "dir": "CeladonCity",
+  "arrive": [
+   34,
+   21
+  ],
+  "gate": [
+   12,
+   25
+  ],
+  "elev": 3,
+  "guide": [
+   11,
+   25
+  ],
+  "dist": 40,
+  "reachable": 920
+ },
+ "MAP_FUCHSIA_CITY": {
+  "dir": "FuchsiaCity",
+  "arrive": [
+   24,
+   5
+  ],
+  "gate": [
+   18,
+   19
+  ],
+  "elev": 3,
+  "guide": [
+   19,
+   19
+  ],
+  "dist": 40,
+  "reachable": 826
+ },
+ "MAP_PALLET_TOWN": {
+  "dir": "PalletTown",
+  "arrive": [
+   6,
+   7
+  ],
+  "gate": [
+   20,
+   19
+  ],
+  "elev": 3,
+  "guide": [
+   21,
+   19
+  ],
+  "dist": 26,
+  "reachable": 268
+ },
+ "MAP_ROUTE22": {
+  "dir": "Route22",
+  "arrive": [
+   8,
+   5
+  ],
+  "gate": [
+   26,
+   12
+  ],
+  "elev": 3,
+  "guide": [
+   27,
+   12
+  ],
+  "dist": 37,
+  "reachable": 104
+ },
+ "MAP_CERULEAN_CAVE_1F": {
+  "dir": "CeruleanCave_1F",
+  "arrive": [
+   33,
+   21
+  ],
+  "gate": [
+   38,
+   14
+  ],
+  "elev": 3,
+  "guide": [
+   38,
+   13
+  ],
+  "dist": 12,
+  "reachable": 35
+ },
+ "MAP_VICTORY_ROAD_1F": {
+  "dir": "VictoryRoad_1F",
+  "arrive": [
+   11,
+   20
+  ],
+  "gate": [
+   5,
+   14
+  ],
+  "elev": 3,
+  "guide": [
+   5,
+   13
+  ],
+  "dist": 16,
+  "reachable": 60
+ }
+}

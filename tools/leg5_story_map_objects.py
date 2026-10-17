@@ -83,6 +83,8 @@ SERVICES = {
                        ('CLERK', 'VendorIndigo', 'mart', [('', 'IndigoPlateau_PokemonCenter_1F_Items')], 'LAST MERCHANT: The final stock\\nbefore the end.'),
                        ('CLERK', 'VendorSeven', 'mart', [('', 'SevenIsland_Mart_Items')], 'RELIC DEALER: Rare goods,\\nfair prices.')],
 }
+# Leg19: healers and vendors moved into the shared camp Pokemon Center and Pokemart (tools/leg19_camp.py, leg3_story.py)
+SERVICES = {k: [] for k in SERVICES}
 sys.path.insert(0, str(Path(__file__).parent))
 from leg6_props import block_cells
 BG = {'Story_RenaisCastle': 'bg_Renais_Chamber', 'Story_FreliaCastle': 'bg_Castle_Interior', 'Story_JehannaHall': 'bg_White_Chamber',

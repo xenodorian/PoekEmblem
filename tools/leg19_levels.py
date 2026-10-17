@@ -55,6 +55,9 @@ for c in ch:
 # apply
 tree_p = root / 'src/data/wild_encounters.json'; tj = json.loads(tree_p.read_text())
 ents = tj['wild_encounter_groups'][0]['encounters']
+# idempotent: undo an earlier run (story entries are replaced by the vanilla entry of that map, or dropped)
+ents[:] = [van[e['map']] if (e['base_label'].startswith('sStoryChapter') and e['map'] in van) else e for e in ents
+           if not (e['base_label'].startswith('sStoryChapter') and e['map'] not in van)]
 byfr = {e['map']: k for k, e in enumerate(ents) if e['base_label'].endswith('_FireRed')}
 rows = []; done = {}
 for i, c, L, rt, ra in plan:

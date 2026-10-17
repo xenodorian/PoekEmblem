@@ -28,7 +28,7 @@ The effect depends on the terrain: grass and cave floor give land encounters, wa
 | 16 | 15 | Scorched Sand | STORY_JEHANNA_HALL | 34 | - | - | none (no grass, cave or water terrain) |
 | 17 | 16 | Ruled by Madness | FUCHSIA_CITY | 37 | vanilla MAP_ROUTE23 | 35.8 | written |
 | 18 | 17 | River of Regrets | PALLET_TOWN | 40 | generated | - | written |
-| 19 | 18 | Two Faces of Evil | ROUTE19 | 44 | generated | - | written |
+| 19 | 18 | Two Faces of Evil | ROUTE22 | 44 | generated | - | written |
 | 20 | 19 | Last Hope | CERULEAN_CAVE_1F | 48 | generated | - | written |
 | 21 | 20 | Darkling Woods | VICTORY_ROAD_1F | 52 | generated | - | written |
 | 22 | 21 | Sacred Stone | STORY_GRADO_THRONE_ROOM | 56 | - | - | none (no grass, cave or water terrain) |

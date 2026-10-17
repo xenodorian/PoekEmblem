@@ -10,7 +10,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import indoor_tiling as it
 
 root = Path(sys.argv[1])
-DOOR = ["      D        "]
+# Leg19: three doors in the bottom wall: left = Pokemon Center, middle = road on, right = Pokemart. Mats are rows 14, columns 2-4, 6-8, 10-12.
+DOOR = ["   D   D   D   "]
 
 ROOMS = {
  # throne hall (one style: cream wall, wall width == floor width): cream wall with windows, shelves, cabinets between FE8 wall ends, red carpet, potted plants
@@ -30,7 +31,7 @@ ROOMS = {
     " ....ccccc.... ",
     " ....ccccc.... ",
     " ............. "] + DOOR,
-  {'Guard': (3, 10), 'Guard2': (11, 10), 'Minister': (9, 12), 'Maid': (3, 13), 'Chest': (12, 9)},
+  {'Guard': (3, 10), 'Guard2': (11, 10), 'Minister': (9, 12), 'Maid': (3, 12), 'Chest': (12, 9)},
   {'Sign0': (5, 1), 'Sign1': (11, 1)}),
  # airy hall: cream centre, council table on a rug island, plants
  'Story_FreliaCastle': (23, 'story_frelia_castle', [
@@ -49,7 +50,7 @@ ROOMS = {
     " .p........... ",
     " ............. ",
     " ............. "] + DOOR,
-  {'Knight': (3, 9), 'Knight2': (11, 9), 'Page': (4, 13), 'Noble': (10, 13), 'Chest': (3, 14)},
+  {'Knight': (3, 9), 'Knight2': (11, 9), 'Page': (4, 12), 'Noble': (10, 12), 'Chest': (12, 11)},
   {'Sign0': (1, 1), 'Sign1': (13, 1)}),
  # stone hall with a dais rug, FE8 brick wall only (no wall objects)
  'Story_JehannaHall': (37, 'story_jehanna_hall', [
@@ -68,7 +69,7 @@ ROOMS = {
     " ............. ",
     " ............. ",
     " ............. "] + DOOR,
-  {'Sage': (7, 10), 'Warrior': (3, 12), 'Scholar': (11, 12), 'Chest': (12, 14)},
+  {'Sage': (7, 10), 'Warrior': (3, 12), 'Scholar': (11, 12), 'Chest': (12, 10)},
   {'Sign0': (6, 1)}),
  # dark stone temple with an altar table, FE8 brick wall only
  'Story_BlackTemple': (51, 'story_black_temple', [
@@ -87,8 +88,45 @@ ROOMS = {
     " ............. ",
     " ............. ",
     " ............. "] + DOOR,
-  {'Cultist': (3, 10), 'Cultist2': (11, 12), 'Hermit': (4, 14), 'Chest': (11, 9)},
+  {'Cultist': (3, 10), 'Cultist2': (11, 12), 'Hermit': (4, 12), 'Chest': (11, 9)},
   {'Sign0': (5, 1)}),
+ # Leg19: Fort Rigwald and the Grado Throne Room are autotiled too (they had the League donor interiors), so all six hubs have the same three doors
+ 'Story_FortRigwald': (62, 'story_fort_rigwald', [
+    " ############# ",
+    " ############# ",
+    " ............. ",
+    " ............. ",
+    " .ccc.....ccc. ",
+    " .ccc.....ccc. ",
+    " ............. ",
+    " ....ccccc.... ",
+    " ....ccccc.... ",
+    " ............. ",
+    " .ccc.....ccc. ",
+    " .ccc.....ccc. ",
+    " ............. ",
+    " ............. ",
+    " ............. "] + DOOR,
+  {'Soldier': (4, 8), 'Scout': (10, 9), 'Recruit': (3, 12), 'Chest': (12, 3)},
+  {'Sign0': (5, 1)}),
+ 'Story_GradoThroneRoom': (77, 'story_grado_throne_room', [
+    " ============= ",
+    " ==xxwwssxxf== ",
+    " ............. ",
+    " ............. ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " .....ccc..... ",
+    " ............. ",
+    " ............. "] + DOOR,
+  {'Guard': (4, 6), 'Guard2': (10, 6), 'Advisor': (8, 9), 'Mage': (12, 12), 'Chest': (2, 12)},
+  {'Sign0': (7, 1)}),
 }
 # fix rows: every row exactly 15 wide
 for k, v in ROOMS.items():
@@ -149,7 +187,7 @@ for mapdir, (seed, tsdir, layout, npcs, signs) in ROOMS.items():
         o['x'], o['y'] = x, y
     assert len(mj['bg_events']) == len(signs)
     mj['weather'] = 'WEATHER_NONE'     # Black Temple was washed out by the donor's WEATHER_FOG_HORIZONTAL, not by a palette
-    mj['warp_events'] = [{'x': 7, 'y': 14, 'elevation': 0, 'dest_map': 'MAP_PALLET_TOWN', 'dest_warp_id': '0'}]
+    mj['warp_events'] = []     # Leg19: doors are coord event triggers (tools/leg3_story.py), not warps
     (root / 'data/maps' / mapdir / 'map.json').write_text(json.dumps(mj, indent=2) + '\n')
     print(mapdir, 'tiles', nt, 'metatiles', nmeta, it.count_sources(res))
 rules_p.write_text(rules)

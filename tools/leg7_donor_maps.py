@@ -7,12 +7,7 @@ import sys, json
 from pathlib import Path
 root = Path(sys.argv[1])
 # Leg17: Black Temple is no longer switched to the Pokemon Tower donor here (tools/leg9_indoor_maps.py autotiles it and undid the switch anyway).
-SWITCH = {
- 'Story_FortRigwald': ('PokemonLeague_BrunosRoom', (6, 10),
-     {'Soldier': (4, 8), 'Scout': (9, 6), 'Recruit': (3, 4), 'Chest': (11, 4)}),
- 'Story_GradoThroneRoom': ('PokemonLeague_ChampionsRoom', (6, 18),
-     {'Guard': (4, 6), 'Guard2': (8, 6), 'Advisor': (6, 9), 'Mage': (10, 11), 'Chest': (1, 12)}),
-}
+SWITCH = {}   # Leg19: Fort Rigwald and Grado are autotiled by leg9_indoor_maps.py now (three door hub rooms)
 for m in ['Story_RenaisCastle', 'Story_FreliaCastle', 'Story_JehannaHall', 'Story_FortRigwald', 'Story_GradoThroneRoom', 'Story_BlackTemple']:
     p = root / 'data/maps' / m / 'map.json'; j = json.loads(p.read_text())
     j['show_map_name'] = False
