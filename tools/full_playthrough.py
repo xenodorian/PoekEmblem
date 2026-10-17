@@ -34,7 +34,7 @@ def hub_for(i): return 0 if i <= 1 else 1 if i <= 9 else 2 if i <= 13 else 3 if 
 SERV = set(int(x) for x in os.environ.get('SERVICE_CHAPTERS', '3,11').split(',')) if os.environ.get('SERVICES') == '1' else set()
 def tapA(n, wait=14):
     for _ in range(n): tap(1, 4, wait)
-def stuck_cb(): mash(12)
+def stuck_cb(): mash(30)
 def go(goal, name):
     ok = wl.walk_to(d, ct, W, goal, on_stuck=stuck_cb, log=lambda m: print('   ' + m, flush=True))
     print('   walk %s -> %s ok=%s map=%s pos=%s' % (name, goal, ok, W.mapdir(d, ct), wl.pos(d, ct)), flush=True)
@@ -91,6 +91,8 @@ def mash_body(f):
         last_img = cur
 
     if not NOBUFF: ct.buff(d, 1)
+    if not NOBUFF and ch >= 22:   # harness-only level boost for the last two chapters (the party is far below the curve there: no auto level push exists)
+        for b in (0, 2): d.cmd('w8 %x 3c' % (0x02023be4 + 0x58 * b + 0x2A))
 
 def mash(n):
     """battle/dialog handling while walking (wild or trainer battle, text boxes): same presses as the chapter loop"""
