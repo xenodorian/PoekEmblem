@@ -29,6 +29,13 @@ while ch < NCH and f < 5000000:
     # play the chapter: mash A
     while f - start < 60000:
         tap(1, 4, 12); f += 16
+        if (f // 16) % 4 == 0:   # forced party menu after a faint (Destiny Bond): move the cursor off the fainted lead and confirm (same trick as chapter_test DUO)
+            d.cmd('shot /tmp/pm_%d.png' % os.getpid()); d.cmd('r8 02024029', True)
+            try:
+                from PIL import Image
+                if Image.open('/tmp/pm_%d.png' % os.getpid()).convert('RGB').getpixel((200, 100)) == (74, 173, 165):
+                    tap(0x80, 4, 10); tap(1, 4, 20); tap(1, 4, 20)
+            except Exception: pass
         if (f // 16) % 9 == 0:   # B backs out of the party/summary screens, UP+LEFT puts the battle cursor back on FIGHT
             tap(2, 4, 12); tap(2, 4, 12); tap(0x40, 4, 8); tap(0x20, 4, 8)
         if (f // 16) % 20 == 0:   # stall detector: an unchanged screen means a Disabled move or a stuck menu
