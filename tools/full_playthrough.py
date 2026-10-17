@@ -22,7 +22,7 @@ if os.environ.get('START_CH'):   # debugging jump only
     d.cmd('w16p %x %x %x' % (ct.SB1, ct.V_CH, int(os.environ['START_CH']))); d.cmd('w16p %x %x 1' % (ct.SB1, ct.V_PEND)); ct.buff(d)
 ch = d.var(ct.V_CH); print('after intro: chapter var', ch, flush=True)
 shot('new_game_start')
-f = 0; log = []
+f = 0; log = []; last_img = None
 while ch < NCH and f < 5000000:
     v = None
     start = f; first = True; shots = 0
@@ -31,9 +31,13 @@ while ch < NCH and f < 5000000:
         tap(1, 4, 12); f += 16
         if (f // 16) % 9 == 0:   # B backs out of the party/summary screens, UP+LEFT puts the battle cursor back on FIGHT
             tap(2, 4, 12); tap(2, 4, 12); tap(0x40, 4, 8); tap(0x20, 4, 8)
-            c9 = (f // 144) % 3   # rotate the move cursor too so a Disabled move cannot stall the run
-            if c9 == 1: tap(0x10, 4, 8)
-            elif c9 == 2: tap(0x80, 4, 8)
+        if (f // 16) % 20 == 0:   # stall detector: an unchanged screen means a Disabled move or a stuck menu
+            d.cmd('shot /tmp/stall_%d.png' % os.getpid()); d.cmd('r8 02024029', True)
+            cur = open('/tmp/stall_%d.png' % os.getpid(), 'rb').read()
+            if cur == last_img:   # back to FIGHT, open it, pick the right-hand move, then back out of anything else
+                for _ in range(3): tap(2, 4, 14)
+                tap(0x40, 4, 8); tap(0x20, 4, 8); tap(1, 4, 20); tap(0x10, 4, 8); tap(1, 4, 20); tap(2, 4, 14); tap(2, 4, 14)
+            last_img = cur
         if not NOBUFF: ct.buff(d, 1)
         it = (f - start) // 16
         if it % 25 == 0 and shots < 12: shot('ch%02d_play_%02d' % (ch, shots)); shots += 1

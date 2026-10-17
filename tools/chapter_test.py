@@ -36,6 +36,7 @@ class Drv:
 _rot = [0]
 MOVES = [0xe8, 0xd3, 0xd2]   # Metal Claw, Steel Wing, Fury Cutter
 def buff(d, n=1):
+    for bt in (0, 2): d.cmd('w16 %x 0' % (0x02023e0c + 0x1C*bt + 4))   # clear Disable on the player side (gDisableStructs from the Leg18 map)
     d.cmd('w32 02023c08 3c3c3c3c'); d.cmd('w32 02023c30 0'); d.cmd('w16 02023c0c 2bc')
     _rot[0] += 1; m = MOVES[_rot[0] // 3 % 3:] + MOVES[:_rot[0] // 3 % 3]   # rotate slot 1 so a Disabled move cannot stall the run
     d.cmd('w32 02023bf0 %04x%04x' % (m[1], m[0])); d.cmd('w32 02023bf4 0000%04x' % m[2])  # Metal Claw, Steel Wing, Fury Cutter (hit Ghost types)
