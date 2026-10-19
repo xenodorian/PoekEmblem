@@ -46,3 +46,4 @@ Leg19 checkpoint 2: hub-only walk-in, mart exit fix; playthrough passes idx 0-10
 - ckpt2b: walk replan around blockers, final-chapter level boost (harness only). Full run through idx 22 passed; idx 23 final boss needed boost. Rerunning: log /workspace/L19/pt.log
 Leg19 final: release rebuilt, SHA-1 90c225e3, playthrough 24/24 + THE END, v19 tarball
 2026-10-19 Leg20 TitleContinue: vanilla copyright/intro/title restored, NEW GAME menu shown with no save, save and Continue verified (also mid chapter), camp PC deposit/withdraw verified. Release SHA-1 3ffa500e57a71eb946b07e40881d1dd9c8943442, previous release archived as _pre_titlecontinue, v20 tarball.
+- Leg20 regression: full_playthrough idx 0-18 PASS, idx 19 harness frame limit in a long double battle (not boot related).
