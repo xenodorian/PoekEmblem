@@ -48,3 +48,4 @@ Leg19 final: release rebuilt, SHA-1 90c225e3, playthrough 24/24 + THE END, v19 t
 2026-10-19 Leg20 TitleContinue: vanilla copyright/intro/title restored, NEW GAME menu shown with no save, save and Continue verified (also mid chapter), camp PC deposit/withdraw verified. Release SHA-1 3ffa500e57a71eb946b07e40881d1dd9c8943442, previous release archived as _pre_titlecontinue, v20 tarball.
 - Leg20 regression: full_playthrough idx 0-18 PASS, idx 19 harness frame limit in a long double battle (not boot related).
 2026-10-19 Leg21 step 1: FE8 location names on the save screen for story rooms (source only), playthrough rerun with CHFRAMES=240000 started.
+2026-10-19 Leg21 final: playthrough 24/24 with CHFRAMES=240000 (ch19 took 84000 frames, harness limit only), story location names on save screen, release SHA-1 ffbefdb04778b990def62ff07f6b773e964da057, old release archived as _pre_locationnames, v21 tarball.
