@@ -47,3 +47,4 @@ Leg19 checkpoint 2: hub-only walk-in, mart exit fix; playthrough passes idx 0-10
 Leg19 final: release rebuilt, SHA-1 90c225e3, playthrough 24/24 + THE END, v19 tarball
 2026-10-19 Leg20 TitleContinue: vanilla copyright/intro/title restored, NEW GAME menu shown with no save, save and Continue verified (also mid chapter), camp PC deposit/withdraw verified. Release SHA-1 3ffa500e57a71eb946b07e40881d1dd9c8943442, previous release archived as _pre_titlecontinue, v20 tarball.
 - Leg20 regression: full_playthrough idx 0-18 PASS, idx 19 harness frame limit in a long double battle (not boot related).
+2026-10-19 Leg21 step 1: FE8 location names on the save screen for story rooms (source only), playthrough rerun with CHFRAMES=240000 started.
