@@ -11,10 +11,6 @@
 #include "save.h"
 #include "new_game.h"
 #include "title_screen.h"
-#include "main_menu.h"
-#include "main.h"
-#include "load_save.h"
-#include "malloc.h"
 #include "decompress.h"
 #include "util.h"
 #include "trig.h"
@@ -1003,19 +999,15 @@ static bool8 SetUpCopyrightScreen(void)
 
 void CB2_InitCopyrightScreenAfterBootup(void)
 {
-    // Skip the copyright screen, Game Freak intro and title screen: load the save and go to the main menu,
-    // which starts a new game immediately when there is no save file
-    EnableInterrupts(INTR_FLAG_VBLANK);
-    SeedRngAndSetTrainerId();
-    SetSaveBlocksPointers();
-    ResetMenuAndMonGlobals();
-    Save_ResetSaveCounters();
-    LoadGameSave(SAVE_NORMAL);
-    if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_INVALID)
-        Sav2_ClearSetDefault();
-    SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
-    InitHeap(gHeap, HEAP_SIZE);
-    SetMainCallback2(CB2_InitMainMenu);
+    if (!SetUpCopyrightScreen())
+    {
+        ResetMenuAndMonGlobals();
+        Save_ResetSaveCounters();
+        LoadGameSave(SAVE_NORMAL);
+        if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_INVALID)
+            Sav2_ClearSetDefault();
+        SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
+    }
 }
 
 void CB2_InitCopyrightScreenAfterTitleScreen(void)

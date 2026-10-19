@@ -263,11 +263,9 @@ static void Task_SetWin0BldRegsAndCheckSaveFile(u8 taskId)
             break;
         case SAVE_STATUS_EMPTY:
         default:
-            // No save file: start a new game immediately, no menu
-            gExitStairsMovementDisabled = FALSE;
-            FreeAllWindowBuffers();
-            DestroyTask(taskId);
-            StartNewGameScene();
+            LoadUserFrameToBg(0);
+            gTasks[taskId].tMenuType = MAIN_MENU_NEWGAME;
+            gTasks[taskId].func = Task_SetWin0BldRegsNoSaveFileCheck;
             break;
         case SAVE_STATUS_NO_FLASH:
             SetStdFrame0OnBg(0);
@@ -316,10 +314,8 @@ static void Task_SetWin0BldRegsNoSaveFileCheck(u8 taskId)
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_TGT1_BG1 | BLDCNT_TGT1_BG2 | BLDCNT_TGT1_BG3 | BLDCNT_TGT1_OBJ | BLDCNT_TGT1_BD | BLDCNT_EFFECT_DARKEN);
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(0, 0));
         SetGpuReg(REG_OFFSET_BLDY, 7);
-        if (gTasks[taskId].tMenuType == MAIN_MENU_NEWGAME)
-            gTasks[taskId].func = Task_ExecuteMainMenuSelection;
-        else
-            gTasks[taskId].func = Task_WaitFadeAndPrintMainMenuText;
+        // Leg20: always show the main menu (NEW GAME alone when there is no save) instead of starting a new game on START
+        gTasks[taskId].func = Task_WaitFadeAndPrintMainMenuText;
     }
 }
 

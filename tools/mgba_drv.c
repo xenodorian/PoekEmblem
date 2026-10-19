@@ -5,6 +5,8 @@
 //   r32 ADDR | r16 ADDR | r8 ADDR    print memory
 //   w32 ADDR VAL | w16 ADDR VAL | w8 ADDR VAL    write memory
 //   rununtil16 ADDR VAL MAXFRAMES     run until the u16 at ADDR equals VAL
+//   reset            soft reset the console (cartridge save memory is kept)
+// Env SAVE=path: use that file as the cartridge save (created if missing, written back on exit).
 #include <mgba/core/core.h>
 #include <mgba/core/blip_buf.h>
 #include <mgba/gba/core.h>
@@ -26,6 +28,11 @@ int main(int argc, char** argv) {
     core->setVideoBuffer(core, buf, w);
     if (!mCoreLoadFile(core, argv[1])) { fprintf(stderr, "load fail\n"); return 1; }
     core->setAudioBufferSize(core, 1024);
+    const char* savePath = getenv("SAVE");
+    if (savePath && *savePath) {
+        struct VFile* sv = VFileOpen(savePath, O_CREAT | O_RDWR);
+        if (!sv || !core->loadSave(core, sv)) fprintf(stderr, "save load fail %s\n", savePath);
+    }
     core->reset(core);
     FILE* f = strcmp(argv[2],"-")?fopen(argv[2], "r"):stdin;
     char line[512];
@@ -40,6 +47,7 @@ int main(int argc, char** argv) {
         else if (!strcmp(cmd, "w16p")) { sscanf(line, "%*s %lx %lx %lx", &x, &y, &z); unsigned p = core->busRead32(core, x); core->busWrite16(core, p + y, z); }
         else if (!strcmp(cmd, "echo")) { printf("echo\n"); }
         else if (!strcmp(cmd, "quit")) break;
+        else if (!strcmp(cmd, "reset")) { core->reset(core); printf("reset\n"); }
         else if (!strcmp(cmd, "r32")) { sscanf(line, "%*s %lx", &x); printf("r32 %08lx = %08x\n", x, core->busRead32(core, x)); }
         else if (!strcmp(cmd, "r16")) { sscanf(line, "%*s %lx", &x); printf("r16 %08lx = %04x\n", x, core->busRead16(core, x)); }
         else if (!strcmp(cmd, "r8"))  { sscanf(line, "%*s %lx", &x); printf("r8 %08lx = %02x\n", x, core->busRead8(core, x)); }

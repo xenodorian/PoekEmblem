@@ -4,7 +4,7 @@ Progress follows the Fire Emblem: The Sacred Stones plot (Eirika route), in the 
 
 ## How the flow works
 
-1. New game: after the naming speech the game starts in Renais Castle (chapter 0). Eirika is already in the party and the vanilla Oak gates are pre-set, so Pallet Town cannot soft lock.
+1. Boot (Leg20): copyright, intro and title screen, then the main menu (CONTINUE and NEW GAME with a save, NEW GAME alone without one). New game: the names are fixed and the game starts in Renais Castle (chapter 0) with its intro scene. Eirika is already in the party and the vanilla Oak gates are pre-set, so Pallet Town cannot soft lock. Continue loads the saved map and tile with no scene replay (VAR_STORY_PENDING is always 0 in a save). Save from the START menu anywhere outside a scene.
 2. Entering a chapter map plays the title card, the opening scene, the battles, recruits and the after scene (map entry cutscene hook in `src/overworld.c`). There is no level scaling and no free heal at the end. The reward is yen only.
 3. Each chapter map is a vanilla FireRed map with its warps and connections removed. After the win the player walks across the map to the gate (a step trigger beside a guide NPC; `story/gates.json` lists the gate tile of every map). The gate fades to the camp.
 4. A camp is a story room (hub) with a Pokemon Center door (left), a Pokemart door (right) and the chapter door (middle), shown as red mats at the bottom wall. The player walks to a mat to go through. The center has a nurse counter (heals the party) and a PC; the mart sells the vanilla FireRed lists. Jehanna Hall carries the big market chain (vitamins, battle items, TMs, stones).
